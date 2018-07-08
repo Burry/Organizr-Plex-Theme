@@ -1,7 +1,7 @@
 # Plex Theme <i style=color:#999>for [Organizr](https://github.com/causefx/Organizr) v2</i>
 A theme for Organizr v2 that emulates the style of Plex
 
-![Screen Shot][screenshot.png]
+![Screen Shot](https://raw.githubusercontent.com/Burry/organizr-v2-theme-plex/master/screenshot.png "Screen Shot")
 
 ## Installation
 

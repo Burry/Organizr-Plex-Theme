@@ -1,5 +1,5 @@
 // Plex Theme for Organizr v2
-// v1.0
+// Version 1.1
 // https://github.com/Burry/organizr-v2-theme-plex
 
 // Variables
@@ -119,7 +119,6 @@ table.dataTable tbody tr,
 }
 
 .sidebar .sidebar-head,
-.login-sidebar .white-box,
 .table-striped > tbody > tr:nth-of-type(odd),
 .table > tbody > tr.active > td,
 .table > tbody > tr.active > th,
@@ -816,21 +815,43 @@ input[aria-controls="loginLogTable"] {
 .login-sidebar {
 	position: relative;
 	right: initial;
+
+	.white-box {
+		width: 100%;
+		height: -webkit-fill-available;
+	}
 }
 
-.login-sidebar .white-box {
-	width: 100%;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+@media screen and (min-width: 768px) {
+	.login-sidebar .white-box {
+		background: $black30a;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
-.login-box .m-t-20, .login-box .m-t-40 {
-	margin-top: 0 !important;
+.login-box {
+	.m-t-20,
+	.m-t-40 {
+		margin-top: 0 !important;
+	}
+
+	.form-group {
+		&:last-of-type,
+		&:last-of-type p {
+			margin-bottom: 0;
+		}
+	}
 }
 
-.login-box .form-group:last-of-type, .login-box .form-group:last-of-type p {
-	margin-bottom: 0;
+#login-logo {
+	display: block !important;
+	margin-bottom: 25px;
+}
+
+.loginLogo {
+	max-width: -webkit-fill-available;
 }
 
 

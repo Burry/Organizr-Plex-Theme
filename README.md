@@ -18,7 +18,7 @@ A theme for Organizr v2 that emulates the style of Plex
     - [plexeina-regularitalic-webfont.woff2](https://www.plex.tv/wp-content/themes/plex/assets/fonts/plexeina-regularitalic-webfont.woff2)
     - [plexeina-regularitalic-webfont.woff](https://www.plex.tv/wp-content/themes/plex/assets/fonts/plexeina-regularitalic-webfont.woff)
 
-## Blur Effect
+## Experimental Blur Effect
 
 The [master](https://github.com/Burry/organizr-v2-theme-plex/tree/master) branch offers a stylesheet that should look good across all major browsers, but it forgoes experimental [backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) blur effects in lieu of darker backgrounds. If your Organizr users are using Safari or another browser that currently supports these effects, try out the [blur](https://github.com/Burry/organizr-v2-theme-plex/tree/blur) version.
 

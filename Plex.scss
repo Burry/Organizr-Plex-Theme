@@ -1,35 +1,62 @@
 // Plex Theme for Organizr v2
-// Beta 1
+// v1.0
 // https://github.com/Burry/organizr-v2-theme-plex
 
 // Variables
 
-$theme: hsl(41, 89%, 47%);
+$theme: #E5A00D;
 $theme08a: hsla(41, 89%, 47%, 0.8);
-$theme-light: hsl(46, 98%, 49%);
-$light-gray: hsl(210, 5%, 26%);
-$dark-gray: hsl(220, 6%, 10%);
+$theme-light: #F7BE02;
+$movie: #FF7676;
+$tv: #53E69D;
+$music: #007BFF;
+$light-gray: #3F4246;
+$dark-gray: #18191B;
 
 $white70a: hsla(0, 0%, 100%, 0.7);
+$white45a: hsla(0, 0%, 100%, 0.45);
 $white25a: hsla(0, 0%, 100%, 0.25);
 $white08a: hsla(0, 0%, 100%, 0.08);
 $black15a: hsla(0, 0%, 0%, 0.15);
+$black35a: hsla(0, 0%, 0%, 0.35);
 $black30a: hsla(0, 0%, 0%, 0.3);
 $black50a: hsla(0, 0%, 0%, 0.5);
 $black70a: hsla(0, 0%, 0%, 0.7);
+$black50: hsl(0, 0%, 50%);
 $black33: hsl(0, 0%, 33%);
 $black20: hsl(0, 0%, 20%);
 $black16: hsl(0, 0%, 16%);
 
-$text: hsl(0, 0%, 93%);
-$text-muted: hsl(0, 0%, 60%);
-$menu-link: hsl(0, 0%, 73%);
-$white: hsl(0, 0%, 100%);
+$white: #FFF;
+$text: #EEE;
+$text-muted: #999;
+$menu-link: #BBB;
+
+
+// Mixins
+
+@mixin border-radius($radius, $side:"") {
+	@if unquote($side) == 'top' {
+		border-top-left-radius: $radius !important;
+		border-top-right-radius: $radius !important;
+	} @else if unquote($side) == 'right' {
+		border-top-right-radius: $radius !important;
+		border-bottom-right-radius: $radius !important;
+	} @else if unquote($side) == 'left' {
+		border-top-left-radius: $radius !important;
+		border-bottom-left-radius: $radius !important;
+	} @else if unquote($side) == 'bottom' {
+		border-bottom-left-radius: $radius !important;
+		border-bottom-right-radius: $radius !important;
+	} @else {
+		border-radius: $radius !important;
+	}
+}
 
 
 // Common Backgrounds
 
-html, body, #preloader, .error-page {
+html, body, .error-page {
 	background: $light-gray url('/plugins/images/background/blur-dark.png') center center no-repeat !important;
 	background-size: cover !important;
 }
@@ -47,20 +74,25 @@ html, body, #preloader, .error-page {
 .btn-primary.disabled:focus,
 .btn-primary,
 .btn-primary.disabled,
+.el-card-avatar a:hover,
+.el-card-avatar a:focus,
+.el-card-content.bg-org,
+.fc-toolbar,
 .fc-button,
+.fc-unthemed .fc-today,
 .navbar-header,
-.bg-info,
+.bg-info:not(.inside-request-div):not(.badge),
 .panel,
 .panel-body,
-.fc-toolbar,
-.bg-org,
 .login-box,
 .white-box,
+.well,
 .tabs-style-flip .content-wrap,
 #page-wrapper,
-.nav .open>a,
-.nav .open>a:focus,
-.nav .open>a:hover,
+.nav-tabs,
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover,
 .btn-1b.btn-primary:after,
 .btn-1c.btn-primary:after,
 .btn-1d.btn-primary:after,
@@ -76,57 +108,84 @@ html, body, #preloader, .error-page {
 .tabs-style-flip nav a::after,
 .panel-blue .panel-heading,
 .panel-info .panel-heading,
-.ace-idle-fingers {
+table.dataTable tbody tr,
+.table-hover > tbody > tr:hover,
+.label-info,
+.fc-day,
+.pagination a,
+.ace-idle-fingers,
+.swapLog {
 	background: $black15a !important;
 }
 
-// Chrome's support for filter blurs is currently still experiemntal and off by
-// default. Making sidebar darker for now to compensate, but normally it is
-// assigned $black15a.
-.sidebar,
 .sidebar .sidebar-head,
 .login-sidebar .white-box,
-.table-hover>tbody>tr:hover,
-.table-striped>tbody>tr:nth-of-type(odd),
-.table>tbody>tr.active>td,
-.table>tbody>tr.active>th,
-.table>tbody>tr>td.active,
-.table>tbody>tr>th.active,
-.table>tfoot>tr.active>td,
-.table>tfoot>tr.active>th,
-.table>tfoot>tr>td.active,
-.table>tfoot>tr>th.active,
-.table>thead>tr.active>td,
-.table>thead>tr.active>th,
-.table>thead>tr>td.active,
-.table>thead>tr>th.active,
+.table-striped > tbody > tr:nth-of-type(odd),
+.table > tbody > tr.active > td,
+.table > tbody > tr.active > th,
+.table > tbody > tr > td.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr.active > td,
+.table > tfoot > tr.active>th,
+.table > tfoot > tr > td.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > thead > tr.active > th,
+.table > thead > tr > td.active,
+.table > thead > tr > th.active,
+.recent-title,
+.bg-theme,
+.fc th.fc-sun,
+.fc th.fc-tue,
+.fc th.fc-thu,
+.fc th.fc-sat,
+.fc th.fc-mon,
+.fc th.fc-wed,
+.fc th.fc-fri,
+#scroll,
 .iziToast,
 .ace-idle-fingers .ace_gutter {
 	background: $black30a !important;
 }
 
-.dropdown-menu>li>a:hover,
-#side-menu>li>a.active,
-#side-menu>li>ul>li>a.active,
-.nav-tabs>li>a:hover,
-.nav-tabs>li>a:focus,
-.nav-tabs>li.active>a,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover,
+.dropdown-menu > li > a:hover,
+#side-menu > li > a.active,
+#side-menu > li > ul > li > a.active,
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover,
 .tabs-style-flip nav a:hover::after,
 .tabs-style-flip nav li.tab-current a::after,
 .checkbox label::before,
 .iziToast-progressbar,
-.ace-idle-fingers .ace_marker-layer .ace_active-line {
+.ace-idle-fingers .ace_marker-layer .ace_active-line,
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination a:focus,
+.pagination a:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.swapLog.active {
 	background: $white08a !important;
 }
 
 .btn-info:hover,
 .btn-info:focus,
+.btn[data-filter="request-result-all"],
 .fc-button:hover,
 .fc-button:focus,
+.fc-state-active,
+.fc-today-button.fc-state-disabled,
 .checkbox-primary input[type=checkbox]:checked+label::before,
-#scroll:hover,
+.radio-purple input[type=radio]:checked+label::after,
+.radio-purple input[type=radio]+label::after,
 .plyr__control--overlaid:focus,
 .plyr__control--overlaid:hover,
 .plyr--video .plyr__controls .plyr__control.plyr__tab-focus,
@@ -139,13 +198,16 @@ html, body, #preloader, .error-page {
 .slimScrollBar,
 .btn-primary:hover,
 .btn-primary:focus,
-.el-element-overlay .el-card-item .el-overlay-1 .el-info>li a:hover {
+.el-element-overlay a.btn-outline:hover,
+.el-element-overlay a.btn-outline:focus,
+#scroll:hover,
+#scroll:focus {
 	background: $white !important;
 }
 
 .white-popup .panel-heading,
 .input-group-addon,
-.white-popup .panel>.table-responsive {
+.white-popup .panel > .table-responsive {
 	background: $black20 !important;
 }
 
@@ -157,83 +219,27 @@ html, body, #preloader, .error-page {
 
 // Common Colors
 
-.btn-info.disabled,
-.btn-primary.disabled,
-.text-dark,
-.bg-title .breadcrumb a,
-.tabs-style-flip nav a,
-.bg-title h4,
-.fc-title,
-.daterangepicker .input-mini,
-.dd-handle,
-.dd3-content,
-.dropify-wrapper,
-.panel-default .panel-heading,
-.panel-white .panel-heading,
-.select2-container .select2-choice,
-.steamline .sl-right div>a,
-.white-box .box-title,
-a.list-group-item,
-button.list-group-item,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-#side-menu li a {
-	color: $white70a !important;
-}
-
-.btn-info:hover,
-.btn-info:focus,
-.fc-button:hover,
-.fc-button:focus,
-.fc-event:hover .fc-title,
-.fc-event:focus .fc-title,
-.dropdown-menu>li>a:hover,
-.text-dark:hover,
-.profile-social-icons a:hover,
-#side-menu li:hover a,
-.panel-info a:hover,
-.white-box,
-.fcbtn a {
-	color: $white !important;
-}
-
-html,
-body,
-.profile-social-icons a,
-.navbar-top-links>li>a:hover,
-.nav-tabs>li>a:hover,
-.tabs-style-flip nav a:hover,
-.panel-info a,
-.text-muted,
-.form-control,
-.ace-idle-fingers .ace_gutter {
-	color: $text !important;
-}
-
-.navbar-top-links>li>a,
-.nav-tabs>li>a,
-.tabs-style-flip nav,
-.fc-day-number,
-.fc-day-number:hover,
-.fc-day-number:focus {
-	color: $text-muted !important;
-}
-
 a:hover,
 a:focus,
 a.text-primary:hover,
 a.text-primary:focus,
 .btn-info,
 .btn-primary:hover,
-#side-menu>li>a.active,
-#side-menu>li>ul>li>a.active,
-.el-element-overlay .el-card-item .el-overlay-1 .el-info>li a:hover,
+.btn-primary:focus,
+.fc-button,
+.el-element-overlay a.btn-outline:hover,
+.el-element-overlay a.btn-outline:focus,
+#side-menu > li > a.active,
+#side-menu > li > ul > li > a.active,
 .fcbtn:hover a,
-.plyr--full-ui input[type=range] {
+.fcbtn:focus a,
+.plyr--full-ui input[type=range],
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+.swapLog.active {
 	color: $theme !important;
 }
 
@@ -247,6 +253,142 @@ a,
 	color: $theme-light !important;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn-info.disabled,
+.btn-primary.disabled,
+.bg-plex,
+.btn-youtube,
+.el-card-avatar a,
+.refreshImage,
+.text-dark,
+.bg-title .breadcrumb a,
+.tabs-style-flip nav a,
+.bg-title h4,
+.fc-title,
+.label-info,
+.daterangepicker .input-mini,
+.dd-handle,
+.dd3-content,
+.dropify-wrapper,
+.panel-default .panel-heading,
+.panel-white .panel-heading,
+.select2-container .select2-choice,
+.steamline .sl-right div>a,
+.white-box .box-title,
+a.list-group-item,
+button.list-group-item,
+#side-menu li a,
+.swapLog {
+	color: $white70a !important;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.bg-plex:hover,
+.bg-plex:focus,
+.btn-youtube:hover,
+.btn-youtube:focus,
+.el-card-avatar a:hover,
+.el-card-avatar a:focus,
+.el-element-overlay a.btn-outline,
+.refreshImage:hover,
+.refreshImage:focus,
+.fc-button:hover,
+.fc-button:focus,
+.fc-state-active,
+.fc-today-button.fc-state-disabled,
+.fc-event:hover .fc-title,
+.fc-event:focus .fc-title,
+.dropdown-menu>li>a:hover,
+.text-dark:hover,
+.profile-social-icons a:hover,
+#side-menu li:hover a,
+.panel-info a:hover,
+h2.m-b-0.font-medium.pull-right,
+.white-box .box-title,
+.fcbtn a {
+	color: $white !important;
+}
+
+html,
+body,
+.profile-social-icons a,
+.navbar-top-links > li > a:hover,
+.nav-tabs > li > a:hover,
+.tabs-style-flip nav a:hover,
+.panel-info a,
+.text-muted,
+.form-control,
+input[aria-controls="loginLogTable"],
+.ace-idle-fingers .ace_gutter,
+.pagination a:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	color: $text !important;
+}
+
+.navbar-top-links > li > a,
+.nav-tabs > li > a,
+.tabs-style-flip nav,
+.fc-day-number,
+.fc-day-number:hover,
+.fc-day-number:focus,
+.pagination a,
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_paginate,
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_processing,
+.footable.breakpoint > tbody > tr > td > span.footable-toggle,
+ pre {
+	color: $text-muted !important;
+}
+
+
+// Common Border Colors
+
+.btn-info,
+.btn-info:hover,
+.btn-info:focus,
+.btn[data-filter="request-result-all"],
+.fc-button,
+.fc-button:hover,
+.fc-button:focus,
+.checkbox-primary input[type=checkbox]:checked+label::before,
+.radio-purple input[type=radio]:checked+label::before, {
+	border-color: $theme;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary.focus,
+.btn-primary.focus:active,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.el-element-overlay a.btn-outline:hover,
+.el-element-overlay a.btn-outline:focus,
+#scroll,
+#scroll:hover,
+#scroll:focus {
+	border-color: $white !important;
+}
+
+.btn-info.disabled,
+.btn-primary.disabled {
+	border-color: $white70a;
+}
+
 
 // Blurs
 // Chrome's support for filter blurs is currently still experiemntal and off by
@@ -254,7 +396,10 @@ a,
 
 .sidebar,
 .sidebar-head,
-.iziToast {
+.iziToast,
+.recent-title,
+.mfp-bg,
+.mfp-zoom-out.mfp-ready.mfp-bg {
 	backdrop-filter: blur(30px);
 	-webkit-backdrop-filter: blur(30px);
 }
@@ -294,8 +439,8 @@ html, body, h1, h2, h3, h4, h5, h6, .sttabs nav a span, .panel .panel-body:first
 	font-family: Plexeina, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
-h1, h2, h3, h4, h5, h6, .btn {
-	font-weight: 700;
+h1, h2, h3, h4, h5, h6, .btn, .fc-button {
+	font-weight: 700 !important;
 }
 
 
@@ -306,7 +451,7 @@ h1, h2, h3, h4, h5, h6, .btn {
 	padding: 10px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 	.navbar {
 		padding-left: 60px;
 	}
@@ -342,23 +487,30 @@ h1, h2, h3, h4, h5, h6, .btn {
 }
 
 .dropdown-menu {
-	border-radius: 3px;
+	@include border-radius(3px);
 	background: $dark-gray;
-}
 
-.dropdown-menu > li > a {
-	color: $menu-link !important;
+	a {
+		color: $menu-link !important;
+	}
 }
 
 
 // Sidebar
 
-.sidebar .sidebar-head {
-	padding: 5px 20px;
+// Chrome's support for filter blurs is currently still experiemntal and off by
+// default. Making sidebar darker for now to compensate, but normally it is
+// assigned $black15a.
+.sidebar {
+	background: $black70a;
 }
 
-.sidebar-head span {
-	font-weight: 700
+.sidebar .sidebar-head {
+	padding: 5px 20px;
+
+	span {
+		font-weight: 700
+	}
 }
 
 .tabLoaded {
@@ -396,19 +548,19 @@ h1, h2, h3, h4, h5, h6, .btn {
 
 .slimScrollBar, .slimScrollRail {
 	width: 3px !important;
-	border-radius: 0 !important;
+	@include border-radius(0);
 }
 
 
 // Page Wrapper & Frame
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 	.fix-header #page-wrapper {
 		margin-top: 60px;
 	}
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 	.fix-header #page-wrapper {
 		margin-top: 60px;
 	}
@@ -419,12 +571,23 @@ h1, h2, h3, h4, h5, h6, .btn {
 }
 
 
-// Internal
+// Internal / Homepage
 
-.well, .form-control, .nav-tab, .nav-tabs > li > a, .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover, .tabs-style-flip nav li.tab-current a::after {
+#preloader {
+	background: $light-gray;
+}
+
+.well,
+.form-control,
+.nav-tab,
+.nav-tabs > li > a,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover,
+.tabs-style-flip nav li.tab-current a::after {
 	margin: 0;
 	border: 0;
-	border-radius: 0;
+	@include border-radius(0);
 }
 
 .tabs-style-flip nav a, .tabs-style-flip nav a::after, .tabs-style-flip nav li.tab-current a::after {
@@ -440,6 +603,20 @@ h1, h2, h3, h4, h5, h6, .btn {
 
 .panel-heading {
 	font-weight: 700 !important;
+
+	.btn {
+		margin-left: -12px;
+		margin-top: -7px;
+	}
+
+	.btn.popup-with-form {
+		padding: 2px;
+		margin-top: -4px;
+	}
+
+	.btn-group {
+		margin-right: -0.5rem;
+	}
 }
 
 .error-box {
@@ -451,8 +628,124 @@ h1, h2, h3, h4, h5, h6, .btn {
 	font-weight: 700;
 }
 
+.css-bar-sm > img {
+	padding: 5px;
+}
+
 .plyr__control--overlaid {
 	background: $theme08a;
+}
+
+h2.m-b-0.font-medium.pull-right {
+	filter: drop-shadow(0px 2px 5px $black70a);
+	-webkit-filter: drop-shadow(0px 2px 5px $black70a);
+}
+
+.mfp-zoom-out .mfp-with-anim {
+	transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+}
+
+.mfp-3d-unfold .mfp-with-anim,
+.mfp-3d-unfold.mfp-ready .mfp-with-anim {
+	transform: none;
+	-webkit-transform: none;
+	transition: none;
+	-webkit-transition: none;
+}
+
+/*
+.mfp-bg,
+.mfp-zoom-out.mfp-ready.mfp-bg {
+	opacity: 0.5;
+}
+*/
+
+.el-element-overlay .white-box {
+	padding: 2px;
+}
+
+.userManagement,
+.categoryEditor {
+	.el-card-avatar {
+		@include border-radius(1000px);
+	}
+}
+
+.label.m-l-20 {
+	margin-left: 10px !important;
+    padding: 3px 8px 3px;
+	font-weight: 700;
+}
+
+.recent-title {
+	padding: 5px;
+	font-weight: bold;
+}
+
+.owl-stage {
+	width: 8200px !important;
+	height: 229px !important;
+}
+
+.owl-item {
+	padding: 2px;
+}
+
+.el-card-item .el-card-avatar,
+.item {
+	box-shadow: 0 0 2px $black35a;
+	-webkit-box-shadow: 0 0 2px $black35a;
+}
+
+.el-card-item:hover .el-card-avatar,
+.item:hover {
+	box-shadow: 0 0 0 2px $theme;
+	-webkit-box-shadow: 0 0 0 2px $theme;
+}
+
+.item:hover,
+.hover-homepage-item:hover,
+.progress,
+.el-card-item .el-card-avatar,
+.pagination a {
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+}
+
+.el-card-content small {
+	color: $white45a;
+}
+
+.el-overlay-1:hover img {
+	-webkit-transform: none !important;
+	-ms-transform: none !important;
+}
+
+.progress {
+	height: 3px;
+	margin-bottom: 5px;
+}
+
+.fc-widget-content {
+	border-color: $white08a;
+}
+
+.pagination a,
+.paginate_button {
+	border: 0 !important;
+	@include border-radius(0);
+}
+
+#homepage-items {
+	.white-box,
+	.panel-heading {
+		padding: 0;
+	}
+}
+
+#plexStreams .hidden-xs {
+	display: none;
 }
 
 #customize-appearance-form .tab-content .tab-pane:last-of-type .form-group .control-label {
@@ -461,59 +754,45 @@ h1, h2, h3, h4, h5, h6, .btn {
 
 #customCSSEditor {
 	height: -webkit-fill-available !important;
-	border-radius: 3px;
+	@include border-radius(3px);
 }
 
-.form-control, .form-material .form-control {
+.form-control,
+.form-material .form-control,
+input[aria-controls="loginLogTable"] {
 	height: 38px;
 	line-height: 1.5;
 	padding: 6px 12px;
-	border-radius: 3px !important;
+	@include border-radius(3px);
 	vertical-align: middle;
 	background: $white25a;
 	transition: background 0.2s;
 	-webkit-transition: background 0.2s;
-}
 
-.form-control:focus, .form-material .form-control.focus, .form-material .form-control:focus {
-	color: $black33 !important;
-	background: $text !important;
-}
-
-.fc-state-default .fc-corner-right {
-	border-top-left-radius: 0 !important;
-	border-bottom-left-radius: 0 !important;
+	&.focus,
+	&:focus {
+		color: $black33 !important;
+		background: $text !important;
+	}
 }
 
 .input-group-addon {
-	border-radius: 3px;
-}
-
-#request-input {
-	border-top-left-radius: 3px !important;
-	border-bottom-left-radius: 3px !important;
-}
-
-#request-input, .fc-state-default .fc-corner-left {
-	border-top-right-radius: 0 !important;
-	border-bottom-right-radius: 0 !important;
+	@include border-radius(3px);
 }
 
 
 // Modal
 
 .white-popup .panel-heading {
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	@include border-radius(3px, 'top');
 }
 
 .white-popup-block, .white-popup .panel-body {
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+	@include border-radius(3px, 'bottom');
 }
 
 .white-popup .panel, .white-popup-block {
-	border-radius: 3px;
+	@include border-radius(3px);
 }
 
 @media screen and (min-width: 768px) {
@@ -525,6 +804,10 @@ h1, h2, h3, h4, h5, h6, .btn {
 
 #invite-area .form-group {
 	margin: 0;
+}
+
+#new-invite-form .btn {
+	margin-right: 0.25rem;
 }
 
 
@@ -553,107 +836,186 @@ h1, h2, h3, h4, h5, h6, .btn {
 
 // Buttons
 
-.btn-lg {
-	padding: 12px 30px;
-}
-
 .btn, .fc-button, #scroll {
 	border-width: 2px !important;
 	border-style: solid;
-	border-radius: 1000px;
 	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 }
 
-.btn-info, .btn-info:hover, .btn-info:focus, .fc-button, .fc-button:hover, .fc-button:focus, .checkbox-primary input[type=checkbox]:checked+label::before, #scroll, #scroll:hover {
-	border-color: $theme;
+.btn:not(.showPassword):not(.dropdown-toggle), #scroll, #newRequestButton {
+	@include border-radius(1000px);
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.focus, .btn-primary.focus:active, .btn-primary:active:focus, .btn-primary:active:hover {
-	border-color: $white;
-}
-
-.btn-info.disabled, .btn-primary.disabled {
-	border-color: $white70a;
-}
-
-.btn-info.disabled.focus, .btn-info.disabled:focus, .btn-info.disabled:hover, .btn-info.focus, .btn-info:focus, .btn-info:hover, .btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
+.btn-info.disabled.focus,
+.btn-info.disabled:focus,
+.btn-info.disabled:hover,
+.btn-info.focus,
+.btn-info:focus,
+.btn-info:hover,
+.btn-primary.disabled.focus,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:hover,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:hover,
+.fc-button:hover,
+.fc-state-hover,
+.fc-today-button,
+.mailbox-widget
+.customtab li a:hover {
 	opacity: 1;
+}
+
+.btn-lg {
+	padding: 12px 30px;
+}
+
+.btn-circle.btn-lg {
+	padding: 10px;
+}
+
+.btn.active, .btn:active {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.btn[data-filter="request-result-movie"] {
+	color: $movie !important;
+	border-color: $movie !important;
+
+	&:hover,
+	&:focus {
+		background: $movie !important;
+		color: $white !important;
+	}
+}
+
+.btn[data-filter="request-result-tv"] {
+	color: $tv !important;
+	border-color: $tv !important;
+
+	&:hover,
+	&:focus {
+		background: $tv !important;
+		color: $white !important;
+	}
+}
+
+.btn[data-filter="request-result-music"] {
+	color: $music !important;
+	border-color: $music !important;
+
+	&:hover,
+	&:focus {
+		background: $music !important;
+		color: $white !important;
+	}
 }
 
 #scroll span {
 	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
-	border-bottom-color: $theme;
-}
-
-#scroll:hover span {
 	border-bottom-color: $white;
 }
 
-.panel-heading .btn {
-	margin-top: -6px;
-	margin-right: -12px;
+#scroll:hover,
+#scroll:focus {
+	span {
+		border-bottom-color: $theme;
+	}
 }
 
-.btn-group .btn {
-	margin-right: 0;
+.input-group-btn,
+.btn-group {
+	.btn:not(.dropdown-toggle):not(:only-child) {
+		margin-right: 0;
+		@include border-radius(0);
+	}
 }
 
-.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
-	border-right-width: 1px !important;
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.fc-state-default.fc-corner-left {
+	@include border-radius(1000px, 'left');
+	@include border-radius(0, 'right');
+	border-right-width: 0px !important;
 }
 
-.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
-	border-left-width: 1px !important;
-}
-
-.checkbox label::before {
-	border: 0;
-	border-radius: 3px;
-	transition: all 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-}
-
-.el-element-overlay .el-card-item .el-overlay-1 .el-info>li a {
-	padding: 10px 12px;
-}
-
-#request-input-div .dropdown-toggle {
-	border-left-width: 0;
-}
-
-#newRequestButton {
-	border-radius: 1000px;
-	margin-left: 1rem;
-}
-
-#newRequestButton .fa-search {
-	margin-left: 0 !important;
+.btn-group > .btn:last-child:not(:first-child), .dropdown-toggle:not(:first-child),
+.fc-state-default.fc-corner-right {
+	@include border-radius(1000px, 'right');
+	@include border-radius(0, 'left');
+	border-left-width: 0px !important;
 }
 
 .fc-state-default {
 	text-shadow: none;
 	box-shadow: none;
+	-webkit-box-shadow: none;
 }
 
-.fc-state-default .fc-corner-left {
-	border-top-left-radius: 1000px !important;
-	border-bottom-left-radius: 1000px !important;
-	border-right-width: 0;
+.fc-today-button {
+	display: block;
+	cursor: pointer;
+	filter: alpha(opacity=1);
 }
 
-.fc-state-default .fc-corner-right {
-	border-top-right-radius: 1000px !important;
-	border-bottom-right-radius: 1000px !important;
-	border-left-width: 0;
-}
-
-
-// Notifications
-
-.iziToast {
+.checkbox label::before {
 	border: 0;
+	@include border-radius(3px);
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+
+.input-group .form-control:first-child {
+	@include border-radius(0, 'right');
+	@include border-radius(3px, 'left');
+
+	.dropdown-toggle {
+		border-left-width: 0;
+	}
+}
+
+#newRequestButton {
+    padding: 6px 9.5px;
+	margin-left: 1rem;
+
+	.fa-search {
+		margin-left: 0 !important;
+	}
+}
+
+.bg-plex,
+.btn-youtube {
+	padding: 15.5px 16px;
+}
+
+div[id^='request'] {
+	h5.text-center {
+		margin-bottom: 1.5rem;
+	}
+
+	.bg-plex,
+	.btn-youtube {
+		margin-top: 10px;
+	}
+}
+
+.updateNow,
+.newAPIKey,
+.getPlexTokenAuth,
+.getPlexMachineAuth,
+.purgeLog {
+	font-size: 14px;
+    padding: 7.5px 10px;
+}
+
+
+// Notifications (& Log Toggle)
+
+.iziToast,
+.swapLog {
+	border: 0 !important;
 }
 
 

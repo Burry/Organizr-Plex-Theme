@@ -17,3 +17,7 @@ A theme for Organizr v2 that emulates the style of Plex
 - Add the contents of the `images` folder from this repository to the directory `/plugins/images/`.
 - Open Organizr Settings > Customize > Appearance > Custom CSS, copy and paste the contents of `Plex.css` into the text field, and save.
     - Note: As of now, Organizr v2's stylesheet placement and use of `!important` rules prevents the Plex Theme from setting certain styles if, instead of pasting the stylesheet into Organizr's custom CSS field, it is installed in the `/css/themes` folder.
+
+## Branches
+
+The [master](https://github.com/Burry/organizr-v2-theme-plex/tree/master) branch offers a stylesheet that should look good across all major browsers, but it forgoes experimental `[backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)` effects in lieu of darker backgrounds. If your Organizr users are using Safari or another browser that currently supports these effects, try out the [blur](https://github.com/Burry/organizr-v2-theme-plex/tree/blur) version.

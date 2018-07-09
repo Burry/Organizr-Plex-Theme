@@ -1,5 +1,5 @@
 // Plex Theme for Organizr v2
-// Version 1.1
+// Version 1.2
 // https://github.com/Burry/organizr-v2-theme-plex
 
 // Variables
@@ -969,6 +969,7 @@ input[aria-controls="loginLogTable"] {
 	border-left-width: 0px !important;
 }
 
+.btn-group.open .dropdown-toggle,
 .fc-state-default {
 	text-shadow: none;
 	box-shadow: none;

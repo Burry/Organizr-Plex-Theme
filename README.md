@@ -16,13 +16,13 @@ A theme for Organizr v2 that emulates the style of Plex
 
 ## Installation
 
-- Choose a variant of the Plex Theme in `/css`. Copy the contents of the CSS file.
+- Choose a variant of the Plex Theme in [`/css`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/css). Copy the contents of the CSS file.
 - Open Organizr Settings > Customize > Appearance > Custom CSS, paste the contents of the CSS file into the text field, and save.
     - Note: Organizr v2's stylesheet placement and use of `!important` rules currently prevents the Plex Theme from setting certain styles if it is installed in Organizr's `/css/themes` folder instead of pasting the stylesheet into Organizr's Custom CSS field.
-- *Optional*: Copy the contents of the `/images` folder from this repository to Organizr's directory `/plugins/images/`. These stylesheets link to assets hosted on this GitHub repository, but assets called in Organizr's page markup must be placed in the local directory.
+- *Optional*: Download the contents of the [`/images`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images) folder from this repository to Organizr's directory `/plugins/images/`. These stylesheets link to assets hosted on this GitHub repository, but assets called in Organizr's page markup must be placed in the local directory.
 
 ## Remove Login Chrome
-Add the following lines to `/js/functions.js` inside the function `swapDisplay` case `login` to hide all UI chrome on the login/register page.
+Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` to hide all UI chrome on the login/register page.
 
 ```
 $('.sidebar').addClass('hidden');

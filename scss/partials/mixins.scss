@@ -1,0 +1,6 @@
+// Mixins
+
+@mixin background-blur($style) {
+	background: $noise repeat fixed center center/auto,
+				$style no-repeat fixed center center/cover;
+}

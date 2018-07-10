@@ -1,0 +1,31 @@
+// Media Player
+
+.plyr--video .plyr__controls {
+	.plyr__control {
+		&.plyr__tab-focus,
+        &:hover {
+			background: $theme;
+		}
+	}
+
+	.plyr__control[aria-expanded=true] {
+		background: $theme;
+	}
+}
+
+.plyr__menu__container label.plyr__control input[type=radio]:checked + span {
+	background: $theme;
+}
+
+.plyr--full-ui input[type=range] {
+	color: $theme;
+}
+
+.plyr__control--overlaid {
+	background: $theme08a;
+
+	&:focus,
+	&:hover {
+		background: $theme;
+	}
+}

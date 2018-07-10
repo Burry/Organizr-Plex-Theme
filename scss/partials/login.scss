@@ -1,0 +1,50 @@
+// Login & Register
+
+.login-register {
+	@include background-blur($blur-dark);
+}
+
+.login-box {
+	background: 0 0;
+
+	.m-t-20,
+	.m-t-40 {
+		margin-top: 0 !important;
+	}
+
+	.form-group:last-of-type {
+		margin-bottom: 0;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.login-sidebar {
+	position: relative;
+	right: initial;
+
+	.white-box {
+		width: 100%;
+		height: -webkit-fill-available;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.login-sidebar .white-box {
+		background: $black30a;
+		position: absolute;
+		top: 50%;
+		margin-top: -205px;
+	}
+}
+
+#login-logo {
+	display: block !important;
+	margin-bottom: 50px;
+}
+
+.loginLogo {
+	max-width: -webkit-fill-available;
+}

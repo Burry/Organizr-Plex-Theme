@@ -1,0 +1,64 @@
+// Text
+
+a {
+	color: $theme;
+
+	&.text-primary {
+		&:focus,
+        &:hover {
+			color: $theme-light;
+		}
+	}
+
+	&:focus,
+    &:hover {
+		color: $theme-light;
+	}
+
+	&.list-group-item {
+		color: $white70a;
+	}
+}
+
+h2 {
+	color: $white70a;
+	font-family: $font-stack;
+	font-weight: 700;
+
+	&.m-b-0.font-medium.pull-right {
+		color: $white;
+		filter: drop-shadow(0 2px 5px $black70a);
+	}
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+	color: $white70a;
+	font-family: $font-stack;
+	font-weight: 700;
+}
+
+pre {
+	color: $text-muted !important;
+}
+
+.text-dark {
+	color: $white70a !important;
+
+	&:hover {
+		color: $white !important;
+	}
+}
+
+.text-info,
+.text-primary,
+.text-purple {
+	color: $theme-light !important;
+}
+
+.text-muted {
+	color: $text !important;
+}

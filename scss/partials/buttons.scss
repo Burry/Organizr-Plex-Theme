@@ -1,0 +1,281 @@
+// Buttons
+
+.btn {
+	font-weight: 700;
+	border-width: 2px !important;
+	border-style: solid;
+	transition: all .3s ease;
+
+	&.active,
+	&:active {
+		box-shadow: none;
+	}
+
+	&:not(.showPassword):not(.dropdown-toggle) {
+		border-radius: 5px;
+	}
+
+	&[data-filter="request-result-movie"] {
+		background: 0 0;
+		color: $movie;
+		border-color: $movie;
+
+		&:focus,
+		&:hover {
+			background: $movie;
+			color: $white;
+			border-color: $movie;
+		}
+	}
+
+	&[data-filter="request-result-tv"] {
+		background: 0 0 !important;
+		color: $tv !important;
+		border-color: $tv !important;
+
+		&:focus,
+		&:hover {
+			background: $tv !important;
+			color: $white;
+			border-color: $tv !important;
+		}
+	}
+
+	&[data-filter="request-result-music"] {
+		background: 0 0 !important;
+		color: $music !important;
+		border-color: $music !important;
+
+		&:focus,
+		&:hover  {
+			background: $music !important;
+			color: $white;
+			border-color: $music !important;
+		}
+	}
+
+	&[data-filter="request-result-all"] {
+		background: $theme;
+		border-color: $theme;
+	}
+}
+
+.btn-circle.btn-lg {
+	padding: 10px;
+}
+
+.btn-group {
+	.btn {
+		&:not(.dropdown-toggle):not(:only-child) {
+			margin-right: 0;
+			border-radius: 0 !important;
+		}
+
+		&:first-child:not(:last-child):not(.dropdown-toggle) {
+			border-right-width: 0 !important;
+			border-radius: 5px 0 0 5px !important;
+		}
+		&:last-child:not(:first-child) {
+			border-left-width: 0 !important;
+			border-radius: 0 5px 5px 0 !important;
+		}
+	}
+
+	&.open .dropdown-toggle {
+		text-shadow: none;
+		box-shadow: none;
+	}
+}
+
+.btn-info {
+	background: 0 0 !important;
+	color: $theme !important;
+	border-color: $theme !important;
+
+	&.disabled {
+        background: 0 0 !important;
+    	color: $theme !important;
+    	border-color: $theme !important;
+		opacity: 0.7;
+
+		&.focus,
+		&:focus,
+        &:hover {
+			background: 0 0 !important;
+	    	color: $theme !important;
+	    	border-color: $theme !important;
+			opacity: 0.7;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: $theme !important;
+		color: $white !important;
+		border-color: $theme !important;
+		opacity: 1;
+	}
+}
+
+.btn-label {
+	background: 0 0;
+}
+
+.btn-lg {
+	padding: 12px 30px;
+}
+
+.btn-primary {
+	background-color: #fff;
+	border-color: $white;
+
+	&.disabled {
+		background: 0 0;
+		color: $white70a;
+		border-color: $white70a;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: 0 0;
+			color: $white70a;
+			border-color: $white70a;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: $white;
+		color: $theme;
+		border-color: $white;
+		opacity: 1;
+	}
+
+	&.active,
+	&:active,
+	&.btn-outline {
+		background: 0 0;
+		border-color: $white;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $white;
+			color: $theme;
+			border-color: $white;
+			opacity: 1;
+		}
+	}
+}
+
+.btn-youtube {
+	background: #F00 !important;
+	color: $white70a !important;
+	padding: 15.5px 16px;
+
+	&.focus,
+	&:focus,
+	&:hover {
+		color: $white !important;
+	}
+}
+
+.btn-1b.btn-primary:after,
+.btn-1c.btn-primary:after,
+.btn-1d.btn-primary:after,
+.btn-1e.btn-primary:after,
+.btn-1f.btn-primary:after {
+	background: 0 0;
+}
+
+.input-group-btn .btn:not(.dropdown-toggle):not(:only-child) {
+	margin-right: 0;
+	border-radius: 0 !important;
+}
+
+#newRequestButton {
+	border-radius: 5px !important;
+	padding: 6px 9.5px;
+	margin-left: 1rem;
+
+	.fa-search {
+		margin-left: 0 !important;
+	}
+}
+
+.refreshImage {
+	color: $white70a;
+
+	&:focus,
+	&:hover {
+		color: $white;
+	}
+}
+
+.pagination {
+	a {
+		background: $black15a;
+		color: $text-muted;
+		transition: all .2s;
+		border: 0;
+		border-radius: 0;
+		&:focus {
+			background: $white08a;
+		}
+		&:hover {
+			background: $white08a;
+			color: $text;
+		}
+	}
+
+	> {
+		.active > a {
+			background: $white08a;
+			color: $theme;
+
+			&:focus,
+			&:hover {
+				background: $white08a;
+				color: $theme;
+			}
+		}
+
+		.disabled > a {
+			background: $white08a;
+			color: $text-muted;
+
+			&:focus,
+			&:hover {
+				background: $white08a;
+				color: $text-muted;
+			}
+		}
+	}
+}
+
+#scroll {
+	background: 0 0;
+	background: $black30a;
+	border-color: $white;
+	border-width: 2px;
+	border-style: solid;
+	transition: all .3s ease;
+	border-radius: 1000px;
+
+	&:focus,
+	&:hover {
+		background: $white;
+		border-color: $white;
+
+		span {
+			border-bottom-color: $theme;
+		}
+	}
+
+	span {
+		transition: all .3s ease;
+		border-bottom-color: $white;
+	}
+}

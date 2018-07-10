@@ -1,0 +1,71 @@
+// Form Elements
+
+.checkbox label::before {
+	background: $white08a;
+	border: 0;
+	border-radius: 3px;
+	transition: all .3s ease;
+}
+
+.checkbox-primary input[type=checkbox]:checked + label::before {
+	background: $theme;
+	border-color: $theme;
+}
+
+.form-control,
+.form-material .form-control,
+input[aria-controls=loginLogTable] {
+	color: $text;
+	margin: 0;
+	border: 0;
+	height: 38px;
+	line-height: 1.5;
+	padding: 6px 12px;
+	border-radius: 3px;
+	vertical-align: middle;
+	background: $white25a;
+	transition: background .2s;
+
+	&.focus,
+	&:focus {
+		color: $black33;
+		background: $text;
+	}
+}
+
+.input-group .form-control:first-child {
+	border-radius: 3px 0 0 3px !important;
+
+	.dropdown-toggle {
+		border-left-width: 0 !important;
+	}
+}
+
+.dropdown-toggle:not(:first-child) {
+	border-left-width: 0 !important;
+	border-radius: 0 5px 5px 0;
+}
+
+#mediaSearchQuery,
+#request-input,
+#request-input-div .dropdown-toggle {
+	font-size: 18px;
+	height: 46px;
+	padding: 10px 16px;
+}
+
+.radio-purple input[type=radio] {
+	+ label::after {
+		background: $theme;
+	}
+
+	&:checked {
+		+ label::after {
+			background: $theme;
+		}
+
+		+ label::before {
+			border-color: $theme;
+		}
+	}
+}

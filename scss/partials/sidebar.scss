@@ -1,0 +1,56 @@
+// Sidebar
+
+.sidebar {
+	background: $black70a;
+
+	.sidebar-head {
+		background: $black30a;
+		padding: 5px 20px;
+
+		span {
+			font-weight: 700;
+		}
+
+		h3 {
+			color: $white70a;
+			transition: .2s all;
+		}
+	}
+
+	.slimScrollBar,
+	.slimScrollRail {
+		left: 0 !important;
+	}
+}
+
+#side-menu {
+	li {
+		a {
+			color: $white70a;
+			transition: .2s all;
+
+			&.active {
+				background: $white08a;
+				color: $theme;
+				box-shadow: none;
+			}
+		}
+
+		&:hover a {
+			color: $white;
+
+			&.active {
+				color: $white;
+			}
+		}
+	}
+}
+
+@media (pointer:fine) {
+	#side-menu li a {
+		&:focus,
+		&:hover {
+			background: $white08a;
+		}
+	}
+}

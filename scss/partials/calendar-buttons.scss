@@ -1,0 +1,54 @@
+// Calendar Buttons
+
+.fc-button {
+	background: 0 0 !important;
+	color: $theme;
+	border-color: $theme;
+	font-weight: 700;
+	border-width: 2px;
+	border-style: solid;
+	transition: all .3s ease;
+
+	&:focus,
+	&:hover {
+		background: $theme !important;
+		color: $white;
+		border-color: $theme;
+		opacity: 1;
+	}
+}
+
+.fc-state-default {
+	text-shadow: none;
+	box-shadow: none;
+
+	&.fc-corner-left {
+		border-right-width: 0;
+		border-radius: 5px 0 0 5px;
+	}
+
+	&.fc-corner-right {
+		border-left-width: 0;
+		border-radius: 0 5px 5px 0;
+	}
+}
+
+.fc-state-active {
+	background: $theme !important;
+	color: $white;
+}
+
+.fc-state-hover {
+	opacity: 1;
+}
+
+.fc-today-button {
+	opacity: 1;
+	display: block;
+	cursor: pointer;
+
+	&.fc-state-disabled {
+		background: $theme !important;
+		color: $white !important;
+	}
+}

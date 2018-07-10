@@ -1,0 +1,14 @@
+// Error Page
+
+.error-page {
+	@include background-blur($blur-dark);
+
+	h1 {
+		font-size: 128px;
+		font-weight: 700;
+	}
+}
+
+.error-box {
+	top: inherit;
+}

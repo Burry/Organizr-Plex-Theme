@@ -1,0 +1,42 @@
+// Navbar
+
+.navbar {
+	background: $black70a;
+	padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar {
+		padding-left: 60px;
+	}
+}
+
+.navbar-header {
+	background: 0 0;
+
+	ul:first-of-type {
+		margin-left: 20px;
+	}
+}
+
+.navbar-top-links {
+	.dropdown-user {
+		top: 60px;
+	}
+
+	> li > a {
+		color: $text-muted;
+
+		&:hover {
+			color: $text;
+		}
+	}
+}
+
+.ti-fullscreen {
+	line-height: inherit;
+}
+
+#languageDropdown {
+	display: none;
+}

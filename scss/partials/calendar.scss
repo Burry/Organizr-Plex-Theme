@@ -1,0 +1,56 @@
+// Calendar
+
+.fc th {
+	&.fc-mon,
+	&.fc-tue,
+	&.fc-wed,
+	&.fc-thu,
+	&.fc-fri,
+	&.fc-sat,
+	&.fc-sun {
+		background: $black30a !important;
+	}
+}
+
+.fc-day {
+	background: $black15a;
+}
+
+.fc-day-number {
+	color: $text-muted;
+
+	&:focus,
+	&:hover {
+		color: $text-muted;
+	}
+}
+
+.fc-event {
+	&:focus .fc-title,
+	&:hover .fc-title {
+		color: $white;
+	}
+}
+
+.fc-title {
+	color: $white70a;
+}
+
+.fc-toolbar {
+	background: 0 0 !important;
+	padding: 10px 0;
+}
+
+.fc-unthemed {
+	.fc-today {
+		background: $white08a !important;
+
+		&.fc-state-highlight {
+			background: 0 0 !important;
+		}
+	}
+}
+
+.fc-widget-content {
+	border-color: $white08a;
+}

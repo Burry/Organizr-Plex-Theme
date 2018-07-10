@@ -1,0 +1,14 @@
+// Plex Theme for Organizr v2
+// Version 1.5.0
+// License MIT
+// https://github.com/Burry/organizr-v2-plex-theme
+
+@import 'partials/variables';
+
+$theme: #E5A00D;
+$theme08a: hsla(41, 89%, 47%, 0.8);
+$theme-light: #F7BE02;
+$font-stack: $plexeina-font-stack;
+
+@import 'Plex';
+@import 'partials/plex.tv';

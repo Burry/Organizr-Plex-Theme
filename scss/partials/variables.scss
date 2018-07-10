@@ -1,0 +1,54 @@
+// Variables
+
+// Colors
+
+$theme: #CC7B19 !default;
+$theme08a: hsla(33, 78%, 45%, 0.8) !default;
+$theme-light: #E5A00D !default;
+$movie: #FF7676;
+$tv: #53E69D;
+$music: #007BFF;
+$light-gray: #3F4246;
+$dark-gray: #18191B;
+
+$white70a: hsla(0, 0%, 100%, 0.7);
+$white45a: hsla(0, 0%, 100%, 0.45);
+$white25a: hsla(0, 0%, 100%, 0.25);
+$white08a: hsla(0, 0%, 100%, 0.08);
+$black15a: hsla(0, 0%, 0%, 0.15);
+$black35a: hsla(0, 0%, 0%, 0.35);
+$black50a: hsla(0, 0%, 0%, 0.5);
+$black30a: hsla(0, 0%, 0%, 0.3);
+$black70a: hsla(0, 0%, 0%, 0.7);
+$black50: hsl(0, 0%, 50%);
+$black33: hsl(0, 0%, 33%);
+$black20: hsl(0, 0%, 20%);
+$black16: hsl(0, 0%, 16%);
+
+$white: #FFF;
+$text: #EEE;
+$text-muted: #999;
+$menu-link: #BBB;
+
+
+// URLs
+
+$blur-light: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/blur-light.png");
+$blur-dark: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/blur-dark.png");
+$noise: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/noise.png");
+
+$plexeina-regular-woff2: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/fonts/plexeina-regular-webfont.woff2");
+$plexeina-regular-woff: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/fonts/plexeina-regular-webfont.woff");
+$plexeina-regularitalic-woff2: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/fonts/plexeina-regularitalic-webfont.woff2");
+$plexeina-regularitalic-woff: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/fonts/plexeina-regularitalic-webfont.woff");
+$plexeina-bold-woff2: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/fonts/plexeina-bold-webfont.woff2");
+$plexeina-bold-woff: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/fonts/plexeina-bold-webfont.woff");
+$plexeina-bolditalic-woff2: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/fonts/plexeina-bolditalic-webfont.woff2");
+$plexeina-bolditalic-woff: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/fonts/plexeina-bolditalic-webfont.woff");
+
+
+// Font Stacks
+$system-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$plexeina-font-stack: Plexeina, $system-font-stack;
+$open-sans-font-stack: "Open Sans", $system-font-stack;
+$font-stack: $open-sans-font-stack !default;

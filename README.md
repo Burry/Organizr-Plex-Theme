@@ -7,7 +7,7 @@ A theme for Organizr v2 that emulates the style of Plex
 
 - [`Plex.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) Regular Plex Theme — looks like [Plex Web](https://app.plex.tv/desktop)
 - [`Plex Blur.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex%20Blur.css) Plex Theme with background blur effects (see below)
-- [`Plex.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.tv.css)Uses the colors and button shapes of [Plex.tv](https://www.plex.tv) (rounder and lighter)
+- [`Plex.tv.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.tv.css)Uses the colors and button shapes of [Plex.tv](https://www.plex.tv) (rounder and lighter)
 - [`Plex.tv Blur.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.tv%20Blur.css) Plex.tv theme with background blur effects
 
 ### Blur Effect

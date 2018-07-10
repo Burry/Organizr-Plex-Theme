@@ -11,16 +11,16 @@ let gulp = require('gulp'),
     sass = require('gulp-sass'),
     sassLint = require('gulp-sass-lint'),
     cleanCSS = require('gulp-clean-css'),
-    packageJson = require('./package.json'),
+    packageJSON = require('./package.json'),
     autoPrefixer = require('gulp-autoprefixer'),
     headerComment = require('gulp-header-comment');
 
-// Auto-compile SCSS files on changes
+// Build Sass files when changes detected
 gulp.task('watch', function() {
     gulp.watch("scss/**/*.s+(a|c)ss", ['build']);
 });
 
-// Compile SASS into CSS
+// Lint, compile, and post-process Sass
 gulp.task('build', function() {
     return gulp
         .src("scss/*.s+(a|c)ss")
@@ -31,9 +31,9 @@ gulp.task('build', function() {
         .pipe(cleanCSS({ level: 2 }))
         .pipe(headerComment(`
             Plex Theme for Organizr v2
-            Version ` + packageJson.version + `
-            ` + packageJson.license + ` License
-        ` + packageJson.repository))
+            Version ` + packageJSON.version + `
+            ` + packageJSON.license + ` License
+        ` + packageJSON.repository))
         .pipe(gulp.dest("css"));
 });
 

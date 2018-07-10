@@ -1,3 +1,10 @@
+/**
+* Plex Theme for Organizr v2
+* Version 1.5.0
+* License MIT
+* https://github.com/Burry/organizr-v2-plex-theme
+*/
+
 'use strict';
 
 let gulp = require('gulp'),
@@ -25,7 +32,7 @@ gulp.task('build', function() {
         .pipe(headerComment(`
             Plex Theme for Organizr v2
             Version ` + packageJson.version + `
-            License ` + packageJson.license + `
+            ` + packageJson.license + ` License
         ` + packageJson.repository))
         .pipe(gulp.dest("css"));
 });

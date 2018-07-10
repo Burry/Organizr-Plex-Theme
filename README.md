@@ -5,14 +5,14 @@ A theme for Organizr v2 that emulates the style of Plex
 
 ## Variants
 
-- `Plex.css` Regular Plex Theme — looks like [Plex Web](https://app.plex.tv/desktop)
-- `Plex Blur.css` Plex Theme with background blur effects (see below)
-- `Plex.tv.css` Uses the colors and button shapes of [Plex.tv](https://www.plex.tv) (rounder and lighter)
-- `Plex.tv Blur.css` Plex.tv theme with background blur effects
+- [`Plex.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) Regular Plex Theme — looks like [Plex Web](https://app.plex.tv/desktop)
+- [`Plex Blur.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex%20Blur.css) Plex Theme with background blur effects (see below)
+- [`Plex.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.tv.css)Uses the colors and button shapes of [Plex.tv](https://www.plex.tv) (rounder and lighter)
+- [`Plex.tv Blur.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.tv%20Blur.css) Plex.tv theme with background blur effects
 
 ### Blur Effect
 
-[Plex.css](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) should look good across all major browsers, but it forgoes experimental [backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) blur effects in lieu of darker backgrounds. If your Organizr users are using Safari or another browser that currently supports these effects, try out [Plex Blur.css](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex%20Blur.css).
+[`Plex.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) should look good across all major browsers, but it forgoes experimental [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) blur effects in lieu of darker backgrounds. If your Organizr users are using Safari or another browser that currently supports these effects, try out [`Plex Blur.css`](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex%20Blur.css).
 
 ## Installation
 

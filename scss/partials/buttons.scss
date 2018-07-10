@@ -1,10 +1,10 @@
 // Buttons
 
+// General Button Styles
+
 .btn {
 	font-weight: 700;
-	border-width: 2px !important;
-	border-style: solid;
-	transition: all .3s ease;
+	transition: all .2s ease;
 
 	&.active,
 	&:active {
@@ -12,162 +12,69 @@
 	}
 
 	&:not(.showPassword):not(.dropdown-toggle) {
-		border-radius: 5px;
+		border-radius: 4px;
 	}
 
+	// Movie Request Filter
 	&[data-filter="request-result-movie"] {
-		background: 0 0;
-		color: $movie;
+		background: $movie;
+		color: $white;
 		border-color: $movie;
 
 		&:focus,
 		&:hover {
-			background: $movie;
+			background: lighter($movie, 10%);
 			color: $white;
-			border-color: $movie;
+			border-color: lighter($movie, 10%);
 		}
 	}
 
+	// TV Show Request Filter
 	&[data-filter="request-result-tv"] {
-		background: 0 0 !important;
-		color: $tv !important;
+		background: $tv !important;
+		color: $white !important;
 		border-color: $tv !important;
 
 		&:focus,
 		&:hover {
-			background: $tv !important;
+			background: lighter($tv, 10%) !important;
 			color: $white;
-			border-color: $tv !important;
+			border-color: lighter($tv, 10%) !important;
 		}
 	}
 
+	// Music Request Filter
 	&[data-filter="request-result-music"] {
-		background: 0 0 !important;
-		color: $music !important;
+		background: $music !important;
+		color: $white !important;
 		border-color: $music !important;
 
 		&:focus,
 		&:hover  {
-			background: $music !important;
+			background: lighter($music, 10%) !important;
 			color: $white;
-			border-color: $music !important;
+			border-color: lighter($music, 10%) !important;
 		}
 	}
 
+	// General Request Filter
 	&[data-filter="request-result-all"] {
 		background: $theme;
 		border-color: $theme;
+
+		&:focus,
+		&:hover  {
+			background: $theme-light;
+			border-color: $theme-light;
+		}
 	}
 }
+
+
+// Media Info Pane Play Buttons
 
 .btn-circle.btn-lg {
 	padding: 10px;
-}
-
-.btn-group {
-	.btn {
-		&:not(.dropdown-toggle):not(:only-child) {
-			margin-right: 0;
-			border-radius: 0 !important;
-		}
-
-		&:first-child:not(:last-child):not(.dropdown-toggle) {
-			border-right-width: 0 !important;
-			border-radius: 5px 0 0 5px !important;
-		}
-		&:last-child:not(:first-child) {
-			border-left-width: 0 !important;
-			border-radius: 0 5px 5px 0 !important;
-		}
-	}
-
-	&.open .dropdown-toggle {
-		text-shadow: none;
-		box-shadow: none;
-	}
-}
-
-.btn-info {
-	background: 0 0 !important;
-	color: $theme !important;
-	border-color: $theme !important;
-
-	&.disabled {
-        background: 0 0 !important;
-    	color: $theme !important;
-    	border-color: $theme !important;
-		opacity: 0.7;
-
-		&.focus,
-		&:focus,
-        &:hover {
-			background: 0 0 !important;
-	    	color: $theme !important;
-	    	border-color: $theme !important;
-			opacity: 0.7;
-		}
-	}
-
-	&.focus,
-	&:focus,
-	&:hover {
-		background: $theme !important;
-		color: $white !important;
-		border-color: $theme !important;
-		opacity: 1;
-	}
-}
-
-.btn-label {
-	background: 0 0;
-}
-
-.btn-lg {
-	padding: 12px 30px;
-}
-
-.btn-primary {
-	background-color: #fff;
-	border-color: $white;
-
-	&.disabled {
-		background: 0 0;
-		color: $white70a;
-		border-color: $white70a;
-
-		&.focus,
-		&:focus,
-		&:hover {
-			background: 0 0;
-			color: $white70a;
-			border-color: $white70a;
-		}
-	}
-
-	&.focus,
-	&:focus,
-	&:hover {
-		background: $white;
-		color: $theme;
-		border-color: $white;
-		opacity: 1;
-	}
-
-	&.active,
-	&:active,
-	&.btn-outline {
-		background: 0 0;
-		border-color: $white;
-
-		&.focus,
-		&:focus,
-		&:hover {
-			background: $white;
-			color: $theme;
-			border-color: $white;
-			opacity: 1;
-		}
-	}
 }
 
 .btn-youtube {
@@ -182,6 +89,126 @@
 	}
 }
 
+
+// Button Groups
+
+.btn-group {
+	.btn {
+		&:not(.dropdown-toggle):not(:only-child) {
+			margin-right: 0;
+			border-radius: 0 !important;
+		}
+
+		&:first-child:not(:last-child):not(.dropdown-toggle) {
+			border-right-width: 0 !important;
+			border-radius: 4px 0 0 4px !important;
+		}
+
+		&:last-child:not(:first-child) {
+			border-left-width: 0 !important;
+			border-radius: 0 4px 4px 0 !important;
+		}
+	}
+
+	&.open .dropdown-toggle {
+		text-shadow: none;
+		box-shadow: none;
+	}
+}
+
+
+// Info Button (Main Button)
+
+.btn-info {
+	background: $theme !important;
+	color: $white !important;
+	border-color: $theme !important;
+
+	&.disabled {
+        background: $theme-light !important;
+    	color: $white !important;
+    	border-color: $theme-light !important;
+		opacity: 0.7;
+
+		&.focus,
+		&:focus,
+        &:hover {
+			background: $theme-light !important;
+	    	color: $white !important;
+	    	border-color: $theme-light !important;
+			opacity: 0.7;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: $theme-light !important;
+		color: $white !important;
+		border-color: $theme-light !important;
+		opacity: 1;
+	}
+}
+
+.btn-label {
+	background: 0 0;
+}
+
+.btn-lg {
+	padding: 12px 30px;
+}
+
+
+// Primary Button (For Organizr's style, secondary)
+
+.btn-primary {
+	background: $white;
+	color: $theme;
+	border-color: $white;
+
+	&.disabled {
+		background: $white;
+		color: $theme;
+		border-color: $white;
+		opacity: 0.7;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $white;
+			color: $theme;
+			border-color: $white;
+			opacity: 0.7;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: darken($white, 10%);
+		color: $theme;
+		border-color: darken($white, 10%);
+		opacity: 1;
+	}
+
+	&.active,
+	&:active,
+	&.btn-outline {
+		background: $white;
+		color: $theme;
+		border-color: $white;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: darken($white, 10%);
+			color: $theme;
+			border-color: darken($white, 10%);
+			opacity: 1;
+		}
+	}
+}
+
 .btn-1b.btn-primary:after,
 .btn-1c.btn-primary:after,
 .btn-1d.btn-primary:after,
@@ -190,13 +217,88 @@
 	background: 0 0;
 }
 
+
+// Calendar Buttons
+
+.fc-button {
+	background: $theme !important;
+	color: $white;
+	border-color: $theme;
+	font-weight: 700;
+	border-width: 2px;
+	border-style: solid;
+	transition: all .2s ease;
+
+	&:focus,
+	&:hover {
+		background: $theme-light !important;
+		color: $white;
+		border-color: $theme-light;
+		opacity: 1;
+	}
+}
+
+.fc-state-default {
+	text-shadow: none;
+	box-shadow: none;
+
+	&.fc-corner-left {
+		border-right-width: 0;
+		border-radius: 4px 0 0 4px;
+	}
+
+	&.fc-corner-right {
+		border-left-width: 0;
+		border-radius: 0 4px 4px 0;
+	}
+}
+
+.fc-state-active,
+.fc-state-active:focus,
+.fc-state-active:hover {
+	background: $white !important;
+	color: $theme;
+	border-color: $white;
+}
+
+.fc-state-hover {
+	opacity: 1;
+}
+
+.fc-today-button {
+	opacity: 1;
+	display: block;
+	cursor: pointer;
+
+	&.fc-state-disabled {
+		background: $white !important;
+		color: $theme !important;
+		border-color: $white;
+	}
+}
+
+
+// Input Group Buttons
+
+.input-group .form-control:first-child .dropdown-toggle {
+	border-left-width: 0 !important;
+}
+
 .input-group-btn .btn:not(.dropdown-toggle):not(:only-child) {
 	margin-right: 0;
 	border-radius: 0 !important;
 }
 
+.dropdown-toggle:not(:first-child) {
+	border-left-width: 0 !important;
+	border-radius: 0 4px 4px 0;
+}
+
+
+// Home Page Request Button
+
 #newRequestButton {
-	border-radius: 5px !important;
+	border-radius: 4px !important;
 	padding: 6px 9.5px;
 	margin-left: 1rem;
 
@@ -204,6 +306,9 @@
 		margin-left: 0 !important;
 	}
 }
+
+
+// Poster Image Refresh Button
 
 .refreshImage {
 	color: $white70a;
@@ -213,6 +318,9 @@
 		color: $white;
 	}
 }
+
+
+// Pagination Buttons
 
 .pagination {
 	> li {
@@ -259,27 +367,25 @@
 	}
 }
 
+
+// Scroll-To-Top Button
+
 #scroll {
-	background: 0 0;
-	background: $black30a;
-	border-color: $white;
+	background: $theme;
+	border-color: $theme;
 	border-width: 2px;
 	border-style: solid;
-	transition: all .3s ease;
+	transition: all .2s ease;
 	border-radius: 1000px;
 
 	&:focus,
 	&:hover {
-		background: $white;
-		border-color: $white;
-
-		span {
-			border-bottom-color: $theme;
-		}
+		background: $theme-light;
+		border-color: $theme-light;
 	}
 
 	span {
-		transition: all .3s ease;
+		transition: all .2s ease;
 		border-bottom-color: $white;
 	}
 }

@@ -362,17 +362,7 @@ body {
 	background: $black16;
 	border-radius: 3px!important;
 }
-.fcbtn {
-	a {
-		color: $white!important;
-	}
-	&:focus a {
-		color: $theme!important;
-	}
-	&:hover a {
-		color: $theme!important;
-	}
-}
+
 
 .bg-plex {
 	color: $white70a!important;

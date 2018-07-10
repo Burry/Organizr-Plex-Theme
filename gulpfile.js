@@ -1,10 +1,3 @@
-/**
-* Plex Theme for Organizr v2
-* Version 1.5.1
-* MIT License
-* https://github.com/Burry/organizr-v2-plex-theme
-*/
-
 'use strict';
 
 let gulp = require('gulp'),

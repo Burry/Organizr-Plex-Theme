@@ -9,53 +9,15 @@ $font-stack: $plexeina-font-stack;
 
 @import 'partials/mixins';
 @import 'partials/plexeina-font';
+@import 'partials/buttons';
+@import 'partials/buttons-plex.tv';
 @import 'partials/error';
 @import 'partials/text';
 @import 'partials/form';
 @import 'partials/login';
 @import 'partials/navbar';
 @import 'partials/sidebar';
-@import 'partials/buttons';
 @import 'partials/calendar';
-@import 'partials/calendar-buttons';
 @import 'partials/player';
 
 @import 'partials/misc-cleanup.scss';
-
-.btn {
-	border-width: 2px !important;
-
-	&:not(.showPassword):not(.dropdown-toggle) {
-		border-radius: 1000px !important;
-	}
-}
-
-.btn-group {
-	.btn {
-		&:first-child:not(:last-child):not(.dropdown-toggle) {
-			border-radius: 1000px 0 0 1000px !important;
-		}
-		&:last-child:not(:first-child) {
-			border-radius: 0 1000px 1000px 0 !important;
-		}
-	}
-}
-
-.dropdown-toggle:not(:first-child) {
-	border-radius: 0 1000px 1000px 0 !important;
-}
-
-.fc-state-default {
-	&.fc-corner-left {
-		border-radius: 1000px 0 0 1000px;
-	}
-
-	&.fc-corner-right {
-		border-radius: 0 1000px 1000px 0;
-	}
-}
-
-#newRequestButton,
-#scroll {
-	border-radius: 1000px !important;
-}

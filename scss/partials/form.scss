@@ -34,16 +34,7 @@ input[aria-controls=loginLogTable] {
 }
 
 .input-group .form-control:first-child {
-	border-radius: 3px 0 0 3px !important;
-
-	.dropdown-toggle {
-		border-left-width: 0 !important;
-	}
-}
-
-.dropdown-toggle:not(:first-child) {
-	border-left-width: 0 !important;
-	border-radius: 0 5px 5px 0;
+	border-radius: 5px 0 0 5px;
 }
 
 #mediaSearchQuery,

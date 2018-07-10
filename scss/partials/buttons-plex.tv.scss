@@ -1,0 +1,241 @@
+// Plex.tv-style Buttons
+
+.btn {
+	border-style: solid;
+	border-width: 2px !important;
+
+	&:not(.showPassword):not(.dropdown-toggle) {
+		border-radius: 1000px;
+	}
+
+	// Movie Request Filter
+	&[data-filter="request-result-movie"] {
+		background: 0 0;
+		color: $movie;
+		border-color: $movie;
+
+		&:focus,
+		&:hover {
+			background: $movie;
+			color: $white;
+			border-color: $movie;
+		}
+	}
+
+	// TV Show Request Filter
+	&[data-filter="request-result-tv"] {
+		background: 0 0 !important;
+		color: $tv !important;
+		border-color: $tv !important;
+
+		&:focus,
+		&:hover {
+			background: $tv !important;
+			color: $white;
+			border-color: $tv !important;
+		}
+	}
+
+	// Music Request Filter
+	&[data-filter="request-result-music"] {
+		background: 0 0 !important;
+		color: $music !important;
+		border-color: $music !important;
+
+		&:focus,
+		&:hover  {
+			background: $music !important;
+			color: $white;
+			border-color: $music !important;
+		}
+	}
+}
+
+
+// Button Groups
+
+.btn-group {
+	.btn {
+		&:first-child:not(:last-child):not(.dropdown-toggle) {
+			border-radius: 1000px 0 0 1000px !important;
+		}
+
+		&:last-child:not(:first-child) {
+			border-radius: 0 1000px 1000px 0 !important;
+		}
+	}
+}
+
+
+// Info Button (Main Button)
+
+.btn-info {
+	background: 0 0 !important;
+	color: $theme !important;
+	border-color: $theme !important;
+
+	&.disabled {
+        background: 0 0 !important;
+    	color: $theme !important;
+    	border-color: $theme !important;
+
+		&.focus,
+		&:focus,
+        &:hover {
+			background: 0 0 !important;
+	    	color: $theme !important;
+	    	border-color: $theme !important;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: $theme !important;
+		color: $white !important;
+		border-color: $theme !important;
+	}
+}
+
+
+// Primary Button (For Organizr's style, secondary)
+
+.btn-primary {
+	background: 0 0;
+	color: $white;
+	border-color: $white;
+
+	&.disabled {
+		background: 0 0;
+		color: $white70a;
+		border-color: $white70a;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: 0 0;
+			color: $white70a;
+			border-color: $white70a;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: $white;
+		color: $theme;
+		border-color: $white;
+	}
+
+	&.active,
+	&:active,
+	&.btn-outline {
+		background: 0 0;
+		color: $white;
+		border-color: $white;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $white;
+			color: $theme;
+			border-color: $white;
+		}
+	}
+}
+
+
+// Calendar Buttons
+
+.fc-button {
+	background: 0 0 !important;
+	color: $theme;
+	border-color: $theme;
+
+	&:focus,
+	&:hover {
+		background: $theme !important;
+		color: $white;
+		border-color: $theme;
+	}
+}
+
+.fc-state-default {
+	&.fc-corner-left {
+		border-radius: 1000px 0 0 1000px;
+	}
+
+	&.fc-corner-right {
+		border-radius: 0 1000px 1000px 0;
+	}
+}
+
+.fc-state-active,
+.fc-state-active:focus,
+.fc-state-active:hover {
+	background: $theme !important;
+	color: $white;
+	border-color: $theme;
+}
+
+.fc-state-hover {
+	opacity: 1;
+}
+
+.fc-today-button {
+	&.fc-state-disabled {
+		background: $theme !important;
+		color: $white !important;
+		border-color: $theme;
+	}
+}
+
+
+// Input Group Buttons
+
+.dropdown-toggle:not(:first-child) {
+	border-radius: 0 1000px 1000px 0;
+}
+
+
+// Home Page Request Button
+
+#newRequestButton {
+	border-radius: 1000px !important;
+}
+
+
+// Scroll-To-Top Button
+
+#scroll {
+	background: $black30a;
+	border-color: $white;
+
+	&:focus,
+	&:hover {
+		background: $white;
+		border-color: $white;
+
+		span {
+			border-bottom-color: $theme;
+		}
+	}
+
+	span {
+		border-bottom-color: $white;
+	}
+}
+
+
+// Settings "I Want to Help" Button
+
+.fcbtn {
+	a {
+		color: $white !important;
+	}
+
+	&:focus a,
+	&:hover a {
+		color: $theme !important;
+	}
+}

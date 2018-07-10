@@ -27,7 +27,7 @@
 
 	.white-box {
 		width: 100%;
-		height: -webkit-fill-available;
+		padding: 50px;
 	}
 }
 
@@ -37,6 +37,7 @@
 		position: absolute;
 		top: 50%;
 		margin-top: -205px;
+		padding: 0;
 	}
 }
 

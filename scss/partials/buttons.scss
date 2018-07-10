@@ -215,23 +215,23 @@
 }
 
 .pagination {
-	a {
-		background: $black15a;
-		color: $text-muted;
-		transition: all .2s;
-		border: 0;
-		border-radius: 0;
-
-		&:focus,
-		&:hover {
-			background: $white08a;
-			color: $text;
+	> li {
+		> a {
+			background: $black15a;
+			color: $text-muted;
+			transition: all .2s;
 			border: 0;
-		}
-	}
+			border-radius: 0;
 
-	> {
-		.active > a {
+			&:focus,
+			&:hover {
+				background: $white08a;
+				color: $text;
+				border: 0;
+			}
+		}
+
+		&.active > a {
 			background: $white08a;
 			color: $theme;
 			border: 0;
@@ -244,7 +244,7 @@
 			}
 		}
 
-		.disabled > a {
+		&.disabled > a {
 			background: $white08a;
 			color: $text-muted;
 			border: 0;

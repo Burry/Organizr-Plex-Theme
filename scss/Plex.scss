@@ -3,7 +3,9 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 @import 'partials/open-sans-font';
+@import 'partials/containers';
 @import 'partials/buttons';
+@import 'partials/pagination';
 @import 'partials/error';
 @import 'partials/text';
 @import 'partials/form';
@@ -13,5 +15,7 @@
 @import 'partials/calendar';
 @import 'partials/splash';
 @import 'partials/player';
+@import 'partials/notification';
+@import 'partials/animations';
 
 @import 'partials/misc-cleanup.scss';

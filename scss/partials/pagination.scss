@@ -1,0 +1,101 @@
+// Pagination Buttons
+
+.pagination {
+	> li {
+		> a {
+			background: 0 0;
+			color: $white70a;
+			border: 0;
+			border-radius: 0;
+
+			&:focus,
+			&:hover {
+				background: $white08a;
+				color: $text;
+				border: 0;
+			}
+		}
+
+		&.active > a {
+			background: $white08a;
+			color: $theme-lighter;
+			border: 0;
+
+			&:focus,
+			&:hover {
+				background: $white08a;
+				color: $theme-lighter;
+				border: 0;
+			}
+		}
+
+		&.disabled > a {
+			background: 0 0;
+			color: $text-muted;
+			border: 0;
+
+			&:focus,
+			&:hover {
+				background: 0 0;
+				color: $text-muted;
+				border: 0;
+			}
+		}
+	}
+}
+
+.paginate_button {
+	border: 0 !important;
+	border-radius: 0 !important;
+}
+
+.dataTables_wrapper {
+	.dataTables_paginate {
+		color: $white70a !important;
+
+		.paginate_button {
+			color: $white70a !important;
+
+			&.current {
+				background: $white08a !important;
+				color: $theme-lighter !important;
+
+				&:hover {
+					background: $white08a !important;
+					color: $theme-lighter !important;
+				}
+			}
+
+			&.disabled {
+				background: 0 0 !important;
+				color: $text-muted !important;
+
+				&:hover {
+					background: 0 0 !important;
+					color: $text-muted !important;
+				}
+			}
+
+			&:hover {
+				background: $white08a!important;
+				color: $text !important;
+			}
+		}
+	}
+
+	.dataTables_filter {
+		color: $text-muted !important;
+	}
+
+	.dataTables_info {
+		color: $text-muted !important;
+	}
+
+	.dataTables_length {
+		color: $text-muted !important;
+	}
+
+	.dataTables_processing {
+		color: $text-muted !important;
+	}
+}

@@ -1,16 +1,6 @@
 // Form Elements
 
-.checkbox label::before {
-	background: $white08a;
-	border: 0;
-	border-radius: 4px;
-	transition: all .2s ease;
-}
-
-.checkbox-primary input[type=checkbox]:checked + label::before {
-	background: $theme;
-	border-color: $theme;
-}
+// Inputs
 
 .form-control,
 .form-material .form-control,
@@ -39,6 +29,9 @@ select {
 	border-radius: 5px 0 0 5px !important;
 }
 
+
+// Large Inputs
+
 #mediaSearchQuery,
 #request-input,
 #request-input-div .dropdown-toggle {
@@ -46,6 +39,33 @@ select {
 	height: 46px;
 	padding: 10px 16px;
 }
+
+
+// Textareas
+
+div[id$="FavIcon"] textarea,
+#customCSSEditor {
+	height: -webkit-fill-available;
+	border-radius: 4px;
+}
+
+
+// Checkboxes
+
+.checkbox label::before {
+	background: $white08a;
+	border: 0;
+	border-radius: 4px;
+	transition: all .2s ease;
+}
+
+.checkbox-primary input[type=checkbox]:checked + label::before {
+	background: $theme;
+	border-color: $theme;
+}
+
+
+// Radio Buttons
 
 .radio-purple input[type=radio] {
 	+ label::before {

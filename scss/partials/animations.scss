@@ -1,0 +1,25 @@
+// Animations
+
+.flipInY,
+.rubberBand,
+.slideInDown,
+.slideInRight,
+.tada {
+	animation-name: none;
+}
+
+.mfp-3d-unfold {
+	.mfp-with-anim,
+	&.mfp-ready .mfp-with-anim {
+		transform: none;
+		transition: none;
+	}
+}
+
+.mfp-zoom-out .mfp-with-anim {
+	transition: all .2s ease-out;
+}
+
+.waves-effect .waves-ripple {
+	display: none;
+}

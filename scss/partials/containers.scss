@@ -1,0 +1,318 @@
+// Containers
+
+// Page Elements
+
+html, body {
+	height: 100%;
+	@include background-blur($blur-light);
+	transition: background-image 0.2s;
+}
+
+body {
+	color: $text;
+	font-family: $font-stack;
+}
+
+
+// Dark Backgrounds
+
+.lock-screen,
+.active-tab-Settings,
+#internal-Settings,
+#preloader {
+	@include background-blur($blur-dark);
+}
+
+
+// Wrappers
+
+#wrapper {
+	height: 100%;
+}
+
+#page-wrapper {
+	background: 0 0;
+}
+
+@media screen and (max-width: 767px) {
+	.fix-header #page-wrapper {
+		margin-top: 60px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.fix-header #page-wrapper {
+		margin-top: 60px;
+	}
+}
+
+.iframe {
+	height: calc(100vh - 60px);
+}
+
+.dropify-wrapper {
+	color: $white70a !important;
+}
+
+
+// Panel
+
+.panel {
+	background: 0 0;
+
+	&.bg-org {
+		background: 0 0 !important;
+	}
+}
+
+.panel-heading {
+	font-weight: 700;
+	
+	.btn {
+		margin-left: -12px;
+		margin-top: -7px;
+		
+		&.popup-with-form {
+			padding: 2px;
+			margin-top: -4px;
+		}
+	}
+	
+	.btn-group {
+		margin-right: -0.5rem;
+	}
+}
+
+.panel-body {
+	background: 0 0;
+
+	&.bg-org {
+		background: 0 0;
+	}
+
+	&:first-child h3 {
+		font-family: $font-stack;
+	}
+}
+
+.panel-default {
+	.panel-heading {
+		border-color: transparent;
+	}
+	
+	.panel-body {
+		background: 0 0;
+		color: $text;
+	}
+}
+
+.panel-info {
+	.panel-heading {
+		background: $black15a;
+		border-color: transparent;
+	}
+	
+	a {
+		color: $text !important;
+		
+		&:focus,
+		&:hover {
+			color: $white !important;
+		}
+	}
+}
+
+.panel-blue {
+	.panel-heading {
+		background: $black15a !important;
+	}
+}
+
+.panel-white {
+	.panel-heading {
+		border-color: transparent;
+	}
+}
+
+
+// Content Containers
+
+.bg-info {
+	background: 0 0 !important;
+}
+
+.bg-plex {
+	color: $white70a!important;
+	padding: 15.5px 16px;
+	
+	&:focus,
+	&:hover {
+		color: $white!important;
+	}
+}
+
+.bg-title {
+	background: $black15a!important;
+	
+	h4 {
+		color: $white70a!important;
+	}
+	
+	.breadcrumb a {
+		color: $white70a!important;
+	}
+}
+
+.bg-theme {
+	background: $black30a!important;
+}
+
+.dropdown-menu {
+	border-radius: 4px;
+	background: $dark-gray !important;
+
+	a {
+		color: $menu-link !important;
+
+		&:hover {
+			background: $white08a !important;
+			color: $white !important;
+		}
+	}
+}
+
+.well {
+	border: 0;
+
+	&.bg-org {
+		background: 0 0 !important;
+	}
+}
+
+.white-box {
+	background: 0 0;
+
+	&.bg-org {
+		background: 0 0 !important;
+	}
+
+	.box-title {
+		color: $white;
+	}
+}
+
+
+// Content Boxes
+
+.el-card-content {
+	&.bg-org {
+		background: 0 0!important;
+	}
+
+	small {
+		color: $white45a;
+	}
+
+	br:last-of-type {
+		display: none;
+	}
+}
+
+#settings-homepage-list,
+#settings-image-manager-list,
+#settings-plugins-active {
+	.el-card-content {
+		background: 0 0;
+		margin-bottom: 3rem;
+	}
+}
+
+.el-card-item .el-card-avatar,
+.item {
+	box-shadow: 0 0 2px $black35a;
+	transition: all 0.2s;
+}
+
+.el-card-item:hover .el-card-avatar,
+.item:hover {
+	box-shadow: 0 0 0 2px $theme;
+}
+
+.el-card-avatar a {
+	color: $white70a !important;
+	
+	&:focus,
+	&:hover {
+		background: 0 0 !important;
+		color: $white !important;
+	}
+}
+
+.el-element-overlay {
+	.white-box {
+		padding: 2px;
+	}
+	
+	a.btn-outline {
+		color: $white70a;
+		border: 0;
+
+		&:focus,
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.el-overlay-1:hover img {
+	transform: none !important;
+}
+
+
+// Modals
+
+.white-popup {
+	> .col-md-6 > .white-box:first-child,
+	.panel-heading {
+		background: $black20 !important;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+
+	.panel-footer {
+		background: $black20;
+		border-top: 1px solid #222;
+	}
+
+	> .col-md-6 > .white-box:nth-child(2),
+	.panel-body {
+		background: $black16;
+	}
+
+	> .col-md-6 > .white-box:nth-child(2),
+	&:not(#speedtest-area) .panel-body,
+	.panel-footer {
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+
+	.panel {
+		border-radius: 4px;
+
+		> .table-responsive {
+			background: $black20;
+		}
+	}
+}
+
+.white-popup-block {
+	background: $black16;
+	border-radius: 4px!important;
+}
+
+@media screen and (min-width: 768px) {
+	.white-popup-block,
+	.white-popup .panel {
+		box-shadow: 0 5px 15px $black50a;
+	}
+}

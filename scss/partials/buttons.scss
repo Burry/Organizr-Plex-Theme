@@ -392,53 +392,6 @@
 }
 
 
-// Pagination Buttons
-
-.pagination {
-	> li {
-		> a {
-			background: 0 0;
-			color: $white70a;
-			border: 0;
-			border-radius: 0;
-
-			&:focus,
-			&:hover {
-				background: $white08a;
-				color: $text;
-				border: 0;
-			}
-		}
-
-		&.active > a {
-			background: $white08a;
-			color: $theme-lighter;
-			border: 0;
-
-			&:focus,
-			&:hover {
-				background: $white08a;
-				color: $theme-lighter;
-				border: 0;
-			}
-		}
-
-		&.disabled > a {
-			background: 0 0;
-			color: $text-muted;
-			border: 0;
-
-			&:focus,
-			&:hover {
-				background: 0 0;
-				color: $text-muted;
-				border: 0;
-			}
-		}
-	}
-}
-
-
 // Scroll-To-Top Button
 
 #scroll {
@@ -458,7 +411,16 @@
 }
 
 
-// Settings "I Want to Help" Button
+// Settings Buttons
+
+.getPlexMachineAuth,
+.getPlexTokenAuth,
+.newAPIKey,
+.purgeLog,
+.updateNow {
+	font-size: 14px;
+	padding: 7.5px 10px;
+}
 
 .fcbtn {
 	a {
@@ -468,5 +430,16 @@
 	&:focus a,
 	&:hover a {
 		color: $white;
+	}
+}
+
+.swapLog {
+	background: $black15a !important;
+	color: $white70a !important;
+	border: 0 !important;
+	
+	&.active {
+		background: $white08a !important;
+		color: $theme !important;
 	}
 }

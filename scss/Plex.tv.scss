@@ -11,8 +11,10 @@ $font-stack: $plexeina-font-stack;
 
 @import 'partials/mixins';
 @import 'partials/plexeina-font';
+@import 'partials/containers';
 @import 'partials/buttons';
 @import 'partials/buttons-plex.tv';
+@import 'partials/pagination';
 @import 'partials/error';
 @import 'partials/text';
 @import 'partials/form';
@@ -22,5 +24,7 @@ $font-stack: $plexeina-font-stack;
 @import 'partials/calendar';
 @import 'partials/splash';
 @import 'partials/player';
+@import 'partials/notification';
+@import 'partials/animations';
 
 @import 'partials/misc-cleanup.scss';

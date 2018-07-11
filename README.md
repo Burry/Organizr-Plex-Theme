@@ -20,7 +20,7 @@ A theme for Organizr v2 that emulates the style of Plex
 
 - Add the stylesheets in [`/css`](tree/master/css) to Organizr's `/css/themes` directory.
 - Open Organizr Settings > Customize > Appearance > Colors & Themes, and select a variant of Plex Theme from the theme dropdown input.
-- Open Organizr's `/js/custom.js` and change `var topOffset = 40` on line 33 to `var topOffset = 60` so that `iframe`s compensate for Plex Theme's increased navbar padding.
+- Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased navbar padding.
 - *Optional*: Add the contents of the [`/images`](tree/master/images) folder from Plex Theme's repository to Organizr's `/plugins/images/` directory. Plex Theme links to some assets hosted on its remote repository, but other images called in Organizr's page markup must be placed in the local installation.
 
 ### Custom Colors

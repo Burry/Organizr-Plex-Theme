@@ -232,6 +232,10 @@
 			border-left-width: 0 !important;
 			border-radius: 0 4px 4px 0 !important;
 		}
+
+		&.btn-outline.dropdown-toggle {
+			border-radius: 4px !important;
+		}
 	}
 
 	&.open .dropdown-toggle {

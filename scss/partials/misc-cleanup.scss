@@ -1,13 +1,12 @@
 // TODO: Clean up: organize styles into separate partial files
 
-body {
+html, body, .lock-screen {
 	@include background-blur($blur-dark);
-	color: $text;
-	font-family: $font-stack;
 }
 
-.lock-screen {
-	@include background-blur($blur-dark);
+body {
+	color: $text;
+	font-family: $font-stack;
 }
 
 #page-wrapper {
@@ -535,7 +534,7 @@ div[id$="FavIcon"] textarea,
 	border-radius: 4px;
 }
 
-div[id^=request] {
+div[id^="request"] {
 	.bg-plex {
 		margin-top: 10px;
 	}

@@ -1,5 +1,15 @@
 // Calendar
 
+%date-link {
+	color: $text-muted;
+	cursor: pointer !important;
+
+	&:focus,
+	&:hover {
+		color: $text;
+	}
+}
+
 .fc th {
 	&.fc-mon,
 	&.fc-tue,
@@ -10,9 +20,13 @@
 	&.fc-sun {
 		background: $black30a !important;
 
-		a,
+		a {
+			@extend %date-link;
+		}
+
 		span {
 			color: $text-muted;
+			cursor: default;
 		}
 	}
 }
@@ -21,13 +35,9 @@
 	background: $black15a;
 }
 
-.fc-day-number {
-	color: $text-muted;
-
-	&:focus,
-	&:hover {
-		color: $text-muted;
-	}
+.fc-day-number,
+.fc-list-heading-main {
+	@extend %date-link;
 }
 
 .fc-title {
@@ -44,15 +54,18 @@
 .fc-toolbar {
 	background: 0 0 !important;
 	padding: 10px 0;
+	cursor: default;
 }
 
-.fc-unthemed {
-	.fc-today {
-		background: $white08a !important;
+.fc-today {
+	background: $white08a !important;
 
-		&.fc-state-highlight {
-			background: 0 0 !important;
-		}
+	.fc-day-number {
+		color: $theme;
+	}
+
+	&.fc-state-highlight {
+		background: 0 0 !important;
 	}
 }
 

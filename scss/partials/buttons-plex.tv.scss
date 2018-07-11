@@ -1,90 +1,23 @@
-// Plex.tv-style Buttons
-
-.btn {
-	border-style: solid;
-	border-width: 2px !important;
-
-	&:not(.showPassword):not(.dropdown-toggle) {
-		border-radius: 1000px;
-	}
-
-	// Movie Request Filter
-	&[data-filter="request-result-movie"] {
-		background: 0 0;
-		color: $movie;
-		border-color: $movie;
-
-		&:focus,
-		&:hover {
-			background: $movie;
-			color: $white;
-			border-color: $movie;
-		}
-	}
-
-	// TV Show Request Filter
-	&[data-filter="request-result-tv"] {
-		background: 0 0 !important;
-		color: $tv !important;
-		border-color: $tv !important;
-
-		&:focus,
-		&:hover {
-			background: $tv !important;
-			color: $white;
-			border-color: $tv !important;
-		}
-	}
-
-	// Music Request Filter
-	&[data-filter="request-result-music"] {
-		background: 0 0 !important;
-		color: $music !important;
-		border-color: $music !important;
-
-		&:focus,
-		&:hover  {
-			background: $music !important;
-			color: $white;
-			border-color: $music !important;
-		}
-	}
-}
-
-
-// Button Groups
-
-.btn-group {
-	.btn {
-		&:first-child:not(:last-child):not(.dropdown-toggle) {
-			border-radius: 1000px 0 0 1000px !important;
-		}
-
-		&:last-child:not(:first-child) {
-			border-radius: 0 1000px 1000px 0 !important;
-		}
-	}
-}
-
+// Buttons
 
 // Info Button (Main Button)
 
 .btn-info {
-	background: 0 0 !important;
+	background: transparent !important;
 	color: $theme !important;
 	border-color: $theme !important;
 
 	&.disabled {
-        background: 0 0 !important;
-    	color: $theme !important;
-    	border-color: $theme !important;
+		background: transparent !important;
+		color: $theme !important;
+		border-color: $theme !important;
 
 		&.focus,
 		&:focus,
         &:hover {
-			background: 0 0 !important;
-	    	color: $theme !important;
-	    	border-color: $theme !important;
+			background: transparent !important;
+			color: $theme !important;
+			border-color: $theme !important;
 		}
 	}
 
@@ -95,27 +28,42 @@
 		color: $white !important;
 		border-color: $theme !important;
 	}
+
+	&.active,
+	&:active {
+		background: $theme-dark !important;
+		color: $white !important;
+		border-color: $theme-dark !important;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $theme-dark !important;
+	    	color: $white !important;
+	    	border-color: $theme-dark !important;
+		}
+	}
 }
 
 
 // Primary Button (For Organizr's style, secondary)
 
 .btn-primary {
-	background: 0 0;
+	background: transparent;
 	color: $white;
 	border-color: $white;
 
 	&.disabled {
-		background: 0 0;
-		color: $white70a;
-		border-color: $white70a;
+		background: transparent;
+		color: $white;
+		border-color: $white;
 
 		&.focus,
 		&:focus,
 		&:hover {
-			background: 0 0;
-			color: $white70a;
-			border-color: $white70a;
+			background: transparent;
+			color: $white;
+			border-color: $white;
 		}
 	}
 
@@ -127,11 +75,9 @@
 		border-color: $white;
 	}
 
-	&.active,
-	&:active,
 	&.btn-outline {
-		background: 0 0;
-		color: $white;
+		background: $white;
+		color: $theme;
 		border-color: $white;
 
 		&.focus,
@@ -142,23 +88,82 @@
 			border-color: $white;
 		}
 	}
+
+	&.active,
+	&:active {
+		background: darken($white, 10%);
+		color: $theme;
+		border-color: darken($white, 10%);
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: darken($white, 10%);
+			color: $theme;
+			border-color: darken($white, 10%);
+		}
+	}
+}
+
+
+// General Button Style
+
+.btn {
+	border-radius: 1000px;
+	border-style: solid;
+	border-width: 2px !important;
+}
+
+
+// Large Table Row Button
+
+.btn-danger.btn-outline {
+	background: transparent;
+	color: $movie;
+	border-color: $movie;
+
+	&:focus,
+	&:hover {
+		background: $movie;
+		color: $white;
+		border-color: $movie;
+	}
+
+	&.active,
+	&:active {
+		background: darken($movie, 10%);
+		color: $white;
+		border-color: darken($movie, 10%);
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: darken($movie, 10%);
+			color: $white;
+			border-color: darken($movie, 10%);
+		}
+	}
+}
+
+
+// Button Groups
+
+.btn-group {
+	.btn {
+		&:first-child:not(:last-child) {
+			border-right-width: 0 !important;
+			border-radius: 1000px 0 0 1000px !important;
+		}
+
+		&:last-child:not(:first-child) {
+			border-left-width: 0 !important;
+			border-radius: 0 1000px 1000px 0 !important;
+		}
+	}
 }
 
 
 // Calendar Buttons
-
-.fc-button {
-	background: 0 0 !important;
-	color: $theme;
-	border-color: $theme;
-
-	&:focus,
-	&:hover {
-		background: $theme !important;
-		color: $white;
-		border-color: $theme;
-	}
-}
 
 .fc-state-default {
 	&.fc-corner-left {
@@ -170,31 +175,40 @@
 	}
 }
 
-.fc-state-active,
-.fc-state-active:focus,
-.fc-state-active:hover {
-	background: $theme !important;
-	color: $white;
-	border-color: $theme;
-}
-
-.fc-state-hover {
-	opacity: 1;
-}
-
 .fc-today-button {
-	&.fc-state-disabled {
-		background: $theme !important;
-		color: $white !important;
-		border-color: $theme;
+	border-radius: 1000px !important;
+
+	background: transparent !important;
+	color: $white;
+	border: solid 2px $white !important;
+
+	&:focus,
+	&:hover {
+		background: $white !important;
+		color: $theme;
+	}
+
+	&:active {
+		background: darken($white, 10%) !important;
 	}
 }
 
 
 // Input Group Buttons
 
-.dropdown-toggle:not(:first-child) {
-	border-radius: 0 1000px 1000px 0;
+#homepage-items {
+	.dropdown-toggle {
+		border-top-left-radius: 1000px !important;
+		border-bottom-left-radius: 1000px !important;
+	}
+
+	.btn-group .btn:not(#newRequestButton) {
+		border: 0 !important;
+	}
+}
+
+.showPassword {
+	border-radius: 4px;
 }
 
 
@@ -205,37 +219,15 @@
 }
 
 
-// Scroll-To-Top Button
-
-#scroll {
-	background: $black30a;
-	border-color: $white;
-
-	&:focus,
-	&:hover {
-		background: $white;
-		border-color: $white;
-
-		span {
-			border-bottom-color: $theme;
-		}
-	}
-
-	span {
-		border-bottom-color: $white;
-	}
-}
-
-
 // Settings "I Want to Help" Button
 
 .fcbtn {
 	a {
-		color: $white !important;
+		color: $theme;
 	}
 
 	&:focus a,
 	&:hover a {
-		color: $theme !important;
+		color: $theme;
 	}
 }

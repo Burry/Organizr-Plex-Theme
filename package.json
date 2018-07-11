@@ -1,17 +1,24 @@
 {
   "name": "organizr-v2-plex-theme",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "A theme for Organizr v2 that emulates the style of Plex",
   "main": "gulpfile.js",
   "repository": "https://github.com/Burry/organizr-v2-plex-theme",
+  "homepage": "http://192.168.7.53:3113",
   "author": "Grant Burry <grant@burry.me>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "gulp"
+    "build": "gulp build",
+    "serve": "gulp build-serve-plex-theme",
+    "serve-plex": "gulp build-serve-plex-theme",
+    "serve-plex-blur": "gulp build-serve-plex-blur-theme",
+    "serve-plex-tv": "gulp build-serve-plex-tv-theme",
+    "serve-plex-tv-blur": "gulp build-serve-plex-tv-blur-theme"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.24.5",
+    "gulp": "gulpjs/gulp.git#4.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-header-comment": "^0.4.0",

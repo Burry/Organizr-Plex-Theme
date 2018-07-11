@@ -45,6 +45,11 @@ pre {
 	color: $text-muted !important;
 }
 
+code {
+	background: $white08a;
+	color: $white70a;
+}
+
 .text-dark {
 	color: $white70a !important;
 
@@ -61,4 +66,19 @@ pre {
 
 .text-muted {
 	color: $text !important;
+}
+
+.label-info {
+	background: $black15a !important;
+	color: $white70a !important;
+}
+
+.label-inverse {
+	background: $black30a;
+}
+
+.label.m-l-20 {
+	margin-left: 10px !important;
+	padding: 3px 8px;
+	font-weight: 700;
 }

@@ -1,8 +1,8 @@
 // Blur Effects
 
 // As of 7/2018 Safari is the only browser that properly supports backdrop-filter.
-// Chrome improperly displays background blur effects, but only if Experimental
-// Web Platform Features are enabled in chrome://flags
+// Chrome has limited support for backdrop-filter effects, but only if
+// Experimental Web Platform Features are enabled in chrome://flags.
 
 .sidebar,
 .sidebar-head,

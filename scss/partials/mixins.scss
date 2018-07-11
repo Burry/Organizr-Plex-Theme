@@ -2,5 +2,27 @@
 
 @mixin background-blur($style) {
 	background: $noise repeat fixed center center/auto,
-				$style no-repeat fixed center center/cover !important;
+		$style no-repeat fixed center center/cover !important;
+}
+
+@mixin request-result-button($color) {
+	background: $color !important;
+	color: $white !important;
+	border-color: transparent !important;
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: lighten($color, 10%) !important;
+		color: $white;
+		border-color: transparent !important;
+	}
+
+	&:active {
+		background: darken($color, 10%) !important;
+
+		&:hover {
+			background: darken($color, 10%) !important;
+		}
+	}
 }

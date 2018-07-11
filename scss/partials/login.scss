@@ -1,51 +1,60 @@
 // Login & Register
 
+.login-area,
+.login-register {
+	height: 100% !important;
+}
+
 .login-register {
 	@include background-blur($blur-dark);
 }
 
 .login-box {
 	background: 0 0;
-
-	.m-t-20,
-	.m-t-40 {
-		margin-top: 0 !important;
-	}
-
-	.form-group:last-of-type {
-		margin-bottom: 0;
-
-		p {
-			margin-bottom: 0;
-		}
-	}
-}
-
-.login-sidebar {
-	position: relative;
+	height: initial;
 	right: initial;
 
 	.white-box {
-		width: 100%;
 		padding: 50px;
 	}
 }
 
+.loginLogo {
+	max-height: 100px;
+	max-width: -webkit-fill-available;
+}
+
 @media screen and (min-width: 768px) {
-	.login-sidebar .white-box {
-		background: $black30a;
+	.login-box {
+		width: 480px;
+		height: 465px;
 		position: absolute;
 		top: 50%;
-		margin-top: -205px;
-		padding: 25px;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+
+		.white-box {
+			background: $black30a;
+			width: 480px;
+			padding: 25px 0;
+			margin: auto;
+			top: 140px;
+		}
+
+		#login-logo {
+			height: 0;
+			margin: 0;
+		}
+
+		.form-group {
+			width: 320px;
+			margin: 25px auto;
+		}
 	}
-}
 
-#login-logo {
-	display: block !important;
-	margin-bottom: 50px;
-}
-
-.loginLogo {
-	max-width: -webkit-fill-available;
+	.loginLogo {
+		position: relative;
+		top: -65px;
+		transform: translateY(-100%);
+	}
 }

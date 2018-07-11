@@ -1,8 +1,8 @@
 // Mixins
 
-@mixin background-blur($style) {
+@mixin background-blur($background-image) {
 	background: $noise repeat fixed center center/auto,
-		$style no-repeat fixed center center/cover !important;
+		$background-image no-repeat fixed center center/cover !important;
 }
 
 @mixin request-result-button($color) {

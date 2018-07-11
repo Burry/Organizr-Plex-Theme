@@ -4,7 +4,8 @@
 
 $theme: #E5A00D;
 $theme08a: rgba($theme, 0.8);
-$theme-light: #F7BE02;
+$theme-light: $theme-lighter;
+$theme-lighter: lighten($theme-light, 10%);
 $theme-dark: #9F7009;
 $font-stack: $plexeina-font-stack;
 

@@ -296,7 +296,7 @@
 .fc-state-active:focus,
 .fc-state-active:hover {
 	background: $white08a !important;
-	color: $theme-light;
+	color: $theme-lighter;
 	border-color: transparent;
 }
 
@@ -412,13 +412,13 @@
 
 		&.active > a {
 			background: $white08a;
-			color: $theme-light;
+			color: $theme-lighter;
 			border: 0;
 
 			&:focus,
 			&:hover {
 				background: $white08a;
-				color: $theme-light;
+				color: $theme-lighter;
 				border: 0;
 			}
 		}

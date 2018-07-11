@@ -33,6 +33,40 @@
 	}
 }
 
+.profile-pic {
+	.img-circle {
+		box-shadow: 0 0 0 1px rgba($white, 0.1);
+	}
+
+	b {
+		font-weight: 600;
+	}
+
+	&:hover {
+		.img-circle {
+			background: $text;
+			box-shadow: 0 0 0 2px $text;
+		}
+
+		b,
+		.caret {
+			color: $text;
+		}
+	}
+
+	&[aria-expanded="true"] {
+		.img-circle {
+			background: $theme-lighter;
+			box-shadow: 0 0 0 2px $theme-lighter;
+		}
+
+		b,
+		.caret {
+			color: $theme-lighter;
+		}
+	}
+}
+
 .ti-fullscreen {
 	line-height: inherit;
 }

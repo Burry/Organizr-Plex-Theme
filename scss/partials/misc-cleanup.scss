@@ -1,12 +1,27 @@
 // TODO: Clean up: organize styles into separate partial files
 
-html, body, .lock-screen {
-	@include background-blur($blur-dark);
+html, body {
+	height: 100%;
+	@include background-blur($blur-light);
+	transition: background-image 0.2s;
+
+	&.active-tab-Settings {
+		@include background-blur($blur-dark);
+	}
 }
 
 body {
 	color: $text;
 	font-family: $font-stack;
+}
+
+.lock-screen,
+#internal-Settings {
+	@include background-blur($blur-dark);
+}
+
+#wrapper {
+	height: 100%;
 }
 
 #page-wrapper {
@@ -55,20 +70,20 @@ body {
 		}
 		&.active > a {
 			background: $white08a!important;
-			color: $theme-light !important;
+			color: $theme-lighter !important;
 			margin: 0;
 			border: 0;
 			border-radius: 0!important;
 			&:focus {
 				background: $white08a!important;
-				color: $theme-light !important;
+				color: $theme-lighter !important;
 				margin: 0;
 				border: 0;
 				border-radius: 0!important;
 			}
 			&:hover {
 				background: $white08a!important;
-				color: $theme-light !important;
+				color: $theme-lighter !important;
 				margin: 0;
 				border: 0;
 				border-radius: 0!important;
@@ -141,7 +156,7 @@ body {
 			}
 
 			a {
-				color: $theme-light!important;
+				color: $theme-lighter!important;
 			}
 		}
 	}
@@ -188,7 +203,7 @@ body {
 .panel-info {
 	.panel-heading {
 		background: $black15a;
-		border-color: $theme;
+		border-color: transparent;
 	}
 	a {
 		color: $text!important;
@@ -280,11 +295,11 @@ tbody {
 
 			&.current {
 				background: $white08a !important;
-				color: $theme-light !important;
+				color: $theme-lighter !important;
 
 				&:hover {
 					background: $white08a !important;
-					color: $theme-light !important;
+					color: $theme-lighter !important;
 				}
 			}
 
@@ -449,7 +464,7 @@ tbody {
 	height: calc(100vh - 60px);
 }
 #preloader {
-	background: $light-gray;
+	@include background-blur($blur-dark);
 }
 .nav-tab {
 	margin: 0;
@@ -519,13 +534,24 @@ tbody {
 	border: 0!important;
 	border-radius: 0!important;
 }
+
 #homepage-items {
 	.panel-heading {
+		font-weight: 600;
 		padding: 0;
 	}
+
 	.white-box {
 		padding: 0;
 	}
+
+	.btn-group {
+		margin-top: 15px;
+	}
+}
+
+.homepageImageTitle {
+	margin-top: 0;
 }
 
 div[id$="FavIcon"] textarea,
@@ -633,6 +659,11 @@ table.dataTable tbody tr {
 .steamline .sl-right div > a,
 button.list-group-item {
 	color: $white70a!important;
+}
+
+.panel-default .panel-heading,
+.panel-white .panel-heading {
+	border-color: transparent;
 }
 
 .profile-social-icons a {

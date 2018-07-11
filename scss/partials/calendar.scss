@@ -9,6 +9,11 @@
 	&.fc-sat,
 	&.fc-sun {
 		background: $black30a !important;
+
+		a,
+		span {
+			color: $text-muted;
+		}
 	}
 }
 
@@ -25,15 +30,15 @@
 	}
 }
 
+.fc-title {
+	color: $white70a;
+}
+
 .fc-event {
 	&:focus .fc-title,
 	&:hover .fc-title {
-		color: $white;
+		color: $text;
 	}
-}
-
-.fc-title {
-	color: $white70a;
 }
 
 .fc-toolbar {
@@ -52,5 +57,14 @@
 }
 
 .fc-widget-content {
-	border-color: $white08a;
+	border-width: 0 !important;
+	border-color: $white08a !important;
+
+	&.fc-day:not(:last-of-type) {
+		border-right-width: 1px !important;
+	}
+
+	&.fc-row:not(:last-of-type) {
+		border-bottom-width: 1px !important;
+	}
 }

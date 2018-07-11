@@ -3,8 +3,8 @@
 .checkbox label::before {
 	background: $white08a;
 	border: 0;
-	border-radius: 3px;
-	transition: all .3s ease;
+	border-radius: 4px;
+	transition: all .2s ease;
 }
 
 .checkbox-primary input[type=checkbox]:checked + label::before {
@@ -14,14 +14,15 @@
 
 .form-control,
 .form-material .form-control,
-input[aria-controls=loginLogTable] {
+input[aria-controls=loginLogTable],
+select {
 	color: $text;
 	margin: 0;
 	border: 0;
 	height: 38px;
 	line-height: 1.5;
 	padding: 6px 12px;
-	border-radius: 3px;
+	border-radius: 4px;
 	vertical-align: middle;
 	background: $white25a;
 	transition: background .2s;
@@ -30,11 +31,12 @@ input[aria-controls=loginLogTable] {
 	&:focus {
 		color: $black33;
 		background: $text;
+		border-radius: 4px;
 	}
 }
 
-.input-group .form-control:first-child {
-	border-radius: 5px 0 0 5px;
+.input-group .form-control {
+	border-radius: 5px 0 0 5px !important;
 }
 
 #mediaSearchQuery,
@@ -46,6 +48,11 @@ input[aria-controls=loginLogTable] {
 }
 
 .radio-purple input[type=radio] {
+	+ label::before {
+		background: $white25a;
+		transition: all 0.2s;
+	}
+
 	+ label::after {
 		background: $theme;
 	}
@@ -56,6 +63,7 @@ input[aria-controls=loginLogTable] {
 		}
 
 		+ label::before {
+			background: $black15a;
 			border-color: $theme;
 		}
 	}

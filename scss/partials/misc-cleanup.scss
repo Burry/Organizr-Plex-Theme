@@ -1,3 +1,4 @@
+// TODO: Clean up: organize styles into separate partial files
 
 body {
 	@include background-blur($blur-dark);
@@ -14,14 +15,25 @@ body {
 }
 
 .el-card-content {
-	background: $black15a;
-
 	&.bg-org {
 		background: 0 0!important;
 	}
 
 	small {
 		color: $white45a;
+	}
+
+	br:last-of-type {
+		display: none;
+	}
+}
+
+#settings-homepage-list,
+#settings-image-manager-list,
+#settings-plugins-active {
+	.el-card-content {
+		background: 0 0;
+		margin-bottom: 3rem;
 	}
 }
 
@@ -44,20 +56,20 @@ body {
 		}
 		&.active > a {
 			background: $white08a!important;
-			color: $theme-light!important;
+			color: $theme-light !important;
 			margin: 0;
 			border: 0;
 			border-radius: 0!important;
 			&:focus {
 				background: $white08a!important;
-				color: $theme-light!important;
+				color: $theme-light !important;
 				margin: 0;
 				border: 0;
 				border-radius: 0!important;
 			}
 			&:hover {
 				background: $white08a!important;
-				color: $theme-light!important;
+				color: $theme-light !important;
 				margin: 0;
 				border: 0;
 				border-radius: 0!important;
@@ -65,8 +77,6 @@ body {
 		}
 	}
 }
-
-
 
 .panel {
 	background: 0 0;
@@ -76,11 +86,16 @@ body {
 	}
 }
 
+.panel-default .panel-body {
+	background: 0 0;
+	color: $text;
+}
+
 .panel-body {
 	background: 0 0;
 
 	&.bg-org {
-		background: 0 0 !important;
+		background: 0 0;
 	}
 
 	&:first-child h3 {
@@ -92,24 +107,30 @@ body {
 	.content-wrap {
 		background: 0 0;
 	}
+
 	nav {
-		color: $text-muted!important;
+		color: $text-muted !important;
+
 		a::after {
-			background: $black15a!important;
+			background: $black15a !important;
 			transition: none;
 			transform: none;
 		}
+
 		a {
-			color: $white70a!important;
+			color: $white70a !important;
 			transition: none;
 			transform: none;
+
 			&:hover::after {
-				background: $white08a!important;
+				background: $white08a !important;
 			}
+
 			&:hover {
 				color: $text!important;
 			}
 		}
+
 		li.tab-current {
 			a::after {
 				background: $white08a!important;
@@ -119,6 +140,7 @@ body {
 				transition: none;
 				transform: none;
 			}
+
 			a {
 				color: $theme-light!important;
 			}
@@ -164,21 +186,6 @@ body {
 	}
 }
 
-
-.label-info {
-	background: $black15a!important;
-	color: $white70a!important;
-}
-.label-inverse {
-	background: $black30a;
-}
-.label.m-l-20 {
-	margin-left: 10px !important;
-	padding: 3px 8px;
-	font-weight: 700;
-}
-
-
 .panel-info {
 	.panel-heading {
 		background: $black15a;
@@ -216,6 +223,14 @@ body {
 	padding: 5px;
 	font-weight: 700;
 	pointer-events: none;
+}
+
+th {
+	color: $white70a;
+}
+
+tbody {
+	color: $text;
 }
 
 .table {
@@ -259,38 +274,56 @@ body {
 
 .dataTables_wrapper {
 	.dataTables_paginate {
-		color: $text-muted!important;
+		color: $white70a !important;
+
 		.paginate_button {
-			color: $text-muted!important;
+			color: $white70a !important;
+
 			&.current {
-				background: $white08a!important;
-				color: $theme!important;
+				background: $white08a !important;
+				color: $theme-light !important;
+
 				&:hover {
-					background: $white08a!important;
-					color: $theme!important;
+					background: $white08a !important;
+					color: $theme-light !important;
 				}
 			}
+
+			&.disabled {
+				background: 0 0 !important;
+				color: $text-muted !important;
+
+				&:hover {
+					background: 0 0 !important;
+					color: $text-muted !important;
+				}
+			}
+
 			&:hover {
 				background: $white08a!important;
-				color: $text!important;
+				color: $text !important;
 			}
 		}
 	}
+
 	.dataTables_filter {
-		color: $text-muted!important;
+		color: $text-muted !important;
 	}
+
 	.dataTables_info {
-		color: $text-muted!important;
+		color: $text-muted !important;
 	}
+
 	.dataTables_length {
-		color: $text-muted!important;
+		color: $text-muted !important;
 	}
+
 	.dataTables_processing {
-		color: $text-muted!important;
+		color: $text-muted !important;
 	}
 }
 .dropdown-menu {
-	border-radius: 3px;
+	border-radius: 4px;
 	background: $dark-gray !important;
 
 	a {
@@ -312,16 +345,12 @@ body {
 		padding: 2px;
 	}
 	a.btn-outline {
-		color: $white!important;
-		&:focus {
-			background: $white!important;
-			color: $theme!important;
-			border-color: $white!important;
-		}
+		color: $white70a;
+		border: 0;
+
+		&:focus,
 		&:hover {
-			background: $white!important;
-			color: $theme!important;
-			border-color: $white!important;
+			color: $white;
 		}
 	}
 }
@@ -333,25 +362,35 @@ body {
 }
 .input-group-addon {
 	background: $black20!important;
-	border-radius: 3px!important;
+	border-radius: 4px!important;
 }
 .white-popup {
-	> .col-md-6 > .white-box:nth-child(1),
+	> .col-md-6 > .white-box:first-child,
 	.panel-heading {
-		background: $black20;
+		background: $black20 !important;
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
+	}
+
+	.panel-footer {
+		background: $black20;
+		border-top: 1px solid #222;
 	}
 
 	> .col-md-6 > .white-box:nth-child(2),
 	.panel-body {
 		background: $black16;
+	}
+
+	> .col-md-6 > .white-box:nth-child(2),
+	&:not(#speedtest-area) .panel-body,
+	.panel-footer {
 		border-bottom-left-radius: 3px;
 		border-bottom-right-radius: 3px;
 	}
 
 	.panel {
-		border-radius: 3px;
+		border-radius: 4px;
 
 		> .table-responsive {
 			background: $black20;
@@ -360,7 +399,7 @@ body {
 }
 .white-popup-block {
 	background: $black16;
-	border-radius: 3px!important;
+	border-radius: 4px!important;
 }
 
 
@@ -489,9 +528,11 @@ body {
 		padding: 0;
 	}
 }
+
+div[id$="FavIcon"] textarea,
 #customCSSEditor {
-	height: -webkit-fill-available !important;
-	border-radius: 3px!important;
+	height: -webkit-fill-available;
+	border-radius: 4px;
 }
 
 div[id^=request] {
@@ -536,11 +577,11 @@ div[id^=request] {
 
 .bg-info {
 	background: 0 0 !important;
+}
 
-	&.badge,
-	&.inside-request-div {
-		background: $theme !important;
-	}
+.badge,
+.inside-request-div {
+	background: $theme !important;
 }
 
 .outside-request-div {
@@ -612,6 +653,10 @@ button.list-group-item {
 .top-left-part a {
 	line-height: inherit;
 	font-size: 26px;
+}
+.css-bar:after {
+	background: $dark-gray;
+	color: $text;
 }
 
 .css-bar-sm > img {

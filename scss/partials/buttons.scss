@@ -1,9 +1,140 @@
 // Buttons
 
-// General Button Styles
+// Info Button (Main Button)
+
+.btn-info {
+	background: $theme !important;
+	color: $white !important;
+	border-color: transparent !important;
+
+	&.disabled {
+        background: $theme-light !important;
+    	color: $white !important;
+    	border-color: transparent !important;
+		opacity: 0.7;
+
+		&.focus,
+		&:focus,
+        &:hover {
+			background: $theme-light !important;
+	    	color: $white !important;
+	    	border-color: transparent !important;
+			opacity: 0.7;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: $theme-light !important;
+		color: $white !important;
+		border-color: transparent !important;
+		opacity: 1;
+	}
+
+	&.active,
+	&:active {
+		background: $theme-dark !important;
+		color: $white !important;
+		border-color: transparent !important;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $theme-dark !important;
+			color: $white !important;
+			border-color: transparent !important;
+		}
+	}
+}
+
+.btn-label {
+	background: 0 0;
+}
+
+.btn-lg {
+	padding: 12px 30px;
+}
+
+
+// Primary Button (For Organizr's style, secondary)
+
+.btn-primary {
+	background: $white25a;
+	color: $white;
+	border-color: transparent;
+
+	&.disabled {
+		background: $white25a;
+		color: $white;
+		border-color: transparent;
+		opacity: 0.7;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $white25a;
+			color: $white;
+			border-color: transparent;
+			opacity: 0.7;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: $white30a;
+		color: $white;
+		border-color: transparent;
+		opacity: 1;
+	}
+
+	&.btn-outline {
+		background: $white25a;
+		color: $white;
+		border-color: transparent;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $white30a;
+			color: $white;
+			border-color: transparent;
+			opacity: 1;
+		}
+	}
+
+	&.active,
+	&:active {
+		background: $white20a;
+		color: $white;
+		border-color: transparent;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $white20a;
+			color: $white;
+			border-color: transparent;
+		}
+	}
+}
+
+.btn-1b.btn-primary:after,
+.btn-1c.btn-primary:after,
+.btn-1d.btn-primary:after,
+.btn-1e.btn-primary:after,
+.btn-1f.btn-primary:after {
+	background: 0 0;
+}
+
+
+// General Button Style
 
 .btn {
+	border-radius: 4px;
 	font-weight: 700;
+	text-transform: uppercase;
 	transition: all .2s ease;
 
 	&.active,
@@ -11,71 +142,64 @@
 		box-shadow: none;
 	}
 
-	&:not(.showPassword):not(.dropdown-toggle) {
-		border-radius: 4px;
-	}
-
 	// Movie Request Filter
 	&[data-filter="request-result-movie"] {
-		background: $movie;
-		color: $white;
-		border-color: $movie;
-
-		&:focus,
-		&:hover {
-			background: lighter($movie, 10%);
-			color: $white;
-			border-color: lighter($movie, 10%);
-		}
+		@include request-result-button($movie);
 	}
 
 	// TV Show Request Filter
 	&[data-filter="request-result-tv"] {
-		background: $tv !important;
-		color: $white !important;
-		border-color: $tv !important;
-
-		&:focus,
-		&:hover {
-			background: lighter($tv, 10%) !important;
-			color: $white;
-			border-color: lighter($tv, 10%) !important;
-		}
+		@include request-result-button($tv);
 	}
 
 	// Music Request Filter
 	&[data-filter="request-result-music"] {
-		background: $music !important;
-		color: $white !important;
-		border-color: $music !important;
-
-		&:focus,
-		&:hover  {
-			background: lighter($music, 10%) !important;
-			color: $white;
-			border-color: lighter($music, 10%) !important;
-		}
+		@include request-result-button($music);
 	}
 
 	// General Request Filter
 	&[data-filter="request-result-all"] {
-		background: $theme;
-		border-color: $theme;
+		@include request-result-button($theme);
+	}
+}
 
+
+// Large Table Row Button
+
+.btn-circle.btn-lg {
+	padding: 10px;
+}
+
+.btn-danger.btn-outline {
+	background: $movie;
+	color: $white;
+	border-color: transparent;
+
+	&:focus,
+	&:hover {
+		background: lighten($movie, 10%);
+		color: $white;
+		border-color: transparent;
+	}
+
+	&.active,
+	&:active {
+		background: darken($movie, 10%);
+		color: $white;
+		border-color: transparent;
+
+		&.focus,
 		&:focus,
-		&:hover  {
-			background: $theme-light;
-			border-color: $theme-light;
+		&:hover {
+			background: darken($movie, 10%);
+			color: $white;
+			border-color: transparent;
 		}
 	}
 }
 
 
-// Media Info Pane Play Buttons
-
-.btn-circle.btn-lg {
-	padding: 10px;
-}
+// Media Info Pane Button
 
 .btn-youtube {
 	background: #F00 !important;
@@ -99,7 +223,7 @@
 			border-radius: 0 !important;
 		}
 
-		&:first-child:not(:last-child):not(.dropdown-toggle) {
+		&:first-child:not(:last-child) {
 			border-right-width: 0 !important;
 			border-radius: 4px 0 0 4px !important;
 		}
@@ -117,124 +241,35 @@
 }
 
 
-// Info Button (Main Button)
-
-.btn-info {
-	background: $theme !important;
-	color: $white !important;
-	border-color: $theme !important;
-
-	&.disabled {
-        background: $theme-light !important;
-    	color: $white !important;
-    	border-color: $theme-light !important;
-		opacity: 0.7;
-
-		&.focus,
-		&:focus,
-        &:hover {
-			background: $theme-light !important;
-	    	color: $white !important;
-	    	border-color: $theme-light !important;
-			opacity: 0.7;
-		}
-	}
-
-	&.focus,
-	&:focus,
-	&:hover {
-		background: $theme-light !important;
-		color: $white !important;
-		border-color: $theme-light !important;
-		opacity: 1;
-	}
-}
-
-.btn-label {
-	background: 0 0;
-}
-
-.btn-lg {
-	padding: 12px 30px;
-}
-
-
-// Primary Button (For Organizr's style, secondary)
-
-.btn-primary {
-	background: $white;
-	color: $theme;
-	border-color: $white;
-
-	&.disabled {
-		background: $white;
-		color: $theme;
-		border-color: $white;
-		opacity: 0.7;
-
-		&.focus,
-		&:focus,
-		&:hover {
-			background: $white;
-			color: $theme;
-			border-color: $white;
-			opacity: 0.7;
-		}
-	}
-
-	&.focus,
-	&:focus,
-	&:hover {
-		background: darken($white, 10%);
-		color: $theme;
-		border-color: darken($white, 10%);
-		opacity: 1;
-	}
-
-	&.active,
-	&:active,
-	&.btn-outline {
-		background: $white;
-		color: $theme;
-		border-color: $white;
-
-		&.focus,
-		&:focus,
-		&:hover {
-			background: darken($white, 10%);
-			color: $theme;
-			border-color: darken($white, 10%);
-			opacity: 1;
-		}
-	}
-}
-
-.btn-1b.btn-primary:after,
-.btn-1c.btn-primary:after,
-.btn-1d.btn-primary:after,
-.btn-1e.btn-primary:after,
-.btn-1f.btn-primary:after {
-	background: 0 0;
-}
-
-
 // Calendar Buttons
 
 .fc-button {
-	background: $theme !important;
-	color: $white;
-	border-color: $theme;
-	font-weight: 700;
-	border-width: 2px;
-	border-style: solid;
-	transition: all .2s ease;
+	background: $black15a !important;
+	color: $text-muted;
+	border-color: transparent;
+	border-radius: 0 !important;
+	border: 0 !important;
 
 	&:focus,
 	&:hover {
-		background: $theme-light !important;
-		color: $white;
-		border-color: $theme-light;
+		background: $white08a !important;
+		color: $text;
+		border-color: transparent;
 		opacity: 1;
+	}
+}
+
+.fc-next-button,
+.fc-prev-button {
+	background: 0 0 !important;
+	color: $white70a !important;
+	border: 0 !important;
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: 0 0 !important;
+		color: $white !important;
 	}
 }
 
@@ -256,9 +291,9 @@
 .fc-state-active,
 .fc-state-active:focus,
 .fc-state-active:hover {
-	background: $white !important;
-	color: $theme;
-	border-color: $white;
+	background: $white08a !important;
+	color: $theme-light;
+	border-color: transparent;
 }
 
 .fc-state-hover {
@@ -266,32 +301,65 @@
 }
 
 .fc-today-button {
-	opacity: 1;
-	display: block;
-	cursor: pointer;
+	border-radius: 4px !important;
+	font-weight: 700;
+	transition: all 0.2s;
 
-	&.fc-state-disabled {
-		background: $white !important;
-		color: $theme !important;
-		border-color: $white;
+	background: $white25a !important;
+	color: $white;
+
+	&:focus,
+	&:hover {
+		background: $white30a !important;
+		color: $white;
+	}
+
+	&:active {
+		background: $white20a !important;
 	}
 }
 
 
 // Input Group Buttons
 
-.input-group .form-control:first-child .dropdown-toggle {
-	border-left-width: 0 !important;
+#homepage-items {
+	.dropdown-toggle {
+		border-top-left-radius: 4px !important;
+		border-bottom-left-radius: 4px !important;
+	}
+
+	.btn-group .btn:not(#newRequestButton) {
+		background: 0 0 !important;
+		color: $white70a !important;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			color: $white !important;
+		}
+	}
 }
 
-.input-group-btn .btn:not(.dropdown-toggle):not(:only-child) {
-	margin-right: 0;
-	border-radius: 0 !important;
-}
+.showPassword {
+	background: $black30a;
+	color: $white70a;
+	border-color: transparent;
 
-.dropdown-toggle:not(:first-child) {
-	border-left-width: 0 !important;
-	border-radius: 0 4px 4px 0;
+	&:focus,
+	&:hover {
+		background: $black15a;
+		color: $white;
+		border-color: transparent;
+	}
+
+	&:active {
+		&:focus,
+		&:hover {
+			background: $black50a;
+			color: $white;
+			border-color: transparent;
+		}
+	}
 }
 
 
@@ -325,9 +393,8 @@
 .pagination {
 	> li {
 		> a {
-			background: $black15a;
-			color: $text-muted;
-			transition: all .2s;
+			background: 0 0;
+			color: $white70a;
 			border: 0;
 			border-radius: 0;
 
@@ -341,25 +408,25 @@
 
 		&.active > a {
 			background: $white08a;
-			color: $theme;
+			color: $theme-light;
 			border: 0;
 
 			&:focus,
 			&:hover {
 				background: $white08a;
-				color: $theme;
+				color: $theme-light;
 				border: 0;
 			}
 		}
 
 		&.disabled > a {
-			background: $white08a;
+			background: 0 0;
 			color: $text-muted;
 			border: 0;
 
 			&:focus,
 			&:hover {
-				background: $white08a;
+				background: 0 0;
 				color: $text-muted;
 				border: 0;
 			}
@@ -371,21 +438,31 @@
 // Scroll-To-Top Button
 
 #scroll {
-	background: $theme;
-	border-color: $theme;
-	border-width: 2px;
-	border-style: solid;
+	background: $white25a;
 	transition: all .2s ease;
 	border-radius: 1000px;
 
 	&:focus,
 	&:hover {
-		background: $theme-light;
-		border-color: $theme-light;
+		background: $white30a;
 	}
 
 	span {
 		transition: all .2s ease;
 		border-bottom-color: $white;
+	}
+}
+
+
+// Settings "I Want to Help" Button
+
+.fcbtn {
+	a {
+		color: $white;
+	}
+
+	&:focus a,
+	&:hover a {
+		color: $white;
 	}
 }

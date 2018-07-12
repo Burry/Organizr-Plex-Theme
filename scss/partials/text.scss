@@ -2,17 +2,22 @@
 
 a {
 	color: $theme;
+	text-decoration: none;
+	transition: color 0.2s;
+	-webkit-tap-highlight-color: transparent;
 
-	&.text-primary {
-		&:focus,
-        &:hover {
-			color: $theme-light;
-		}
+	&:hover,
+	&:focus {
+		color: $white !important;
 	}
 
-	&:focus,
-    &:hover {
-		color: $theme-light;
+	&.text-primary {
+		font-weight: 600;
+	    user-select: none;
+
+        &:hover {
+			color: $white;
+		}
 	}
 
 	&.list-group-item {
@@ -20,25 +25,22 @@ a {
 	}
 }
 
-h2 {
-	color: $white70a;
-	font-family: $font-stack;
-	font-weight: 700;
-
-	&.m-b-0.font-medium.pull-right {
-		color: $white;
-		filter: drop-shadow(0 2px 5px $black70a);
-	}
+b {
+	font-weight: 600;
 }
 
 h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
-	color: $white70a;
-	font-family: $font-stack;
-	font-weight: 700;
+	@extend %header;
+}
+
+h2.m-b-0.font-medium.pull-right {
+	color: $white;
+	filter: drop-shadow(0 2px 5px $black70a);
 }
 
 pre {
@@ -48,6 +50,14 @@ pre {
 code {
 	background: $white08a;
 	color: $white70a;
+}
+
+.bg-title h4 {
+	font-weight: 600;
+}
+
+.font-medium {
+	text-transform: none;
 }
 
 .text-dark {
@@ -68,6 +78,60 @@ code {
 	color: $text !important;
 }
 
+.has-success {
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline {
+		color: $tv;
+	}
+
+	.checkbox,
+	&.checkbox-inline,
+	&.radio,
+	&.radio-inline {
+		label {
+			color: $tv;
+		}
+	}
+
+	.form-control {
+		border: 2px solid $tv;
+	}
+}
+
+.has-failure {
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline {
+		color: $movie;
+	}
+
+	.checkbox,
+	&.checkbox-inline,
+	&.radio,
+	&.radio-inline {
+		label {
+			color: $movie;
+		}
+	}
+
+	.form-control {
+		border: 2px solid $movie;
+	}
+}
+
+.label {
+	cursor: default;
+	height: 100%;
+	user-select: none;
+}
+
 .label-info {
 	background: $black15a !important;
 	color: $white70a !important;
@@ -81,4 +145,15 @@ code {
 	margin-left: 10px !important;
 	padding: 3px 8px;
 	font-weight: 700;
+}
+
+
+// Random stuff
+
+.daterangepicker .input-mini,
+.steamline .sl-right div > a,
+button.list-group-item,
+.dd-handle,
+.dd3-content {
+	color: $white70a !important;
 }

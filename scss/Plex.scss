@@ -1,21 +1,26 @@
 // Plex Theme
 
 @import 'partials/variables';
-@import 'partials/mixins';
+@import 'partials/common';
 @import 'partials/open-sans-font';
 @import 'partials/containers';
+@import 'partials/preloader';
+@import 'partials/text';
 @import 'partials/buttons';
 @import 'partials/pagination';
+@import 'partials/dropdown';
+@import 'partials/scrollbar';
+@import 'partials/alert';
 @import 'partials/error';
-@import 'partials/text';
 @import 'partials/form';
-@import 'partials/login';
+@import 'partials/modals';
 @import 'partials/navbar';
 @import 'partials/sidebar';
-@import 'partials/calendar';
+@import 'partials/login';
 @import 'partials/splash';
+@import 'partials/lockscreen';
+@import 'partials/homepage';
+@import 'partials/calendar';
 @import 'partials/player';
-@import 'partials/notification';
+@import 'partials/settings';
 @import 'partials/animations';
-
-@import 'partials/misc-cleanup.scss';

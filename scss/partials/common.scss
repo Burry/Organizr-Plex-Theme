@@ -1,0 +1,78 @@
+// Common Style Blocks
+
+// Mixins
+
+@mixin background-blur($background-image, $attachment: "") {
+	background: $light-gray $noise repeat $attachment center center/auto,
+		$background-image no-repeat $attachment center center/cover !important;
+}
+
+@mixin simple-button($color) {
+	background: $color !important;
+	border: 0 !important;
+
+	&.disabled,
+	&:disabled {
+        background: $color !important;
+		opacity: 0.7;
+
+		&.focus,
+		&:focus,
+        &:hover {
+			background: $color !important;
+			opacity: 0.7;
+		}
+	}
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: lighten($color, 10%) !important;
+	}
+
+	&.active,
+	&:active {
+		background: darken($color, 10%) !important;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: darken($color, 10%) !important;
+		}
+	}
+}
+
+
+// Extensions
+
+%button {
+	border-radius: 4px;
+    font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: background 0.1s;
+}
+
+%center {
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+%header {
+	color: $white70a;
+	font-family: $font-stack;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+%date-link {
+	color: $text-muted;
+	cursor: pointer !important;
+	transition: color 0.2s;
+
+	&:focus,
+	&:hover {
+		color: $text;
+	}
+}

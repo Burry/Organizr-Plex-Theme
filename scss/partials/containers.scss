@@ -3,24 +3,21 @@
 // Page Elements
 
 html, body {
-	height: 100%;
-	@include background-blur($blur-light);
+	@include background-blur($blur-light, "fixed");
 	transition: background-image 0.2s;
 }
 
 body {
 	color: $text;
-	font-family: $font-stack;
+	font: 600 13px $font-stack;
 }
 
 
-// Dark Backgrounds
+// Dark Settings Backgrounds
 
-.lock-screen,
 .active-tab-Settings,
-#internal-Settings,
-#preloader {
-	@include background-blur($blur-dark);
+#internal-Settings {
+	@include background-blur($blur-dark, "fixed");
 }
 
 
@@ -63,23 +60,26 @@ body {
 	&.bg-org {
 		background: 0 0 !important;
 	}
-}
 
-.panel-heading {
-	font-weight: 700;
-	
-	.btn {
-		margin-left: -12px;
-		margin-top: -7px;
-		
-		&.popup-with-form {
-			padding: 2px;
-			margin-top: -4px;
+	.panel-heading {
+		font-size: 14px;
+		font-weight: 600;
+		color: $text-muted;
+		text-transform: uppercase;
+
+		.btn {
+			padding: 8px 12px;
+			margin-top: -10px;
+
+			&.popup-with-form {
+				padding: 2px;
+				margin-top: -4px;
+			}
 		}
-	}
-	
-	.btn-group {
-		margin-right: -0.5rem;
+
+		.btn-group {
+			margin-right: -0.5rem;
+		}
 	}
 }
 
@@ -98,8 +98,9 @@ body {
 .panel-default {
 	.panel-heading {
 		border-color: transparent;
+		color: $white70a;
 	}
-	
+
 	.panel-body {
 		background: 0 0;
 		color: $text;
@@ -109,12 +110,13 @@ body {
 .panel-info {
 	.panel-heading {
 		background: $black15a;
+		color: $text-muted;
 		border-color: transparent;
 	}
-	
+
 	a {
 		color: $text !important;
-		
+
 		&:focus,
 		&:hover {
 			color: $white !important;
@@ -131,6 +133,7 @@ body {
 .panel-white {
 	.panel-heading {
 		border-color: transparent;
+		color: $white70a;
 	}
 }
 
@@ -141,23 +144,13 @@ body {
 	background: 0 0 !important;
 }
 
-.bg-plex {
-	color: $white70a!important;
-	padding: 15.5px 16px;
-	
-	&:focus,
-	&:hover {
-		color: $white!important;
-	}
-}
-
 .bg-title {
 	background: $black15a!important;
-	
+
 	h4 {
 		color: $white70a!important;
 	}
-	
+
 	.breadcrumb a {
 		color: $white70a!important;
 	}
@@ -165,20 +158,6 @@ body {
 
 .bg-theme {
 	background: $black30a!important;
-}
-
-.dropdown-menu {
-	border-radius: 4px;
-	background: $dark-gray !important;
-
-	a {
-		color: $menu-link !important;
-
-		&:hover {
-			background: $white08a !important;
-			color: $white !important;
-		}
-	}
 }
 
 .well {
@@ -198,6 +177,7 @@ body {
 
 	.box-title {
 		color: $white;
+		font-size: 14px;
 	}
 }
 
@@ -240,7 +220,7 @@ body {
 
 .el-card-avatar a {
 	color: $white70a !important;
-	
+
 	&:focus,
 	&:hover {
 		background: 0 0 !important;
@@ -252,7 +232,7 @@ body {
 	.white-box {
 		padding: 2px;
 	}
-	
+
 	a.btn-outline {
 		color: $white70a;
 		border: 0;
@@ -266,53 +246,4 @@ body {
 
 .el-overlay-1:hover img {
 	transform: none !important;
-}
-
-
-// Modals
-
-.white-popup {
-	> .col-md-6 > .white-box:first-child,
-	.panel-heading {
-		background: $black20 !important;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
-	}
-
-	.panel-footer {
-		background: $black20;
-		border-top: 1px solid #222;
-	}
-
-	> .col-md-6 > .white-box:nth-child(2),
-	.panel-body {
-		background: $black16;
-	}
-
-	> .col-md-6 > .white-box:nth-child(2),
-	&:not(#speedtest-area) .panel-body,
-	.panel-footer {
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
-	}
-
-	.panel {
-		border-radius: 4px;
-
-		> .table-responsive {
-			background: $black20;
-		}
-	}
-}
-
-.white-popup-block {
-	background: $black16;
-	border-radius: 4px!important;
-}
-
-@media screen and (min-width: 768px) {
-	.white-popup-block,
-	.white-popup .panel {
-		box-shadow: 0 5px 15px $black50a;
-	}
 }

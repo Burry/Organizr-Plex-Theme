@@ -3,29 +3,17 @@ A theme for Organizr v2 that emulates the style of Plex
 
 ![Screen Shot](screenshot.jpg "Screen Shot")
 
-## Variants
+## Usage
 
-![Samples](samples.jpg "Samples")
-
-- [<b style="color: #CC7B19; font-family: 'Open Sans'">Plex</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css): Regular Plex Theme — looks like [Plex Web](https://app.plex.tv/desktop)
-- [<b style="color: #CC7B19; font-family: 'Open Sans'">Plex Blur</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex%20Blur.css): Plex Theme with background blur effect
-- [<b style="color: #E5A00D">Plex.tv</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.tv.css): Uses the colors and button shapes of [Plex.tv](https://www.plex.tv) (rounder, lighter, and outlined)
-- [<b style="color: #E5A00D">Plex.tv Blur</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.tv%20Blur.css): Plex.tv theme with background blur effect
+- [Download](https://github.com/Burry/organizr-v2-plex-theme/archive/master.zip) the stylesheets from [`/css`](tree/master/css) to Organizr's `/css/themes` directory.
+- Open Organizr Settings > Customize > Appearance > Colors & Themes, and select "Plex" or "Plex Blur" from the theme dropdown input.
+- Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased nav bar padding.
+- To ensure that notifications display as intended, keep the default notification type in Organizr Settings > Customize > Appearance > Notifications as "Izi."
+- *Optional*: Copy the contents of the [`/images`](tree/master/images) folder from Plex Theme's repository to Organizr's `/plugins/images/` directory. Plex Theme links to some assets hosted on its remote repository, but other images called in Organizr's page markup must be placed in the local installation.
 
 ### Blur Effect
 
-[<b style="color: #CC7B19; font-family: 'Open Sans'">Plex Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) should look good across all major browsers, but it forgoes experimental an background blur effect in favor of darker backgrounds. If your Organizr users are using Safari or another browser that currently supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter), try out [<b style="color: #CC7B19; font-family: 'Open Sans'">Plex Blur</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex%20Blur.css). Chrome has limited support for `backdrop-filter` effects, but only if Experimental Web Platform Features are enabled in [chrome://flags](chrome://flags).
-
-## Installation
-
-- Add the stylesheets in [`/css`](tree/master/css) to Organizr's `/css/themes` directory.
-- Open Organizr Settings > Customize > Appearance > Colors & Themes, and select a variant of Plex Theme from the theme dropdown input.
-- Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased navbar padding.
-- *Optional*: Add the contents of the [`/images`](tree/master/images) folder from Plex Theme's repository to Organizr's `/plugins/images/` directory. Plex Theme links to some assets hosted on its remote repository, but other images called in Organizr's page markup must be placed in the local installation.
-
-### Custom Colors
-
-Changing the placeholder color values in Organizr's Colors & Themes will override Plex Theme's color styles. Deleting custom color values will reverse this. Overrides can also be made in Organizr's Custom CSS settings pane.
+[<b style="color: #CC7B19; font-family: 'Open Sans'">Plex Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) should look good across all major browsers, but it forgoes experimental an background blur effect in favor of darker backgrounds. If your Organizr users are using Safari or another browser that currently supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter), try out [<b style="color: #CC7B19; font-family: 'Open Sans'">Plex Blur Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex%20Blur.css). Chrome has limited support for `backdrop-filter` effects, but only if Experimental Web Platform Features are enabled in [chrome://flags](chrome://flags).
 
 ### Remove Login Chrome
 
@@ -36,6 +24,9 @@ $('.sidebar').addClass('hidden');
 $('.navbar').addClass('hidden');
 $('#pagewrapper').addClass('hidden');
 ```
+### Custom Colors
+
+Changing the placeholder color values in Organizr's Colors & Themes will override Plex Theme's color styles. Deleting custom color values will reverse this. Overrides can also be made in Organizr's Custom CSS settings pane.
 
 ## Development
 
@@ -52,8 +43,6 @@ As you make changes in `/scss`, the stylesheet will be continually recompiled an
 ```
 yarn serve-plex
 yarn serve-plex-blur
-yarn serve-plex-tv
-yarn serve-plex-tv-blur
 ```
 
 You can also just run `yarn build` to compile the stylesheets and watch for changes without serving a test window.

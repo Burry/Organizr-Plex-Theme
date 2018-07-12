@@ -5,16 +5,26 @@
 
 	.sidebar-head {
 		background: $black30a;
-		padding: 5px 20px;
-
-		span {
-			font-weight: 700;
-		}
+		padding: 2.5px 20px;
 
 		h3 {
 			color: $white70a;
+			font-weight: 400;
+			text-transform: none;
 			transition: .2s all;
+
+			.m-r-5 {
+				margin-right: 10px !important;
+			}
+
+			i {
+				font-size: 14px;
+			}
 		}
+	}
+
+	.label {
+		padding: 5px 8px;
 	}
 
 	.slimScrollBar,
@@ -23,26 +33,33 @@
 	}
 }
 
-#side-menu {
-	li {
-		a {
-			color: $white70a;
-			font-weight: 600;
-			transition: .2s all;
+@media screen and (min-width: 768px) {
+	.sidebar .sidebar-head {
+		padding: 5px 20px;
 
-			&.active {
-				background: $white08a;
-				color: $theme;
-				box-shadow: none;
+		h3 {
+			.m-r-5 {
+				margin-right: 5px !important;
+			}
+
+			i {
+				font-size: 20px;
 			}
 		}
+	}
+}
 
-		&:hover a {
-			color: $white;
+#side-menu {
+	li a {
+		color: $white70a;
+		font-weight: 600 !important;
+	    padding: 15px 35px 15px 15px;
+		transition: .2s color ease;
 
-			&.active {
-				color: $white;
-			}
+		&.active {
+			background: $white08a;
+			color: $theme-lighter;
+			box-shadow: none;
 		}
 	}
 }
@@ -51,7 +68,12 @@
 	#side-menu li a {
 		&:focus,
 		&:hover {
+			color: $white;
 			background: $white08a;
 		}
 	}
+}
+
+.tabLoaded {
+	filter: none;
 }

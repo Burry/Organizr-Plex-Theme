@@ -1,0 +1,13 @@
+// Lock screen
+
+.lock-screen {
+	h1 {
+		color: $text;
+	}
+
+	background: hsl(0, 0, 5%) !important;
+
+	.white-box {
+		background: hsl(0, 0, 5%);
+	}
+}

@@ -1,60 +1,123 @@
 // Login & Register
 
-.login-area,
-.login-register {
-	height: 100% !important;
+.login-area:not(.hidden) + #page-wrapper {
+	display: none;
 }
 
 .login-register {
 	@include background-blur($blur-dark);
 }
 
-.login-box {
+.login-register .login-box {
 	background: 0 0;
 	height: initial;
 	right: initial;
+	@extend %center;
 
 	.white-box {
-		padding: 50px;
+		padding: 0;
+	}
+
+	form {
+		width: 100%;
+		max-width: 360px;
+		margin: auto;
+		padding: 30px;
+	}
+
+	.form-group {
+		margin: 15px auto;
+
+		.col-xs-12,
+		.col-md-12 {
+			padding: 0;
+		}
+
+		&.m-t-40,
+		&.m-b-0 {
+			margin: 0 auto !important;
+		}
+
+		&.m-b-0 {
+			color: #A8A8AB;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+#loginform .form-group.m-t-20 {
+	margin: -10px auto 15px !important;
+}
+
+#registerForm .form-group {
+	margin: 15px auto !important;
+
+	&:first-of-type {
+		margin-top: 0px !important;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0px !important;
 	}
 }
 
 .loginLogo {
 	max-height: 100px;
 	max-width: -webkit-fill-available;
+	margin-bottom: 35px;
+}
+
+#to-recover span {
+	color: $white45a;
+	transition: color 0.2s;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+.blockMsg {
+	display: none !important;
 }
 
 @media screen and (min-width: 768px) {
-	.login-box {
+	.login-register {
 		width: 480px;
-		height: 465px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
+		height: 300px;
+	}
+
+	.login-register .login-box {
+		width: 480px;
 
 		.white-box {
 			background: $black30a;
 			width: 480px;
-			padding: 25px 0;
+			padding: 0;
 			margin: auto;
-			top: 140px;
 		}
 
-		#login-logo {
-			height: 0;
-			margin: 0;
+		form {
+			padding: 20px;
 		}
 
 		.form-group {
 			width: 320px;
-			margin: 25px auto;
 		}
 	}
 
+	#login-logo {
+		display: block !important;
+		height: 0;
+		margin: 0;
+	}
+
 	.loginLogo {
+		margin-bottom: 0;
 		position: relative;
-		top: -65px;
+		top: -55px;
 		transform: translateY(-100%);
 	}
 }

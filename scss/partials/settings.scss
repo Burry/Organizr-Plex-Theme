@@ -1,0 +1,291 @@
+// Settings
+
+// Tabs
+
+.sttabs nav a span {
+	font-family: $font-stack;
+}
+
+.tabs-style-flip {
+	.content-wrap {
+		background: 0 0;
+	}
+
+	nav {
+		color: $text-muted !important;
+
+		a::after {
+			background: $black15a !important;
+			transition: none;
+			transform: none;
+		}
+
+		a {
+			color: $white70a !important;
+			transition: none;
+
+			&:hover::after {
+				background: $white08a !important;
+			}
+
+			&:hover {
+				color: $text!important;
+			}
+
+			span {
+				text-transform: none;
+			}
+		}
+
+		li.tab-current {
+			a::after {
+				background: $white08a !important;
+			}
+
+			a {
+				color: $theme-lighter !important;
+			}
+		}
+	}
+}
+
+
+// Buttons
+
+.getPlexMachineAuth,
+.getPlexTokenAuth,
+.newAPIKey,
+.purgeLog,
+.updateNow {
+	font-size: 14px;
+	padding: 6.5px 20px !important;
+}
+
+.fcbtn {
+	a {
+		color: $white;
+	}
+
+	&:focus a,
+	&:hover a {
+		color: $white;
+	}
+}
+
+.swapLog {
+	background: $black15a !important;
+	color: $white70a !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+
+	&:focus,
+	&:hover {
+		color: $white !important;
+		opacity: 1;
+	}
+
+	&.active {
+		background: $white08a !important;
+		color: $theme-lighter !important;
+		opacity: 1;
+	}
+}
+
+#manageUserTable {
+	.el-card-avatar {
+		border-radius: 1000px !important;
+	}
+}
+
+#settings-settings-updates {
+	.btn {
+		margin-top: -4px;
+	}
+
+	.label:not(.label-info) {
+		min-width: 80px;
+	    display: inline-block;
+	    padding: 4px 12px 3px;
+	}
+}
+
+
+// Organizr Links
+
+.profile-social-icons a {
+	color: $white70a !important;
+
+	&:hover,
+	&:focus {
+		color: $white !important;
+	}
+}
+
+
+// Panels
+
+.tab-pane {
+	.panel-wrapper {
+		margin-top: 30px;
+	}
+
+	.panel-body {
+		padding: 0;
+	}
+}
+
+ul.nav.customtab.nav-tabs.nav-low-margin {
+	margin: 0 !important;
+}
+
+
+// Favicon / CSS editors
+
+div[id$="Custom-CSS"] {
+	.col-md-12,
+	.row {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+div[id$="FavIcon"] textarea,
+#customCSSEditor {
+	height: -webkit-fill-available;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.ace-idle-fingers {
+	background: $black15a !important;
+}
+
+.ace_gutter {
+	background: $black30a !important;
+	color: $text!important;
+}
+
+.ace_marker-layer .ace_active-line {
+	background: $white08a !important;
+}
+
+.ace_cursor {
+	color: $white !important;
+}
+
+
+// Log Table
+
+th {
+	color: $white70a;
+}
+
+tbody {
+	color: $text;
+}
+
+table.dataTable {
+	border: 0;
+
+	thead {
+		.sorting::after,
+		.sorting_asc::after,
+		.sorting_desc::after {
+			color: $white70a;
+		}
+	}
+
+	tbody tr {
+		background: $black15a !important;
+
+		&:hover {
+			background: $black15a !important;
+		}
+	}
+}
+
+.table-bordered,
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+	border: 0;
+}
+
+.table-hover tbody tr:hover {
+	background: $black15a !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background: $black30a !important;
+}
+
+.footable.breakpoint > tbody > tr > td > span.footable-toggle {
+	color: $text-muted !important;
+}
+
+
+// Invites Settings
+
+.select2-container--default .select2-selection--multiple {
+	.select2-selection__choice {
+		background: $black30a;
+		border: 0;
+		font-size: 13px;
+		padding: 2.5px 5px;
+	}
+
+	.select2-selection__choice__remove {
+		margin-right: 5px;
+	}
+}
+
+
+// E-Mail Center
+
+.ms-container {
+	.ms-list {
+		border: 0;
+
+		&.ms-focus {
+			box-shadow: none;
+		}
+	}
+
+	.ms-selectable,
+	.ms-selection {
+		background: $dark-gray;
+
+		li {
+			background: transparent;
+			color: $text;
+
+			&.ms-hover {
+				background: $light-gray;
+				color: $white;
+			}
+		}
+	}
+
+	.ms-selectable li.ms-elem-selectable,
+	.ms-selection li.ms-elem-selection {
+		border: 0;
+	}
+}
+
+.mce-menu-item {
+	.mce-text {
+		color: $text-muted !important;
+	}
+
+	&:hover {
+		background: $light-gray !important;
+
+		.mce-text {
+			color: $white !important;
+		}
+	}
+}

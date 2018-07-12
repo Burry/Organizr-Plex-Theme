@@ -1,16 +1,61 @@
 // Buttons
 
+// General Button Style
+
+.btn {
+	@extend %button;
+
+	&:not(.dropdown-toggle) {
+		padding: 8px 30px;
+	}
+
+	&.active,
+	&:active {
+		box-shadow: none;
+	}
+
+	// Movie Request Filter
+	&[data-filter="request-result-movie"] {
+		@include simple-button($movie);
+		color: $white !important;
+	}
+
+	// TV Show Request Filter
+	&[data-filter="request-result-tv"] {
+		@include simple-button($tv);
+		color: $white !important;
+	}
+
+	// Music Request Filter
+	&[data-filter="request-result-music"] {
+		@include simple-button($music);
+		color: $white !important;
+	}
+
+	// General Request Filter
+	&[data-filter="request-result-all"] {
+		@include simple-button($theme);
+		color: $white !important;
+	}
+
+	a {
+		transition: none;
+	}
+}
+
+
 // Info Button (Main Button)
 
 .btn-info {
 	background: $theme !important;
 	color: $white !important;
-	border-color: transparent !important;
+	border: 0 !important;
 
-	&.disabled {
+	&.disabled,
+	&:disabled {
         background: $theme-light !important;
     	color: $white !important;
-    	border-color: transparent !important;
+    	border: 0 !important;
 		opacity: 0.7;
 
 		&.focus,
@@ -18,7 +63,7 @@
         &:hover {
 			background: $theme-light !important;
 	    	color: $white !important;
-	    	border-color: transparent !important;
+	    	border: 0 !important;
 			opacity: 0.7;
 		}
 	}
@@ -28,7 +73,7 @@
 	&:hover {
 		background: $theme-light !important;
 		color: $white !important;
-		border-color: transparent !important;
+		border: 0 !important;
 		opacity: 1;
 	}
 
@@ -36,24 +81,38 @@
 	&:active {
 		background: $theme-dark !important;
 		color: $white !important;
-		border-color: transparent !important;
+		border: 0 !important;
 
 		&.focus,
 		&:focus,
 		&:hover {
 			background: $theme-dark !important;
 			color: $white !important;
-			border-color: transparent !important;
+			border: 0 !important;
 		}
 	}
 }
 
-.btn-label {
-	background: 0 0;
+// Outlined Button
+
+.btn-outline {
+	border-width: 2px;
 }
+
+
+// Large Button
 
 .btn-lg {
 	padding: 12px 30px;
+}
+
+
+// Button Icon
+
+.btn-label {
+	background: 0 0;
+	padding: 0;
+    margin: 0 8px 0 0;
 }
 
 
@@ -62,12 +121,13 @@
 .btn-primary {
 	background: $white25a;
 	color: $white;
-	border-color: transparent;
+	border: 0;
 
-	&.disabled {
+	&.disabled,
+	&:disabled {
 		background: $white25a;
 		color: $white;
-		border-color: transparent;
+		border: 0;
 		opacity: 0.7;
 
 		&.focus,
@@ -75,7 +135,7 @@
 		&:hover {
 			background: $white25a;
 			color: $white;
-			border-color: transparent;
+			border: 0;
 			opacity: 0.7;
 		}
 	}
@@ -85,21 +145,21 @@
 	&:hover {
 		background: $white30a;
 		color: $white;
-		border-color: transparent;
+		border: 0;
 		opacity: 1;
 	}
 
 	&.btn-outline {
 		background: $white25a;
 		color: $white;
-		border-color: transparent;
+		border: 0;
 
 		&.focus,
 		&:focus,
 		&:hover {
 			background: $white30a;
 			color: $white;
-			border-color: transparent;
+			border: 0;
 			opacity: 1;
 		}
 	}
@@ -108,14 +168,14 @@
 	&:active {
 		background: $white20a;
 		color: $white;
-		border-color: transparent;
+		border: 0;
 
 		&.focus,
 		&:focus,
 		&:hover {
 			background: $white20a;
 			color: $white;
-			border-color: transparent;
+			border: 0;
 		}
 	}
 }
@@ -129,87 +189,112 @@
 }
 
 
-// General Button Style
-
-.btn {
-	border-radius: 4px;
-	font-weight: 700;
-	text-transform: uppercase;
-	transition: all .2s ease;
-
-	&.active,
-	&:active {
-		box-shadow: none;
-	}
-
-	// Movie Request Filter
-	&[data-filter="request-result-movie"] {
-		@include request-result-button($movie);
-	}
-
-	// TV Show Request Filter
-	&[data-filter="request-result-tv"] {
-		@include request-result-button($tv);
-	}
-
-	// Music Request Filter
-	&[data-filter="request-result-music"] {
-		@include request-result-button($music);
-	}
-
-	// General Request Filter
-	&[data-filter="request-result-all"] {
-		@include request-result-button($theme);
-	}
-}
-
-
 // Large Table Row Button
 
 .btn-circle.btn-lg {
 	padding: 10px;
 }
 
-.btn-danger.btn-outline {
-	background: $movie;
-	color: $white;
-	border-color: transparent;
 
-	&:focus,
-	&:hover {
-		background: lighten($movie, 10%);
-		color: $white;
-		border-color: transparent;
-	}
+// Green Button
 
-	&.active,
-	&:active {
-		background: darken($movie, 10%);
-		color: $white;
-		border-color: transparent;
+.btn-success {
+	@include simple-button($tv);
+}
 
-		&.focus,
-		&:focus,
-		&:hover {
-			background: darken($movie, 10%);
-			color: $white;
-			border-color: transparent;
-		}
+// Red Button
+
+.btn-danger {
+	@include simple-button($movie);
+
+	&.btn-outline {
+		@include simple-button($movie);
 	}
 }
 
 
-// Media Info Pane Button
+// Media Info Pane Buttons
+
+.bg-emby,
+.bg-plex,
+.btn-youtube {
+	color: $white70a !important;
+	padding: 15.5px 16px !important;
+	transition: background 0.1s;
+
+	&:focus,
+	&:hover {
+		color: $white !important;
+	}
+}
+
+.bg-plex {
+	&:focus,
+	&:hover {
+		background: $theme-light;
+	}
+
+	&:active {
+		background: $theme-dark;
+
+		&:focus,
+		&:hover {
+			background: $theme-dark;
+		}
+	}
+}
 
 .btn-youtube {
-	background: #F00 !important;
-	color: $white70a !important;
-	padding: 15.5px 16px;
+	@include simple-button(#F00);
+}
+
+
+// MCE Buttons
+
+.mce-menubar .mce-menubtn {
+	background: transparent !important;
+	border: 0 !important;
+	border-radius: 4px;
+	text-shadow: none !important;
+
+	button,
+	.mce-caret {
+		color: $text-muted !important;
+		border-top-color: $text-muted !important;
+	}
+
+	&:hover {
+		button,
+		.mce-caret {
+			color: $white !important;
+			border-top-color: $white !important;
+		}
+	}
+}
+
+.mce-btn {
+	@extend %button;
+	background: $white25a !important;
+	color: $white !important;
+	border: 0 !important;
+
+	&.disabled,
+	&:disabled {
+		background: $white25a !important;
+		opacity: 0.7;
+
+		&.focus,
+		&:focus,
+		&:hover {
+			background: $white25a !important;
+			opacity: 0.7;
+		}
+	}
 
 	&.focus,
 	&:focus,
 	&:hover {
-		color: $white !important;
+		background: $white30a !important;
 	}
 }
 
@@ -245,201 +330,61 @@
 }
 
 
-// Calendar Buttons
+// List Group Item
 
-.fc-button {
-	background: $black15a !important;
-	color: $text-muted;
-	border-color: transparent;
-	border-radius: 0 !important;
-	border: 0 !important;
+button.list-group-item {
+	color: $white70a !important;
+}
 
-	&:focus,
-	&:hover {
-		background: $white08a !important;
-		color: $text;
-		border-color: transparent;
+
+// Navigation Tabs
+
+.customtab2 {
+	padding: 0;
+}
+
+.nav-tab {
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+}
+
+.mailbox-widget .customtab li {
+	&:hover a {
 		opacity: 1;
 	}
 }
 
-.fc-next-button,
-.fc-prev-button {
-	background: 0 0 !important;
-	color: $white70a !important;
-	border: 0 !important;
+.nav-tabs {
+	background: $black15a;
+	border: 0;
 
-	&.focus,
-	&:focus,
-	&:hover {
-		background: 0 0 !important;
-		color: $white !important;
-	}
-}
+	li {
+		a {
+			color: $text-muted !important;
+			margin: 0;
+			transition: none;
 
-.fc-state-default {
-	text-shadow: none;
-	box-shadow: none;
-
-	&.fc-corner-left {
-		border-right-width: 0;
-		border-radius: 4px 0 0 4px;
-	}
-
-	&.fc-corner-right {
-		border-left-width: 0;
-		border-radius: 0 4px 4px 0;
-	}
-}
-
-.fc-state-active,
-.fc-state-active:focus,
-.fc-state-active:hover {
-	background: $white08a !important;
-	color: $theme-lighter;
-	border-color: transparent;
-}
-
-.fc-state-hover {
-	opacity: 1;
-}
-
-.fc-today-button {
-	border-radius: 4px !important;
-	font-weight: 700;
-	transition: all 0.2s;
-
-	background: $white25a !important;
-	color: $white;
-
-	&:focus,
-	&:hover {
-		background: $white30a !important;
-		color: $white;
-	}
-
-	&:active {
-		background: $white20a !important;
-	}
-}
-
-
-// Input Group Buttons
-
-#homepage-items {
-	.dropdown-toggle {
-		border-top-left-radius: 4px !important;
-		border-bottom-left-radius: 4px !important;
-	}
-
-	.btn-group .btn:not(#newRequestButton) {
-		background: 0 0 !important;
-		color: $white70a !important;
-
-		&.focus,
-		&:focus,
-		&:hover {
-			color: $white !important;
+			&:focus,
+			&:hover {
+				background: $white08a !important;
+				color: $text !important;
+			}
 		}
-	}
-}
 
-.showPassword {
-	background: $black30a;
-	color: $white70a;
-	border-color: transparent;
+		&.active a {
+			background: $white08a !important;
+			color: $theme-lighter !important;
+			border: 0;
+			cursor: pointer;
 
-	&:focus,
-	&:hover {
-		background: $black15a;
-		color: $white;
-		border-color: transparent;
-	}
-
-	&:active {
-		&:focus,
-		&:hover {
-			background: $black50a;
-			color: $white;
-			border-color: transparent;
+			&:focus,
+			&:hover {
+				background: $white08a;
+				color: $theme-lighter !important;
+				border: 0;
+				cursor: pointer;
+			}
 		}
-	}
-}
-
-
-// Home Page Request Button
-
-#newRequestButton {
-	border-radius: 4px !important;
-	padding: 6px 9.5px;
-	margin-left: 1rem;
-
-	.fa-search {
-		margin-left: 0 !important;
-	}
-}
-
-
-// Poster Image Refresh Button
-
-.refreshImage {
-	color: $white70a;
-
-	&:focus,
-	&:hover {
-		color: $white;
-	}
-}
-
-
-// Scroll-To-Top Button
-
-#scroll {
-	background: $white25a;
-	transition: all .2s ease;
-	border-radius: 1000px;
-
-	&:focus,
-	&:hover {
-		background: $white30a;
-	}
-
-	span {
-		transition: all .2s ease;
-		border-bottom-color: $white;
-	}
-}
-
-
-// Settings Buttons
-
-.getPlexMachineAuth,
-.getPlexTokenAuth,
-.newAPIKey,
-.purgeLog,
-.updateNow {
-	font-size: 14px;
-	padding: 7.5px 10px;
-}
-
-.fcbtn {
-	a {
-		color: $white;
-	}
-
-	&:focus a,
-	&:hover a {
-		color: $white;
-	}
-}
-
-.swapLog {
-	background: $black15a !important;
-	color: $white70a !important;
-	border: 0 !important;
-	
-	&.active {
-		background: $white08a !important;
-		color: $theme !important;
 	}
 }

@@ -2,16 +2,22 @@
 
 // Inputs
 
+input,
+select,
 .form-control,
 .form-material .form-control,
-input[aria-controls=loginLogTable],
-select {
+.input-group .form-control,
+span.select2-selection.select2-selection--single,
+span.select2-selection.select2-selection--multiple,
+.select2-container--default .select2-search--dropdown .select2-search__field {
 	color: $text;
 	margin: 0;
 	border: 0;
-	height: 38px;
+	height: 36px;
+	font-size: 15px;
+	font-weight: 600;
 	line-height: 1.5;
-	padding: 6px 12px;
+	padding: 0 12px;
 	border-radius: 4px;
 	vertical-align: middle;
 	background: $white25a;
@@ -23,12 +29,55 @@ select {
 		background: $text;
 		border-radius: 4px;
 	}
+
+	&[disabled],
+	&[readonly] {
+		background: $black15a;
+	}
 }
 
-.input-group .form-control {
-	border-radius: 5px 0 0 5px !important;
+// Input label
+
+.control-label {
+	color: $text-muted;
 }
 
+
+// Input Groups
+
+.input-group .form-control:not(:first-child):not(:last-child) {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.input-group-addon {
+	background: $black20 !important;
+	border-radius: 4px !important;
+}
+
+.input-group-btn .btn {
+	background: $black20;
+	color: $menu-link;
+	border-color: transparent;
+	padding: 6.5px 12px;
+	transition: none;
+
+	&:focus,
+	&:hover {
+		background: $black20;
+		color: $menu-link;
+		border-color: transparent;
+	}
+
+	&:active {
+		&:focus,
+		&:hover {
+			background: $theme;
+			color: $white;
+			border-color: transparent;
+		}
+	}
+}
 
 // Large Inputs
 
@@ -41,31 +90,43 @@ select {
 }
 
 
-// Textareas
+// Checkboxes & Radio Buttons
 
-div[id$="FavIcon"] textarea,
-#customCSSEditor {
-	height: -webkit-fill-available;
-	border-radius: 4px;
+.checkbox label {
+	&::before {
+		background: $white08a;
+		border: 0;
+		border-radius: 4px;
+		transition: all .2s ease;
+	}
+
+	&::after {
+		top: 2px;
+	}
+}
+
+.checkbox-primary input[type=checkbox] {
+	label {
+		color: $white45a;
+		font-weight: 600;
+	}
+
+	&:hover label {
+		color: $white;
+	}
+
+	&:checked + label::before {
+		background: $theme;
+		border-color: $theme;
+	}
 }
 
 
-// Checkboxes
 
-.checkbox label::before {
-	background: $white08a;
-	border: 0;
-	border-radius: 4px;
-	transition: all .2s ease;
+input[type=checkbox], input[type=radio] {
+    margin: 0;
+    height: 17px;
 }
-
-.checkbox-primary input[type=checkbox]:checked + label::before {
-	background: $theme;
-	border-color: $theme;
-}
-
-
-// Radio Buttons
 
 .radio-purple input[type=radio] {
 	+ label::before {

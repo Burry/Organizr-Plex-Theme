@@ -1,0 +1,63 @@
+// Dropdowns
+
+// Dropdown Menu
+
+.dropdown-menu {
+	background: $dark-gray !important;
+	border-radius: 4px;
+
+	li {
+		cursor: pointer;
+	}
+
+	a {
+		color: $menu-link !important;
+		transition: none;
+
+		&:hover {
+			background: $white08a !important;
+			color: $white !important;
+		}
+	}
+
+	h4,
+	.text-muted {
+		color: $menu-header !important;
+		margin-bottom: 6px !important;
+	}
+
+	.text-muted {
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.divider {
+		background: hsla(0, 0%, 78%, 0.15);
+		margin: 5px;
+	}
+}
+
+
+// Rich Selector
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+	padding: 0;
+}
+
+.select2-dropdown {
+	background: $dark-gray;
+	color: $menu-link;
+	border: 0;
+}
+
+.select2-container--default {
+	.select2-results__option[aria-selected=true] {
+		background: $dark-gray !important;
+		color: $menu-link !important;
+	}
+
+	.select2-results__option--highlighted[aria-selected] {
+		background: $white08a;
+		color: $white;
+	}
+}

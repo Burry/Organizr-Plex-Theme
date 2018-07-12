@@ -1,0 +1,262 @@
+// Homepage
+
+// Calendar Buttons
+
+.fc-button {
+	background: $black15a !important;
+	color: $text-muted;
+	border-color: transparent;
+	border-radius: 0 !important;
+	border: 0 !important;
+	text-transform: uppercase;
+
+	&:focus,
+	&:hover {
+		background: $white08a !important;
+		color: $text;
+		border-color: transparent;
+		opacity: 1;
+	}
+}
+
+.fc-next-button,
+.fc-prev-button {
+	background: 0 0 !important;
+	color: $white70a !important;
+	border: 0 !important;
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: 0 0 !important;
+		color: $white !important;
+	}
+}
+
+.fc-state-default {
+	text-shadow: none;
+	box-shadow: none;
+
+	&.fc-corner-left {
+		border-right-width: 0;
+		border-radius: 4px 0 0 4px;
+	}
+
+	&.fc-corner-right {
+		border-left-width: 0;
+		border-radius: 0 4px 4px 0;
+	}
+}
+
+.fc-state-active,
+.fc-state-active:focus,
+.fc-state-active:hover {
+	background: $white08a !important;
+	color: $theme-lighter;
+	border-color: transparent;
+}
+
+.fc-state-hover {
+	opacity: 1;
+}
+
+.fc-today-button {
+	border-radius: 4px !important;
+	font-weight: 700;
+	transition: all 0.1s;
+
+	background: $white25a !important;
+	color: $white;
+
+	&:focus,
+	&:hover {
+		background: $white30a !important;
+		color: $white;
+	}
+
+	&:active {
+		background: $white20a !important;
+	}
+}
+
+
+// Input Group Buttons
+
+#homepage-items {
+	.dropdown-toggle {
+		border-top-left-radius: 4px !important;
+		border-bottom-left-radius: 4px !important;
+	}
+
+	.btn-group {
+		margin-top: 15px;
+
+		.btn:not(#newRequestButton) {
+			background: 0 0 !important;
+			color: $white70a !important;
+			padding: 6px 12px;
+			margin: 0 12.5px;
+
+			&.focus,
+			&:focus,
+			&:hover {
+				color: $white !important;
+			}
+		}
+	}
+
+	h2.text-center {
+		opacity: 0.5;
+		font-size: 12px !important;
+	}
+
+	h3 {
+		text-transform: none;
+	}
+
+	h4.pull-left,
+	.panel-heading {
+		@extend %header;
+		color: $text !important;
+		font-size: 15px;
+		padding: 0;
+		cursor: default;
+		user-select: none;
+	}
+
+	.white-box {
+		padding: 0;
+	}
+}
+
+.homepageImageTitle {
+	margin-top: 0;
+}
+
+
+// Home Page Request Button
+
+#newRequestButton {
+	border-radius: 4px !important;
+	padding: 6px 9.5px;
+	margin-left: 1rem;
+
+	.fa-search {
+		margin-left: 0 !important;
+	}
+}
+
+
+// Poster Image Refresh Button
+
+.refreshImage {
+	color: $white70a;
+
+	&:focus,
+	&:hover {
+		color: $white;
+	}
+
+	&.default {
+		padding: 6.5px 8px !important;
+		position: absolute;
+		right: 0;
+	}
+}
+
+
+// Scroll-To-Top Button
+
+#scroll {
+	background: $white25a;
+	transition: all 0.1s;
+	border-radius: 1000px;
+
+	&:focus,
+	&:hover {
+		background: $white30a;
+	}
+
+	span {
+		transition: all 0.1s;
+		border-bottom-color: $white;
+	}
+}
+
+
+// Content Streams
+
+#embyStreams,
+#plexStreams {
+	hr.hidden-xs {
+		display: none;
+	}
+}
+
+
+// Content Thumbnails
+
+.owl-stage {
+	width: 9999999px !important;
+	height: 229px !important;
+}
+
+.owl-item {
+	padding: 2px;
+}
+
+.hover-homepage-item:hover {
+	transition: all .2s;
+}
+
+.badge,
+.inside-request-div {
+	background: $theme !important;
+}
+
+.outside-request-div {
+	z-index: 1;
+}
+
+.recent-title {
+	background: $black30a!important;
+	padding: 5px;
+	font-weight: 700;
+	pointer-events: none;
+}
+
+
+// Download Queues
+
+tbody[class$="-queue"] {
+	cursor: default;
+
+	td.hidden-xs {
+		font-weight: 400;
+		user-select: none;
+	}
+}
+
+
+// Progress Bars
+
+tbody[class$="-queue"] {
+	.progress,
+	.progress-bar-info {
+		border-radius: 4px;
+	}
+}
+
+.progress {
+	height: 3px;
+	margin-bottom: 5px;
+	transition: all 0.2s;
+}
+
+.progress-bar-info {
+    background: $theme;
+}
+
+.progress-bar-inverse {
+	background: $black15a;
+}

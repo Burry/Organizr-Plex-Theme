@@ -1,0 +1,122 @@
+// Modal Views
+
+.white-popup {
+	> .col-md-6 > .white-box:first-child,
+	.panel-heading {
+		background: $black20 !important;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+
+	.panel-footer {
+		background: $black20;
+		border-top: 1px solid #222;
+	}
+
+	> .col-md-6 > .white-box:nth-child(2),
+	.panel-body {
+		background: $black16;
+	}
+
+	> .col-md-6 > .white-box:nth-child(2),
+	&:not(#speedtest-area) .panel-body,
+	.panel-footer {
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+
+	.panel {
+		border-radius: 4px;
+
+		> .table-responsive {
+			background: $black20;
+		}
+	}
+}
+
+.white-popup-block {
+	background: $black16;
+	border-radius: 4px!important;
+
+	h1 {
+		color: $text;
+		font-size: 20px;
+		font-weight: 400;
+		text-transform: none;
+		margin: 0 0 15px 0;
+	}
+
+
+	.btn.row {
+		margin: 15px 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.white-popup-block,
+	.white-popup .panel {
+		box-shadow: 0 5px 15px $black50a;
+	}
+}
+
+.mfp-close-btn-in .mfp-close {
+	color: $white70a;
+	font-size: 42px;
+}
+
+
+// Invite Modal
+
+#invite-area .form-group {
+	margin: 0;
+}
+
+
+// Content/Request Modal
+
+.css-bar:after {
+	background: $dark-gray;
+	color: $text;
+}
+
+.css-bar-sm > img {
+	padding: 5px;
+}
+
+div[id^="request"] {
+	.bg-plex {
+		margin-top: 10px;
+	}
+	.btn-youtube {
+		margin-top: 10px;
+	}
+	h5.text-center {
+		margin-bottom: 1.5rem;
+	}
+}
+
+
+// MCE Modal
+
+.mce-window {
+	background: transparent;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.mce-panel {
+	background: $black16 !important;
+	border: 0 !important;
+}
+
+.mce-label {
+	color: $text-muted !important;
+	text-shadow: none !important;
+}
+
+.mce-foot {
+	background: $black20 !important;
+	border-top: 1px solid #222;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}

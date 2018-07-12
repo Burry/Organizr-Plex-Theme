@@ -1,15 +1,5 @@
 // Calendar
 
-%date-link {
-	color: $text-muted;
-	cursor: pointer !important;
-
-	&:focus,
-	&:hover {
-		color: $text;
-	}
-}
-
 .fc th {
 	&.fc-mon,
 	&.fc-tue,
@@ -40,8 +30,14 @@
 	@extend %date-link;
 }
 
+.fc-time {
+	font-weight: 400 !important;
+}
+
 .fc-title {
 	color: $white70a;
+	font-weight: 600;
+	transition: color 0.2s;
 }
 
 .fc-event {
@@ -53,15 +49,27 @@
 
 .fc-toolbar {
 	background: 0 0 !important;
-	padding: 10px 0;
 	cursor: default;
+	padding: 10px 0;
+
+	h2 {
+		@extend %header;
+		color: $text;
+		font-size: 15px;
+	}
+
+	.fc-center {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 .fc-today {
 	background: $white08a !important;
 
 	.fc-day-number {
-		color: $theme;
+		color: $theme-lighter;
 	}
 
 	&.fc-state-highlight {

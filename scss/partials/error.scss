@@ -1,7 +1,7 @@
 // Error Page
 
 .error-page {
-	@include background-blur($blur-dark);
+	@include background-blur($blur-dark, "fixed");
 
 	h1 {
 		font-size: 128px;

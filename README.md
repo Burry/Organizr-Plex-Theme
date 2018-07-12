@@ -5,11 +5,11 @@ A theme for Organizr v2 that emulates the style of Plex
 
 ## Usage
 
-- [Download](https://github.com/Burry/organizr-v2-plex-theme/archive/master.zip) the stylesheets from [`/css`](tree/master/css) to Organizr's `/css/themes` directory.
+- [Download](https://github.com/Burry/organizr-v2-plex-theme/archive/master.zip) the stylesheets from [`/css`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/css) to Organizr's `/css/themes` directory.
 - Open Organizr Settings > Customize > Appearance > Colors & Themes, and select "Plex" or "Plex Blur" from the theme dropdown input.
 - Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased nav bar padding.
 - To ensure that notifications display as intended, keep the default notification type in Organizr Settings > Customize > Appearance > Notifications as "Izi."
-- *Optional*: Copy the contents of the [`/images`](tree/master/images) folder from Plex Theme's repository to Organizr's `/plugins/images/` directory. Plex Theme links to some assets hosted on its remote repository, but other images called in Organizr's page markup must be placed in the local installation.
+- *Optional*: Copy the contents of the [`/images`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images) folder from Plex Theme's repository to Organizr's `/plugins/images/` directory. Plex Theme links to some assets hosted on its remote repository, but other images called in Organizr's page markup must be placed in the local installation.
 
 ### Blur Effect
 

@@ -12,7 +12,7 @@
 	background: 0 0;
 	height: initial;
 	right: initial;
-	position: absolute;
+	position: fixed;
 	@extend %center;
 
 	.white-box {

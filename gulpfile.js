@@ -74,15 +74,5 @@ gulp.task('serve-plex-blur-theme', function() {
     return startBrowserSync('Plex Blur');
 });
 
-gulp.task('serve-plex-tv-theme', function() {
-    return startBrowserSync('Plex.tv');
-});
-
-gulp.task('serve-plex-tv-blur-theme', function() {
-    return startBrowserSync('Plex.tv Blur');
-});
-
 gulp.task('build-serve-plex-theme', gulp.parallel('build', 'serve-plex-theme'));
 gulp.task('build-serve-plex-blur-theme', gulp.parallel('build', 'serve-plex-blur-theme'));
-gulp.task('build-serve-plex-tv-theme', gulp.parallel('build', 'serve-plex-tv-theme'));
-gulp.task('build-serve-plex-tv-blur-theme', gulp.parallel('build', 'serve-plex-tv-blur-theme'));

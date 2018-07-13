@@ -19,7 +19,6 @@ Add the following lines to Organizr's `/js/functions.js` inside the function `sw
 $('.sidebar').addClass('hidden');
 $('.navbar').addClass('hidden');
 $('#pagewrapper').addClass('hidden');
-
 ```
 
 ### Custom Colors

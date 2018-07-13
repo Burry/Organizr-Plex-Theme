@@ -26,6 +26,8 @@
 	h2.text-center {
 		color: $white30a;
 		font-size: 14px !important;
+		cursor: default;
+		user-select: none;
 	}
 
 	h3 {
@@ -57,6 +59,7 @@
 #newRequestButton {
 	border-radius: 4px !important;
 	padding: 6px 9.5px;
+	margin: 2.5px auto;
 	margin-left: 1rem;
 
 	.fa-search {
@@ -219,7 +222,7 @@ tbody {
 
 		.progress-bar {
 			font-size: 75% !important;
-			line-height: 16px;
+			line-height: 16px !important;
 		}
 	}
 }

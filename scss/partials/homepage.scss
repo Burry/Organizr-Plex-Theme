@@ -24,8 +24,8 @@
 	}
 
 	h2.text-center {
-		opacity: 0.5;
-		font-size: 12px !important;
+		color: $white30a;
+		font-size: 14px !important;
 	}
 
 	h3 {
@@ -116,7 +116,7 @@
 
 .owl-stage {
 	width: 9999999px !important;
-	height: 229px !important;
+	padding: 4px;
 }
 
 .owl-item {
@@ -188,7 +188,7 @@ tbody[class$="-queue"] {
 			}
 
 			&:only-child {
-				color: $white70a;
+				color: $white30a;
 				text-transform: uppercase;
 			}
 		}

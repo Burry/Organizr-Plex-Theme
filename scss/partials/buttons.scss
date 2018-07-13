@@ -28,6 +28,10 @@
 	a {
 		transition: none;
 	}
+
+	&.row {
+		margin: 0 !important;
+	}
 }
 
 
@@ -102,6 +106,7 @@
 
 	&.btn-outline {
 		@include button($red);
+		border-radius: 1000px;
 	}
 }
 

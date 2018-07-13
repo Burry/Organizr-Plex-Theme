@@ -52,6 +52,18 @@
 	}
 }
 
+@supports (backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px)) {
+	.mfp-bg,
+	.mfp-container {
+		@extend %background-blur;
+	}
+
+	.mfp-bg,
+	.mfp-zoom-out.mfp-ready.mfp-bg {
+		opacity: 0.5;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.white-popup-block,
 	.white-popup .panel {

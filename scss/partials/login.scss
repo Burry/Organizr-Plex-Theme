@@ -5,7 +5,7 @@
 }
 
 .login-register {
-	@include background-blur($blur-dark);
+	@include background-blur($bg-dark);
 }
 
 .login-register .login-box {

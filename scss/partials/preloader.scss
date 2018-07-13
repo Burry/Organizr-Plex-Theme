@@ -1,7 +1,7 @@
 // Preloader
 
 #preloader {
-	@include background-blur($blur-dark, "fixed");
+	@include background-blur($bg-dark, "fixed");
 	z-index: 2;
 }
 

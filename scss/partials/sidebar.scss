@@ -33,6 +33,17 @@
 	}
 }
 
+@supports (backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px)) {
+	.sidebar {
+		background: $black15a;
+	}
+
+	.sidebar,
+	.sidebar-head {
+		@extend %background-blur;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.sidebar .sidebar-head {
 		padding: 5px 20px;

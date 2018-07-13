@@ -3,7 +3,7 @@
 // Page Elements
 
 html, body {
-	@include background-blur($blur-light, "fixed");
+	@include background-blur($bg-light, "fixed");
 	transition: background-image 0.2s;
 }
 
@@ -17,7 +17,7 @@ body {
 
 .active-tab-Settings,
 #internal-Settings {
-	@include background-blur($blur-dark, "fixed");
+	@include background-blur($bg-dark, "fixed");
 }
 
 

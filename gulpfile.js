@@ -7,15 +7,20 @@ const gulp = require('gulp'),
     packageJSON = require('./package.json'),
     autoPrefixer = require('gulp-autoprefixer'),
     headerComment = require('gulp-header-comment'),
+    comment = `Plex Theme for Organizr v2
+        Version ` + packageJSON.version + `
+        ` + packageJSON.license + ` License
+        ` + packageJSON.repository,
     browserSync = require('browser-sync').create(),
-    browserSyncConfig = theme => ({
+    browserSnippet = '<link rel="stylesheet" type="text/css" href="/Plex.css"/>',
+    browserSyncConfig = {
         proxy: packageJSON.homepage,
-        files: 'css/' + theme + '.css',
+        files: 'css/Plex.css',
         serveStatic: ['css'],
         snippetOptions: {
             rule: {
                 match: /<\/head>/i,
-                fn: (snippet, match) => '<link rel="stylesheet" type="text/css" href="/' + theme + '.css"/>' + snippet + match
+                fn: (snippet, match) => browserSnippet + snippet + match
             }
         },
         ghostMode: {
@@ -30,7 +35,7 @@ const gulp = require('gulp'),
         		bottom: '0'
             }
         }
-    });
+    };
 
 // Lint, compile, and post-process Sass
 gulp.task('compile', function() {
@@ -41,11 +46,7 @@ gulp.task('compile', function() {
         .pipe(sass({ errLogToConsole: true }).on('error', sass.logError))
         .pipe(autoPrefixer())
         .pipe(cleanCSS({ level: 2 }))
-        .pipe(headerComment(`
-            Plex Theme for Organizr v2
-            Version ` + packageJSON.version + `
-            ` + packageJSON.license + ` License
-        ` + packageJSON.repository))
+        .pipe(headerComment(comment))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream());
 });
@@ -58,21 +59,12 @@ gulp.task('watch', function() {
 gulp.task('build', gulp.series(['compile', 'watch']));
 
 // Start BrowserSync server
-function startBrowserSync(theme) {
+gulp.task('serve', function() {
     if (!packageJSON.homepage) {
         console.error('Set the "homepage" value in package.json to your Organizr instance\'s URL to test with Browsersync');
-        return;
+        return process.exit(0);
     }
-    return browserSync.init(browserSyncConfig(theme));
-}
-
-gulp.task('serve-plex-theme', function() {
-    return startBrowserSync('Plex');
+    return browserSync.init(browserSyncConfig);
 });
 
-gulp.task('serve-plex-blur-theme', function() {
-    return startBrowserSync('Plex Blur');
-});
-
-gulp.task('build-serve-plex-theme', gulp.parallel('build', 'serve-plex-theme'));
-gulp.task('build-serve-plex-blur-theme', gulp.parallel('build', 'serve-plex-blur-theme'));
+gulp.task('build-serve', gulp.parallel('build', 'serve'));

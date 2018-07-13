@@ -202,11 +202,11 @@ button.list-group-item {
 }
 
 .nav-tabs {
-	background: $black15a;
 	border: 0;
 
 	li {
 		a {
+			background: $black15a;
 			color: $text-muted !important;
 			margin: 0;
 			transition: none;

@@ -16,6 +16,11 @@
 	> .col-md-6 > .white-box:nth-child(2),
 	.panel-body {
 		background: $black16;
+		box-shadow: 0 5px 15px $black50a;
+
+		.text-muted {
+			color: $text-muted !important;
+		}
 	}
 
 	> .col-md-6 > .white-box:nth-child(2),

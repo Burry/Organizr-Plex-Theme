@@ -11,7 +11,7 @@ A theme for Organizr v2 that emulates the style of Plex
 - To ensure that notifications display as intended, keep the default notification style setting "Izi" under Organizr Settings > Customize > Appearance > Notifications.
 - *Optional*: Copy the contents of [Plex Theme's `/images`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images) to Organizr's `/plugins/images/` directory. Plex Theme links to some assets hosted on its remote repository, but other images called in Organizr's page markup must be placed in the local installation.
 
-### Remove Login Chrome
+### Hide Login Page UI Chrome
 
 Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login/register page.
 
@@ -32,7 +32,7 @@ Changing the placeholder color values in Organizr's Colors & Themes will overrid
 - Run `yarn` to install development dependencies
 - Set the `homepage` value in `package.json` to your Organizr instance's URL
 - Run `yarn serve` to...
-    - Compile the [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) stylesheets to minified CSS files and recompile when changes are detected
+    - Compile the [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) source stylesheets to a minified CSS file and recompile when changes are detected
     - Launch a new [Browsersync](https://browsersync.io) window with the Plex Theme css injected into your Organizr instance
 
 As you make changes in `/scss`, the stylesheet will be continually recompiled and automatically injected into the Browsersync window, so you can see your changes instantly. Make sure that while testing, your Organizr instance is not set to use Plex Theme under Organizr Settings > Customize > Appearance > Colors & Themes, or some of your changes will not appear without `!important` overrides.

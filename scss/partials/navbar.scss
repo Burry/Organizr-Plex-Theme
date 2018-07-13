@@ -40,8 +40,12 @@
 	.dropdown-user {
 		top: 60px;
 
-		.dw-user-box .u-img img {
-			border-radius: 1000px;
+		.dw-user-box {
+			cursor: default;
+
+			.u-img img {
+				border-radius: 1000px;
+			}
 		}
 	}
 }

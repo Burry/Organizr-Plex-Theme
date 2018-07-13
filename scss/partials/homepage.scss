@@ -7,7 +7,7 @@
 	}
 
 	.btn-group {
-		margin-top: 15px;
+		margin-top: 4px;
 
 		.btn:not(#newRequestButton) {
 			background: 0 0 !important;
@@ -26,6 +26,7 @@
 	h2.text-center {
 		color: $white30a;
 		font-size: 14px !important;
+		margin: 0;
 		cursor: default;
 		user-select: none;
 	}
@@ -34,18 +35,30 @@
 		text-transform: none;
 	}
 
+	.panel,
+	.white-box.p-0 {
+		padding: 0 !important;
+		margin-bottom: 46px !important;
+	}
+
+	h4.pull-left,
+	.panel-heading,
+	.white-box.bg-info {
+		padding: 0 0 11px 0 !important;
+	}
+
 	h4.pull-left,
 	.panel-heading {
 		@extend %header;
 		color: $text !important;
 		font-size: 15px;
-		padding: 0;
+		padding: 0 0 11px 0 !important;
 		cursor: default;
 		user-select: none;
 	}
 
-	.white-box {
-		padding: 0;
+	.pull-left.m-t-5 {
+		margin-top: 0 !important;
 	}
 }
 
@@ -173,6 +186,14 @@ tbody[class$="-queue"] {
 	}
 }
 
+.table {
+	margin-bottom: 0;
+}
+
+.simplebar-content {
+	padding-bottom: 0 !important;
+}
+
 .table-bordered,
 .table {
 	> tbody,
@@ -190,7 +211,7 @@ tbody[class$="-queue"] {
 				border-color: $white08a;
 			}
 
-			&:only-child {
+			> td[lang] {
 				color: $white30a;
 				text-transform: uppercase;
 			}

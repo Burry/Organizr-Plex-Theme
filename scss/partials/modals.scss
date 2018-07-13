@@ -94,6 +94,15 @@
 
 // Content/Request Modal
 
+#mediaSearch-area,
+#new-request {
+	.white-box {
+		background: $black16;
+		box-shadow: 0 5px 15px $black50a;
+		border-radius: 4px;
+	}
+}
+
 .css-bar:after {
 	background: $dark-gray;
 	color: $text;

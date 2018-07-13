@@ -52,16 +52,9 @@
 	}
 }
 
-@supports (backdrop-filter: blur(30px)) {
-	.mfp-bg,
-	.mfp-container {
-		@extend %background-blur;
-	}
-
-	.mfp-bg,
-	.mfp-zoom-out.mfp-ready.mfp-bg {
-		opacity: 0.5;
-	}
+.mfp-bg {
+	background: $black;
+	opacity: 0.5 !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -102,9 +95,22 @@ div[id^="request"] {
 	.btn-youtube {
 		margin-top: 10px;
 	}
-	h5.text-center {
-		margin-bottom: 1.5rem;
-	}
+}
+
+h2.m-b-0.font-medium.pull-right {
+	color: $white;
+	font-weight: 600;
+	filter: drop-shadow(0 2px 5px $black70a);
+}
+
+.white-popup .user-bg {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.genre-list .badge {
+	cursor: default;
+	user-select: none;
 }
 
 

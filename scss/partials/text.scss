@@ -38,11 +38,6 @@ h6 {
 	@extend %header;
 }
 
-h2.m-b-0.font-medium.pull-right {
-	color: $white;
-	filter: drop-shadow(0 2px 5px $black70a);
-}
-
 pre {
 	color: $text-muted !important;
 }

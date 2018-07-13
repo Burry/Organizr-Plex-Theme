@@ -21,9 +21,19 @@
 	}
 
 	h4,
+	h5,
 	.text-muted {
 		color: $menu-header !important;
+	}
+
+	h4,
+	.text-muted {
 		margin-bottom: 6px !important;
+	}
+
+	h5 {
+		margin-bottom: 1.5rem;
+		cursor: default;
 	}
 
 	.text-muted {

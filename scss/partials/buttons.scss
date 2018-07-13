@@ -21,6 +21,10 @@
 		@include button($theme, $theme-light, $theme-dark, $white);
 	}
 
+	&[data-filter="request-result-all"] {
+		@include button($white25a, $white30a, $white20a, $white);
+	}
+
 	a {
 		transition: none;
 	}
@@ -59,22 +63,22 @@
 
 // Primary Button (For Organizr's style, secondary)
 
-.btn-primary,
-.btn[data-filter="request-result-all"],
-.mce-btn {
+.btn-primary {
 	@include button($white25a, $white30a, $white20a, $white);
+
+	&.btn-outline {
+		@include button($white25a, $white30a, $white20a, $white);
+	}
 }
 
-.btn-primary.btn-outline {
-	@include button($white25a, $white30a, $white20a, $white);
-}
-
-.btn-1b.btn-primary:after,
-.btn-1c.btn-primary:after,
-.btn-1d.btn-primary:after,
-.btn-1e.btn-primary:after,
-.btn-1f.btn-primary:after {
-	background: 0 0;
+.btn-1b,
+.btn-1c,
+.btn-1d,
+.btn-1e,
+.btn-1f {
+	.btn-primary:after {
+		background: transparent;
+	}
 }
 
 
@@ -123,22 +127,50 @@
 
 // MCE Buttons
 
+.mce-btn {
+	@include button($white25a, $white30a, $white20a, $white);
+
+	button {
+		color: $white !important;
+	}
+
+	.mce-open {
+		border: 0 !important;
+	}
+}
+
+.mce-ico {
+	color: $white !important;
+}
+
+.mce-caret {
+	border-top-color: $white !important
+}
+
 .mce-menubar .mce-menubtn {
 	background: transparent !important;
 	border: 0 !important;
 	border-radius: 4px;
 	text-shadow: none !important;
 
-	button,
-	.mce-caret {
+	button {
 		color: $text-muted !important;
+	}
+
+	.mce-caret {
 		border-top-color: $text-muted !important;
 	}
 
+	&:active,
+	&.mce-active,
 	&:hover {
-		button,
-		.mce-caret {
+		background: transparent !important;
+
+		button {
 			color: $white !important;
+		}
+
+		.mce-caret {
 			border-top-color: $white !important;
 		}
 	}

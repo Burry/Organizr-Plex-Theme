@@ -139,8 +139,17 @@
 .recent-title {
 	background: $black30a!important;
 	padding: 5px;
-	font-weight: 700;
+    font-size: 85%;
 	pointer-events: none;
+
+	&::first-line {
+		font-size: 115%;
+		font-weight: 700;
+	}
+
+	small {
+		font-size: 100% !important;
+	}
 }
 
 @supports (backdrop-filter: blur(30px)) {
@@ -197,16 +206,29 @@ tbody[class$="-queue"] {
 
 // Progress Bars
 
-tbody[class$="-queue"] {
-	.progress,
-	.progress-bar-info {
-		border-radius: 4px;
+
+tbody {
+	&[class$="queue"],
+	&[class$="history"] {
+		.progress,
+		.progress-bar {
+			border-radius: 1000px;
+			min-width: 72px;
+			height: 16px !important;
+		}
+
+		.progress-bar {
+			font-size: 75% !important;
+			line-height: 16px;
+		}
 	}
 }
 
 .progress {
 	height: 3px;
 	margin-bottom: 5px;
+	cursor: default;
+	user-select: none;
 	transition: all 0.2s;
 }
 

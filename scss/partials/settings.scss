@@ -2,8 +2,12 @@
 
 // Tabs
 
-.sttabs nav a span {
-	font-family: $font-stack;
+.sttabs nav {
+	padding: 0 25px;
+
+	a span {
+		font-family: $font-stack;
+	}
 }
 
 .tabs-style-flip {
@@ -97,16 +101,8 @@
 	}
 }
 
-#settings-settings-about {
-	.col-xs-12::after {
-		content: "+ Plex";
-		display: block;
-		margin-top: -10px;
-		color: $theme;
-		font-size: 24px;
-		font-weight: 600;
-		text-align: center;
-	}
+#settings-settings-about li:hover {
+	background: transparent;
 }
 
 #settings-settings-updates {
@@ -274,16 +270,49 @@ table.dataTable {
 	}
 }
 
+.mce-menubar {
+	border: 0 !important;
+}
+
+.mce-toolbar-grp {
+	padding: 0 10px 10px 10px !important;
+}
+
+.mce-btn-group:not(:first-child) {
+	border: 0 !important;
+}
+
 .mce-menu-item {
 	.mce-text {
 		color: $text-muted !important;
 	}
 
-	&:hover {
+	&:focus,
+	&:hover,
+	&.mce-selected {
 		background: $light-gray !important;
 
 		.mce-text {
 			color: $white !important;
 		}
+	}
+}
+
+.mce-menu-item-sep {
+	border-bottom-color: $divider !important;
+	margin: 5px !important;
+
+	&:hover {
+		background: transparent !important;
+	}
+}
+
+.mce-grid-border a {
+	border-color: $white25a !important;
+
+	&:hover,
+	&.mce-active {
+		background: $theme !important;
+		border-color: $theme !important;
 	}
 }

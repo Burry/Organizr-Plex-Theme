@@ -1,7 +1,7 @@
 # <font style="color: #CC7B19; font-family: 'Open Sans'; font-weight: 700">Plex Theme</font> <i style="font-weight: 300">for [Organizr](https://organizr.app) v2</i>
 A theme for Organizr v2 that emulates the style of Plex
 
-![Screen Shot](screenshot.jpg "Screen Shot")
+![Screen Shot](screenshot.png "Screen Shot")
 
 ## Usage
 

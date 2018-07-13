@@ -2,8 +2,7 @@
 
 #preloader {
 	@include background-blur($blur-dark, "fixed");
-	opacity: 1 !important;
-	transition: all 10s;
+	z-index: 2;
 }
 
 .circular {

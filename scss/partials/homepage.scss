@@ -1,87 +1,5 @@
 // Homepage
 
-// Calendar Buttons
-
-.fc-button {
-	background: $black15a !important;
-	color: $text-muted;
-	border-color: transparent;
-	border-radius: 0 !important;
-	border: 0 !important;
-	text-transform: uppercase;
-
-	&:focus,
-	&:hover {
-		background: $white08a !important;
-		color: $text;
-		border-color: transparent;
-		opacity: 1;
-	}
-}
-
-.fc-next-button,
-.fc-prev-button {
-	background: 0 0 !important;
-	color: $white70a !important;
-	border: 0 !important;
-
-	&.focus,
-	&:focus,
-	&:hover {
-		background: 0 0 !important;
-		color: $white !important;
-	}
-}
-
-.fc-state-default {
-	text-shadow: none;
-	box-shadow: none;
-
-	&.fc-corner-left {
-		border-right-width: 0;
-		border-radius: 4px 0 0 4px;
-	}
-
-	&.fc-corner-right {
-		border-left-width: 0;
-		border-radius: 0 4px 4px 0;
-	}
-}
-
-.fc-state-active,
-.fc-state-active:focus,
-.fc-state-active:hover {
-	background: $white08a !important;
-	color: $theme-lighter;
-	border-color: transparent;
-}
-
-.fc-state-hover {
-	opacity: 1;
-}
-
-.fc-today-button {
-	border-radius: 4px !important;
-	font-weight: 700;
-	transition: all 0.1s;
-
-	background: $white25a !important;
-	color: $white;
-
-	&:focus,
-	&:hover {
-		background: $white30a !important;
-		color: $white;
-	}
-
-	&:active {
-		background: $white20a !important;
-	}
-}
-
-
-// Input Group Buttons
-
 #homepage-items {
 	.dropdown-toggle {
 		border-top-left-radius: 4px !important;
@@ -237,6 +155,39 @@ tbody[class$="-queue"] {
 	}
 }
 
+.table-bordered,
+.table {
+	> tbody,
+	> tfoot,
+	> thead {
+		> tr {
+			> th,
+			> td {
+				border: 0;
+			}
+
+			&:not(:first-of-type):not(:last-of-type) > td {
+				border-width: 1px 0 1px 0;
+				border-style: solid;
+				border-color: $white08a;
+			}
+
+			&:only-child {
+				color: $white70a;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.table-hover tbody tr:hover {
+	background: $black15a !important;
+
+	&:only-child {
+		background: transparent !important;
+	}
+}
+
 
 // Progress Bars
 
@@ -259,4 +210,84 @@ tbody[class$="-queue"] {
 
 .progress-bar-inverse {
 	background: $black15a;
+}
+
+
+// Calendar Buttons
+
+.fc-button {
+	background: $black15a !important;
+	color: $text-muted;
+	border-color: transparent;
+	border-radius: 0 !important;
+	border: 0 !important;
+	text-transform: uppercase;
+
+	&:focus,
+	&:hover {
+		background: $white08a !important;
+		color: $text;
+		border-color: transparent;
+		opacity: 1;
+	}
+}
+
+.fc-next-button,
+.fc-prev-button {
+	background: 0 0 !important;
+	color: $white70a !important;
+	border: 0 !important;
+
+	&.focus,
+	&:focus,
+	&:hover {
+		background: 0 0 !important;
+		color: $white !important;
+	}
+}
+
+.fc-state-default {
+	text-shadow: none;
+	box-shadow: none;
+
+	&.fc-corner-left {
+		border-right-width: 0;
+		border-radius: 4px 0 0 4px;
+	}
+
+	&.fc-corner-right {
+		border-left-width: 0;
+		border-radius: 0 4px 4px 0;
+	}
+}
+
+.fc-state-active,
+.fc-state-active:focus,
+.fc-state-active:hover {
+	background: $white08a !important;
+	color: $theme-lighter;
+	border-color: transparent;
+}
+
+.fc-state-hover {
+	opacity: 1;
+}
+
+.fc-today-button {
+	border-radius: 4px !important;
+	font-weight: 700;
+	transition: all 0.1s;
+
+	background: $white25a !important;
+	color: $white;
+
+	&:focus,
+	&:hover {
+		background: $white30a !important;
+		color: $white;
+	}
+
+	&:active {
+		background: $white20a !important;
+	}
 }

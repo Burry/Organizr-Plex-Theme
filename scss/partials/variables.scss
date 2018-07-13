@@ -7,9 +7,8 @@ $theme08a: rgba($theme, 0.8) !default;
 $theme-light: #E3891C !default;
 $theme-lighter: #F9BE03 !default;
 $theme-dark: #955A12 !default;
-$movie: #FF7676;
-$tv: #53E69D;
-$music: #007BFF;
+$red: #FF7676;
+$green: #53E69D;
 $light-gray: #3F4245;
 $dark-gray: #18191B;
 
@@ -43,6 +42,7 @@ $black12: hsl(0, 0%, 12%);
 $blur-light: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/blur-light.png");
 $blur-dark: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/blur-dark.png");
 $noise: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/noise.png");
+$no-list: url("https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/cache/no-list.png");
 
 
 // Font Stacks

@@ -53,7 +53,7 @@ code {
 }
 
 .bg-title h4 {
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .font-medium {
@@ -85,7 +85,7 @@ code {
 	.help-block,
 	.radio,
 	.radio-inline {
-		color: $tv;
+		color: $green;
 	}
 
 	.checkbox,
@@ -93,12 +93,12 @@ code {
 	&.radio,
 	&.radio-inline {
 		label {
-			color: $tv;
+			color: $green;
 		}
 	}
 
 	.form-control {
-		border: 2px solid $tv;
+		border: 2px solid $green;
 	}
 }
 
@@ -109,7 +109,7 @@ code {
 	.help-block,
 	.radio,
 	.radio-inline {
-		color: $movie;
+		color: $red;
 	}
 
 	.checkbox,
@@ -117,12 +117,12 @@ code {
 	&.radio,
 	&.radio-inline {
 		label {
-			color: $movie;
+			color: $red;
 		}
 	}
 
 	.form-control {
-		border: 2px solid $movie;
+		border: 2px solid $red;
 	}
 }
 

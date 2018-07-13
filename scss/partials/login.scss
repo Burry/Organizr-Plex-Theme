@@ -15,6 +15,12 @@
 	position: fixed;
 	@extend %center;
 
+	h1 {
+		color: $white;
+		font-weight: 700;
+		margin: 0 0 35px;
+	}
+
 	.white-box {
 		padding: 0;
 	}
@@ -69,6 +75,7 @@
 	max-height: 100px;
 	max-width: -webkit-fill-available;
 	margin-bottom: 35px;
+	border: 0;
 }
 
 #to-recover span {
@@ -92,6 +99,11 @@
 
 	.login-register .login-box {
 		width: 480px;
+
+		h1 {
+			position: relative;
+			bottom: 92px;
+		}
 
 		.white-box {
 			background: $black30a;

@@ -247,3 +247,7 @@ body {
 .el-overlay-1:hover img {
 	transform: none !important;
 }
+
+div[id^="mediaSearch"] .lazyload {
+	background: $black30a $no-list center center/cover;
+}

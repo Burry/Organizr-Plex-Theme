@@ -19,7 +19,9 @@ Add the following lines to Organizr's `/js/functions.js` inside the function `sw
 $('.sidebar').addClass('hidden');
 $('.navbar').addClass('hidden');
 $('#pagewrapper').addClass('hidden');
+
 ```
+
 ### Custom Colors
 
 Changing the placeholder color values in Organizr's Colors & Themes will override Plex Theme's color styles. Deleting custom color values will reverse this. Overrides can also be made in Organizr's Custom CSS settings pane.

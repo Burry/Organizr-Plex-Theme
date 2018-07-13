@@ -2,12 +2,13 @@
 
 // Page Elements
 
-html, body {
-	@include background($bg-light, "fixed");
-	transition: background-image 0.2s;
+html {
+	@include background($bg-dark, "fixed");
 }
 
 body {
+	@include background($bg-light, "fixed");
+	transition: background-image 0.2s;
 	color: $text;
 	font: 600 13px $font-stack;
 }

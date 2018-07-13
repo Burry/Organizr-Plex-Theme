@@ -104,21 +104,20 @@
 
 // Media Info Pane Buttons
 
-.bg-emby,
-.bg-plex,
 .btn-youtube {
+	@include button(#F00);
+}
+
+.btn-youtube,
+.bg-emby,
+.bg-plex {
 	color: $white70a !important;
 	padding: 15.5px 16px !important;
-	transition: background 0.1s;
 
 	&:focus,
 	&:hover {
 		color: $white !important;
 	}
-}
-
-.btn-youtube {
-	@include button(#F00);
 }
 
 

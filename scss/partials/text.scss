@@ -63,6 +63,14 @@ code {
 	}
 }
 
+.text-success {
+	color: $green;
+}
+
+.text-danger {
+	color: $red;
+}
+
 .text-info,
 .text-primary,
 .text-purple {
@@ -132,6 +140,23 @@ code {
 	color: $white70a !important;
 }
 
+#settings-settings-updates {
+	.label-info {
+		background: $theme !important;
+		color: $white !important;
+	}
+}
+
+.label-success {
+	background: $green;
+	color: $black;
+}
+
+.label-danger {
+	background: $red;
+}
+
+.label-warning,
 .label-inverse {
 	background: $black30a;
 }

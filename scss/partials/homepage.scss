@@ -143,7 +143,7 @@
 	pointer-events: none;
 }
 
-@supports (backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px)) {
+@supports (backdrop-filter: blur(30px)) {
 	.recent-title {
 		@extend %background-blur;
 	}

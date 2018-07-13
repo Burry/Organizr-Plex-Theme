@@ -144,10 +144,18 @@
 	.white-box {
 		padding: 0;
 	}
+
+	h3.p-l-10 {
+		padding-left: 0 !important;
+	}
 }
 
 ul.nav.customtab.nav-tabs.nav-low-margin {
 	margin: 0 !important;
+}
+
+.sales-report {
+	margin: 0 0 15px 0;
 }
 
 
@@ -163,7 +171,7 @@ div[id$="Custom-CSS"] {
 
 div[id$="FavIcon"] textarea,
 #customCSSEditor {
-	height: -webkit-fill-available;
+	height: -webkit-fill-available !important;
 	border-radius: 4px;
 	font-size: 12px;
 	font-weight: 400;

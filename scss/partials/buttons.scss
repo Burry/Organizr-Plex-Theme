@@ -96,16 +96,16 @@
 // Green Button
 
 .btn-success {
-	@include button($green);
+	@include button($green, $color: $white);
 }
 
 // Red Button
 
 .btn-danger {
-	@include button($red);
+	@include button($red, $color: $white);
 
 	&.btn-outline {
-		@include button($red);
+		@include button($red, $color: $white);
 		border-radius: 1000px;
 	}
 }

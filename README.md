@@ -16,9 +16,9 @@ A theme for Organizr v2 that emulates the style of Plex
 Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login/register page.
 
 ```
-$('.sidebar').addClass('hidden');
-$('.navbar').addClass('hidden');
-$('#pagewrapper').addClass('hidden');
+    $('.sidebar').addClass('hidden');
+    $('.navbar').addClass('hidden');
+    $('#pagewrapper').addClass('hidden');
 ```
 
 ### Custom Colors

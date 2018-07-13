@@ -71,8 +71,8 @@
 
 #newRequestButton {
 	border-radius: 4px !important;
-	padding: 6px 9.5px;
-	margin: 2.5px auto;
+	padding: 8px 11.5px;
+	margin: -2px auto -2px 1rem;
 	margin-left: 1rem;
 
 	.fa-search {
@@ -211,12 +211,20 @@ tbody[class$="-queue"] {
 				border-color: $white08a;
 			}
 
-			> td[lang] {
-				color: $white30a;
-				text-transform: uppercase;
+			> td {
+				&[lang] {
+					color: $white30a;
+					text-transform: uppercase;
+				}
 			}
 		}
 	}
+}
+
+td span.label.label-info {
+	min-width: initial !important;
+	width: 100%;
+    max-width: 80px;
 }
 
 .table-hover tbody tr:hover {
@@ -238,6 +246,7 @@ tbody {
 		.progress-bar {
 			border-radius: 1000px;
 			min-width: 72px;
+			max-width: 80px;
 			height: 16px !important;
 		}
 

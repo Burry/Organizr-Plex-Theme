@@ -45,9 +45,21 @@ span.select2-selection.select2-selection--multiple,
 
 // Input Groups
 
-.input-group .form-control:not(:first-child):not(:last-child) {
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
+.input-group {
+	.form-control {
+		&:not(:first-child):not(:last-child) {
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+		}
+
+		&:first-child {
+			&.focus,
+			&:focus {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+	}
 }
 
 .input-group-addon {

@@ -18,7 +18,17 @@
 		background: $black16;
 		box-shadow: 0 5px 15px $black50a;
 
-		.text-muted {
+		.box-title {
+			color: $text-muted;
+			font-weight: 700;
+
+			span {
+				color: $text;
+				font-weight: 600;
+			}
+		}
+
+		.mdi {
 			color: $text-muted !important;
 		}
 	}
@@ -91,6 +101,7 @@
 
 .css-bar-sm > img {
 	padding: 5px;
+	transition: none;
 }
 
 div[id^="request"] {

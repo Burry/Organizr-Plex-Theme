@@ -43,6 +43,15 @@
 		font-weight: 600;
 	}
 
+	// Handle large usernames / emails in user dropdown
+	.u-text {
+		.text-muted {
+		    width: 150px;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+	}
+
 	.divider {
 		background: $divider;
 		margin: 5px;

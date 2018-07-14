@@ -71,6 +71,21 @@
 	}
 }
 
+.invite-div {
+	h4 {
+		text-transform: none;
+		font-weight: 600;
+		margin: 0;
+	}
+
+	.input-group {
+		&:not(:first-of-type)
+		 :not(:last-of-type) {
+		     margin: 15px auto;
+		 }
+	}
+}
+
 .loginLogo {
 	max-height: 100px;
 	max-width: -webkit-fill-available;

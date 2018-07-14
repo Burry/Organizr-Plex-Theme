@@ -106,14 +106,16 @@
 }
 
 #settings-settings-updates {
-	.btn {
-		margin-top: -4px;
-	}
-
 	.label:not(.label-info) {
 		min-width: 80px;
 	    display: inline-block;
 	    padding: 4px 12px 3px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#settings-settings-updates .btn {
+		margin: -20px -15px !important;
 	}
 }
 

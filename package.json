@@ -1,10 +1,10 @@
 {
   "name": "organizr-v2-plex-theme",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "A theme for Organizr v2 that emulates the style of Plex",
   "main": "gulpfile.js",
   "repository": "https://github.com/Burry/organizr-v2-plex-theme",
-  "homepage": "keystone.local:3113",
+  "homepage": "",
   "author": "Grant Burry <grant@burry.me>",
   "license": "MIT",
   "private": false,

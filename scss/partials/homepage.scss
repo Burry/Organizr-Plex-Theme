@@ -9,7 +9,7 @@
 	.btn-group {
 		margin-top: 4px;
 
-		.btn:not(#newRequestButton) {
+		.btn {
 			background: 0 0 !important;
 			color: $white70a !important;
 			padding: 6px 12px;
@@ -23,28 +23,51 @@
 		}
 	}
 
-	h2.text-center {
-		color: $white30a;
-		font-size: 14px !important;
-		margin: 0;
-		cursor: default;
-		user-select: none;
+	h2 {
+		&.text-center {
+			color: $white30a;
+			font-size: 14px !important;
+			margin: 0;
+			cursor: default;
+			user-select: none;
+		}
 	}
 
 	h3 {
 		text-transform: none;
 	}
 
-	.panel,
-	.white-box.p-0 {
-		padding: 0 !important;
-		margin-bottom: 36px !important;
+	h4 {
+		&.pull-left {
+			margin: 0;
+			padding: 0 0 18px 0;
+		}
 	}
 
-	h4.pull-left,
-	.panel-heading,
-	.white-box.bg-info {
-		padding: 0 0 11px 0 !important;
+	.flexbox {
+		margin-bottom: 50px;
+	}
+
+	.white-box {
+		margin: 0;
+
+		&.bg-info {
+			padding: 0 0 20px 0 !important;
+		}
+
+		&.p-0 {
+			padding: 0 !important;
+			margin: 0 0 50px !important;
+		}
+	}
+
+	.panel {
+		padding: 0;
+		margin-bottom: 46px;
+	}
+
+	.panel-heading {
+		padding: 0 0 16px 0 !important;
 	}
 
 	h4.pull-left,
@@ -52,13 +75,16 @@
 		@extend %header;
 		color: $text !important;
 		font-size: 15px;
-		padding: 0 0 11px 0 !important;
 		cursor: default;
 		user-select: none;
 	}
 
 	.pull-left.m-t-5 {
-		margin-top: 0 !important;
+		margin: 0 !important;
+	}
+
+	.dropdown-toggle {
+		padding: 6px 4px !important;
 	}
 }
 
@@ -70,14 +96,7 @@
 // Home Page Request Button
 
 #newRequestButton {
-	border-radius: 4px !important;
-	padding: 8px 11.5px;
-	margin: -2px 0 0 1rem;
-	margin-left: 1rem;
-
-	.fa-search {
-		margin-left: 0 !important;
-	}
+	margin: 0 !important;
 }
 
 
@@ -127,6 +146,10 @@
 	}
 }
 
+.nowPlayingHover {
+	margin-bottom: 40px;
+}
+
 
 // Content Thumbnails
 
@@ -140,7 +163,7 @@
 }
 
 .hover-homepage-item:hover {
-	transition: all .2s;
+	transition: all 0.2s linear;
 }
 
 .badge,
@@ -239,6 +262,27 @@ td span.label.label-info {
 // Progress Bars
 
 
+.progress {
+	height: 3px;
+	margin-bottom: 5px;
+	cursor: default;
+	user-select: none;
+	transition: height 0.2s;
+}
+
+.progress-lg {
+	margin-left: -2px;
+	width: calc(100% + 4px);
+}
+
+.progress-bar-info {
+    background: $theme;
+}
+
+.progress-bar-inverse {
+	background: $black15a;
+}
+
 tbody {
 	&[class$="queue"],
 	&[class$="history"] {
@@ -255,22 +299,6 @@ tbody {
 			line-height: 16px !important;
 		}
 	}
-}
-
-.progress {
-	height: 3px;
-	margin-bottom: 5px;
-	cursor: default;
-	user-select: none;
-	transition: all 0.2s;
-}
-
-.progress-bar-info {
-    background: $theme;
-}
-
-.progress-bar-inverse {
-	background: $black15a;
 }
 
 

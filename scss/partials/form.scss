@@ -91,16 +91,6 @@ span.select2-selection.select2-selection--multiple,
 	}
 }
 
-// Large Inputs
-
-#mediaSearchQuery,
-#request-input,
-#request-input-div .dropdown-toggle {
-	font-size: 18px;
-	height: 46px;
-	padding: 10px 16px;
-}
-
 
 // Checkboxes & Radio Buttons
 
@@ -143,7 +133,7 @@ input[type=checkbox], input[type=radio] {
 .radio-purple input[type=radio] {
 	+ label::before {
 		background: $white25a;
-		transition: all 0.2s;
+		transition: all 0.2s linear;
 	}
 
 	+ label::after {

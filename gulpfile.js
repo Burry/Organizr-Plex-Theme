@@ -23,12 +23,6 @@ const gulp = require('gulp'),
                 fn: (snippet, match) => browserSnippet + snippet + match
             }
         },
-        ghostMode: {
-            clicks: false,
-            location: false,
-            forms: false,
-            scroll: false
-        },
         notify: {
             styles: {
         		top: 'auto',

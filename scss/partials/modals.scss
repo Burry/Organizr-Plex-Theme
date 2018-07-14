@@ -4,6 +4,7 @@
 	> .col-md-6 > .white-box:first-child,
 	.panel-heading {
 		background: $black20 !important;
+	    box-shadow: 0 5px 15px rgba($black, 0.5);
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
 	}
@@ -45,6 +46,20 @@
 
 		> .table-responsive {
 			background: $black20;
+		}
+	}
+
+	&[id$="metadata-div"],
+	&[id^="request"] {
+		.white-box:not(.resultBox-outside) {
+			background: $black30a $no-np center center/cover !important;
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+		}
+
+		.user-bg {
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
 		}
 	}
 }
@@ -94,23 +109,80 @@
 
 // Content/Request Modal
 
-#mediaSearch-area,
-#new-request {
-	.resultBox-outside {
-		background: $black16;
-		box-shadow: 0 5px 15px $black50a;
-		border-radius: 4px;
+.resultBox-outside {
+	background: $black16;
+	box-shadow: 0 5px 15px $black50a;
+	border-radius: 4px;
+	padding-bottom: 10px;
+}
+
+.resultBox-inside {
+	padding-bottom: 15px;
+}
+
+#request-input-div {
+	span:first-of-type {
+		display: none;
+	}
+
+	.dropdown-toggle {
+	    padding: 7.5px 12px;
 	}
 }
 
-.css-bar:after {
-	background: $dark-gray;
-	color: $text;
+@media screen and (min-width: 576px) {
+	#request-input-div span:first-of-type {
+		display: inline;
+	}
+
+	#mediaSearchQuery,
+	#request-input,
+	#request-input-div .dropdown-toggle {
+		font-size: 18px;
+		height: 46px;
+		padding: 10px 16px;
+	}
+}
+
+.css-bar {
+	font-weight: 700;
+
+	&:after {
+		background: $dark-gray;
+		color: $text;
+		opacity: 1;
+	}
 }
 
 .css-bar-sm > img {
 	padding: 5px;
+}
+
+.css-bar-lg > img {
+	width: 90px;
+    height: 90px;
+	margin: 5px 0 0 5px;
+}
+
+.css-bar-info {
+	background-image: linear-gradient(90deg, $dark-gray 50%, transparent 50%, transparent), linear-gradient(198deg, $theme 50%, $dark-gray 50%, $dark-gray) !important;
+}
+
+.nowPlayingUserThumb:hover {
 	transition: none;
+}
+
+.customPoster {
+	margin: 40px 0;
+
+	a {
+		color: $text !important;
+		font-size: 32px;
+		font-weight: 600;
+		text-shadow: none !important;
+		text-transform: none;
+		transform: none !important;
+	}
 }
 
 div[id^="request"] {
@@ -126,11 +198,6 @@ h2.m-b-0.font-medium.pull-right {
 	color: $white;
 	font-weight: 600;
 	filter: drop-shadow(0 2px 5px $black70a);
-}
-
-.white-popup .user-bg {
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
 }
 
 .genre-list .badge {

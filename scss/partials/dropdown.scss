@@ -73,3 +73,39 @@
 		color: $white;
 	}
 }
+
+
+// Language Dropdown
+
+.drop-title {
+	color: $menu-header;
+	border-bottom-color: $divider;
+	text-transform: uppercase;
+}
+
+#languageDropdown {
+	.dropdown-menu {
+		margin-top: 20px;
+	}
+
+	h5 {
+		color: $menu-link !important;
+		text-transform: none;
+	}
+
+	a {
+		border-bottom-color: $divider;
+
+		&:hover {
+			background: $white08a;
+
+			h5 {
+				color: $white !important;
+			}
+		}
+	}
+}
+
+.mail-desc {
+	display: none !important;
+}

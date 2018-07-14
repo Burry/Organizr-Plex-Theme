@@ -3,7 +3,7 @@
 .pagination {
 	> li {
 		> a {
-			background: 0 0;
+			background: $black15a;
 			color: $white70a;
 			border: 0;
 			border-radius: 0;
@@ -37,24 +37,25 @@
 			&:focus,
 			&:hover {
 				background: 0 0;
-				color: $text-muted;
+				color: $text-muted !important;
 				border: 0;
+				cursor: default;
 			}
 		}
 	}
 }
 
-.paginate_button {
-	border: 0 !important;
-	border-radius: 0 !important;
-}
-
 .dataTables_wrapper {
 	.dataTables_paginate {
-		color: $white70a !important;
+		color: $white70a;
 
 		.paginate_button {
+			background: $black15a;
 			color: $white70a !important;
+			border: 0 !important;
+			border-radius: 0 !important;
+			margin: 0 !important;
+			transition: none;
 
 			&.current {
 				background: $white08a !important;

@@ -57,8 +57,10 @@
 		color: $text;
 		font-size: 15px;
 	}
+}
 
-	.fc-center {
+@media screen and (min-width: 768px) {
+	.fc-toolbar .fc-center {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);

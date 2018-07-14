@@ -200,19 +200,9 @@ body {
 	}
 }
 
-#settings-homepage-list,
-#settings-image-manager-list,
-#settings-plugins-active {
-	.el-card-content {
-		background: 0 0;
-		margin-bottom: 3rem;
-	}
-}
-
 .el-card-item .el-card-avatar,
 .item {
 	box-shadow: 0 0 2px $black35a;
-	transition: all 0.2s;
 }
 
 .el-card-item:hover .el-card-avatar,
@@ -244,12 +234,40 @@ body {
 			color: $white;
 		}
 	}
+
+	.el-card-item .el-overlay {
+		transition: all 0.2s linear;
+	    background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
+	}
 }
 
-.el-overlay-1:hover img {
-	transform: none !important;
+.el-overlay-1:hover {
+	img {
+		transform: none !important;
+	}
 }
 
-div[id^="mediaSearch"] .lazyload {
+.mediaSearch-div .el-card-item {
+	.el-overlay-1::after {
+		content: "";
+		background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		transition: all 0.2s linear;
+	}
+
+	&:hover {
+		.el-overlay-1::after {
+			opacity: 1;
+		}
+	}
+}
+
+.mediaSearch-div .lazyload {
 	background: $black30a $no-list center center/cover;
 }

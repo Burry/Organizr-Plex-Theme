@@ -45,6 +45,10 @@
 	background: $black15a;
 }
 
+.ping .heartbit {
+	z-index: 9;
+}
+
 body[data-active-tab=""],
 .active-tab-Settings {
 	.sidebar {

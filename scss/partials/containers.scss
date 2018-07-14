@@ -236,7 +236,7 @@ body {
 	}
 
 	.el-card-item .el-overlay {
-		transition: all 0.2s linear;
+		transition: all 0.2s;
 	    background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
 	}
 }
@@ -258,7 +258,7 @@ body {
 		top: 0;
 		left: 0;
 		cursor: pointer;
-		transition: all 0.2s linear;
+		transition: all 0.2s;
 	}
 
 	&:hover {

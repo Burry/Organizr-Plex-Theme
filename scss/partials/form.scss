@@ -133,7 +133,7 @@ input[type=checkbox], input[type=radio] {
 .radio-purple input[type=radio] {
 	+ label::before {
 		background: $white25a;
-		transition: all 0.2s linear;
+		transition: all 0.2s;
 	}
 
 	+ label::after {

@@ -12,15 +12,15 @@ const gulp = require('gulp'),
         ` + packageJSON.license + ` License
         ` + packageJSON.repository,
     browserSync = require('browser-sync').create(),
-    browserSnippet = '<link rel="stylesheet" type="text/css" href="/Plex.css"/>',
+    browserSnippet = '<link rel="stylesheet" type="text/css" href="/Plex.css">',
     browserSyncConfig = {
         proxy: packageJSON.homepage,
         files: 'css/Plex.css',
         serveStatic: ['css'],
         snippetOptions: {
             rule: {
-                match: /<\/head>/i,
-                fn: (snippet, match) => browserSnippet + snippet + match
+                match: /<link id="theme" href=".*" rel="stylesheet">/i,
+                fn: (snippet, match) => browserSnippet + snippet
             }
         },
         notify: {

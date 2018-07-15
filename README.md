@@ -35,6 +35,6 @@ Changing the placeholder color values in Organizr's Colors & Themes will overrid
     - Compile the [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) source stylesheets to a minified CSS file and recompile when changes are detected
     - Launch a new [Browsersync](https://browsersync.io) window with the Plex Theme css injected into your Organizr instance
 
-As you make changes in `/scss`, the stylesheet will be continually recompiled and automatically injected into the Browsersync window, so you can see your changes instantly. Make sure that while testing, your Organizr instance is not set to use Plex Theme under Organizr Settings > Customize > Appearance > Colors & Themes, or some of your changes will not appear without `!important` overrides.
+As you make changes in `/scss`, the stylesheet will be continually recompiled and automatically injected into the Browsersync window, so you can see your changes instantly.
 
 You can also just run `yarn build` to compile the stylesheets and watch for changes without serving a test window.

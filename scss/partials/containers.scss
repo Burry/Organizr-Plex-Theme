@@ -215,7 +215,7 @@ body {
 
 	&:focus,
 	&:hover {
-		background: 0 0 !important;
+		background: transparent !important;
 		color: $white !important;
 	}
 }
@@ -235,9 +235,15 @@ body {
 		}
 	}
 
-	.el-card-item .el-overlay {
-		transition: all 0.2s;
-	    background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
+	.el-card-item {
+		.el-overlay {
+			transition: all 0.2s;
+		    background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
+		}
+		
+		.el-overlay-1 img {
+			transition: none;
+		}
 	}
 }
 
@@ -247,27 +253,6 @@ body {
 	}
 }
 
-.mediaSearch-div .el-card-item {
-	.el-overlay-1::after {
-		content: "";
-		background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
-		opacity: 0;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		cursor: pointer;
-		transition: all 0.2s;
-	}
-
-	&:hover {
-		.el-overlay-1::after {
-			opacity: 1;
-		}
-	}
-}
-
-.mediaSearch-div .lazyload {
-	background: $black30a $no-list center center/cover;
+.lazyload:not(.homepageImageTitle) {
+	background-color: $black45a;
 }

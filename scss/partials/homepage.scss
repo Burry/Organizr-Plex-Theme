@@ -14,6 +14,7 @@
 			color: $white70a !important;
 			padding: 6px 12px;
 			margin: 0 12.5px;
+			transition: color 0.2s;
 
 			&.focus,
 			&:focus,
@@ -104,6 +105,7 @@
 
 .refreshImage {
 	color: $white70a;
+	opacity: 0;
 	transition: all 0.2s;
 
 	&:focus,
@@ -116,7 +118,6 @@
 		position: absolute;
 		top: -49px;
 		right: 0;
-		opacity: 0;
 	}
 }
 
@@ -158,6 +159,27 @@
 	margin-bottom: 40px;
 }
 
+.el-info {
+	.inline-popups,
+	.metadata-get,
+	.openTab,
+	.refreshImage {
+		transform: translateY(100%);
+		opacity: 0;
+		transition: all 0.2s;
+	}
+}
+
+.el-overlay-1:hover {
+	.inline-popups,
+	.metadata-get,
+	.openTab,
+	.refreshImage {
+		transform: none;
+		opacity: 1;
+	}
+}
+
 
 // Content Thumbnails
 
@@ -180,7 +202,15 @@
 }
 
 .outside-request-div {
+	transition: all 0.2s;
 	z-index: 1;
+}
+
+.item:hover {
+	.outside-request-div {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
 }
 
 .recent-title {
@@ -188,6 +218,7 @@
 	display: block;
 	padding: 5px;
     font-size: 85%;
+	opacity: 0;
 	pointer-events: none;
 	transform: translateY(100%);
 	transition: all 0.2s;
@@ -206,7 +237,8 @@
 	overflow: hidden;
 
 	&:hover .recent-title {
-		transform: translateY(0);
+		opacity: 1;
+		transform: none;
 	}
 }
 

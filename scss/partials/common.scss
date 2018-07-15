@@ -25,6 +25,18 @@
 	transform: translateX(-50%) translateY(-50%);
 }
 
+%circular-loader {
+	width: 24px;
+	height: 24px;
+	position: fixed;
+	margin: -12px 0 0 -12px;
+	border: 2px solid transparent;
+	border-top-color: $theme;
+	border-left-color: $theme;
+	border-radius: 50%;
+	animation: loading 0.5s linear infinite;
+}
+
 %header {
 	color: $white70a;
 	font-family: $font-stack;

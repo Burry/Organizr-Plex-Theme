@@ -96,7 +96,8 @@
 }
 
 #manageUserTable {
-	.el-card-avatar {
+	.el-card-avatar,
+	.el-overlay {
 		border-radius: 1000px !important;
 	}
 }
@@ -188,8 +189,19 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 #settings-image-manager-list,
 #settings-plugins-active {
 	.el-card-content {
-		background: 0 0;
+		background: transparent;
 		margin-bottom: 3rem;
+	}
+
+	.lazyload {
+		background: $black15a;
+	}
+}
+
+#settings-homepage-list,
+#settings-image-manager-list {
+	.lazyload {
+		padding: 15px;
 	}
 }
 

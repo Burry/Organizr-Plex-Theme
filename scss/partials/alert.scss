@@ -10,15 +10,22 @@
 .iziToast {
 	background: $black !important;
 	border: 0 !important;
-	border-radius: 10px;
+	border-radius: 10px 10px 0 0;
     box-shadow: 0 4px 12px $black50a;
-	width: 50%;
 	padding: 10px 20px;
-	margin: 0 0 20px;
 	font-family: $font-stack;
 
 	> .iziToast-close {
 		width: 100%;
+		opacity: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.iziToast {
+		border-radius: 10px;
+		width: 50%;
+		margin: 0 0 20px;
 	}
 }
 

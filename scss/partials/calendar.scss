@@ -1,49 +1,8 @@
 // Calendar
 
-.fc th {
-	&.fc-mon,
-	&.fc-tue,
-	&.fc-wed,
-	&.fc-thu,
-	&.fc-fri,
-	&.fc-sat,
-	&.fc-sun {
-		background: $black30a !important;
-
-		a {
-			@extend %date-link;
-		}
-
-		span {
-			color: $text-muted;
-			cursor: default;
-		}
-	}
-}
-
-.fc-day {
-	background: $black15a;
-}
-
-.fc-day-number,
-.fc-list-heading-main {
-	@extend %date-link;
-}
-
-.fc-time {
-	font-weight: 400 !important;
-}
-
-.fc-title {
-	color: $white70a;
-	font-weight: 600;
-	transition: color 0.2s;
-}
-
-.fc-event {
-	&:focus .fc-title,
-	&:hover .fc-title {
-		color: $text;
+#homepageOrdercalendar:not(:last-of-type) {
+	#calendar {
+		margin: 0 0 50px !important;
 	}
 }
 
@@ -67,15 +26,86 @@
 	}
 }
 
+.fc-day-header {
+	background: $black30a !important;
+
+	a {
+		@extend %date-link;
+	}
+
+	span {
+		color: $text-muted;
+		cursor: default;
+	}
+}
+
+.fc-day {
+	background: $black15a;
+}
+
+.fc-day-top {
+	padding: 10px 15px !important;
+}
+
+.fc-day-number {
+	@extend %date-link;
+	width: 100%;
+	padding: 0 !important;
+	text-align: left !important;
+}
+
+.fc-list-heading-main {
+	@extend %date-link;
+}
+
+.fc-time {
+	font-weight: 400 !important;
+}
+
+.fc-title {
+	color: $white70a;
+	font-weight: 600;
+	transition: color 0.2s;
+}
+
+.fc-event {
+	&:focus,
+	&:hover {
+		.fc-title {
+	   		color: $text;
+	   	}
+	}
+}
+
+.fc-content {
+	text-overflow: ellipsis;
+}
+
+.fc-day-grid {
+	.fc-event {
+		padding: 5px 15px;
+	}
+
+	tr:last-of-type .fc-event {
+		padding-bottom: 15px;
+	}
+}
+
 .fc-today {
 	background: $white08a !important;
 
-	.fc-day-number {
-		color: $theme-lighter;
+	&.fc-day-top,
+	&.fc-state-highlight,
+	&.fc-day-header {
+		background: $white08a !important;
+
+		a {
+			color: $theme-lighter;
+		}
 	}
 
-	&.fc-state-highlight {
-		background: 0 0 !important;
+	&.fc-day-header span {
+		color: $theme-lighter;
 	}
 }
 

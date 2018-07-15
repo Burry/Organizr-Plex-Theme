@@ -5,8 +5,8 @@
 	.panel-heading {
 		background: $black20 !important;
 	    box-shadow: 0 5px 15px rgba($black, 0.5);
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
 	}
 
 	.panel-footer {
@@ -37,8 +37,8 @@
 	> .col-md-6 > .white-box:nth-child(2),
 	&:not(#speedtest-area) .panel-body,
 	.panel-footer {
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
 	}
 
 	.panel {
@@ -46,20 +46,6 @@
 
 		> .table-responsive {
 			background: $black20;
-		}
-	}
-
-	&[id$="metadata-div"],
-	&[id^="request"] {
-		.white-box:not(.resultBox-outside) {
-			background: $black30a $no-np center center/cover !important;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
-		}
-
-		.user-bg {
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
 		}
 	}
 }
@@ -89,7 +75,7 @@
 
 @media screen and (min-width: 768px) {
 	.white-popup-block,
-	.white-popup .panel {
+	.white-popup:not([id$="metadata-div"]):not([id^="request"]) .panel {
 		box-shadow: 0 5px 15px $black50a;
 	}
 }
@@ -120,13 +106,59 @@
 	padding-bottom: 15px;
 }
 
+.mediaSearch-div .el-card-item {
+	.el-overlay-1::after {
+		content: "";
+		background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	&:hover {
+		.el-overlay-1::after {
+			opacity: 1;
+		}
+	}
+}
+
+.request-result-item {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media screen and (min-width: 576px) {
+	.request-result-item {
+		left: initial;
+		transform: none;
+	}
+}
+
 #request-input-div {
 	span:first-of-type {
 		display: none;
 	}
 
 	.dropdown-toggle {
-	    padding: 7.5px 12px;
+	    padding: 8px 12px;
+	}
+}
+
+.ajaxloader {
+	border-radius: 4px;
+	margin: 0 15px;
+	width: calc(100% - 30px);
+	left: 0;
+	transition: all 0.2s;
+
+	.circular {
+		position: absolute;
+		top: 50%;
 	}
 }
 
@@ -142,6 +174,43 @@
 		height: 46px;
 		padding: 10px 16px;
 	}
+}
+
+.white-popup {
+	&[id$="metadata-div"],
+	&[id^="request"] {
+		.white-box:not(.resultBox-outside) {
+			box-shadow: 0 5px 15px rgba($black, 0.5);
+		}
+	}
+}
+
+.user-bg {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	background: $black45a;
+	@extend %background-blur;
+}
+
+.lazyload.error,
+.owl-item img[data-src="plugins/images/cache/no-list.png"],
+.slimScrollDiv img[data-src="plugins/images/cache/no-list.png"] {
+	background: $black45a $no-list center center/cover !important;
+}
+
+img[data-src="plugins/images/cache/no-request.png"] {
+	background: $black45a $no-request center center/cover !important;
+}
+
+.resultImages.error,
+.owl-item img[data-src="plugins/images/cache/no-list.png"],
+.slimScrollDiv img[data-src="plugins/images/cache/no-list.png"],
+img[data-src="plugins/images/cache/no-request.png"] {
+	padding: 0 0 0 200px;
+}
+
+div[data-src="plugins/images/cache/no-np.png"] {
+	background: $black45a $no-np center center/cover !important;
 }
 
 .css-bar {
@@ -162,6 +231,11 @@
 	width: 90px;
     height: 90px;
 	margin: 5px 0 0 5px;
+}
+
+img[src="plugins/images/rotten.png"] {
+	padding: 0 0 0 40px;
+	background: $rotten-tomatoes 5px 5px/30px no-repeat;
 }
 
 .css-bar-info {

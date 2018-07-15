@@ -2,23 +2,21 @@
 
 #preloader {
 	@include background($bg-dark, "fixed");
-	z-index: 2;
 }
 
 .circular {
+	@extend %circular-loader;
 	position: fixed;
 	top: 30%;
 	left: 50%;
-	width: 24px;
-	height: 24px;
-	margin: -12px 0 0 -12px;
-	border: 2px solid transparent;
-	border-top-color: $theme;
-	border-left-color: $theme;
-	border-radius: 50%;
-	animation: loading 0.5s linear infinite;
 
 	circle {
 		display: none;
+	}
+}
+
+body[style=""] {
+	#preloader {
+		z-index: 2;
 	}
 }

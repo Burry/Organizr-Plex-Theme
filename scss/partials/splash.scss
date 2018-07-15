@@ -1,34 +1,35 @@
 // Splash Screen
 
 #splashScreen {
-	background: hsl(0, 0, 5%) !important;
+	background: $splash !important;
+	overflow: auto;
+
+	.col-xs-12 {
+		pointer-events: none;
+	}
 
 	.panel {
-		border-radius: 4px;
-		background: $dark-gray;
-		max-width: 160px;
-		padding-top: 0px;
-		padding-bottom: 20px;
-		margin: 25px auto !important;
+		cursor: pointer;
+		pointer-events: all;
+	}
 
-		span {
-			color: $text-muted;
-			font-size: 14px;
-			float: none !important;
-			margin: 0 !important;
-			text-align: center;
-		}
+	.panel-heading {
+		border: 0;
+		padding: 0px !important;
+	}
 
-		img {
-			display: block !important;
-			border-radius: 1000px;
-			height: 80px !important;
-			width: 80px !important;
-			margin: 20px auto 20px auto;
-		}
+	img {
+		background: $light-gray;
+		display: block !important;
+		border-radius: 1000px;
+		height: 80px !important;
+		width: 80px !important;
+		margin: 0 auto 17px;
+	    transform: translateX(3px);
 	}
 
 	div[id^="menu-"] {
+		&:focus,
 		&:hover {
 			span {
 				color: $white;
@@ -40,47 +41,88 @@
 		}
 	}
 
-	.panel-heading {
-		border: 0;
-		padding: 0px !important;
-	}
-
 	.flexbox {
-		padding: 0;
 		margin: 0;
-		position: absolute;
+
+		span {
+			float: none !important;
+			padding: 4px 0;
+			text-align: center;
+		}
 
 		&:first-of-type {
 			width: 100%;
-			top: 50%;
-			transform: translateY(-50%);
+			position: absolute;
+			padding: 130px 20px 75px 20px !important;
+
+			.panel {
+				background: $dark-gray;
+				border-radius: 4px;
+				max-width: 160px;
+				height: 160px;
+				margin: 25px auto !important;
+				padding: 18px 0;
+			}
+
+			div[id^="menu"]:first-of-type {
+				.panel:before {
+					content: "Select App";
+					display: block;
+					color: $text;
+					font-size: 20px;
+					font-weight: 400;
+					position: relative;
+				    top: -85px;
+					pointer-events: none;
+				}
+
+				.panel-heading {
+					margin-top: -27px;
+				}
+			}
+
+			span {
+				color: $text-muted;
+				font-size: 14px;
+				margin: 0 0 0 -6px !important;
+			}
+
+			i {
+				display: block !important;
+				font-size: 80px;
+				margin: 0 auto 17px;
+				width: 100% !important;
+				text-align: center !important;
+			}
 		}
 
 		&:last-of-type {
 			width: min-content;
-			bottom: 25px;
+			padding: 0 !important;
+			position: fixed;
+			bottom: 30px;
 			left: 50%;
 			transform: translateX(-50%);
 
 			.panel {
+				@include button($white25a, $white30a, $white20a, $white);
 			    padding: 8px 12px;
 				margin: 0 !important;
-				background: $white25a;
+			}
 
-				span {
-					color: $white !important;
-					font-size: 12px;
-					text-transform: uppercase;
-				}
-
-				&:hover {
-					background: $white30a;
-				}
-
-				&:active {
-					background: $white20a;
-				}
+			span {
+				color: $white;
+				font-size: 12px;
+				text-transform: uppercase;
+				margin: 0 !important;
 			}
 		}
+	}
+}
+
+@media (min-width: 992px) {
+	#splashScreen .flexbox:first-of-type {
+		width: 70%;
+		left: 15%;
 	}
 }

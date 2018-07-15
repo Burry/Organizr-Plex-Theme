@@ -33,6 +33,7 @@
 
 	.label {
 		padding: 5px 8px;
+		cursor: pointer;
 	}
 
 	.slimScrollBar,
@@ -115,7 +116,14 @@ body[data-active-tab=""],
 	    padding: 15px 35px 15px 15px;
 		transition: .2s color ease;
 
-		&.active {
+		&:focus,
+		&:hover {
+			color: $white;
+			background: $white08a !important;
+		}
+
+		&.active,
+		&:active {
 			background: $white08a;
 			color: $theme-lighter;
 			box-shadow: none;
@@ -123,16 +131,17 @@ body[data-active-tab=""],
 	}
 }
 
-@media (pointer:fine) {
-	#side-menu li a {
-		&:focus,
-		&:hover {
-			color: $white;
-			background: $white08a;
-		}
-	}
-}
-
 .tabLoaded {
 	filter: none;
+}
+
+// Unsure where this belongs
+
+.nav .open > a {
+	background: transparent !important;
+
+	&:focus,
+	&:hover {
+		background: transparent !important;
+	}
 }

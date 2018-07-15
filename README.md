@@ -9,16 +9,16 @@ A theme for Organizr v2 that emulates the style of Plex
 - Open Organizr Settings > Customize > Appearance > Colors & Themes, and select "Plex" from the theme dropdown input.
 - Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased nav bar padding.
 - To ensure that notifications display as intended, keep the default notification style setting "Izi" under Organizr Settings > Customize > Appearance > Notifications.
-- *Optional*: Copy the contents of [Plex Theme's `/images`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images) to Organizr's `/plugins/images/` directory. Plex Theme links to some assets hosted on its remote repository, but other images called in Organizr's page markup must be placed in the local installation.
+- *Optional*: Copy the contents of [Plex Theme's `/images`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images) to Organizr's `/plugins/images/` directory. Plex Theme links to some assets hosted on its remote repository, but assets such as group icons are also provided which must be installed directly.
 
 ### Hide Login Page UI Chrome
 
 Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login/register page.
 
 ```
-    $('.sidebar').addClass('hidden');
-    $('.navbar').addClass('hidden');
-    $('#pagewrapper').addClass('hidden');
+        $('.sidebar').addClass('hidden');
+        $('.navbar').addClass('hidden');
+        $('#pagewrapper').addClass('hidden');
 ```
 
 ### Custom Colors

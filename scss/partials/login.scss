@@ -55,19 +55,51 @@
 	}
 }
 
+.loginLogo {
+	max-height: 100px;
+	max-width: -webkit-fill-available;
+	margin-bottom: 35px;
+	border: 0;
+}
+
 #loginform .form-group.m-t-20 {
-	margin: -10px auto 15px !important;
+	margin: -10px 0 0 !important;
 }
 
 #registerForm .form-group {
 	margin: 15px auto !important;
 
 	&:first-of-type {
-		margin-top: 0px !important;
+		margin: 0 0 15px !important;
 	}
 
 	&:last-of-type {
-		margin-bottom: 0px !important;
+		margin: 15px 0 0 !important;
+	}
+}
+
+#recoverform {
+	.form-group {
+		&:first-of-type {
+			margin: 0 0 15px !important;
+		}
+
+		&:last-of-type {
+			margin: 15px 0 0 !important;
+		}
+	}
+
+	h3 {
+		margin: 0;
+	}
+}
+
+#to-recover span {
+	color: $white45a;
+	transition: color 0.2s;
+
+	&:hover {
+		color: $white;
 	}
 }
 
@@ -86,24 +118,26 @@
 	}
 }
 
-.loginLogo {
-	max-height: 100px;
-	max-width: -webkit-fill-available;
-	margin-bottom: 35px;
-	border: 0;
-}
-
-#to-recover span {
-	color: $white45a;
-	transition: color 0.2s;
-
-	&:hover {
-		color: $white;
-	}
-}
-
 .blockMsg {
-	display: none !important;
+	background: transparent !important;
+	border: 0 !important;
+	width: 90% !important;
+
+	h5 {
+		color: transparent;
+
+		&:after {
+			@extend %circular-loader;
+			content: "";
+			display: block;
+			top: 50%;
+			left: 50%;
+		}
+	}
+
+	img {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -128,7 +162,7 @@
 		}
 
 		form {
-			padding: 20px;
+			padding: 30px 20px;
 		}
 
 		.form-group {

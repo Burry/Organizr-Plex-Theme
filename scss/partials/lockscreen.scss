@@ -5,9 +5,9 @@
 		color: $text;
 	}
 
-	background: hsl(0, 0, 5%) !important;
+	background: $splash !important;
 
 	.white-box {
-		background: hsl(0, 0, 5%);
+		background: $splash;
 	}
 }

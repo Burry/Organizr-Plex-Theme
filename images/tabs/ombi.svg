@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Ombi</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#CA7D29" offset="0%"></stop>
+            <stop stop-color="#F6BD16" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#1F1F1F" offset="0%"></stop>
+            <stop stop-color="#2C2C2C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ombi" fill-rule="nonzero">
+            <circle id="Oval" fill="url(#linearGradient-1)" cx="300" cy="300" r="300"></circle>
+            <circle id="Oval" fill="url(#linearGradient-2)" cx="300" cy="300" r="280"></circle>
+            <path d="M463.98471,433.943727 L375.470129,344.686222 C374.439621,343.653235 373.30127,342.864445 372.214154,342.005414 C387.166433,318.871878 395.897239,291.316746 395.897239,261.635728 C395.897239,180.092981 330.353393,114 249.44862,114 C168.588884,114 103,180.093394 103,261.635728 C103,343.18963 168.588884,409.268149 249.44862,409.268149 C278.879242,409.268149 306.244305,400.443135 329.226611,385.366485 C330.063744,386.487895 330.83146,387.603109 331.845026,388.627832 L420.371177,477.896493 C426.41539,483.971696 434.28675,487 442.170093,487 C450.058394,487 457.935539,483.972109 463.974381,477.910542 C475.999587,465.758898 475.999587,446.086281 463.98471,433.943727 M249.44862,362.648624 C194.21233,362.648624 149.249303,317.327356 149.249303,261.635728 C149.249303,205.952362 194.212743,160.619525 249.44862,160.619525 C304.684495,160.619525 349.647935,205.952362 349.647935,261.635728 C349.647935,317.326944 304.684495,362.648624 249.448206,362.648624" id="Shape" fill="url(#linearGradient-1)"></path>
+        </g>
+    </g>
+</svg>

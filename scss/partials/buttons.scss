@@ -86,18 +86,12 @@
 }
 
 
-// Large Table Row Button
-
-.btn-circle.btn-lg {
-	padding: 10px;
-}
-
-
 // Green Button
 
 .btn-success {
 	@include button($green, $color: $white);
 }
+
 
 // Red Button
 
@@ -108,6 +102,14 @@
 		@include button($red, $color: $white);
 		border-radius: 1000px;
 	}
+}
+
+
+// Large Table Row Button
+
+.btn-circle.btn-lg {
+	padding: 10px;
+	font-size: 18px;
 }
 
 

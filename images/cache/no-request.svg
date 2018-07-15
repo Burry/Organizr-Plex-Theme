@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="533" viewBox="0 0 400 533">
-  <defs>
-    <radialGradient id="a" cy="0%" r="142.322%" fx="50%" fy="0%" gradientTransform="scale(-1 -.75047) rotate(-69.432 0 .722)">
-      <stop offset="0%" stop-color="#3F4245"/>
-      <stop offset="100%" stop-color="#18191B"/>
-    </radialGradient>
-    <linearGradient id="b" x1="0%" y1="50%" y2="50%">
-      <stop offset="0%" stop-color="#CA7D29"/>
-      <stop offset="100%" stop-color="#F6BD16"/>
-    </linearGradient>
-    <linearGradient id="c" x1="0%" y1="50%" y2="50%">
-      <stop offset="0%" stop-color="#1F1F1F"/>
-      <stop offset="100%" stop-color="#2C2C2C"/>
-    </linearGradient>
-  </defs>
-  <g fill="none" fill-rule="evenodd">
-    <path fill="url(#a)" fill-rule="nonzero" d="M0 0h400v533H0z" style="mix-blend-mode:overlay"/>
-    <g fill-rule="nonzero" transform="translate(100 167)">
-      <circle cx="100" cy="100" r="100" fill="url(#b)"/>
-      <circle cx="100" cy="100" r="93.333" fill="url(#c)"/>
-      <path fill="url(#b)" d="M154.662 144.648l-29.505-29.753c-.344-.344-.723-.607-1.086-.893a49.166 49.166 0 0 0 7.895-26.79C131.966 60.03 110.118 38 83.15 38c-26.954 0-48.817 22.031-48.817 49.212 0 27.185 21.863 49.21 48.817 49.21 9.81 0 18.931-2.941 26.592-7.967.28.374.535.746.873 1.088l29.509 29.756a10.222 10.222 0 0 0 14.534.005c4.009-4.051 4.009-10.609.004-14.656M83.15 120.883c-18.413 0-33.4-15.107-33.4-33.671 0-18.561 14.988-33.672 33.4-33.672 18.411 0 33.4 15.11 33.4 33.672 0 18.564-14.989 33.67-33.4 33.67"/>
+<svg width="400px" height="533px" viewBox="0 0 400 533" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>no-request</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="67.5976756%" cy="-35.1480994%" fx="67.5976756%" fy="-35.1480994%" r="142.322159%" gradientTransform="translate(0.675977,-0.351481),scale(1.000000,0.750469),rotate(110.567976),translate(-0.675977,0.351481)" id="radialGradient-1">
+            <stop stop-color="#3F4245" offset="0%"></stop>
+            <stop stop-color="#18191B" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#CA7D29" offset="0%"></stop>
+            <stop stop-color="#F6BD16" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#1F1F1F" offset="0%"></stop>
+            <stop stop-color="#2C2C2C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="no-request">
+            <polygon id="Shape" fill="url(#radialGradient-1)" fill-rule="nonzero" style="mix-blend-mode: overlay;" points="0 0 400 0 400 533 0 533"></polygon>
+            <g id="Group" transform="translate(100.000000, 167.000000)" fill-rule="nonzero">
+                <circle id="Oval" fill="url(#linearGradient-2)" cx="100" cy="100" r="100"></circle>
+                <circle id="Oval" fill="url(#linearGradient-3)" cx="100" cy="100" r="93.333"></circle>
+                <path d="M154.662,144.648 L125.157,114.895 C124.813,114.551 124.434,114.288 124.071,114.002 C129.237039,106.022938 131.979368,96.7174306 131.966,87.212 C131.966,60.03 110.118,38 83.15,38 C56.196,38 34.333,60.031 34.333,87.212 C34.333,114.397 56.196,136.422 83.15,136.422 C92.96,136.422 102.081,133.481 109.742,128.455 C110.022,128.829 110.277,129.201 110.615,129.543 L140.124,159.299 C142.043407,161.240601 144.659767,162.333681 147.389957,162.33462 C150.120146,162.33556 152.737257,161.24428 154.658,159.304 C158.667,155.253 158.667,148.695 154.662,144.648 M83.15,120.883 C64.737,120.883 49.75,105.776 49.75,87.212 C49.75,68.651 64.738,53.54 83.15,53.54 C101.561,53.54 116.55,68.65 116.55,87.212 C116.55,105.776 101.561,120.882 83.15,120.882" id="Shape" fill="url(#linearGradient-2)"></path>
+            </g>
+            <text id="NEW-REQUEST" fill-opacity="0.45" fill="#FFFFFF" font-family="OpenSans-Bold, Open Sans" font-size="32" font-weight="bold">
+                <tspan x="87" y="463">NEW REQUEST</tspan>
+            </text>
+        </g>
     </g>
-    <text fill="#FFF" fill-opacity=".45" font-family="OpenSans-Bold, Open Sans" font-size="32" font-weight="bold">
-      <tspan x="87" y="463">NEW REQUEST</tspan>
-    </text>
-  </g>
 </svg>

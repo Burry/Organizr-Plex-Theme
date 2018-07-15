@@ -1,5 +1,6 @@
 // Animations
 
+.tada,
 .flipInX,
 .flipInY,
 .bounceInDown,
@@ -8,7 +9,7 @@
 .slideIn,
 .slideInDown,
 .slideInRight,
-.tada {
+.showSweetAlert[data-animation=pop] {
 	animation-name: none;
 }
 

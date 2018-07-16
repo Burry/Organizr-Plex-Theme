@@ -1,7 +1,7 @@
 // Sidebar
 
 .sidebar {
-	@include background($bg-light, "fixed");
+	@include background($bg-light, 'fixed');
 	box-shadow: none;
 	transition: background 0.2s;
 	transition: width 0.1s;
@@ -50,10 +50,10 @@
 	z-index: 9;
 }
 
-body[data-active-tab=""],
+body[data-active-tab=''],
 .active-tab-Settings {
 	.sidebar {
-		@include background($bg-dark, "fixed");
+		@include background($bg-dark, 'fixed');
 	}
 }
 
@@ -64,11 +64,11 @@ body[data-active-tab=""],
 		background-color: $black15a;
 
 		.sidebar-head {
-			@include background($bg-light, "fixed");
+			@include background($bg-light, 'fixed');
 			background: $black15a;
 
 			&::after {
-				content: "";
+				content: '';
 			    background: $black70a;
 			    position: absolute;
 			    top: 0;
@@ -80,7 +80,7 @@ body[data-active-tab=""],
 		}
 	}
 
-	body[data-active-tab=""],
+	body[data-active-tab=''],
 	.active-tab-Settings {
 		.sidebar {
 			background-image: none !important;
@@ -88,7 +88,7 @@ body[data-active-tab=""],
 		}
 
 		.sidebar-head {
-			@include background($bg-dark, "fixed");
+			@include background($bg-dark, 'fixed');
 		}
 	}
 }
@@ -134,6 +134,20 @@ body[data-active-tab=""],
 .tabLoaded {
 	filter: none;
 }
+
+
+// Override Ombi Icon
+
+.sidebar img {
+	&[src='plugins/images/tabs/ombi.png'],
+	&[src='plugins/images/tabs/ombi-plex.png'],
+	&[src='plugins/images/tabs/ombi-emby.png'] {
+		background: $ombi;
+		height: 30px;
+		padding-left: 30px;
+	}
+}
+
 
 // Unsure where this belongs
 

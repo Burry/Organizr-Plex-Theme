@@ -190,6 +190,12 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 	margin-top: 15px;
 }
 
+#settings-tab-editor-homepage-order {
+	.panel-body {
+		padding: 0 15px;
+	}
+}
+
 
 // Cards
 
@@ -199,6 +205,7 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 	.el-card-content {
 		background: transparent;
 		margin-bottom: 3rem;
+		cursor: default;
 	}
 
 	.lazyload {
@@ -213,10 +220,71 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 	}
 }
 
+#settings-homepage-list {
+	img {
+		&[src='plugins/images/tabs/ombi.png'],
+		&[src='plugins/images/tabs/ombi-plex.png'],
+		&[src='plugins/images/tabs/ombi-emby.png'] {
+			background: $black15a $ombi center center/90px no-repeat !important;
+			padding-top: 105px;
+		}
+	}
+}
+
+div[data-src='plugins/images/tabs/ombi.png'] {
+	background-image: $ombi !important;
+}
+
+
+// Tab Editor
+
+.tabEditor {
+	// Override Ombi Icon
+	img {
+		&[src='plugins/images/tabs/ombi.png'],
+		&[src='plugins/images/tabs/ombi-plex.png'],
+		&[src='plugins/images/tabs/ombi-emby.png'] {
+			background: $ombi;
+			height: 35px !important;
+			padding-left: 35px;
+		}
+	}
+
+	td:nth-of-type(2) {
+		padding: 30px 0 30px 15px;
+		font-weight: 600;
+	}
+
+	select {
+		margin-top: 7px;
+	}
+
+	.radio,
+	.switchery {
+		margin: 15px 0;
+	}
+}
+
+#settings-tab-editor-tabs .tabEditorIcon {
+	padding: 7.5px;
+}
+
+.select2-container {
+	img {
+		&[src='plugins/images/tabs/ombi.png'],
+		&[src='plugins/images/tabs/ombi-plex.png'],
+		&[src='plugins/images/tabs/ombi-emby.png'] {
+			background: $ombi;
+			height: 20px;
+			padding-left: 20px;
+		}
+	}
+}
+
 
 // Favicon / CSS editors
 
-div[id$="Custom-CSS"] {
+div[id$='Custom-CSS'] {
 	.col-md-12,
 	.row {
 		margin: 0;
@@ -224,7 +292,7 @@ div[id$="Custom-CSS"] {
 	}
 }
 
-div[id$="FavIcon"] textarea,
+div[id$='FavIcon'] textarea,
 #customCSSEditor {
 	height: -webkit-fill-available !important;
 	border-radius: 4px;
@@ -286,6 +354,38 @@ table.dataTable {
 
 .footable.breakpoint > tbody > tr > td > span.footable-toggle {
 	color: $text-muted !important;
+}
+
+
+// User Management
+
+.userManagement {
+	img[alt="user-img"] {
+		min-width: 55px;
+		min-height: 55px;
+	}
+
+	select {
+		margin-top: 7px;
+	}
+
+	.tabEditorIcon img {
+		width: 54px !important;
+	}
+}
+
+#manageUserTable td {
+	&:nth-of-type(2),
+	&:nth-of-type(3) {
+		padding: 24px 0 24px 10px;
+	}
+}
+
+#manageGroupTable td {
+	&:nth-of-type(2),
+	&:nth-of-type(3) {
+		padding: 32px 10px;
+	}
 }
 
 

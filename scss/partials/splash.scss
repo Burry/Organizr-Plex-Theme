@@ -28,7 +28,7 @@
 	    transform: translateX(3px);
 	}
 
-	div[id^="menu-"] {
+	div[id^='menu-'] {
 		&:focus,
 		&:hover {
 			span {
@@ -64,9 +64,9 @@
 				padding: 18px 0;
 			}
 
-			div[id^="menu"]:first-of-type {
+			div[id^='menu']:first-of-type {
 				.panel:before {
-					content: "Select App";
+					content: 'Select App';
 					display: block;
 					color: $text;
 					font-size: 20px;

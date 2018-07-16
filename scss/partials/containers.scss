@@ -3,11 +3,11 @@
 // Page Elements
 
 html {
-	@include background($bg-dark, "fixed");
+	@include background($bg-dark, 'fixed');
 }
 
 body {
-	@include background($bg-light, "fixed");
+	@include background($bg-light, 'fixed');
 	transition: background-image 0.2s;
 	color: $text;
 	font: 600 13px $font-stack;
@@ -18,7 +18,7 @@ body {
 
 .active-tab-Settings,
 #internal-Settings {
-	@include background($bg-dark, "fixed");
+	@include background($bg-dark, 'fixed');
 }
 
 
@@ -145,6 +145,18 @@ body {
 	background: 0 0 !important;
 }
 
+.bg-theme {
+	background: $black30a!important;
+}
+
+.bg-danger {
+	background: $red !important;
+}
+
+.bg-success {
+	background: $green !important;
+}
+
 .bg-title {
 	background: $black15a!important;
 
@@ -155,10 +167,6 @@ body {
 	.breadcrumb a {
 		color: $white70a!important;
 	}
-}
-
-.bg-theme {
-	background: $black30a!important;
 }
 
 .well {
@@ -240,7 +248,7 @@ body {
 			transition: all 0.2s;
 		    background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
 		}
-		
+
 		.el-overlay-1 img {
 			transition: none;
 		}

@@ -62,6 +62,9 @@
 		margin: 0 0 15px 0;
 	}
 
+	p {
+		margin: 0;
+	}
 
 	.btn.row {
 		margin: 15px 0;
@@ -75,7 +78,7 @@
 
 @media screen and (min-width: 768px) {
 	.white-popup-block,
-	.white-popup:not([id$="metadata-div"]):not([id^="request"]) .panel {
+	.white-popup:not([id$='metadata-div']):not([id^='request']) .panel {
 		box-shadow: 0 5px 15px $black50a;
 	}
 }
@@ -139,7 +142,7 @@
 
 .mediaSearch-div .el-card-item {
 	.el-overlay-1::after {
-		content: "";
+		content: '';
 		background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
 		opacity: 0;
 		width: 100%;
@@ -208,8 +211,8 @@
 }
 
 .white-popup {
-	&[id$="metadata-div"],
-	&[id^="request"] {
+	&[id$='metadata-div'],
+	&[id^='request'] {
 		.white-box:not(.resultBox-outside) {
 			box-shadow: 0 5px 15px rgba($black, 0.5);
 		}
@@ -220,42 +223,53 @@
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 	background: $black45a;
-	@extend %background-blur;
+}
+
+@supports (backdrop-filter: blur(30px)) {
+	.user-bg {
+		@extend %background-blur;
+	}
 }
 
 .lazyload.error,
-.owl-item img[data-src="plugins/images/cache/no-list.png"],
-.slimScrollDiv img[data-src="plugins/images/cache/no-list.png"] {
+.owl-item img[src='plugins/images/cache/no-list.png'],
+.slimScrollDiv img[src='plugins/images/cache/no-list.png'] {
 	background: $black45a $no-list center center/cover !important;
 }
 
-img[data-src="plugins/images/cache/no-request.png"] {
+img[src='plugins/images/cache/no-request.png'] {
 	background: $black45a $no-request center center/cover !important;
 }
 
 .resultImages.error,
-.owl-item img[data-src="plugins/images/cache/no-list.png"],
-.slimScrollDiv img[data-src="plugins/images/cache/no-list.png"],
-img[data-src="plugins/images/cache/no-request.png"] {
+.owl-item img[src='plugins/images/cache/no-list.png'],
+.slimScrollDiv img[src='plugins/images/cache/no-list.png'],
+img[src='plugins/images/cache/no-request.png'] {
 	padding: 0 0 0 200px;
 }
 
-div[data-src="plugins/images/cache/no-np.png"] {
-	background: $black45a $no-np center center/cover !important;
+div[data-src='plugins/images/cache/no-np.png'] {
+	background: $black20 $no-np center center/cover !important;
 }
 
-.css-bar {
-	font-weight: 700;
-
-	&:after {
-		background: $dark-gray;
-		color: $text;
-		opacity: 1;
+@supports (backdrop-filter: blur(30px)) {
+	div[data-src='plugins/images/cache/no-np.png'] {
+		background-color: $black45a !important;
 	}
 }
 
-.css-bar-sm > img {
-	padding: 5px;
+.css-bar:after {
+	background: $dark-gray;
+	color: $text;
+	opacity: 1;
+}
+
+.css-bar-sm {
+	font-size: 11px;
+
+	> img {
+		padding: 5px;
+	}
 }
 
 .css-bar-lg > img {
@@ -264,7 +278,7 @@ div[data-src="plugins/images/cache/no-np.png"] {
 	margin: 5px 0 0 5px;
 }
 
-img[src="plugins/images/rotten.png"] {
+img[src='plugins/images/rotten.png'] {
 	padding: 0 0 0 40px;
 	background: $rotten-tomatoes 5px 5px/30px no-repeat;
 }
@@ -290,7 +304,7 @@ img[src="plugins/images/rotten.png"] {
 	}
 }
 
-div[id^="request"] {
+div[id^='request'] {
 	.bg-plex {
 		margin-top: 10px;
 	}

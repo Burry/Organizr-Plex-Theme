@@ -72,7 +72,7 @@
 		}
 	}
 
-	&[aria-expanded="true"] {
+	&[aria-expanded='true'] {
 		.img-circle {
 			background: $theme-lighter;
 			box-shadow: 0 0 0 2px $theme-lighter;

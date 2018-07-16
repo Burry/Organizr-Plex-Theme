@@ -249,9 +249,24 @@
 }
 
 
+// Override Ombi Icon
+
+img {
+	&[src='plugins/images/tabs/ombi.png'],
+	&[src='plugins/images/tabs/ombi-plex.png'],
+	&[src='plugins/images/tabs/ombi-emby.png'] {
+		&.homepageImageTitle {
+			background: $ombi;
+			width: 40px;
+			padding-left: 40px;
+		}
+	}
+}
+
+
 // Download Queues
 
-tbody[class$="-queue"] {
+tbody[class$='-queue'] {
 	cursor: default;
 
 	td.hidden-xs {
@@ -268,27 +283,29 @@ tbody[class$="-queue"] {
 	padding-bottom: 0 !important;
 }
 
-.table-bordered,
-.table {
-	> tbody,
-	> tfoot,
-	> thead {
-		> tr {
-			> th,
-			> td {
-				border: 0;
-			}
+#homepage-items {
+	.table-bordered,
+	.table {
+		> tbody,
+		> tfoot,
+		> thead {
+			> tr {
+				> th,
+				> td {
+					border: 0;
+				}
 
-			&:not(:first-of-type):not(:last-of-type) > td {
-				border-width: 1px 0 1px 0;
-				border-style: solid;
-				border-color: $white08a;
-			}
+				&:not(:first-of-type):not(:last-of-type) > td {
+					border-width: 1px 0;
+					border-style: solid;
+					border-color: $white08a;
+				}
 
-			> td {
-				&[lang] {
-					color: $white30a;
-					text-transform: uppercase;
+				> td {
+					&[lang] {
+						color: $white30a;
+						text-transform: uppercase;
+					}
 				}
 			}
 		}
@@ -312,7 +329,6 @@ td span.label.label-info {
 
 // Progress Bars
 
-
 .progress {
 	height: 3px;
 	margin-bottom: 5px;
@@ -335,8 +351,8 @@ td span.label.label-info {
 }
 
 tbody {
-	&[class$="queue"],
-	&[class$="history"] {
+	&[class$='queue'],
+	&[class$='history'] {
 		.progress,
 		.progress-bar {
 			border-radius: 1000px;

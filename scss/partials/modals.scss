@@ -234,11 +234,11 @@
 .lazyload.error,
 .owl-item img[src='plugins/images/cache/no-list.png'],
 .slimScrollDiv img[src='plugins/images/cache/no-list.png'] {
-	background: $black45a $no-list center center/cover !important;
+	background: $black45a var(--no-list) center center/cover !important;
 }
 
 img[src='plugins/images/cache/no-request.png'] {
-	background: $black45a $no-request center center/cover !important;
+	background: $black45a var(--no-request) center center/cover !important;
 }
 
 .resultImages.error,
@@ -249,7 +249,7 @@ img[src='plugins/images/cache/no-request.png'] {
 }
 
 div[data-src='plugins/images/cache/no-np.png'] {
-	background: $black20 $no-np center center/cover !important;
+	background: $black20 var(--no-np) center center/cover !important;
 }
 
 @supports (backdrop-filter: blur(30px)) {
@@ -280,7 +280,7 @@ div[data-src='plugins/images/cache/no-np.png'] {
 
 img[src='plugins/images/rotten.png'] {
 	padding: 0 0 0 40px;
-	background: $rotten-tomatoes 5px 5px/30px no-repeat;
+	background: var(--rotten-tomatoes) 5px 5px/30px no-repeat;
 }
 
 .css-bar-info {

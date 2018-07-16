@@ -1,6 +1,6 @@
 {
   "name": "organizr-v2-plex-theme",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "description": "A theme for Organizr v2 that emulates the style of Plex",
   "main": "gulpfile.js",
   "repository": "https://github.com/Burry/organizr-v2-plex-theme",
@@ -18,11 +18,10 @@
     "gulp": "gulpjs/gulp.git#4.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
-    "gulp-cssimport": "^6.0.1",
+    "gulp-css-svg": "^1.3.1",
     "gulp-header-comment": "^0.4.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^4.0.1",
-    "gulp-sass-lint": "^1.4.0",
-    "sass-inline-image": "^0.0.3"
+    "gulp-sass-lint": "^1.4.0"
   }
 }

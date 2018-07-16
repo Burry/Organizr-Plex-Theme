@@ -1,7 +1,7 @@
 // Error Page
 
 .error-page {
-	@include background($bg-dark, 'fixed');
+	@include background(var(--bg-dark), 'fixed');
 
 	h1 {
 		font-size: 128px;

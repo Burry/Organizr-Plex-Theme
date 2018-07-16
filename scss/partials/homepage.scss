@@ -251,16 +251,10 @@
 
 // Override Ombi Icon
 
-img {
-	&[src='plugins/images/tabs/ombi.png'],
-	&[src='plugins/images/tabs/ombi-plex.png'],
-	&[src='plugins/images/tabs/ombi-emby.png'] {
-		&.homepageImageTitle {
-			background: $ombi;
-			width: 40px;
-			padding-left: 40px;
-		}
-	}
+img[src*='ombi'].homepageImageTitle {
+	background: var(--ombi);
+	width: 40px;
+	padding-left: 40px;
 }
 
 

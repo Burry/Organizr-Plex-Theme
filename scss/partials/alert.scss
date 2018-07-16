@@ -12,7 +12,7 @@
 	border: 0 !important;
     box-shadow: 0 4px 12px $black50a;
 	padding: 10px 20px;
-	font-family: $font-stack;
+	font-family: var(--font-stack);
 
 	> .iziToast-close {
 		width: 100%;

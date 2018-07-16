@@ -3,7 +3,7 @@
 .plyr {
 	border-radius: 4px;
 	box-shadow: 0 5px 15px $black50a;
-	font-family: $font-stack;
+	font-family: var(--font-stack);
 	transition: all 0.2s;
 
    input {

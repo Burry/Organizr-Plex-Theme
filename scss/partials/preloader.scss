@@ -1,7 +1,7 @@
 // Preloader
 
 #preloader {
-	@include background($bg-dark, 'fixed');
+	@include background(var(--bg-dark), 'fixed');
 }
 
 .circular {

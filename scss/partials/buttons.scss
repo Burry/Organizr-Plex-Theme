@@ -14,14 +14,14 @@
 		box-shadow: none;
 	}
 
-	// Request Filters
-	&[data-filter='request-result-movie'],
-	&[data-filter='request-result-tv'],
-	&[data-filter='request-result-music'] {
+	// Content Search Filters
+	&[data-filter$='movie'],
+	&[data-filter$='tv'],
+	&[data-filter$='music'] {
 		@include button($theme, $theme-light, $theme-dark, $white);
 	}
 
-	&[data-filter='request-result-all'] {
+	&[data-filter$='all'] {
 		@include button($white25a, $white30a, $white20a, $white);
 	}
 

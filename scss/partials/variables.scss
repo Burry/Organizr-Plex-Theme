@@ -1,7 +1,6 @@
-// Variables
+// Sass Variables
 
 // Colors
-
 $theme: #CC7B19            !default;
 $theme-light: #E3891C      !default;
 $theme-lighter: #F9BE03    !default;
@@ -40,19 +39,20 @@ $black16: hsl(0, 0%, 16%);
 $black12: hsl(0, 0%, 12%);
 
 
-// URLs
+// CSS4 Variables
+// (Used to prevent repeating large blocks)
 
-$bg-light: url('https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/blur-light.png');
-$bg-dark: url('https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/blur-dark.png');
-$noise: url('https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/noise.png');
-$no-list: url(inline-image('images/cache/no-list.svg'));
-$no-np: url(inline-image('images/cache/no-np.svg'));
-$no-request: url(inline-image('images/cache/no-request.svg'));
-$ombi: url(inline-image('images/tabs/ombi.svg'));
-$rotten-tomatoes: url(inline-image('images/rotten.svg'));
+:root {
+    // URLs
+    --bg-light: url('https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/blur-light.png');
+    --bg-dark: url('https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/blur-dark.png');
+    --noise: url('https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/images/background/noise.png');
+    --no-list: url('images/cache/no-list.svg');
+    --no-np: url('images/cache/no-np.svg');
+    --no-request: url('images/cache/no-request.svg');
+    --ombi: url('images/tabs/ombi.svg');
+    --rotten-tomatoes: url('images/rotten.svg');
 
-
-// Font Stacks
-
-$system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-stack: 'Open Sans', $system-font-stack !default;
+    // Font Stack
+    --font-stack: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}

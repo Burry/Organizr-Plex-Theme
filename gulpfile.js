@@ -4,9 +4,8 @@ const gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     sass = require('gulp-sass'),
     sassLint = require('gulp-sass-lint'),
-    sassInlineImage = require('sass-inline-image'),
+    cssSvg = require('gulp-css-svg'),
     autoPrefixer = require('gulp-autoprefixer'),
-    cssImport = require('gulp-cssimport'),
     cleanCSS = require('gulp-clean-css'),
     packageJSON = require('./package.json'),
     headerComment = require('gulp-header-comment'),
@@ -46,6 +45,18 @@ const gulp = require('gulp'),
         })
     ],
     imagesGlob = '**/*.+(svg|png|jpg|jpeg|gif)',
+    cleanCSSConfig = {
+        inline: ['all'],
+        level: {
+            1: {
+                all: true
+            },
+            2: {
+                mergeSemantically: true,
+                restructureRules: true
+            }
+        }
+    },
     comment = `Plex Theme for Organizr v2
         Version ` + packageJSON.version + `
         ` + packageJSON.license + ` License
@@ -65,28 +76,12 @@ gulp.task('imagemin', () =>
 gulp.task('compile', () =>
     gulp
         .src('scss/*.s+(a|c)ss')
-        .pipe(sassLint({
-            options: { 'merge-default-rules': false }
-        }))
+        .pipe(sassLint({ options: { 'merge-default-rules': false } }))
         .pipe(sassLint.format())
-        .pipe(sass({
-            errLogToConsole: true,
-            functions: sassInlineImage()
-        }).on('error', sass.logError))
+        .pipe(sass({ errLogToConsole: true }).on('error', sass.logError))
         .pipe(autoPrefixer())
-        .pipe(cssImport({ matchPattern: '*.css' }))
-        .pipe(cleanCSS({
-            level: {
-                1: {
-                    all: true
-                },
-                2: {
-                    mergeSemantically: true,
-                    removeUnusedAtRules: true,
-                    restructureRules: true
-                }
-            }
-        }))
+        .pipe(cssSvg({ baseDir: '../' }))
+        .pipe(cleanCSS(cleanCSSConfig))
         .pipe(headerComment(comment))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream())

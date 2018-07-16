@@ -3,14 +3,14 @@
 // Page Elements
 
 html {
-	@include background($bg-dark, 'fixed');
+	@include background(var(--bg-dark), 'fixed');
 }
 
 body {
-	@include background($bg-light, 'fixed');
+	@include background(var(--bg-light), 'fixed');
 	transition: background-image 0.2s;
 	color: $text;
-	font: 600 13px $font-stack;
+	font: 600 13px var(--font-stack);
 }
 
 
@@ -18,7 +18,7 @@ body {
 
 .active-tab-Settings,
 #internal-Settings {
-	@include background($bg-dark, 'fixed');
+	@include background(var(--bg-dark), 'fixed');
 }
 
 
@@ -92,7 +92,7 @@ body {
 	}
 
 	&:first-child h3 {
-		font-family: $font-stack;
+		font-family: var(--font-stack);
 	}
 }
 

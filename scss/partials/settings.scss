@@ -6,7 +6,7 @@
 	padding: 0 25px;
 
 	a span {
-		font-family: $font-stack;
+		font-family: var(--font-stack);
 	}
 }
 
@@ -220,19 +220,13 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 	}
 }
 
-#settings-homepage-list {
-	img {
-		&[src='plugins/images/tabs/ombi.png'],
-		&[src='plugins/images/tabs/ombi-plex.png'],
-		&[src='plugins/images/tabs/ombi-emby.png'] {
-			background: $black15a $ombi center center/90px no-repeat !important;
-			padding-top: 105px;
-		}
-	}
+#settings-homepage-list img[src*='ombi'] {
+	background: $black15a var(--ombi) center center/90px no-repeat !important;
+	padding-top: 105px;
 }
 
-div[data-src='plugins/images/tabs/ombi.png'] {
-	background-image: $ombi !important;
+div[data-src*='ombi'] {
+	background-image: var(--ombi) !important;
 }
 
 
@@ -240,14 +234,10 @@ div[data-src='plugins/images/tabs/ombi.png'] {
 
 .tabEditor {
 	// Override Ombi Icon
-	img {
-		&[src='plugins/images/tabs/ombi.png'],
-		&[src='plugins/images/tabs/ombi-plex.png'],
-		&[src='plugins/images/tabs/ombi-emby.png'] {
-			background: $ombi;
-			height: 35px !important;
-			padding-left: 35px;
-		}
+	img[src*='ombi'] {
+		background: var(--ombi);
+		height: 35px !important;
+		padding-left: 35px;
 	}
 
 	td:nth-of-type(2) {
@@ -269,16 +259,10 @@ div[data-src='plugins/images/tabs/ombi.png'] {
 	padding: 7.5px;
 }
 
-.select2-container {
-	img {
-		&[src='plugins/images/tabs/ombi.png'],
-		&[src='plugins/images/tabs/ombi-plex.png'],
-		&[src='plugins/images/tabs/ombi-emby.png'] {
-			background: $ombi;
-			height: 20px;
-			padding-left: 20px;
-		}
-	}
+.select2-container img[src*='ombi'] {
+	background: var(--ombi);
+	height: 20px;
+	padding-left: 20px;
 }
 
 

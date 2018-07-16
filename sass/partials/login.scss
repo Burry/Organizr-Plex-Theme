@@ -7,10 +7,15 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	overflow: hidden;
 
 	&:not(.hidden) + #page-wrapper {
 		display: none;
 	}
+}
+
+body[data-active-tab=''] {
+	overflow: hidden;
 }
 
 .login-register {

@@ -7,7 +7,7 @@
 
 .slimScrollBar {
 	background: $white !important;
-	background: $white25a;
+	background: var(--w25a);
 	width: 3px !important;
 	border-radius: 0 !important;
 	pointer-events: none;

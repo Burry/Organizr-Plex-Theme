@@ -38,7 +38,7 @@
 }
 
 %header {
-	color: $white70a;
+	color: var(--w70a);
 	font-family: var(--font-stack);
 	font-weight: 700;
 	text-transform: uppercase;
@@ -64,10 +64,7 @@
 		$background-image no-repeat $attachment center center/cover !important;
 }
 
-@mixin button
-	($background, $background-hover: lighten($background, 10%),
-	$background-active: darken($background, 10%),
-	$color: inherit) {
+@mixin button($background, $background-hover, $background-active, $color: inherit) {
 		@extend %button-basic;
 		background: $background !important;
 		color: $color !important;

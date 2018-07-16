@@ -27,7 +27,7 @@
 }
 
 .fc-day-header {
-	background: $black30a !important;
+	background: var(--b30a) !important;
 
 	a {
 		@extend %date-link;
@@ -40,7 +40,7 @@
 }
 
 .fc-day {
-	background: $black15a;
+	background: var(--b15a);
 }
 
 .fc-day-top {
@@ -63,7 +63,7 @@
 }
 
 .fc-title {
-	color: $white70a;
+	color: var(--w70a);
 	font-weight: 600;
 	transition: color 0.2s;
 }
@@ -92,12 +92,12 @@
 }
 
 .fc-today {
-	background: $white08a !important;
+	background: var(--w08a) !important;
 
 	&.fc-day-top,
 	&.fc-state-highlight,
 	&.fc-day-header {
-		background: $white08a !important;
+		background: var(--w08a) !important;
 
 		a {
 			color: $theme-lighter;
@@ -111,7 +111,7 @@
 
 .fc-widget-content {
 	border-width: 0 !important;
-	border-color: $white08a !important;
+	border-color: var(--w08a) !important;
 
 	&.fc-day:not(:last-of-type) {
 		border-right-width: 1px !important;

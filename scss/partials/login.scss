@@ -95,7 +95,7 @@
 }
 
 #to-recover span {
-	color: $white45a;
+	color: var(--w45a);
 	transition: color 0.2s;
 
 	&:hover {
@@ -155,7 +155,7 @@
 		}
 
 		.white-box {
-			background: $black30a;
+			background: var(--b30a);
 			width: 480px;
 			padding: 0;
 			margin: auto;

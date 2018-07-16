@@ -21,19 +21,19 @@ span.select2-selection.select2-selection--multiple,
 	padding: 0 12px;
 	border-radius: 4px;
 	vertical-align: middle;
-	background: $white25a;
+	background: var(--w25a);
 	transition: background .2s;
 
 	&.focus,
 	&:focus {
-		color: $black33;
+		color: hsl(0, 0%, 33%);
 		background: $text;
 		border-radius: 4px;
 	}
 
 	&[disabled],
 	&[readonly] {
-		background: $black15a;
+		background: var(--b15a);
 	}
 }
 
@@ -64,12 +64,12 @@ span.select2-selection.select2-selection--multiple,
 }
 
 .input-group-addon {
-	background: $black20 !important;
+	background: var(--b20) !important;
 	border-radius: 4px !important;
 }
 
 .input-group-btn .btn {
-	background: $black20;
+	background: var(--b20);
 	color: $menu-link;
 	border-color: transparent;
 	padding: 6.5px 12px;
@@ -77,7 +77,7 @@ span.select2-selection.select2-selection--multiple,
 
 	&:focus,
 	&:hover {
-		background: $black20;
+		background: var(--b20);
 		color: $menu-link;
 		border-color: transparent;
 	}
@@ -97,7 +97,7 @@ span.select2-selection.select2-selection--multiple,
 
 .checkbox label {
 	&::before {
-		background: $white08a;
+		background: var(--w08a);
 		border: 0;
 		border-radius: 4px;
 		transition: all .2s ease;
@@ -110,7 +110,7 @@ span.select2-selection.select2-selection--multiple,
 
 .checkbox-primary input[type=checkbox] {
 	label {
-		color: $white45a;
+		color: var(--w45a);
 		font-weight: 600;
 	}
 
@@ -134,7 +134,7 @@ input {
 
 .radio-purple input[type=radio] {
 	+ label::before {
-		background: $white25a;
+		background: var(--w25a);
 		transition: all 0.2s;
 	}
 
@@ -148,7 +148,7 @@ input {
 		}
 
 		+ label::before {
-			background: $black15a;
+			background: var(--b15a);
 			border-color: $theme;
 		}
 	}

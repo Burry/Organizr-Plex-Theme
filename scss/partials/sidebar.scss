@@ -7,11 +7,11 @@
 	transition: width 0.1s;
 
 	.sidebar-head {
-		background: $black65a;
+		background: var(--b65a);
 		padding: 2.5px 20px;
 
 		h3 {
-			color: $white70a;
+			color: var(--w70a);
 			font-weight: 400;
 			text-transform: none;
 			transition: .2s all;
@@ -43,7 +43,7 @@
 }
 
 .sidebar-nav {
-	background: $black15a;
+	background: var(--b15a);
 }
 
 .ping .heartbit {
@@ -61,15 +61,15 @@ body[data-active-tab=''],
 	.sidebar {
 		@extend %background-blur;
 		background-image: none !important;
-		background-color: $black15a;
+		background-color: var(--b15a);
 
 		.sidebar-head {
 			@include background(var(--bg-light), 'fixed');
-			background: $black15a;
+			background: var(--b15a);
 
 			&::after {
 				content: '';
-			    background: $black70a;
+			    background: var(--b70a);
 			    position: absolute;
 			    top: 0;
 			    left: 0;
@@ -84,7 +84,7 @@ body[data-active-tab=''],
 	.active-tab-Settings {
 		.sidebar {
 			background-image: none !important;
-			background-color: $black15a;
+			background-color: var(--b15a);
 		}
 
 		.sidebar-head {
@@ -111,7 +111,7 @@ body[data-active-tab=''],
 
 #side-menu {
 	li a {
-		color: $white70a;
+		color: var(--w70a);
 		font-weight: 600 !important;
 	    padding: 15px 35px 15px 15px;
 		transition: .2s color ease;
@@ -119,12 +119,12 @@ body[data-active-tab=''],
 		&:focus,
 		&:hover {
 			color: $white;
-			background: $white08a !important;
+			background: var(--w08a) !important;
 		}
 
 		&.active,
 		&:active {
-			background: $white08a;
+			background: var(--w08a);
 			color: $theme-lighter;
 			box-shadow: none;
 		}

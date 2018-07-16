@@ -19,17 +19,17 @@
 		color: $text-muted !important;
 
 		a::after {
-			background: $black15a !important;
+			background: var(--b15a) !important;
 			transition: none;
 			transform: none;
 		}
 
 		a {
-			color: $white70a !important;
+			color: var(--w70a) !important;
 			transition: none;
 
 			&:hover::after {
-				background: $white08a !important;
+				background: var(--w08a) !important;
 			}
 
 			&:hover {
@@ -43,7 +43,7 @@
 
 		li.tab-current {
 			a::after {
-				background: $white08a !important;
+				background: var(--w08a) !important;
 			}
 
 			a {
@@ -77,8 +77,8 @@
 }
 
 .swapLog {
-	background: $black15a !important;
-	color: $white70a !important;
+	background: var(--b15a) !important;
+	color: var(--w70a) !important;
 	border: 0 !important;
 	border-radius: 0 !important;
 
@@ -89,7 +89,7 @@
 	}
 
 	&.active {
-		background: $white08a !important;
+		background: var(--w08a) !important;
 		color: $theme-lighter !important;
 		opacity: 1;
 	}
@@ -124,7 +124,7 @@
 // Organizr Links
 
 .profile-social-icons a {
-	color: $white70a !important;
+	color: var(--w70a) !important;
 
 	&:hover,
 	&:focus {
@@ -209,7 +209,7 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 	}
 
 	.lazyload {
-		background: $black15a;
+		background: var(--b15a);
 	}
 }
 
@@ -221,7 +221,7 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 }
 
 #settings-homepage-list img[src*='ombi'] {
-	background: $black15a var(--ombi) center center/90px no-repeat !important;
+	background: var(--b15a) var(--ombi) center center/90px no-repeat !important;
 	padding-top: 105px;
 }
 
@@ -285,16 +285,16 @@ div[id$='FavIcon'] textarea,
 }
 
 .ace-idle-fingers {
-	background: $black15a !important;
+	background: var(--b15a) !important;
 }
 
 .ace_gutter {
-	background: $black30a !important;
+	background: var(--b30a) !important;
 	color: $text!important;
 }
 
 .ace_marker-layer .ace_active-line {
-	background: $white08a !important;
+	background: var(--w08a) !important;
 }
 
 .ace_cursor {
@@ -305,7 +305,7 @@ div[id$='FavIcon'] textarea,
 // Log Table
 
 th {
-	color: $white70a;
+	color: var(--w70a);
 }
 
 tbody {
@@ -319,21 +319,21 @@ table.dataTable {
 		.sorting::after,
 		.sorting_asc::after,
 		.sorting_desc::after {
-			color: $white70a;
+			color: var(--w70a);
 		}
 	}
 
 	tbody tr {
-		background: $black15a !important;
+		background: var(--b15a) !important;
 
 		&:hover {
-			background: $black15a !important;
+			background: var(--b15a) !important;
 		}
 	}
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-	background: $black30a !important;
+	background: var(--b30a) !important;
 }
 
 .footable.breakpoint > tbody > tr > td > span.footable-toggle {
@@ -377,7 +377,7 @@ table.dataTable {
 
 .select2-container--default .select2-selection--multiple {
 	.select2-selection__choice {
-		background: $black30a;
+		background: var(--b30a);
 		border: 0;
 		font-size: 13px;
 		padding: 2.5px 5px;
@@ -459,7 +459,7 @@ table.dataTable {
 }
 
 .mce-grid-border a {
-	border-color: $white25a !important;
+	border-color: var(--w25a) !important;
 
 	&:hover,
 	&.mce-active {

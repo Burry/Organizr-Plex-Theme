@@ -1,5 +1,20 @@
 // Buttons
 
+// Common Button Styles
+
+%button-theme {
+	@include button($theme, $theme-light, $theme-dark, $white);
+}
+
+%button-white {
+	@include button(var(--w25a), var(--w30a), var(--w20a), $white);
+}
+
+%button-red {
+	@include button($red, lighten($red, 10%), darken($red, 10%), $white);
+}
+
+
 // General Button Style
 
 .btn {
@@ -18,11 +33,11 @@
 	&[data-filter$='movie'],
 	&[data-filter$='tv'],
 	&[data-filter$='music'] {
-		@include button($theme, $theme-light, $theme-dark, $white);
+		@extend %button-theme;
 	}
 
 	&[data-filter$='all'] {
-		@include button($white25a, $white30a, $white20a, $white);
+		@extend %button-white;
 	}
 
 	a {
@@ -39,7 +54,7 @@
 
 .btn-info,
 .bg-plex {
-	@include button($theme, $theme-light, $theme-dark, $white);
+	@extend %button-theme;
 }
 
 // Outlined Button
@@ -68,16 +83,16 @@
 // Primary Button (For Organizr's style, secondary)
 
 .btn-primary {
-	@include button($white25a, $white30a, $white20a, $white);
+	@extend %button-white;
 }
 
 .btn-outline {
 	&.btn-primary {
-		@include button($white25a, $white30a, $white20a, $white);
+		@extend %button-white;
 	}
 
 	&.btn-warning {
-		@include button($white25a, $white30a, $white20a, $white);
+		@extend %button-white;
 		border-radius: 1000px;
 	}
 
@@ -91,7 +106,7 @@
 }
 
 div[id^='request']:not(#request-input-div) .dropdown-toggle {
-	@include button($black50a);
+	@include button(var(--b50a), rgba($black, 0.4), rgba($black, 0.6), $white);
 	@extend %background-blur;
 }
 
@@ -109,17 +124,17 @@ div[id^='request']:not(#request-input-div) .dropdown-toggle {
 // Green Button
 
 .btn-success {
-	@include button($green, $color: $white);
+	@include button($green, lighten($green, 10%), darken($green, 10%), $white);
 }
 
 
 // Red Button
 
 .btn-danger {
-	@include button($red, $color: $white);
+	@extend %button-red;
 
 	&.btn-outline {
-		@include button($red, $color: $white);
+		@extend %button-red;
 		border-radius: 1000px;
 	}
 }
@@ -136,13 +151,13 @@ div[id^='request']:not(#request-input-div) .dropdown-toggle {
 // Media Info Pane Buttons
 
 .btn-youtube {
-	@include button(#F00);
+	@include button(red, lighten(red, 10%), darken(red, 10%));
 }
 
 .btn-youtube,
 .bg-emby,
 .bg-plex {
-	color: $white70a !important;
+	color: var(--w70a) !important;
 	padding: 15.5px 16px !important;
 
 	&:focus,
@@ -155,7 +170,7 @@ div[id^='request']:not(#request-input-div) .dropdown-toggle {
 // MCE Buttons
 
 .mce-btn {
-	@include button($white25a, $white30a, $white20a, $white);
+	@extend %button-white;
 
 	button {
 		color: $white !important;
@@ -238,7 +253,7 @@ div[id^='request']:not(#request-input-div) .dropdown-toggle {
 // List Group Item
 
 button.list-group-item {
-	color: $white70a !important;
+	color: var(--w70a) !important;
 }
 
 
@@ -265,27 +280,27 @@ button.list-group-item {
 
 	li {
 		a {
-			background: $black15a;
+			background: var(--b15a);
 			color: $text-muted !important;
 			margin: 0;
 			transition: none;
 
 			&:focus,
 			&:hover {
-				background: $white08a !important;
+				background: var(--w08a) !important;
 				color: $text !important;
 			}
 		}
 
 		&.active a {
-			background: $white08a !important;
+			background: var(--w08a) !important;
 			color: $theme-lighter !important;
 			border: 0;
 			cursor: pointer;
 
 			&:focus,
 			&:hover {
-				background: $white08a;
+				background: var(--w08a);
 				color: $theme-lighter !important;
 				border: 0;
 				cursor: pointer;

@@ -105,7 +105,7 @@
 			transform: translateX(-50%);
 
 			.panel {
-				@include button($white25a, $white30a, $white20a, $white);
+				@extend %button-white;
 			    padding: 8px 12px;
 				margin: 0 !important;
 			}

@@ -6,7 +6,7 @@ A theme for Organizr v2 that emulates the style of Plex
 ## Usage
 
 - [<b style="color: #CC7B19; font-family: 'Open Sans'">Download Plex Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) to Organizr's `/css/themes` directory.
-- Open Organizr Settings > Customize > Appearance > Colors & Themes, and select "Plex" from the theme dropdown input.
+- Open Organizr Settings > Customize > Appearance > Colors & Themes, and select "Plex" from the theme dropdown.
 - Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased nav bar padding.
 - To ensure that notifications display as intended, keep the default notification style setting "Izi" under Organizr Settings > Customize > Appearance > Notifications.
 

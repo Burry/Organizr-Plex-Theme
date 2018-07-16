@@ -6,12 +6,13 @@ const gulp = require('gulp'),
     sassLint = require('gulp-sass-lint'),
     sassInlineImage = require('sass-inline-image'),
     autoPrefixer = require('gulp-autoprefixer'),
-    cleanCSS = require('gulp-clean-css'),
+    cssImport = require('gulp-cssimport'),
+    crass = require('gulp-crass'),
     packageJSON = require('./package.json'),
     headerComment = require('gulp-header-comment'),
     browserSync = require('browser-sync').create(),
     browserSnippet = '<link rel="stylesheet" type="text/css" href="/Plex.css">',
-    browserSyncError = 'Set the "homepage" value in package.json to your Organizr instance\'s URL to test with Browsersync',
+    browserSyncError = 'Set the "homepage" value in package.json to your Organizr instance\'s URL to test with Browsersync.',
     browserSyncConfig = {
         proxy: packageJSON.homepage,
         files: 'css/Plex.css',
@@ -73,7 +74,8 @@ gulp.task('compile', () =>
             functions: sassInlineImage()
         }).on('error', sass.logError))
         .pipe(autoPrefixer())
-        .pipe(cleanCSS({ level: 2 }))
+        .pipe(cssImport())
+        .pipe(crass({ pretty: false }))
         .pipe(headerComment(comment))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream())

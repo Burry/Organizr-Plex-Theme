@@ -7,7 +7,7 @@ const gulp = require('gulp'),
     sassInlineImage = require('sass-inline-image'),
     autoPrefixer = require('gulp-autoprefixer'),
     cssImport = require('gulp-cssimport'),
-    crass = require('gulp-crass'),
+    cleanCSS = require('gulp-clean-css'),
     packageJSON = require('./package.json'),
     headerComment = require('gulp-header-comment'),
     browserSync = require('browser-sync').create(),
@@ -74,8 +74,19 @@ gulp.task('compile', () =>
             functions: sassInlineImage()
         }).on('error', sass.logError))
         .pipe(autoPrefixer())
-        .pipe(cssImport())
-        .pipe(crass({ pretty: false }))
+        .pipe(cssImport({ matchPattern: '*.css' }))
+        .pipe(cleanCSS({
+            level: {
+                1: {
+                    all: true
+                },
+                2: {
+                    mergeSemantically: true,
+                    removeUnusedAtRules: true,
+                    restructureRules: true
+                }
+            }
+        }))
         .pipe(headerComment(comment))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream())

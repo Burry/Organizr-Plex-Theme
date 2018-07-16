@@ -17,7 +17,7 @@
     "browser-sync": "^2.24.5",
     "gulp": "gulpjs/gulp.git#4.0",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-crass": "^0.2.2",
+    "gulp-clean-css": "^3.9.4",
     "gulp-cssimport": "^6.0.1",
     "gulp-header-comment": "^0.4.0",
     "gulp-imagemin": "^4.1.0",

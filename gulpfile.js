@@ -1,17 +1,24 @@
+// Plex Theme Build Automation
+
 'use strict';
 
+// Imports & Configurations
+
+    // Automation Engine
 const gulp = require('gulp'),
-    imagemin = require('gulp-imagemin'),
+    // CSS Preprocessor
     sass = require('gulp-sass'),
     sassLint = require('gulp-sass-lint'),
+    // Inline and optimize svgs
     cssSvg = require('gulp-css-svg'),
+    // Add browser prefixes
     autoPrefixer = require('gulp-autoprefixer'),
-    cleanCSS = require('gulp-clean-css'),
+    // Project Information
     packageJSON = require('./package.json'),
-    headerComment = require('gulp-header-comment'),
+    repository = packageJSON.repository,
+
+    // BrowserSync
     browserSync = require('browser-sync').create(),
-    browserSnippet = '<link rel="stylesheet" type="text/css" href="/Plex.css">',
-    browserSyncError = 'Set the "homepage" value in package.json to your Organizr instance\'s URL to test with Browsersync.',
     browserSyncConfig = {
         proxy: packageJSON.homepage,
         files: 'css/Plex.css',
@@ -19,7 +26,9 @@ const gulp = require('gulp'),
         snippetOptions: {
             rule: {
                 match: /<link id="theme" href=".*" rel="stylesheet">/i,
-                fn: (snippet, match) => browserSnippet + snippet
+                fn: (snippet, match) =>
+                    '<link rel="stylesheet" type="text/css" href="/Plex.css">'
+                    + snippet
             }
         },
         ghostMode: {
@@ -35,47 +44,54 @@ const gulp = require('gulp'),
             }
         }
     },
+    browserSyncError = () => {
+        console.error('Set the "homepage" value in package.json to your Organizr instance\'s URL to test with Browsersync.');
+        return process.exit(0);
+    },
+
+    // Image optimzation
+    imagemin = require('gulp-imagemin'),
     imageminPlugins = [
         imagemin.svgo(),
         imagemin.optipng({ optimizationLevel: 7 }),
         imagemin.jpegtran({ progressive: true }),
-        imagemin.gifsicle({
-            interlaced: true,
-            optimizationLevel: 3
-        })
+        imagemin.gifsicle({ interlaced: true, optimizationLevel: 3 })
     ],
-    imagesGlob = '**/*.+(svg|png|jpg|jpeg|gif)',
+    imageGlob = '**/*.+(svg|png|jpg|jpeg|gif)',
+
+    // CSS optimization
+    cleanCSS = require('gulp-clean-css'),
     cleanCSSConfig = {
         inline: ['all'],
         level: {
-            1: {
-                all: true
-            },
-            2: {
-                mergeSemantically: true,
-                restructureRules: true
-            }
+            1: { all: true, optimizeBackground: false },
+            2: { mergeSemantically: true, restructureRules: true }
         }
     },
+
+    // Header Comment
+    headerComment = require('gulp-header-comment'),
     comment = `Plex Theme for Organizr v2
         Version ` + packageJSON.version + `
         ` + packageJSON.license + ` License
-        ` + packageJSON.repository;
+        ` + repository;
 
 
 // Losslessly optimize images
+
 gulp.task('imagemin', () =>
     gulp
-        .src(imagesGlob)
+        .src(imageGlob)
         .pipe(imagemin(imageminPlugins))
         .pipe(gulp.dest('./'))
 );
 
 
 // Lint, compile, and post-process Sass
+
 gulp.task('compile', () =>
     gulp
-        .src('scss/*.s+(a|c)ss')
+        .src('sass/*.s+(a|c)ss')
         .pipe(sassLint({ options: { 'merge-default-rules': false } }))
         .pipe(sassLint.format())
         .pipe(sass({ errLogToConsole: true }).on('error', sass.logError))
@@ -89,21 +105,18 @@ gulp.task('compile', () =>
 
 
 // Build Sass files when changes detected
+
 gulp.task('watch', () =>
-    gulp.watch([imagesGlob, 'scss/**/*.s+(a|c)ss'], gulp.series('compile'))
+    gulp.watch(['sass/**/*.s+(a|c)ss', imageGlob], gulp.series('compile'))
 );
 
 gulp.task('build', gulp.series(['compile', 'watch']));
 
 
 // Start BrowserSync server
-const serveError = () => {
-    console.error(browserSyncError);
-    return process.exit(0);
-};
 
 gulp.task('serve', () => !packageJSON.homepage
-    ? serveError
+    ? browserSyncError
     : browserSync.init(browserSyncConfig)
 );
 

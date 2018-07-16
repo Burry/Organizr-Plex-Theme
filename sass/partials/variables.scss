@@ -1,3 +1,7 @@
+// Variables
+// Use Sass variables for uncomplicated colors and CSS4 variables when the
+// variable name can be smaller than the value it represents.
+
 // Sass Variables
 
 // Colors
@@ -20,8 +24,7 @@ $menu-link: #BBB;
 $divider: hsla(0, 0%, 78%, 0.15);
 
 
-// CSS4 Variables
-// (Used when the variable is smaller than the value it's representing
+// CSS Variables
 
 :root {
     // Colors

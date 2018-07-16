@@ -1,0 +1,17 @@
+// Grant's Custom Variables
+
+$theme: #E5A00D;
+$theme-light: lighten($theme, 10%);
+$theme-lighter: #F9BE03;
+$theme-dark: darken($theme, 10%);
+
+
+// Hide shit
+
+#sign-out,
+#github,
+#languageDropdown,
+#menu-Organizr-Support,
+.devider {
+    display: none !important;
+}

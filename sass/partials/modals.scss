@@ -232,28 +232,28 @@
 }
 
 .lazyload.error,
-.owl-item img[src='plugins/images/cache/no-list.png'],
-.slimScrollDiv img[src='plugins/images/cache/no-list.png'] {
+.owl-item img[src$='no-list.png'],
+.slimScrollDiv img[src$='no-list.png'] {
 	background: var(--b45a) var(--no-list) center center/cover !important;
 }
 
-img[src='plugins/images/cache/no-request.png'] {
+img[src$='no-request.png'] {
 	background: var(--b45a) var(--no-request) center center/cover !important;
 }
 
 .resultImages.error,
-.owl-item img[src='plugins/images/cache/no-list.png'],
-.slimScrollDiv img[src='plugins/images/cache/no-list.png'],
-img[src='plugins/images/cache/no-request.png'] {
+.owl-item img[src$='no-list.png'],
+.slimScrollDiv img[src$='no-list.png'],
+img[src$='no-request.png'] {
 	padding: 0 0 0 200px;
 }
 
-div[data-src='plugins/images/cache/no-np.png'] {
+div[data-src$='no-np.png'] {
 	background: var(--b20) var(--no-np) center center/cover !important;
 }
 
 @supports (backdrop-filter: blur(30px)) {
-	div[data-src='plugins/images/cache/no-np.png'] {
+	div[data-src$='no-np.png'] {
 		background-color: var(--b45a) !important;
 	}
 }

@@ -2,18 +2,18 @@
 
 'use strict';
 
-// Imports & Configurations
+// Imports & configurations
 
-    // Automation Engine
+    // Automation engine
 const gulp = require('gulp'),
-    // CSS Preprocessor
+    // CSS preprocessor
     sass = require('gulp-sass'),
     sassLint = require('gulp-sass-lint'),
     // Inline and optimize svgs
     cssSvg = require('gulp-css-svg'),
     // Add browser prefixes
     autoPrefixer = require('gulp-autoprefixer'),
-    // Project Information
+    // Project information
     packageJSON = require('./package.json'),
     repository = packageJSON.repository,
 

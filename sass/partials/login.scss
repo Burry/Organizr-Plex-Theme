@@ -1,65 +1,92 @@
 // Login & Register
 
-.login-area:not(.hidden) + #page-wrapper {
-	display: none;
+.login-area {
+	@include background(var(--bg-dark), 'fixed');
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&:not(.hidden) + #page-wrapper {
+		display: none;
+	}
 }
 
 .login-register {
-	@include background(var(--bg-dark));
-}
+	background: transparent !important;
 
-.login-register .login-box {
-	background: 0 0;
-	height: initial;
-	right: initial;
-	position: fixed;
-	@extend %center;
+	.login-box {
+		background: transparent;
+		width: 480px;
+		height: initial;
+		right: initial;
+		position: fixed;
+		@extend %center;
 
-	h1 {
-		color: $white;
-		font-weight: 700;
-		margin: 0 0 35px;
-	}
+		h1 {
+			color: $white;
+			font-weight: 700;
+			margin: 0 0 35px;
+		}
 
-	.white-box {
-		padding: 0;
-	}
-
-	form {
-		width: 100%;
-		max-width: 360px;
-		margin: auto;
-		padding: 30px;
-	}
-
-	.form-group {
-		margin: 15px auto;
-
-		.col-xs-12,
-		.col-md-12 {
+		.white-box {
+			background: var(--b30a);
+			width: 480px;
+			margin: auto;
 			padding: 0;
 		}
 
-		&.m-t-40,
-		&.m-b-0 {
-			margin: 0 auto !important;
+		h1 {
+			position: relative;
+			bottom: 92px;
 		}
 
-		&.m-b-0 {
-			color: #A8A8AB;
+		form {
+			width: 100%;
+			max-width: 360px;
+			margin: auto;
+			padding: 30px 35px;
+		}
 
-			p {
-				margin: 15px 0 0 0;
+		.form-group {
+			margin: 15px auto;
+
+			.col-xs-12,
+			.col-md-12 {
+				padding: 0;
+			}
+
+			&.m-b-0 {
+				margin: 0 auto !important;
+			}
+
+			&.m-b-0 {
+				color: #A8A8AB;
+
+				p {
+					margin: 15px 0 0 0;
+				}
 			}
 		}
 	}
 }
 
+#login-logo {
+	display: block !important;
+	height: 0;
+	margin: -135px 0 0;
+
+	+ .form-group {
+		margin: 135px 0 0 !important;
+	}
+}
+
 .loginLogo {
-	max-height: 100px;
-	max-width: -webkit-fill-available;
-	margin-bottom: 35px;
 	border: 0;
+	max-height: 100px;
+	max-width: 290px;
+	margin: 0;
 }
 
 #loginform .form-group.m-t-20 {
@@ -140,46 +167,12 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 360px) {
 	.login-register {
-		width: 480px;
-		height: 300px;
-	}
-
-	.login-register .login-box {
-		width: 480px;
-
-		h1 {
-			position: relative;
-			bottom: 92px;
+		.login-box {
+			form {
+				padding: 30px 15px;
+			}
 		}
-
-		.white-box {
-			background: var(--b30a);
-			width: 480px;
-			padding: 0;
-			margin: auto;
-		}
-
-		form {
-			padding: 30px 20px;
-		}
-
-		.form-group {
-			width: 320px;
-		}
-	}
-
-	#login-logo {
-		display: block !important;
-		height: 0;
-		margin: 0;
-	}
-
-	.loginLogo {
-		margin-bottom: 0;
-		position: relative;
-		top: -55px;
-		transform: translateY(-100%);
 	}
 }

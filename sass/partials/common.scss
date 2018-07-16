@@ -4,15 +4,10 @@
 
 %button-basic {
 	border-radius: 4px;
+	font-size: 15px;
 	font-weight: 700;
 	text-transform: uppercase;
 	transition: background 0.1s;
-}
-
-@media screen and (min-width: 768px) {
-	%button-basic {
-	    font-size: 15px;
-	}
 }
 
 %background-blur {

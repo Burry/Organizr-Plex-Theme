@@ -3,7 +3,7 @@
 // Page Elements
 
 html {
-	@include background(var(--bg-dark), 'fixed');
+	background-color: $light-gray;
 }
 
 body {

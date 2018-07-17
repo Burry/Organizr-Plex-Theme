@@ -45,11 +45,15 @@ Some group icons are provided for your use in [`/images/groups`](https://github.
 
 #### `yarn build`
 
-Compiles the [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) source stylesheets in `/scss` into a minified CSS file and recompiles when changes are detected until exited.
+Compiles the [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) source stylesheets in `/scss` into a minified CSS file.
+
+#### `yarn watch`
+
+Runs `yarn build` continuously as changes are detected until exited.
 
 #### `yarn serve`
 
-You must first set the `homepage` value in `package.json` to your Organizr instance's URL. Then `yarn serve` runs `yarn build` and launches a new [Browsersync](https://browsersync.io) window with the Plex Theme css injected into your Organizr instance every time it is recompiled, so you can see your changes instantly.
+You must first set the `homepage` value in `package.json` to your Organizr instance's URL. Then `yarn serve` runs `yarn watch` and launches a new [Browsersync](https://browsersync.io) window with the Plex Theme css injected into your Organizr instance every time it is recompiled, so you can see your changes instantly.
 
 #### `yarn imagemin`
 

@@ -10,7 +10,8 @@
   "private": false,
   "scripts": {
     "build": "gulp build",
-    "serve": "gulp build-serve",
+    "watch": "gulp build-watch",
+    "serve": "gulp build-watch-serve",
     "imagemin": "gulp imagemin"
   },
   "dependencies": {

@@ -89,7 +89,7 @@ gulp.task('imagemin', () =>
 
 // Lint, compile, and post-process Sass
 
-gulp.task('compile', () =>
+gulp.task('build', () =>
     gulp
         .src('sass/*.s+(a|c)ss')
         .pipe(sassLint({ options: { 'merge-default-rules': false } }))
@@ -107,10 +107,10 @@ gulp.task('compile', () =>
 // Build Sass files when changes detected
 
 gulp.task('watch', () =>
-    gulp.watch(['sass/**/*.s+(a|c)ss', imageGlob], gulp.series('compile'))
+    gulp.watch(['sass/**/*.s+(a|c)ss', imageGlob], gulp.series('build'))
 );
 
-gulp.task('build', gulp.series(['compile', 'watch']));
+gulp.task('build-watch', gulp.series(['build', 'watch']));
 
 
 // Start BrowserSync server
@@ -120,4 +120,4 @@ gulp.task('serve', () => !packageJSON.homepage
     : browserSync.init(browserSyncConfig)
 );
 
-gulp.task('build-serve', gulp.parallel('build', 'serve'));
+gulp.task('build-watch-serve', gulp.parallel('build-watch', 'serve'));

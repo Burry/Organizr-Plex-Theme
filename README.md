@@ -1,6 +1,15 @@
 # <font style="color: #CC7B19; font-family: 'Open Sans'; font-weight: 700">Plex Theme</font> <i style="font-weight: 300">for [Organizr](https://organizr.app) v2</i>
 A theme for Organizr v2 that emulates the style of Plex
 
+<p float="left">
+    <a href="https://travis-ci.org/Burry/organizr-v2-plex-theme" target="_blank" title="Build Status">
+        <img src="https://travis-ci.org/Burry/organizr-v2-plex-theme.svg?branch=master" alt="Build Status" />
+    </a>
+    <a href="https://beerpay.io/Burry/organizr-v2-plex-theme" target="_blank" title="Beerpay">
+        <img src="https://beerpay.io/Burry/organizr-v2-plex-theme/badge.svg?style=flat" alt="Beerpay" />
+    </a>
+</p>
+
 ![Screen Shot](screenshot.png "Screen Shot")
 
 ## Usage
@@ -15,9 +24,9 @@ A theme for Organizr v2 that emulates the style of Plex
 Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login/register page.
 
 ```
-        $('.sidebar').addClass('hidden');
-        $('.navbar').addClass('hidden');
-        $('#pagewrapper').addClass('hidden');
+            $('.sidebar').addClass('hidden');
+            $('.navbar').addClass('hidden');
+            $('#pagewrapper').addClass('hidden');
 ```
 
 ### Custom Colors

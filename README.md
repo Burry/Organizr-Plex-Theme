@@ -12,16 +12,22 @@ A theme for Organizr v2 that emulates the style of Plex
 
 ![Screen Shot](screenshot.png "Screen Shot")
 
+
 ## Usage
 
-- [<b style="color: #CC7B19; font-family: 'Open Sans'">Download Plex Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) to Organizr's `/css/themes` directory.
-- Open Organizr Settings > Customize > Appearance > Colors & Themes, and select "Plex" from the theme dropdown.
-- Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased nav bar padding.
-- To ensure that notifications display as intended, keep the default notification style setting "Izi" under Organizr Settings > Customize > Appearance > Notifications.
+1. [<b style="color: #CC7B19; font-family: 'Open Sans'">Download Plex Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) to Organizr's `/css/themes` directory.
+2. Open Organizr Settings > Customize > Appearance > Colors & Themes, select "Plex" from the theme dropdown, and keep the style set to "Dark."
+3. For ideal presentation, make the necessary changes to Organizr's JavaScript as described below. Note that these changes will be overwritten whenever Organizr pulls a new update, pending more advanced theme support.
 
-### Hide Login Page UI Chrome
 
-Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login/register page.
+### Manual JavaScript Fixes
+
+#### Top bar Offset
+Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased top bar padding.
+
+#### Hide Login Page UI Chrome
+
+Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login and registration page.
 
 ```
             $('.sidebar').addClass('hidden');
@@ -29,13 +35,22 @@ Add the following lines to Organizr's `/js/functions.js` inside the function `sw
             $('#pagewrapper').addClass('hidden');
 ```
 
-### Custom Colors
-
-Changing the placeholder color values in Organizr's Colors & Themes will override Plex Theme's color styles. Deleting custom color values will reverse this. Overrides can also be made in Organizr's Custom CSS settings pane.
 
 ### Group Icons
 
 Some group icons are provided for your use in [`/images/groups`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images/groups), to be installed in Organizr's `/plugins/images/groups`.
+
+
+### Don't Change These
+
+#### Notifications
+
+To ensure that notifications display as intended, keep the default notification style setting "Izi" under Organizr Settings > Customize > Appearance > Notifications.
+
+#### Custom Colors
+
+Changing the placeholder color values in Organizr Settings > Customize > Appearance > Colors & Themes will override Plex Theme's color styles. Deleting custom color values will reverse this.
+
 
 ## Development
 
@@ -45,7 +60,7 @@ Some group icons are provided for your use in [`/images/groups`](https://github.
 
 #### `yarn build`
 
-Compiles the [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) source stylesheets in `/scss` into a minified CSS file.
+Compiles the [Sass](https://sass-lang.com/documentation/file.SASS_REFERENCE.html) source stylesheets in `/sass` into a minified CSS file.
 
 #### `yarn watch`
 

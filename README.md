@@ -1,4 +1,4 @@
-<h1>
+<h1 align="center">
     <img src="banner.png" height="100px" alt="Plex Theme for Organizr v2" />
 </h1>
 

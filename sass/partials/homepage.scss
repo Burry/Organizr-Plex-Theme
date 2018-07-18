@@ -11,7 +11,7 @@
 
 		.btn {
 			background: 0 0 !important;
-			color: var(--w70a) !important;
+			color: $white70a !important;
 			padding: 6px 12px;
 			margin: 0 12.5px;
 			transition: color 0.2s;
@@ -26,7 +26,7 @@
 
 	h2 {
 		&.text-center {
-			color: var(--w30a);
+			color: $white30a;
 			font-size: 14px !important;
 			margin: 0;
 			cursor: default;
@@ -104,7 +104,7 @@
 // Poster Image Refresh Button
 
 .refreshImage {
-	color: var(--w70a);
+	color: $white70a;
 	opacity: 0;
 	transition: all 0.2s;
 
@@ -130,13 +130,13 @@
 // Scroll-To-Top Button
 
 #scroll {
-	background: var(--w25a);
+	background: $white25a;
 	transition: all 0.1s;
 	border-radius: 1000px;
 
 	&:focus,
 	&:hover {
-		background: var(--w30a);
+		background: $white30a;
 	}
 
 	span {
@@ -214,7 +214,7 @@
 }
 
 .recent-title {
-	background: var(--b30a)!important;
+	background: $black30a!important;
 	display: block;
 	padding: 5px;
     font-size: 85%;
@@ -251,10 +251,16 @@
 
 // Override Ombi Icon
 
-img[src*='ombi'].homepageImageTitle {
-	background: var(--ombi);
-	width: 40px;
-	padding-left: 40px;
+img {
+	&[src='plugins/images/tabs/ombi.png'],
+	&[src='plugins/images/tabs/ombi-plex.png'],
+	&[src='plugins/images/tabs/ombi-emby.png'] {
+		&.homepageImageTitle {
+			background: $ombi;
+			width: 40px;
+			padding-left: 40px;
+		}
+	}
 }
 
 
@@ -292,12 +298,12 @@ tbody[class$='-queue'] {
 				&:not(:first-of-type):not(:last-of-type) > td {
 					border-width: 1px 0;
 					border-style: solid;
-					border-color: var(--w08a);
+					border-color: $white08a;
 				}
 
 				> td {
 					&[lang] {
-						color: var(--w30a);
+						color: $white30a;
 						text-transform: uppercase;
 					}
 				}
@@ -313,7 +319,7 @@ td span.label.label-info {
 }
 
 .table-hover tbody tr:hover {
-	background: var(--b15a) !important;
+	background: $black15a !important;
 
 	&:only-child {
 		background: transparent !important;
@@ -341,7 +347,7 @@ td span.label.label-info {
 }
 
 .progress-bar-inverse {
-	background: var(--b15a);
+	background: $black15a;
 }
 
 tbody {
@@ -366,7 +372,7 @@ tbody {
 // Calendar Buttons
 
 .fc-button {
-	background: var(--b15a) !important;
+	background: $black15a !important;
 	color: $text-muted;
 	border-color: transparent;
 	border-radius: 0 !important;
@@ -375,7 +381,7 @@ tbody {
 
 	&:focus,
 	&:hover {
-		background: var(--w08a) !important;
+		background: $white08a !important;
 		color: $text;
 		border-color: transparent;
 		opacity: 1;
@@ -385,7 +391,7 @@ tbody {
 .fc-next-button,
 .fc-prev-button {
 	background: 0 0 !important;
-	color: var(--w70a) !important;
+	color: $white70a !important;
 	border: 0 !important;
 
 	&.focus,
@@ -414,7 +420,7 @@ tbody {
 .fc-state-active,
 .fc-state-active:focus,
 .fc-state-active:hover {
-	background: var(--w08a) !important;
+	background: $white08a !important;
 	color: $theme-lighter;
 	border-color: transparent;
 }
@@ -428,16 +434,16 @@ tbody {
 	font-weight: 700;
 	transition: all 0.1s;
 
-	background: var(--w25a) !important;
+	background: $white25a !important;
 	color: $white;
 
 	&:focus,
 	&:hover {
-		background: var(--w30a) !important;
+		background: $white30a !important;
 		color: $white;
 	}
 
 	&:active {
-		background: var(--w20a) !important;
+		background: $white20a !important;
 	}
 }

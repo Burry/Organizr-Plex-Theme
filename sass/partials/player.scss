@@ -2,8 +2,8 @@
 
 .plyr {
 	border-radius: 4px;
-	box-shadow: 0 5px 15px var(--b50a);
-	font-family: var(--font-stack);
+	box-shadow: 0 5px 15px $black50a;
+	font-family: $font-stack;
 	transition: all 0.2s;
 
    input {
@@ -57,12 +57,12 @@
 }
 
 .plyr__menu__container {
-	background: var(--b20);
+	background: $black20;
 	box-shadow: 0 5px 15px rgba($black, 0.5);
 	padding: 5px 0;
 
 	&:after {
-		border-top-color: var(--b20);
+		border-top-color: $black20;
 	}
 
 	ul {
@@ -83,7 +83,7 @@
 
 		&:active,
 		&:hover {
-			background: var(--w08a) !important;
+			background: $white08a !important;
 			color: $white !important;
 		}
 
@@ -140,6 +140,6 @@
 }
 
 .plyr__badge {
-	background: var(--w08a);
+	background: $white08a;
 	color: $text-muted;
 }

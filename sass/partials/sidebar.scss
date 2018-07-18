@@ -1,17 +1,28 @@
 // Sidebar
 
 .sidebar {
-	@include background(var(--bg-light), 'fixed');
+	background: $black15a;
 	box-shadow: none;
 	transition: background 0.2s;
 	transition: width 0.1s;
 
 	.sidebar-head {
-		background: var(--b65a);
-		padding: 2.5px 20px;
+		@include background($bg-light, 'fixed');
+		background: $black15a;
+
+		&::after {
+			content: '';
+			background: $black70a;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
 
 		h3 {
-			color: var(--w70a);
+			color: $white70a;
 			font-weight: 400;
 			text-transform: none;
 			transition: .2s all;
@@ -42,55 +53,24 @@
 	}
 }
 
+@supports (backdrop-filter: blur(30px)) {
+	.sidebar {
+		@extend %background-blur;
+	}
+}
+
+@supports not (backdrop-filter: blur(30px)) {
+	.sidebar:hover {
+		background: $black70a;
+	}
+}
+
 .sidebar-nav {
-	background: var(--b15a);
+	background: $black15a;
 }
 
 .ping .heartbit {
 	z-index: 9;
-}
-
-body[data-active-tab=''],
-.active-tab-Settings {
-	.sidebar {
-		@include background(var(--bg-dark), 'fixed');
-	}
-}
-
-@supports (backdrop-filter: blur(30px)) {
-	.sidebar {
-		@extend %background-blur;
-		background-image: none !important;
-		background-color: var(--b15a);
-
-		.sidebar-head {
-			@include background(var(--bg-light), 'fixed');
-			background: var(--b15a);
-
-			&::after {
-				content: '';
-			    background: var(--b70a);
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-			    width: 100%;
-			    height: 100%;
-				z-index: -1;
-			}
-		}
-	}
-
-	body[data-active-tab=''],
-	.active-tab-Settings {
-		.sidebar {
-			background-image: none !important;
-			background-color: var(--b15a);
-		}
-
-		.sidebar-head {
-			@include background(var(--bg-dark), 'fixed');
-		}
-	}
 }
 
 @media screen and (min-width: 768px) {
@@ -111,7 +91,7 @@ body[data-active-tab=''],
 
 #side-menu {
 	li a {
-		color: var(--w70a);
+		color: $white70a;
 		font-weight: 600 !important;
 	    padding: 15px 35px 15px 15px;
 		transition: .2s color ease;
@@ -119,12 +99,12 @@ body[data-active-tab=''],
 		&:focus,
 		&:hover {
 			color: $white;
-			background: var(--w08a) !important;
+			background: $white08a !important;
 		}
 
 		&.active,
 		&:active {
-			background: var(--w08a);
+			background: $white08a;
 			color: $theme-lighter;
 			box-shadow: none;
 		}
@@ -138,10 +118,14 @@ body[data-active-tab=''],
 
 // Override Ombi Icon
 
-.sidebar img[src*='ombi'] {
-	background: var(--ombi);
-	height: 30px;
-	padding-left: 30px;
+.sidebar img {
+	&[src='plugins/images/tabs/ombi.png'],
+	&[src='plugins/images/tabs/ombi-plex.png'],
+	&[src='plugins/images/tabs/ombi-emby.png'] {
+		background: $ombi;
+		height: 30px;
+		padding-left: 30px;
+	}
 }
 
 

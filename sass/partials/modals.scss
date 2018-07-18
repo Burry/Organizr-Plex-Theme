@@ -3,21 +3,21 @@
 .white-popup {
 	> .col-md-6 > .white-box:first-child,
 	.panel-heading {
-		background: var(--b20) !important;
+		background: $black20 !important;
 	    box-shadow: 0 5px 15px rgba($black, 0.5);
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
 	}
 
 	.panel-footer {
-		background: var(--b20);
+		background: $black20;
 		border-top: 1px solid #222;
 	}
 
 	> .col-md-6 > .white-box:nth-child(2),
 	.panel-body {
-		background: var(--b16);
-		box-shadow: 0 5px 15px var(--b50a);
+		background: $black16;
+		box-shadow: 0 5px 15px $black50a;
 
 		.box-title {
 			color: $text-muted;
@@ -45,13 +45,13 @@
 		border-radius: 4px;
 
 		> .table-responsive {
-			background: var(--b20);
+			background: $black20;
 		}
 	}
 }
 
 .white-popup-block {
-	background: var(--b16);
+	background: $black16;
 	border-radius: 4px!important;
 
 	h1 {
@@ -79,17 +79,17 @@
 @media screen and (min-width: 768px) {
 	.white-popup-block,
 	.white-popup:not([id$='metadata-div']):not([id^='request']) .panel {
-		box-shadow: 0 5px 15px var(--b50a);
+		box-shadow: 0 5px 15px $black50a;
 	}
 }
 
 .mfp-close-btn-in .mfp-close {
-	color: var(--w70a);
+	color: $white70a;
 	font-size: 42px;
 }
 
 .sweet-alert {
-	background: var(--b16);
+	background: $black16;
 	border-radius: 4px;
 	box-shadow: 0 5px 15px rgba($black, 0.5);
 	padding: 30px;
@@ -103,7 +103,7 @@
 	}
 
 	button.cancel {
-		@extend %button-white;
+		@include button($white25a, $white30a, $white20a, $white);
 
 		&:focus {
 			box-shadow: none !important;
@@ -111,7 +111,7 @@
 	}
 
 	button.confirm {
-		@extend %button-red;
+		@include button($red, $color: $white);
 
 		&:focus {
 			box-shadow: none !important;
@@ -130,8 +130,8 @@
 // Content/Request Modal
 
 .resultBox-outside {
-	background: var(--b16);
-	box-shadow: 0 5px 15px var(--b50a);
+	background: $black16;
+	box-shadow: 0 5px 15px $black50a;
 	border-radius: 4px;
 	padding-bottom: 10px;
 }
@@ -143,7 +143,7 @@
 .mediaSearch-div .el-card-item {
 	.el-overlay-1::after {
 		content: '';
-		background: radial-gradient(farthest-corner at 50% 50%, var(--b50a) 50%, var(--b20) 100%);
+		background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
 		opacity: 0;
 		width: 100%;
 		height: 100%;
@@ -222,7 +222,7 @@
 .user-bg {
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
-	background: var(--b45a);
+	background: $black45a;
 }
 
 @supports (backdrop-filter: blur(30px)) {
@@ -232,29 +232,29 @@
 }
 
 .lazyload.error,
-.owl-item img[src$='no-list.png'],
-.slimScrollDiv img[src$='no-list.png'] {
-	background: var(--b45a) var(--no-list) center center/cover !important;
+.owl-item img[src='plugins/images/cache/no-list.png'],
+.slimScrollDiv img[src='plugins/images/cache/no-list.png'] {
+	background: $black45a $no-list center center/cover !important;
 }
 
-img[src$='no-request.png'] {
-	background: var(--b45a) var(--no-request) center center/cover !important;
+img[src='plugins/images/cache/no-request.png'] {
+	background: $black45a $no-request center center/cover !important;
 }
 
 .resultImages.error,
-.owl-item img[src$='no-list.png'],
-.slimScrollDiv img[src$='no-list.png'],
-img[src$='no-request.png'] {
+.owl-item img[src='plugins/images/cache/no-list.png'],
+.slimScrollDiv img[src='plugins/images/cache/no-list.png'],
+img[src='plugins/images/cache/no-request.png'] {
 	padding: 0 0 0 200px;
 }
 
-div[data-src$='no-np.png'] {
-	background: var(--b20) var(--no-np) center center/cover !important;
+div[data-src='plugins/images/cache/no-np.png'] {
+	background: $black20 $no-np center center/cover !important;
 }
 
 @supports (backdrop-filter: blur(30px)) {
-	div[data-src$='no-np.png'] {
-		background-color: var(--b45a) !important;
+	div[data-src='plugins/images/cache/no-np.png'] {
+		background-color: $black45a !important;
 	}
 }
 
@@ -280,7 +280,7 @@ div[data-src$='no-np.png'] {
 
 img[src='plugins/images/rotten.png'] {
 	padding: 0 0 0 40px;
-	background: var(--rotten-tomatoes) 5px 5px/30px no-repeat;
+	background: $rotten-tomatoes 5px 5px/30px no-repeat;
 }
 
 .css-bar-info {
@@ -316,7 +316,7 @@ div[id^='request'] {
 h2.m-b-0.font-medium.pull-right {
 	color: $white;
 	font-weight: 600;
-	filter: drop-shadow(0 2px 5px var(--b70a));
+	filter: drop-shadow(0 2px 5px $black70a);
 }
 
 .genre-list .badge {
@@ -334,7 +334,7 @@ h2.m-b-0.font-medium.pull-right {
 }
 
 .mce-panel {
-	background: var(--b16) !important;
+	background: $black16 !important;
 	border: 0 !important;
 }
 
@@ -344,7 +344,7 @@ h2.m-b-0.font-medium.pull-right {
 }
 
 .mce-foot {
-	background: var(--b20) !important;
+	background: $black20 !important;
 	border-top: 1px solid #222;
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;

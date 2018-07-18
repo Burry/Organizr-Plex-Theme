@@ -21,7 +21,7 @@ a {
 	}
 
 	&.list-group-item {
-		color: var(--w70a);
+		color: $white70a;
 	}
 }
 
@@ -43,8 +43,8 @@ pre {
 }
 
 code {
-	background: var(--w08a);
-	color: var(--w70a);
+	background: $white08a;
+	color: $white70a;
 }
 
 .bg-title h4 {
@@ -56,7 +56,7 @@ code {
 }
 
 .text-dark {
-	color: var(--w70a) !important;
+	color: $white70a !important;
 
 	&:hover {
 		color: $white !important;
@@ -136,8 +136,8 @@ code {
 }
 
 .label-info {
-	background: var(--b15a) !important;
-	color: var(--w70a) !important;
+	background: $black15a !important;
+	color: $white70a !important;
 }
 
 #settings-settings-updates {
@@ -158,7 +158,7 @@ code {
 
 .label-warning,
 .label-inverse {
-	background: var(--b30a);
+	background: $black30a;
 }
 
 .label.m-l-20 {
@@ -175,5 +175,5 @@ code {
 button.list-group-item,
 .dd-handle,
 .dd3-content {
-	color: var(--w70a) !important;
+	color: $white70a !important;
 }

@@ -3,27 +3,27 @@
 .pagination {
 	> li {
 		> a {
-			background: var(--b15a);
-			color: var(--w70a);
+			background: $black15a;
+			color: $white70a;
 			border: 0;
 			border-radius: 0;
 
 			&:focus,
 			&:hover {
-				background: var(--w08a);
+				background: $white08a;
 				color: $text;
 				border: 0;
 			}
 		}
 
 		&.active > a {
-			background: var(--w08a);
+			background: $white08a;
 			color: $theme-lighter;
 			border: 0;
 
 			&:focus,
 			&:hover {
-				background: var(--w08a);
+				background: $white08a;
 				color: $theme-lighter;
 				border: 0;
 			}
@@ -47,22 +47,22 @@
 
 .dataTables_wrapper {
 	.dataTables_paginate {
-		color: var(--w70a);
+		color: $white70a;
 
 		.paginate_button {
-			background: var(--b15a);
-			color: var(--w70a) !important;
+			background: $black15a;
+			color: $white70a !important;
 			border: 0 !important;
 			border-radius: 0 !important;
 			margin: 0 !important;
 			transition: none;
 
 			&.current {
-				background: var(--w08a) !important;
+				background: $white08a !important;
 				color: $theme-lighter !important;
 
 				&:hover {
-					background: var(--w08a) !important;
+					background: $white08a !important;
 					color: $theme-lighter !important;
 				}
 			}
@@ -82,7 +82,7 @@
 			}
 
 			&:hover {
-				background: var(--w08a)!important;
+				background: $white08a!important;
 				color: $text !important;
 			}
 		}

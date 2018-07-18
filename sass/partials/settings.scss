@@ -6,7 +6,7 @@
 	padding: 0 25px;
 
 	a span {
-		font-family: var(--font-stack);
+		font-family: $font-stack;
 	}
 }
 
@@ -19,17 +19,17 @@
 		color: $text-muted !important;
 
 		a::after {
-			background: var(--b15a) !important;
+			background: $black15a !important;
 			transition: none;
 			transform: none;
 		}
 
 		a {
-			color: var(--w70a) !important;
+			color: $white70a !important;
 			transition: none;
 
 			&:hover::after {
-				background: var(--w08a) !important;
+				background: $white08a !important;
 			}
 
 			&:hover {
@@ -43,7 +43,7 @@
 
 		li.tab-current {
 			a::after {
-				background: var(--w08a) !important;
+				background: $white08a !important;
 			}
 
 			a {
@@ -77,8 +77,8 @@
 }
 
 .swapLog {
-	background: var(--b15a) !important;
-	color: var(--w70a) !important;
+	background: $black15a !important;
+	color: $white70a !important;
 	border: 0 !important;
 	border-radius: 0 !important;
 
@@ -89,7 +89,7 @@
 	}
 
 	&.active {
-		background: var(--w08a) !important;
+		background: $white08a !important;
 		color: $theme-lighter !important;
 		opacity: 1;
 	}
@@ -124,7 +124,7 @@
 // Organizr Links
 
 .profile-social-icons a {
-	color: var(--w70a) !important;
+	color: $white70a !important;
 
 	&:hover,
 	&:focus {
@@ -209,7 +209,7 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 	}
 
 	.lazyload {
-		background: var(--b15a);
+		background: $black15a;
 	}
 }
 
@@ -220,13 +220,19 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 	}
 }
 
-#settings-homepage-list img[src*='ombi'] {
-	background: var(--b15a) var(--ombi) center center/90px no-repeat !important;
-	padding-top: 105px;
+#settings-homepage-list {
+	img {
+		&[src='plugins/images/tabs/ombi.png'],
+		&[src='plugins/images/tabs/ombi-plex.png'],
+		&[src='plugins/images/tabs/ombi-emby.png'] {
+			background: $black15a $ombi center center/90px no-repeat !important;
+			padding-top: 105px;
+		}
+	}
 }
 
-div[data-src*='ombi'] {
-	background-image: var(--ombi) !important;
+div[data-src='plugins/images/tabs/ombi.png'] {
+	background-image: $ombi !important;
 }
 
 
@@ -234,10 +240,14 @@ div[data-src*='ombi'] {
 
 .tabEditor {
 	// Override Ombi Icon
-	img[src*='ombi'] {
-		background: var(--ombi);
-		height: 35px !important;
-		padding-left: 35px;
+	img {
+		&[src='plugins/images/tabs/ombi.png'],
+		&[src='plugins/images/tabs/ombi-plex.png'],
+		&[src='plugins/images/tabs/ombi-emby.png'] {
+			background: $ombi;
+			height: 35px !important;
+			padding-left: 35px;
+		}
 	}
 
 	td:nth-of-type(2) {
@@ -259,10 +269,16 @@ div[data-src*='ombi'] {
 	padding: 7.5px;
 }
 
-.select2-container img[src*='ombi'] {
-	background: var(--ombi);
-	height: 20px;
-	padding-left: 20px;
+.select2-container {
+	img {
+		&[src='plugins/images/tabs/ombi.png'],
+		&[src='plugins/images/tabs/ombi-plex.png'],
+		&[src='plugins/images/tabs/ombi-emby.png'] {
+			background: $ombi;
+			height: 20px;
+			padding-left: 20px;
+		}
+	}
 }
 
 
@@ -285,16 +301,16 @@ div[id$='FavIcon'] textarea,
 }
 
 .ace-idle-fingers {
-	background: var(--b15a) !important;
+	background: $black15a !important;
 }
 
 .ace_gutter {
-	background: var(--b30a) !important;
+	background: $black30a !important;
 	color: $text!important;
 }
 
 .ace_marker-layer .ace_active-line {
-	background: var(--w08a) !important;
+	background: $white08a !important;
 }
 
 .ace_cursor {
@@ -305,7 +321,7 @@ div[id$='FavIcon'] textarea,
 // Log Table
 
 th {
-	color: var(--w70a);
+	color: $white70a;
 }
 
 tbody {
@@ -319,21 +335,21 @@ table.dataTable {
 		.sorting::after,
 		.sorting_asc::after,
 		.sorting_desc::after {
-			color: var(--w70a);
+			color: $white70a;
 		}
 	}
 
 	tbody tr {
-		background: var(--b15a) !important;
+		background: $black15a !important;
 
 		&:hover {
-			background: var(--b15a) !important;
+			background: $black15a !important;
 		}
 	}
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-	background: var(--b30a) !important;
+	background: $black30a !important;
 }
 
 .footable.breakpoint > tbody > tr > td > span.footable-toggle {
@@ -377,7 +393,7 @@ table.dataTable {
 
 .select2-container--default .select2-selection--multiple {
 	.select2-selection__choice {
-		background: var(--b30a);
+		background: $black30a;
 		border: 0;
 		font-size: 13px;
 		padding: 2.5px 5px;
@@ -459,7 +475,7 @@ table.dataTable {
 }
 
 .mce-grid-border a {
-	border-color: var(--w25a) !important;
+	border-color: $white25a !important;
 
 	&:hover,
 	&.mce-active {

@@ -2,7 +2,7 @@
     <img src="banner.png" height="100px" alt="Plex Theme for Organizr v2" />
 </h1>
 
-<p style="text-align:center">
+<p align="center">
     A theme for Organizr v2 that emulates the style of Plex
     <br />
     <br />

@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="banner.png" height="100px" alt="Plex Theme for Organizr v2" />
+    <img src="banner.png" width="370px" alt="Plex Theme for Organizr v2" />
 </h1>
 
 <p align="center">

@@ -33,7 +33,7 @@ Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it
 
 Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login and registration page.
 
-```
+```javascript
             $('.sidebar').addClass('hidden');
             $('.navbar').addClass('hidden');
             $('#pagewrapper').addClass('hidden');

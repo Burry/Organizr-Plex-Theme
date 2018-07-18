@@ -19,30 +19,24 @@
 
 ## Usage
 
-1. [<b style="color: #CC7B19; font-family: 'Open Sans'">Download Plex Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) to Organizr's `/css/themes` directory.
-2. Open Organizr Settings > Customize > Appearance > Colors & Themes, select "Plex" from the theme dropdown, and keep the style set to "Dark."
-3. For ideal presentation, make the necessary changes to Organizr's JavaScript as described below. Note that these changes will be overwritten whenever Organizr pulls a new update, pending more advanced theme support.
+1. Make a couple changes to Organizr's JavaScript so that it looks best for Plex Theme. Choose an option:
+    1. *(Recommended)* Use Tronyx's custom Organizr v2 Docker image [`tronyx/docker-organizr-v2:plex`](https://hub.docker.com/r/tronyx/docker-organizr-v2/tags) with the changes pre-applied.
+    2. Make the following manual edits to Organizr's JavaScript. Note that these changes will be overwritten whenever Organizr pulls a new update, pending more advanced theme support.
+        1. Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased top bar padding.
+        2. Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login and registration page.
 
-
-### Manual JavaScript Fixes
-
-#### Top Bar Offset
-Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased top bar padding.
-
-#### Hide Login Page UI Chrome
-
-Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login and registration page.
-
-```javascript
-            $('.sidebar').addClass('hidden');
-            $('.navbar').addClass('hidden');
-            $('#pagewrapper').addClass('hidden');
-```
+        ```javascript
+                    $('.sidebar').addClass('hidden');
+                    $('.navbar').addClass('hidden');
+                    $('#pagewrapper').addClass('hidden');
+        ```
+2. [<b style="color: #CC7B19; font-family: 'Open Sans'">Download Plex Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) to Organizr's `/css/themes` directory.
+3. Open Organizr Settings > Customize > Appearance > Colors & Themes, select "Plex" from the theme dropdown, and keep the style set to "Dark."
 
 
 ### Group Icons
 
-Some group icons are provided for your use in [`/images/groups`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images/groups), to be installed in Organizr's `/plugins/images/groups`.
+Some group icons are provided for your use in [`/images/groups`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images/groups) to be copied to Organizr's `/plugins/images/groups`.
 
 
 ### Don't Change These

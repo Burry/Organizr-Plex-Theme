@@ -65,7 +65,7 @@ const gulp = require('gulp'),
         inline: ['all'],
         level: {
             1: { all: true, optimizeBackground: false },
-            2: { mergeSemantically: true, restructureRules: true }
+            2: { all: true }
         }
     },
 

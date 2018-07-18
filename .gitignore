@@ -56,4 +56,4 @@ $RECYCLE.BIN/
 yarn-error.log
 
 # Personal modifications
-/scss/partials/grant-custom.scss
+/sass/partials/grant-custom.scss

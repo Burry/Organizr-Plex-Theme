@@ -24,7 +24,6 @@
     2. Make the following manual edits to Organizr's JavaScript. Note that these changes will be overwritten whenever Organizr pulls a new update, pending more advanced theme support.
         1. Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased top bar padding.
         2. Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login and registration page.
-
         ```javascript
                     $('.sidebar').addClass('hidden');
                     $('.navbar').addClass('hidden');

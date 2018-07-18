@@ -258,33 +258,38 @@ div[data-src='plugins/images/cache/no-np.png'] {
 	}
 }
 
-.css-bar:after {
-	background: $dark-gray;
-	color: $text;
-	opacity: 1;
+.css-bar {
+	&:after {
+		background: transparent;
+		color: $text;
+		opacity: 1;
+	}
 }
 
 .css-bar-sm {
 	font-size: 11px;
 
-	> img {
-		padding: 5px;
+	&:after {
+		z-index: 102;
+		font-size: 10px;
+	    line-height: 45px;
 	}
 }
 
-.css-bar-lg > img {
+.css-bar-lg img {
 	width: 90px;
     height: 90px;
 	margin: 5px 0 0 5px;
 }
 
-img[src='plugins/images/rotten.png'] {
+img[src$='rotten.png'] {
 	padding: 0 0 0 40px;
-	background: $rotten-tomatoes 5px 5px/30px no-repeat;
+	background: $dark-gray $rotten-tomatoes 5px 5px/30px no-repeat;
 }
 
+// TODO: Add multitude of classes from css-chart.css
 .css-bar-info {
-	background-image: linear-gradient(90deg, $dark-gray 50%, transparent 50%, transparent), linear-gradient(198deg, $theme 50%, $dark-gray 50%, $dark-gray) !important;
+	background-image: linear-gradient(90deg, $theme 50%, transparent 50%, transparent), linear-gradient(270deg, $theme 50%, $dark-gray 50%, $dark-gray) !important;
 }
 
 .nowPlayingUserThumb:hover {

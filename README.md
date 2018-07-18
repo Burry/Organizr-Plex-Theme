@@ -1,7 +1,11 @@
-# <font style="color: #CC7B19; font-family: 'Open Sans'; font-weight: 700">Plex Theme</font> <i style="font-weight: 300">for [Organizr](https://organizr.app) v2</i>
-A theme for Organizr v2 that emulates the style of Plex
+<h1>
+    <img src="banner.png" height="100px" alt="Plex Theme for Organizr v2" />
+</h1>
 
-<p float="left">
+<p style="text-align:center">
+    A theme for Organizr v2 that emulates the style of Plex
+    <br />
+    <br />
     <a href="https://travis-ci.org/Burry/organizr-v2-plex-theme" target="_blank" title="Build Status">
         <img src="https://travis-ci.org/Burry/organizr-v2-plex-theme.svg?branch=master" alt="Build Status" />
     </a>
@@ -22,7 +26,7 @@ A theme for Organizr v2 that emulates the style of Plex
 
 ### Manual JavaScript Fixes
 
-#### Top bar Offset
+#### Top Bar Offset
 Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased top bar padding.
 
 #### Hide Login Page UI Chrome

@@ -34,11 +34,29 @@
 
 		i {
 			font-size: 14px;
+			position: relative;
+			top: 3px;
 		}
 
 		span {
 			cursor: default;
 			user-select: none;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.sidebar-head {
+		padding: 5px 20px !important;
+
+		h3 {
+			.m-r-5 {
+				margin-right: 5px !important;
+			}
+
+			i {
+				font-size: 20px;
+			}
 		}
 	}
 }
@@ -67,22 +85,6 @@
 
 .ping .heartbit {
 	z-index: 9;
-}
-
-@media screen and (min-width: 768px) {
-	.sidebar .sidebar-head {
-		padding: 5px 20px;
-
-		h3 {
-			.m-r-5 {
-				margin-right: 5px !important;
-			}
-
-			i {
-				font-size: 20px;
-			}
-		}
-	}
 }
 
 #side-menu {

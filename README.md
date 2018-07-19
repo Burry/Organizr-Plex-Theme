@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    A theme for <a href="https://github.com/causefx/Organizr" target="_blank">Organizr v2</a> that emulates the style of Plex
+    A theme for <a href="https://github.com/causefx/Organizr/tree/v2-develop" target="_blank">Organizr v2</a> that emulates the style of Plex
     <br />
     <br />
     <a href="https://travis-ci.org/Burry/organizr-v2-plex-theme" target="_blank" title="Build Status">

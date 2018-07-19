@@ -277,8 +277,9 @@ div[data-src$='no-np.png'] {
 }
 
 img[src$='rotten.png'] {
-	padding: 0 0 0 40px;
 	background: $dark-gray $rotten-tomatoes 5px 5px/30px no-repeat;
+	opacity: 1 !important;
+	padding: 0 0 0 40px;
 }
 
 .css-bar-info {

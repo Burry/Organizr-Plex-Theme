@@ -120,7 +120,7 @@
 	}
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
 	#splashScreen .flexbox:first-of-type {
 		width: 70%;
 		left: 15%;

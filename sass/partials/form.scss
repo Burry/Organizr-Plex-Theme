@@ -65,7 +65,9 @@ span.select2-selection.select2-selection--multiple,
 
 .input-group-addon {
 	background: $black20 !important;
-	border-radius: 4px !important;
+	color: $menu-link;
+	border-color: transparent;
+	border-radius: 4px;
 }
 
 .input-group-btn .btn {

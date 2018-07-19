@@ -5,35 +5,38 @@
 }
 
 .login-register {
-	@include background($bg-dark);
-}
+	background: transparent !important;
 
-.login-register .login-box {
-	background: 0 0;
-	height: initial;
-	right: initial;
-	position: fixed;
-	@extend %center;
+	.login-box {
+		background: transparent;
+		width: 480px;
+		height: initial;
+		right: initial;
+		position: fixed;
+		@extend %center;
+	}
 
 	h1 {
 		color: $white;
 		font-weight: 700;
-		margin: 0 0 35px;
+		width: 320px;
+		margin: 0;
 	}
 
 	.white-box {
+		background: $black30a;
+		margin: 0;
 		padding: 0;
 	}
 
 	form {
-		width: 100%;
-		max-width: 360px;
+		width: 320px;
 		margin: auto;
-		padding: 30px;
+		padding-top: 30px;
 	}
 
 	.form-group {
-		margin: 15px auto;
+		margin: 15px 0;
 
 		.col-xs-12,
 		.col-md-12 {
@@ -42,32 +45,72 @@
 
 		&.m-t-40,
 		&.m-b-0 {
-			margin: 0 auto !important;
+			margin: 0 !important;
 		}
 
 		&.m-b-0 {
 			color: #A8A8AB;
 
 			p {
-				margin: 15px 0 0 0;
+				margin: 20px 0;
 			}
 		}
 	}
 }
 
-.loginLogo {
-	max-height: 100px;
-	max-width: -webkit-fill-available;
-	margin-bottom: 35px;
-	border: 0;
-}
-
+// Needs to not apply to register form, so we don't group with above
 #loginform .form-group.m-t-20 {
 	margin: -10px 0 0 !important;
 }
 
+@media screen and (max-width: 320px) {
+	.login-register {
+		h1,
+		form {
+			width: 288px;
+		}
+	}
+}
+
+@media screen and (min-width: 350px) {
+	.login-register {
+		width: 480px;
+		height: 300px;
+
+		.white-box {
+			width: 480px;
+		}
+	}
+}
+
+
+// Login Logo
+
+#login-logo {
+	display: block !important;
+	height: 0;
+	position: absolute;
+	top: -70px;
+}
+
+.loginLogo {
+	max-width: 320px;
+	border: 0;
+    margin-top: 35px;
+	transform: translateY(-100%);
+}
+
+@media screen and (max-width: 320px) {
+	.loginLogo {
+		max-width: 288px;
+	}
+}
+
+
+// Registration form
+
 #registerForm .form-group {
-	margin: 15px auto !important;
+	margin: 15px 0 !important;
 
 	&:first-of-type {
 		margin: 0 0 15px !important;
@@ -75,8 +118,12 @@
 
 	&:last-of-type {
 		margin: 15px 0 0 !important;
+		padding: 0 0 30px;
 	}
 }
+
+
+// Password recovery form
 
 #recoverform {
 	.form-group {
@@ -86,6 +133,7 @@
 
 		&:last-of-type {
 			margin: 15px 0 0 !important;
+			padding: 0 0 30px;
 		}
 	}
 
@@ -103,20 +151,80 @@
 	}
 }
 
-.invite-div {
+
+// Invite Modal
+
+#invite-area {
+	.panel {
+		max-width: 480px;
+		margin: auto;
+	}
+
+	.panel-body {
+		padding: 35px;
+	}
+
+	.invite-step-1 {
+		max-width: 210px;
+
+		.input-group:last-of-type {
+			margin: 0 !important;
+		}
+	}
+
+	.form-group {
+		margin: 0 auto;
+	}
+
+	.input-group {
+		margin: 15px 0;
+
+		&:first-of-type {
+			margin: 0 0 15px !important;
+		}
+
+		&:last-of-type {
+			margin: 15px 0 0 !important;
+		}
+
+		.form-control:last-child {
+			border-radius: 4px;
+		}
+	}
+
 	h4 {
 		text-transform: none;
 		font-weight: 600;
 		margin: 0;
 	}
+}
 
-	.input-group {
-		&:not(:first-of-type)
-		 :not(:last-of-type) {
-		     margin: 15px auto;
-		 }
+#inviteCodeInput {
+	font-family: $monospace-font-stack;
+	font-size: 50px !important;
+	font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+	#invite-area {
+		.invite-step-1 {
+			max-width: 350px;
+			margin: auto;
+		}
+
+		.input-group .form-control:last-child {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	#inviteCodeInput {
+		font-size: 64px !important;
 	}
 }
+
+
+// Login overlay
 
 .blockMsg {
 	background: transparent !important;
@@ -137,49 +245,5 @@
 
 	img {
 		display: none;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.login-register {
-		width: 480px;
-		height: 300px;
-	}
-
-	.login-register .login-box {
-		width: 480px;
-
-		h1 {
-			position: relative;
-			bottom: 92px;
-		}
-
-		.white-box {
-			background: $black30a;
-			width: 480px;
-			padding: 0;
-			margin: auto;
-		}
-
-		form {
-			padding: 30px 20px;
-		}
-
-		.form-group {
-			width: 320px;
-		}
-	}
-
-	#login-logo {
-		display: block !important;
-		height: 0;
-		margin: 0;
-	}
-
-	.loginLogo {
-		margin-bottom: 0;
-		position: relative;
-		top: -55px;
-		transform: translateY(-100%);
 	}
 }

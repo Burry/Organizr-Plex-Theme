@@ -3,19 +3,23 @@
 // Page Elements
 
 html {
-	@include background($bg-dark, 'fixed');
+	background: $light-gray;
 }
 
 body {
 	@include background($bg-light, 'fixed');
-	transition: background-image 0.2s;
 	color: $text;
 	font: 600 13px $font-stack;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: background-image 0.2s;
 }
 
 
 // Dark Settings Backgrounds
 
+body[data-active-tab=""],
 .active-tab-Settings,
 #internal-Settings {
 	@include background($bg-dark, 'fixed');

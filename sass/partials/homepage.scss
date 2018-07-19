@@ -214,6 +214,7 @@
 }
 
 .recent-title {
+	@extend %background-blur;
 	background: $black30a!important;
 	display: block;
 	padding: 5px;
@@ -239,12 +240,6 @@
 	&:hover .recent-title {
 		opacity: 1;
 		transform: none;
-	}
-}
-
-@supports (backdrop-filter: blur(30px)) {
-	.recent-title {
-		@extend %background-blur;
 	}
 }
 

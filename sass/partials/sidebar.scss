@@ -1,10 +1,10 @@
 // Sidebar
 
 .sidebar {
-	background: $black15a;
+	@extend %background-blur;
+	background: $black15a !important;
 	box-shadow: none;
-	transition: background 0.2s;
-	transition: width 0.1s;
+	transition: background 0.2s, width 0.1s;
 
 	.label {
 		padding: 5px 8px;
@@ -18,6 +18,7 @@
 }
 
 .sidebar-head {
+	@extend %background-blur;
 	background: $black30a !important;
 
 	h3 {
@@ -41,26 +42,25 @@
 	}
 }
 
-@supports (backdrop-filter: blur(30px)) {
-	.sidebar-nav,
-	.sidebar-head {
-		@extend %background-blur;
-	}
-}
-
 @supports not (backdrop-filter: blur(30px)) {
 	.sidebar {
-		&:hover {
-			background: $black70a;
+		@include background($bg-light, 'fixed');
+	}
 
-			.sidebar-head {
-				background: $black50a !important;
-			}
-		}
+	.sidebar-nav {
+		background: $black15a;
+	}
 
-		.label {
-			background: $white08a;
+	body[data-active-tab=""],
+	.active-tab-Settings,
+	#internal-Settings {
+		.sidebar {
+			@include background($bg-dark, 'fixed');
 		}
+	}
+
+	.sidebar-head {
+		background: $black65a !important;
 	}
 }
 

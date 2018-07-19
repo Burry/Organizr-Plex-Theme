@@ -120,13 +120,6 @@
 }
 
 
-// Invite Modal
-
-#invite-area .form-group {
-	margin: 0;
-}
-
-
 // Content/Request Modal
 
 .resultBox-outside {
@@ -220,15 +213,10 @@
 }
 
 .user-bg {
+	@extend %background-blur;
+	background: $black45a;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
-	background: $black45a;
-}
-
-@supports (backdrop-filter: blur(30px)) {
-	.user-bg {
-		@extend %background-blur;
-	}
 }
 
 .lazyload.error,

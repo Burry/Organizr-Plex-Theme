@@ -55,4 +55,5 @@ $rotten-tomatoes: url('images/rotten.svg');
 // Font Stacks
 
 $system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$monospace-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, "Source Code Pro", "Droid Sans Mono", "Liberation Mono", "Fira Mono", "Courier New", monospace;
 $font-stack: 'Open Sans', $system-font-stack !default;

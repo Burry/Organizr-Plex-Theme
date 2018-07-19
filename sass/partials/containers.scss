@@ -12,11 +12,11 @@ body {
 	font: 600 13px $font-stack;
 	width: 100%;
 	height: 100%;
+	//position: fixed;
 	transition: background-image 0.2s;
 
 	&[data-active-tab=""] {
 		@include background($bg-dark, 'fixed');
-		position: absolute;
 	}
 }
 
@@ -28,7 +28,19 @@ body {
 }
 
 #page-wrapper {
-	background: 0 0;
+	background: transparent;
+
+	&:before {
+		content: '';
+		@include background($bg-light, 'fixed');
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
 }
 
 @media screen and (max-width: 767px) {

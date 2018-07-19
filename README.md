@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    A theme for Organizr v2 that emulates the style of Plex
+    A theme for <a href="https://github.com/causefx/Organizr" target="_blank">Organizr v2</a> that emulates the style of Plex
     <br />
     <br />
     <a href="https://travis-ci.org/Burry/organizr-v2-plex-theme" target="_blank" title="Build Status">
@@ -20,7 +20,7 @@
 ## Usage
 
 1. Make a couple changes to Organizr's JavaScript so that it looks best for Plex Theme. Choose an option:
-    1. *(Recommended)* Use Tronyx's custom Organizr v2 Docker image [`tronyx/docker-organizr-v2:plex`](https://hub.docker.com/r/tronyx/docker-organizr-v2/tags) with the changes pre-applied.
+    1. *(Recommended)* Use tronyx's custom Organizr v2 Docker image [`tronyx/docker-organizr-v2:plex`](https://hub.docker.com/r/tronyx/docker-organizr-v2/tags) with the changes pre-applied.
     2. Make the following manual edits to Organizr's JavaScript. Note that these changes will be overwritten whenever Organizr pulls a new update, pending more advanced theme support.
         1. Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60` so that `iframe`s compensate for Plex Theme's increased top bar padding.
         2. Add the following lines to Organizr's `/js/functions.js` inside the function `swapDisplay` case `login` under line 277 to hide all UI chrome on the login and registration page.
@@ -32,12 +32,6 @@
 2. [<b style="color: #CC7B19; font-family: 'Open Sans'">Download Plex Theme</b>](https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/css/Plex.css) to Organizr's `/css/themes` directory.
 3. Open Organizr Settings > Customize > Appearance > Colors & Themes, select "Plex" from the theme dropdown, and keep the style set to "Dark."
 
-
-### Group Icons
-
-Some group icons are provided for your use in [`/images/groups`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images/groups) to be copied to Organizr's `/plugins/images/groups`.
-
-
 ### Don't Change These
 
 #### Notifications
@@ -48,6 +42,15 @@ To ensure that notifications display as intended, keep the default notification 
 
 Changing the placeholder color values in Organizr Settings > Customize > Appearance > Colors & Themes will override Plex Theme's color styles. Deleting custom color values will reverse this.
 
+## Related Plex Tweaks for Organizr
+
+### Open Plex App on Mobile
+
+Using Organizr's Settings > Customize > Appearance > Custom JavaScript and [this script](https://gist.github.com/Burry/7f6c2caa9cf645ca511ffefd697b3126), you can redirect all links to Plex while browsing on iOS (Android untested) to the Plex app, complete with functional deep-linking.
+
+### Group Icons
+
+Some group icons are provided for your use in [`/images/groups`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images/groups) to be copied to Organizr's `/plugins/images/groups`.
 
 ## Development
 

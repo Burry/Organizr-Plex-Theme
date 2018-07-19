@@ -339,6 +339,7 @@ td span.label.label-info {
 // Progress Bars
 
 .progress {
+	background: $black15a;
 	height: 3px;
 	margin-bottom: 5px;
 	cursor: default;
@@ -356,7 +357,7 @@ td span.label.label-info {
 }
 
 .progress-bar-inverse {
-	background: $black15a;
+	background: $white08a;
 }
 
 tbody {
@@ -365,9 +366,12 @@ tbody {
 		.progress,
 		.progress-bar {
 			border-radius: 1000px;
-			min-width: 72px;
 			max-width: 80px;
 			height: 16px !important;
+		}
+
+		.progress {
+			min-width: 72px;
 		}
 
 		.progress-bar {

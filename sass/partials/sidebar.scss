@@ -4,7 +4,7 @@
 	@extend %background-blur;
 	background: $black15a !important;
 	box-shadow: none;
-	transition: background 0.2s, width 0.1s;
+	transition: all 0.2s;
 
 	.label {
 		padding: 5px 8px;
@@ -46,6 +46,10 @@
 }
 
 @media screen and (min-width: 768px) {
+	.sidebar {
+		transition: background 0.2s, width 0.1s;
+	}
+	
 	.sidebar-head {
 		padding: 5px 20px !important;
 

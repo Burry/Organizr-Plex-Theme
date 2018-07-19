@@ -44,9 +44,9 @@ Changing the placeholder color values in Organizr Settings > Customize > Appeara
 
 ## Related Plex Tweaks for Organizr
 
-### Open Plex App on Mobile
+### Open Plex App on iOS
 
-Using Organizr's Settings > Customize > Appearance > Custom JavaScript and [this script](https://gist.github.com/Burry/7f6c2caa9cf645ca511ffefd697b3126), you can redirect all links to Plex while browsing on iOS (Android untested) to the Plex app, complete with functional deep-linking.
+Using Organizr's Settings > Customize > Appearance > Custom JavaScript and [this script](https://gist.github.com/Burry/7f6c2caa9cf645ca511ffefd697b3126), you can redirect all links to Plex while browsing on iOS to the Plex app, complete with functional deep-linking. I cannot find the equivalent scheme to open Plex on Android if it exists.
 
 ### Group Icons
 

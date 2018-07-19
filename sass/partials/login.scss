@@ -37,6 +37,7 @@
 
 	.form-group {
 		margin: 15px 0;
+		overflow: visible;
 
 		.col-xs-12,
 		.col-md-12 {
@@ -52,7 +53,7 @@
 			color: #A8A8AB;
 
 			p {
-				margin: 20px 0;
+				margin: -10px 0 20px;
 			}
 		}
 	}
@@ -60,7 +61,7 @@
 
 // Needs to not apply to register form, so we don't group with above
 #loginform .form-group.m-t-20 {
-	margin: -10px 0 0 !important;
+	margin: -10px 0 30px !important;
 }
 
 @media screen and (max-width: 320px) {

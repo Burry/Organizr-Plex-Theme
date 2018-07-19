@@ -247,9 +247,9 @@
 // Override Ombi Icon
 
 img {
-	&[src='plugins/images/tabs/ombi.png'],
-	&[src='plugins/images/tabs/ombi-plex.png'],
-	&[src='plugins/images/tabs/ombi-emby.png'] {
+	&[src$='ombi.png'],
+	&[src$='ombi-plex.png'],
+	&[src$='ombi-emby.png'] {
 		&.homepageImageTitle {
 			background: $ombi;
 			width: 40px;

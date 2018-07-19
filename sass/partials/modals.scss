@@ -48,6 +48,10 @@
 			background: $black20;
 		}
 	}
+
+	p {
+		margin: 0;
+	}
 }
 
 .white-popup-block {
@@ -60,10 +64,6 @@
 		font-weight: 400;
 		text-transform: none;
 		margin: 0 0 15px 0;
-	}
-
-	p {
-		margin: 0;
 	}
 
 	.btn.row {
@@ -219,30 +219,36 @@
 	border-top-right-radius: 4px;
 }
 
-.lazyload.error,
-.owl-item img[src='plugins/images/cache/no-list.png'],
-.slimScrollDiv img[src='plugins/images/cache/no-list.png'] {
-	background: $black45a $no-list center center/cover !important;
-}
-
-img[src='plugins/images/cache/no-request.png'] {
-	background: $black45a $no-request center center/cover !important;
-}
+// Custom error images
 
 .resultImages.error,
-.owl-item img[src='plugins/images/cache/no-list.png'],
-.slimScrollDiv img[src='plugins/images/cache/no-list.png'],
-img[src='plugins/images/cache/no-request.png'] {
+img[src$='no-list.png'],
+img[src$='no-request.png'] {
 	padding: 0 0 0 200px;
 }
 
-div[data-src='plugins/images/cache/no-np.png'] {
-	background: $black20 $no-np center center/cover !important;
+.lazyload.error,
+img[src$='no-list.png'],
+div[data-src$='no-np.png'] {
+	background: $black45a $not-found no-repeat center center !important;
 }
 
-@supports (backdrop-filter: blur(30px)) {
-	div[data-src='plugins/images/cache/no-np.png'] {
-		background-color: $black45a !important;
+.lazyload.error,
+img[src$='no-list.png'] {
+	background-size: 100px 100px !important;
+}
+
+img[src$='no-request.png'] {
+	background: $black45a $no-request center center/cover;
+}
+
+div[data-src$='no-np.png'] {
+	background-size: 150px 150px !important;
+}
+
+@supports not (backdrop-filter: blur(30px)) {
+	div[data-src$='no-np.png'] {
+		background-color: $black20 !important;
 	}
 }
 
@@ -275,9 +281,17 @@ img[src$='rotten.png'] {
 	background: $dark-gray $rotten-tomatoes 5px 5px/30px no-repeat;
 }
 
-// TODO: Add multitude of classes from css-chart.css
 .css-bar-info {
-	background-image: linear-gradient(90deg, $theme 50%, transparent 50%, transparent), linear-gradient(270deg, $theme 50%, $dark-gray 50%, $dark-gray) !important;
+	$percent: 0;
+	@while $percent <= 100 {
+		$deg1: if($percent < 50, 90, 270 + (360 / 20) * ($percent - 50) / 5);
+		$deg2: if($percent < 50, 90 + (360 / 20) * $percent / 5, 270);
+		$first-color: if($percent < 50, $light-gray, $theme);
+		&.css-bar-#{$percent} {
+			background-image: linear-gradient(#{$deg1}deg, $first-color 50%, transparent 50%, transparent), linear-gradient(#{$deg2}deg, $theme 50%, $light-gray 50%, $light-gray);
+		}
+		$percent: $percent + 5;
+	}
 }
 
 .nowPlayingUserThumb:hover {

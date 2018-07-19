@@ -1,5 +1,13 @@
 // Settings
 
+// Background
+
+.active-tab-Settings,
+#internal-Settings {
+	@include background($bg-dark, 'fixed');
+}
+
+
 // Tabs
 
 .sttabs nav {
@@ -222,9 +230,9 @@ ul.nav.customtab.nav-tabs.nav-low-margin {
 
 #settings-homepage-list {
 	img {
-		&[src='plugins/images/tabs/ombi.png'],
-		&[src='plugins/images/tabs/ombi-plex.png'],
-		&[src='plugins/images/tabs/ombi-emby.png'] {
+		&[src$='ombi.png'],
+		&[src$='ombi-plex.png'],
+		&[src$='ombi-emby.png'] {
 			background: $black15a $ombi center center/90px no-repeat !important;
 			padding-top: 105px;
 		}
@@ -241,9 +249,9 @@ div[data-src='plugins/images/tabs/ombi.png'] {
 .tabEditor {
 	// Override Ombi Icon
 	img {
-		&[src='plugins/images/tabs/ombi.png'],
-		&[src='plugins/images/tabs/ombi-plex.png'],
-		&[src='plugins/images/tabs/ombi-emby.png'] {
+		&[src$='ombi.png'],
+		&[src$='ombi-plex.png'],
+		&[src$='ombi-emby.png'] {
 			background: $ombi;
 			height: 35px !important;
 			padding-left: 35px;
@@ -271,9 +279,9 @@ div[data-src='plugins/images/tabs/ombi.png'] {
 
 .select2-container {
 	img {
-		&[src='plugins/images/tabs/ombi.png'],
-		&[src='plugins/images/tabs/ombi-plex.png'],
-		&[src='plugins/images/tabs/ombi-emby.png'] {
+		&[src$='ombi.png'],
+		&[src$='ombi-plex.png'],
+		&[src$='ombi-emby.png'] {
 			background: $ombi;
 			height: 20px;
 			padding-left: 20px;

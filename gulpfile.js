@@ -64,7 +64,7 @@ const gulp = require('gulp'),
     cleanCSSConfig = {
         inline: ['all'],
         level: {
-            1: { all: true, optimizeBackground: false },
+            1: { all: true },
             2: { all: true }
         }
     },

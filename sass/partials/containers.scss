@@ -12,17 +12,12 @@ body {
 	font: 600 13px $font-stack;
 	width: 100%;
 	height: 100%;
-	position: absolute;
 	transition: background-image 0.2s;
-}
 
-
-// Dark Settings Backgrounds
-
-body[data-active-tab=""],
-.active-tab-Settings,
-#internal-Settings {
-	@include background($bg-dark, 'fixed');
+	&[data-active-tab=""] {
+		@include background($bg-dark, 'fixed');
+		position: absolute;
+	}
 }
 
 

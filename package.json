@@ -1,6 +1,6 @@
 {
   "name": "organizr-v2-plex-theme",
-  "version": "2.4.10",
+  "version": "2.4.11",
   "description": "A theme for Organizr v2 that emulates the style of Plex",
   "main": "css/Plex.css",
   "repository": "https://github.com/Burry/organizr-v2-plex-theme",

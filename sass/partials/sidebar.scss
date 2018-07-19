@@ -20,13 +20,16 @@
 .sidebar-head {
 	@extend %background-blur;
 	background: $black30a !important;
-	padding: 2.5px 20px !important;
+	min-height: 60px;
+	max-height: 60px;
+	padding: 2px 20px !important;
 
 	h3 {
 		color: $white70a;
 		font-weight: 400;
 		text-transform: none;
-		transition: .2s all;
+		padding: 2px 0 !important;
+		transition: 0.2s all;
 
 		.m-r-5 {
 			margin-right: 10px !important;
@@ -35,7 +38,7 @@
 		i {
 			font-size: 14px;
 			position: relative;
-			top: 3px;
+			top: 2px;
 		}
 
 		span {
@@ -49,11 +52,11 @@
 	.sidebar {
 		transition: background 0.2s, width 0.1s;
 	}
-	
-	.sidebar-head {
-		padding: 5px 20px !important;
 
+	.sidebar-head {
 		h3 {
+			padding: 0;
+
 			.m-r-5 {
 				margin-right: 5px !important;
 			}

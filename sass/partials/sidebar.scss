@@ -20,6 +20,7 @@
 .sidebar-head {
 	@extend %background-blur;
 	background: $black30a !important;
+	padding: 2.5px 20px !important;
 
 	h3 {
 		color: $white70a;

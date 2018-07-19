@@ -156,10 +156,11 @@
 }
 
 .nowPlayingItem {
-	margin-bottom: 30px;
+	margin: 0 0 30px;
 
+	&:first-child:nth-last-child(3),
 	+ .white-popup + .white-popup + .nowPlayingItem {
-		margin-bottom: 0;
+		margin: 0;
 	}
 }
 

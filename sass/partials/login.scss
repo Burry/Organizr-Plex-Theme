@@ -156,7 +156,7 @@
 
 // Invite Modal
 
-#invite-area {
+body[data-active-tab=''] #invite-area {
 	.panel {
 		max-width: 480px;
 		margin: auto;
@@ -208,7 +208,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	#invite-area {
+	body[data-active-tab=''] #invite-area {
 		.invite-step-1 {
 			max-width: 350px;
 			margin: auto;

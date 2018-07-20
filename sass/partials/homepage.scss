@@ -263,7 +263,8 @@
 	}
 }
 
-.hover-homepage-item:hover {
+.hover-homepage-item {
+	pointer-events: none;
 	transition: all 0.2s;
 }
 
@@ -278,6 +279,11 @@
 }
 
 .item:hover {
+	.hover-homepage-item {
+		background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
+		opacity: 1;
+	}
+
 	.inside-over-request-div {
 		opacity: 0;
 		top: -60px;
@@ -386,7 +392,7 @@ td span.label.label-info {
 }
 
 .progress-lg {
-	margin-left: -4px;
+	margin-left: -2px;
 	width: calc(100% + 4px);
 }
 

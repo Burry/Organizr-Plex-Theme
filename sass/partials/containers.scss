@@ -287,18 +287,18 @@ body {
 	color: $white45a;
 	display: block;
 	padding: 5px 0 0;
-    font-size: 11px;
-	font-weight: 600;
-	line-height: 20px;
+    font-size: 13px;
+	font-weight: 600 ;
+	line-height: 17px;
 	transform: translateY(100%);
 
 	&::first-line {
 		color: $white;
-		font-size: 115%;
 	}
 
 	small {
 		font-size: 100% !important;
+		font-weight: 600;
 	}
 }
 

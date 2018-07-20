@@ -4,15 +4,10 @@
 
 %button-basic {
 	border-radius: 4px;
+	font-size: 15px;
 	font-weight: 700;
 	text-transform: uppercase;
 	transition: background 0.1s;
-}
-
-@media screen and (min-width: 768px) {
-	%button-basic {
-	    font-size: 15px;
-	}
 }
 
 %background-blur {
@@ -114,4 +109,17 @@
 				opacity: 1;
 			}
 		}
+}
+
+@mixin css-bar($progress-color, $bg-color) {
+	$percent: 0;
+	@while $percent <= 100 {
+		$deg1: if($percent < 50, 90, 270 + (360 / 20) * ($percent - 50) / 5);
+		$deg2: if($percent < 50, 90 + (360 / 20) * $percent / 5, 270);
+		$first-color: if($percent < 50, $bg-color, $progress-color);
+		&.css-bar-#{$percent} {
+			background-image: linear-gradient(#{$deg1}deg, $first-color 50%, transparent 50%, transparent), linear-gradient(#{$deg2}deg, $progress-color 50%, $bg-color 50%, $bg-color);
+		}
+		$percent: $percent + 5;
+	}
 }

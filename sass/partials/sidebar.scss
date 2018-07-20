@@ -71,6 +71,10 @@
 @supports not (backdrop-filter: blur(30px)) {
 	.sidebar {
 		@include background($bg-light, 'fixed');
+
+		&:hover {
+			box-shadow: 0 5px 15px $black50a;
+		}
 	}
 
 	.sidebar-nav {
@@ -123,14 +127,9 @@
 
 // Override Ombi Icon
 
-.sidebar img {
-	&[src$='ombi.png'],
-	&[src$='ombi-plex.png'],
-	&[src$='ombi-emby.png'] {
-		background: $ombi;
-		height: 30px;
-		padding-left: 30px;
-	}
+.sidebar img[src*='ombi'] {
+	height: 30px;
+	padding-left: 30px;
 }
 
 

@@ -122,6 +122,10 @@
 
 // Content/Request Modal
 
+.nowPlayingUserThumb:hover {
+	transition: none;
+}
+
 .resultBox-outside {
 	background: $black16;
 	box-shadow: 0 5px 15px $black50a;
@@ -209,6 +213,42 @@
 		.white-box:not(.resultBox-outside) {
 			box-shadow: 0 5px 15px rgba($black, 0.5);
 		}
+
+		.panel-body {
+			overflow: hidden;
+		}
+	}
+
+	.el-card-content.bg-org {
+		text-align: left;
+
+		h3 {
+			text-transform: none;
+			padding: 3px 0 0;
+		}
+
+		small {
+			position: relative;
+			top: -5px;
+		}
+	}
+}
+
+.mediaSearch-div {
+	.el-card-content.bg-org {
+		cursor: pointer;
+
+		&:hover {
+			h3 {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+#request-results {
+	.el-card-content.bg-org {
+		cursor: default;
 	}
 }
 
@@ -252,9 +292,11 @@ div[data-src$='no-np.png'] {
 	}
 }
 
+
+// Circular progress indicators
+
 .css-bar {
 	&:after {
-		background: transparent;
 		color: $text;
 		opacity: 1;
 	}
@@ -276,27 +318,21 @@ div[data-src$='no-np.png'] {
 	margin: 5px 0 0 5px;
 }
 
+
+// Rotten Tomatoes rating indicator
+
 img[src$='rotten.png'] {
-	background: $dark-gray $rotten-tomatoes 5px 5px/30px no-repeat;
+	background: $dark-gray $rotten-tomatoes 5px 4px/30px no-repeat;
 	opacity: 1 !important;
 	padding: 0 0 0 40px;
 }
 
 .css-bar-info {
-	$percent: 0;
-	@while $percent <= 100 {
-		$deg1: if($percent < 50, 90, 270 + (360 / 20) * ($percent - 50) / 5);
-		$deg2: if($percent < 50, 90 + (360 / 20) * $percent / 5, 270);
-		$first-color: if($percent < 50, $light-gray, $theme);
-		&.css-bar-#{$percent} {
-			background-image: linear-gradient(#{$deg1}deg, $first-color 50%, transparent 50%, transparent), linear-gradient(#{$deg2}deg, $theme 50%, $light-gray 50%, $light-gray);
-		}
-		$percent: $percent + 5;
-	}
-}
+	@include css-bar($theme, $dark-gray);
 
-.nowPlayingUserThumb:hover {
-	transition: none;
+	&:after {
+		background: transparent;
+	}
 }
 
 .customPoster {
@@ -307,7 +343,6 @@ img[src$='rotten.png'] {
 		font-size: 32px;
 		font-weight: 600;
 		text-shadow: none !important;
-		text-transform: none;
 		transform: none !important;
 	}
 }
@@ -356,4 +391,33 @@ h2.m-b-0.font-medium.pull-right {
 	border-top: 1px solid #222;
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
+}
+
+
+// Speed Test
+
+#speedtest-area {
+	.ti-download {
+		color: $green;
+	}
+
+	.ti-upload {
+		color: $theme;
+	}
+}
+
+.css-bar-default {
+	@include css-bar($green, $dark-gray);
+
+	&:after {
+		background: $dark-gray;
+	}
+}
+
+.css-bar-warning {
+	@include css-bar($theme, $dark-gray);
+
+	&:after {
+		background: $dark-gray;
+	}
 }

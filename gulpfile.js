@@ -14,13 +14,13 @@ const gulp = require('gulp'),
     // Add browser prefixes
     autoPrefixer = require('gulp-autoprefixer'),
     // Project information
-    packageJSON = require('./package.json'),
-    repository = packageJSON.repository,
+    packageDetails = require('./package.json'),
+    repository = packageDetails.repository,
 
     // BrowserSync
     browserSync = require('browser-sync').create(),
     browserSyncConfig = {
-        proxy: packageJSON.homepage,
+        proxy: packageDetails.homepage,
         files: 'css/Plex.css',
         serveStatic: ['css'],
         snippetOptions: {
@@ -72,8 +72,8 @@ const gulp = require('gulp'),
     // Header Comment
     headerComment = require('gulp-header-comment'),
     comment = `Plex Theme for Organizr v2
-        Version ` + packageJSON.version + `
-        ` + packageJSON.license + ` License
+        Version ` + packageDetails.version + `
+        ` + packageDetails.license + ` License
         ` + repository;
 
 
@@ -115,7 +115,7 @@ gulp.task('build-watch', gulp.series(['build', 'watch']));
 
 // Start BrowserSync server
 
-gulp.task('serve', () => !packageJSON.homepage
+gulp.task('serve', () => !packageDetails.homepage
     ? browserSyncError
     : browserSync.init(browserSyncConfig)
 );

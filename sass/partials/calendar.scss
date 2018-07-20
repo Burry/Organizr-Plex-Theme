@@ -1,15 +1,27 @@
 // Calendar
 
+#calendar {
+	margin: 0 !important
+}
+
 #homepageOrdercalendar:not(:last-of-type) {
 	#calendar {
-		margin: 0 0 50px !important;
+		margin: 0 0 30px !important;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#homepageOrdercalendar:not(:last-of-type) {
+		#calendar {
+			margin: 0 0 50px !important;
+		}
 	}
 }
 
 .fc-toolbar {
 	background: transparent !important;
 	cursor: default;
-	padding: 0 0 15px 0;
+	padding: 0 0 2.5px;
 
 	h2 {
 		@extend %header;
@@ -19,6 +31,10 @@
 }
 
 @media screen and (min-width: 768px) {
+	.fc-toolbar {
+		padding: 0 0 20px;
+	}
+
 	.fc-toolbar .fc-center {
 		position: absolute;
 		left: 50%;
@@ -36,6 +52,16 @@
 	span {
 		color: $text-muted;
 		cursor: default;
+	}
+}
+
+.fc-today-button {
+	margin: 0 5px !important;
+}
+
+@media screen and (min-width: 768px) {
+	.fc-today-button {
+		margin: 0;
 	}
 }
 

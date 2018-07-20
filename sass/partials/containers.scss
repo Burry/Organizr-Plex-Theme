@@ -67,10 +67,10 @@ body {
 // Panel
 
 .panel {
-	background: 0 0;
+	background: transparent;
 
 	&.bg-org {
-		background: 0 0 !important;
+		background: transparent !important;
 	}
 
 	.panel-heading {
@@ -96,10 +96,10 @@ body {
 }
 
 .panel-body {
-	background: 0 0;
+	background: transparent;
 
 	&.bg-org {
-		background: 0 0;
+		background: transparent;
 	}
 
 	&:first-child h3 {
@@ -114,7 +114,7 @@ body {
 	}
 
 	.panel-body {
-		background: 0 0;
+		background: transparent;
 		color: $text;
 	}
 }
@@ -153,7 +153,7 @@ body {
 // Content Containers
 
 .bg-info {
-	background: 0 0 !important;
+	background: transparent !important;
 }
 
 .bg-theme {
@@ -184,15 +184,15 @@ body {
 	border: 0;
 
 	&.bg-org {
-		background: 0 0 !important;
+		background: transparent !important;
 	}
 }
 
 .white-box {
-	background: 0 0;
+	background: transparent;
 
 	&.bg-org {
-		background: 0 0 !important;
+		background: transparent !important;
 	}
 
 	.box-title {
@@ -207,7 +207,7 @@ body {
 
 .el-card-content {
 	&.bg-org {
-		background: 0 0!important;
+		background: transparent!important;
 	}
 
 	small {
@@ -260,8 +260,10 @@ body {
 		    background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
 		}
 
-		.el-overlay-1 img {
-			transition: none;
+		.el-overlay-1 {
+			img {
+				transition: none;
+			}
 		}
 	}
 }
@@ -274,4 +276,42 @@ body {
 
 .lazyload:not(.homepageImageTitle) {
 	background-color: $black45a;
+}
+
+.recent-poster {
+	margin-bottom: 50px;
+}
+
+.recent-title {
+	background: transparent;
+	color: $white45a;
+	display: block;
+	padding: 5px 0 0;
+    font-size: 11px;
+	font-weight: 600;
+	line-height: 20px;
+	transform: translateY(100%);
+
+	&::first-line {
+		color: $white;
+		font-size: 115%;
+	}
+
+	small {
+		font-size: 100% !important;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.recent-title {
+		padding: 10px 0 0;
+	}
+}
+
+
+// Override Ombi Icon
+
+img[src*='ombi'],
+div[data-src*='ombi'] {
+	background-image: $ombi !important;
 }

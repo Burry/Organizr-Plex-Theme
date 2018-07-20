@@ -26,6 +26,10 @@
 		width: 80px !important;
 		margin: 0 auto 17px;
 	    transform: translateX(3px);
+
+		&[src*='ombi'] {
+			padding: 80px 0 0;
+		}
 	}
 
 	div[id^='menu-'] {

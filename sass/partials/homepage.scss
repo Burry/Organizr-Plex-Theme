@@ -1,6 +1,8 @@
 // Homepage
 
 #homepage-items {
+	padding: 25px;
+
 	.dropdown-toggle {
 		border-top-left-radius: 4px !important;
 		border-bottom-left-radius: 4px !important;
@@ -10,7 +12,7 @@
 		margin-top: 4px;
 
 		.btn {
-			background: 0 0 !important;
+			background: transparent !important;
 			color: $white70a !important;
 			padding: 6px 12px;
 			margin: 0 12.5px;
@@ -46,29 +48,29 @@
 	}
 
 	.flexbox {
-		margin-bottom: 50px;
+		margin: 0 0 30px;
 	}
 
 	.white-box {
 		margin: 0;
 
 		&.bg-info {
-			padding: 0 0 20px 0 !important;
+			padding: 0 0 5px 0 !important;
 		}
 
 		&.p-0 {
 			padding: 0 !important;
-			margin: 0 0 50px !important;
+			margin: 0 0 25px !important;
 		}
 	}
 
 	.panel {
 		padding: 0;
-		margin-bottom: 46px;
+		margin: 0 0 48px;
 	}
 
 	.panel-heading {
-		padding: 0 0 16px 0 !important;
+		padding: 0 0 10px !important;
 	}
 
 	h4.pull-left,
@@ -86,6 +88,44 @@
 
 	.dropdown-toggle {
 		padding: 6px 4px !important;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#homepage-items .pull-left {
+		font-size: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#homepage-items {
+		padding: 35px 60px;
+
+		.flexbox {
+			margin: 0 0 50px;
+		}
+
+		.panel {
+			margin: 0 0 73px;
+		}
+
+		.panel-heading {
+			padding: 0 0 20px !important;
+		}
+
+		.white-box {
+			&.bg-info {
+				padding: 0 0 15px !important;
+			}
+
+			&.p-0 {
+				margin: 0 0 45px !important;
+			}
+		}
+
+		.owl-item {
+			margin-right: 30px !important;
+		}
 	}
 }
 
@@ -179,8 +219,9 @@
 	.metadata-get,
 	.openTab,
 	.refreshImage {
-		transform: translateY(100%);
+		padding: 10px !important;
 		opacity: 0;
+		transform: translateY(100%);
 		transition: all 0.2s;
 	}
 }
@@ -190,21 +231,36 @@
 	.metadata-get,
 	.openTab,
 	.refreshImage {
-		transform: none;
 		opacity: 1;
+		transform: none;
 	}
 }
 
 
 // Content Thumbnails
 
-.owl-stage {
-	width: 9999999px !important;
-	padding: 4px;
+#ombi-requests .panel {
+	margin: 0 0 20px;
 }
 
-.owl-item {
-	padding: 2px;
+@media screen and (min-width: 768px) {
+	#ombi-requests .panel {
+		margin: 0 0 45px;
+	}
+}
+
+.owl-stage-outer {
+    overflow: visible !important;
+}
+
+.owl-stage {
+	width: 9999999px !important;
+}
+
+@media screen and (min-width: 768px) {
+	#homepage-items .owl-item {
+		margin-right: 30px !important;
+	}
 }
 
 .hover-homepage-item:hover {
@@ -222,54 +278,35 @@
 }
 
 .item:hover {
-	.outside-request-div {
+	.inside-over-request-div {
 		opacity: 0;
-		transform: translateY(-20px);
+		top: -60px;
+	}
+
+	.inside-request-div {
+		opacity: 0;
+		top: -46px;
 	}
 }
 
-.recent-title {
-	@extend %background-blur;
-	background: $black30a!important;
-	display: block;
-	padding: 5px;
-    font-size: 85%;
-	opacity: 0;
-	pointer-events: none;
-	transform: translateY(100%);
-	transition: all 0.2s;
+#homepage-items .recent-title {
+	transition: 0.2s color;
 
-	&::first-line {
-		font-size: 115%;
-		font-weight: 700;
-	}
-
-	small {
-		font-size: 100% !important;
-	}
-}
-
-.item {
-	overflow: hidden;
-
-	&:hover .recent-title {
-		opacity: 1;
-		transform: none;
+	&:hover {
+		&::first-line {
+			color: $white;
+			text-decoration: underline;
+		}
 	}
 }
 
 
 // Override Ombi Icon
 
-img {
-	&[src$='ombi.png'],
-	&[src$='ombi-plex.png'],
-	&[src$='ombi-emby.png'] {
-		&.homepageImageTitle {
-			background: $ombi;
-			width: 40px;
-			padding-left: 40px;
-		}
+img[src*='ombi'] {
+	&.homepageImageTitle {
+		width: 40px;
+		padding-left: 40px;
 	}
 }
 
@@ -349,7 +386,7 @@ td span.label.label-info {
 }
 
 .progress-lg {
-	margin-left: -2px;
+	margin-left: -4px;
 	width: calc(100% + 4px);
 }
 
@@ -361,18 +398,33 @@ td span.label.label-info {
 	background: $white08a;
 }
 
+.max-texts {
+	max-width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 768px) {
+	max-width: none;
+}
+
 tbody {
 	&[class$='queue'],
 	&[class$='history'] {
+		td.text-right {
+			max-width: 65px;
+		}
+
 		.progress,
 		.progress-bar {
 			border-radius: 1000px;
-			max-width: 80px;
 			height: 16px !important;
 		}
 
 		.progress {
 			min-width: 72px;
+			max-width: 80px;
+			float: right;
 		}
 
 		.progress-bar {
@@ -404,14 +456,14 @@ tbody {
 
 .fc-next-button,
 .fc-prev-button {
-	background: 0 0 !important;
+	background: transparent !important;
 	color: $white70a !important;
 	border: 0 !important;
 
 	&.focus,
 	&:focus,
 	&:hover {
-		background: 0 0 !important;
+		background: transparent !important;
 		color: $white !important;
 	}
 }

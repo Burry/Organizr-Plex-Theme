@@ -30,13 +30,13 @@
 		}
 
 		&.disabled > a {
-			background: 0 0;
+			background: transparent;
 			color: $text-muted;
 			border: 0;
 
 			&:focus,
 			&:hover {
-				background: 0 0;
+				background: transparent;
 				color: $text-muted !important;
 				border: 0;
 				cursor: default;
@@ -72,11 +72,11 @@
 			}
 
 			&.disabled {
-				background: 0 0 !important;
+				background: transparent !important;
 				color: $text-muted !important;
 
 				&:hover {
-					background: 0 0 !important;
+					background: transparent !important;
 					color: $text-muted !important;
 				}
 			}

@@ -312,6 +312,12 @@ div[data-src$='no-np.png'] {
 	}
 }
 
+.css-bar-lg {
+	&:after {
+		background: $dark-gray !important;
+	}
+}
+
 .css-bar-lg img {
 	width: 90px;
     height: 90px;

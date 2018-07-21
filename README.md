@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="banner.png" width="370px" alt="Plex Theme for Organizr v2" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/banner.png" width="370px" alt="Plex Theme for Organizr v2" />
 </h1>
 
 <p align="center">
@@ -12,9 +12,13 @@
     <a href="https://beerpay.io/Burry/organizr-v2-plex-theme" target="_blank" title="Beerpay">
         <img src="https://beerpay.io/Burry/organizr-v2-plex-theme/badge.svg?style=flat" alt="Beerpay" />
     </a>
+    <br />
+    <br />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/1.png" alt="Screen Shot 1" width="41.55%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/2.png" alt="Screen Shot 2" width="41.55%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/3.png" alt="Screen Shot 3" width="41.55%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/4.png" alt="Screen Shot 4" width="41.55%" />
 </p>
-
-![Screen Shot](screenshot.png "Screen Shot")
 
 
 ## Usage

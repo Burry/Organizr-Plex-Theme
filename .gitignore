@@ -57,6 +57,3 @@ yarn-error.log
 
 # Personal modifications
 /sass/partials/grant-custom.scss
-
-# Until converting to Organizr theme plugin format
-/screenshots

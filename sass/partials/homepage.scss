@@ -240,12 +240,12 @@
 // Content Thumbnails
 
 #ombi-requests .panel {
-	margin: 0 0 15px;
+	margin: 0 0 19px;
 }
 
 @media screen and (min-width: 768px) {
 	#ombi-requests .panel {
-		margin: 0 0 40px;
+		margin: 0 0 44px;
 	}
 }
 
@@ -437,85 +437,5 @@ tbody {
 			font-size: 75% !important;
 			line-height: 16px !important;
 		}
-	}
-}
-
-
-// Calendar Buttons
-
-.fc-button {
-	background: $black15a !important;
-	color: $text-muted;
-	border-color: transparent;
-	border-radius: 0 !important;
-	border: 0 !important;
-	text-transform: uppercase;
-
-	&:focus,
-	&:hover {
-		background: $white08a !important;
-		color: $text;
-		border-color: transparent;
-		opacity: 1;
-	}
-}
-
-.fc-next-button,
-.fc-prev-button {
-	background: transparent !important;
-	color: $white70a !important;
-	border: 0 !important;
-
-	&.focus,
-	&:focus,
-	&:hover {
-		background: transparent !important;
-		color: $white !important;
-	}
-}
-
-.fc-state-default {
-	text-shadow: none;
-	box-shadow: none;
-
-	&.fc-corner-left {
-		border-right-width: 0;
-		border-radius: 4px 0 0 4px;
-	}
-
-	&.fc-corner-right {
-		border-left-width: 0;
-		border-radius: 0 4px 4px 0;
-	}
-}
-
-.fc-state-active,
-.fc-state-active:focus,
-.fc-state-active:hover {
-	background: $white08a !important;
-	color: $theme-lighter;
-	border-color: transparent;
-}
-
-.fc-state-hover {
-	opacity: 1;
-}
-
-.fc-today-button {
-	border-radius: 4px !important;
-	font-weight: 700;
-	transition: all 0.1s;
-
-	background: $white25a !important;
-	color: $white;
-
-	&:focus,
-	&:hover {
-		background: $white30a !important;
-		color: $white;
-	}
-
-	&:active {
-		background: $white20a !important;
 	}
 }

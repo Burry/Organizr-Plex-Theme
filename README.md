@@ -14,10 +14,10 @@
     </a>
     <br />
     <br />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/1.png" alt="Screen Shot 1" width="41.55%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/2.png" alt="Screen Shot 2" width="41.55%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/3.png" alt="Screen Shot 3" width="41.55%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/4.png" alt="Screen Shot 4" width="41.55%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/1.png" alt="Screen Shot 1" width="49.75%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/2.png" alt="Screen Shot 2" width="49.75%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/3.png" alt="Screen Shot 3" width="49.75%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/4.png" alt="Screen Shot 4" width="49.75%" />
 </p>
 
 
@@ -29,6 +29,14 @@
     1. *(Recommended)* Use tronyx's custom Organizr v2 Docker image [`tronyx/docker-organizr-v2:plex`](https://hub.docker.com/r/tronyx/docker-organizr-v2/tags) with the fix pre-applied.
     2. Open Organizr's `/js/custom.min.js`, search for the string `h=40`, and change it to `h=60`. Note that this change will be overwritten whenever Organizr pulls a new update.
 
+### Group Icons
+
+Some group icons are provided for your use in [`/images/groups`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images/groups) to be copied to Organizr's `/plugins/images/groups`.
+
+### *Related:* Open Plex App on iOS
+
+Using Organizr's Settings > Customize > Appearance > Custom JavaScript and [this script](https://gist.github.com/Burry/7f6c2caa9cf645ca511ffefd697b3126), you can redirect all links to Plex while browsing on iOS to the Plex app, complete with functional deep-linking. I cannot find the equivalent scheme to open Plex on Android if it exists.
+
 ### Don't Change These
 
 #### Notifications
@@ -39,15 +47,6 @@ To ensure that notifications display as intended, keep the default notification 
 
 Changing the placeholder color values in Organizr Settings > Customize > Appearance > Colors & Themes will override Plex Theme's color styles. Deleting custom color values will reverse this.
 
-## Related Plex Tweaks for Organizr
-
-### Open Plex App on iOS
-
-Using Organizr's Settings > Customize > Appearance > Custom JavaScript and [this script](https://gist.github.com/Burry/7f6c2caa9cf645ca511ffefd697b3126), you can redirect all links to Plex while browsing on iOS to the Plex app, complete with functional deep-linking. I cannot find the equivalent scheme to open Plex on Android if it exists.
-
-### Group Icons
-
-Some group icons are provided for your use in [`/images/groups`](https://github.com/Burry/organizr-v2-plex-theme/tree/master/images/groups) to be copied to Organizr's `/plugins/images/groups`.
 
 ## Development
 

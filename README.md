@@ -14,10 +14,10 @@
     </a>
     <br />
     <br />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/1.png" alt="Screen Shot 1" width="49.75%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/2.png" alt="Screen Shot 2" width="49.75%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/3.png" alt="Screen Shot 3" width="49.75%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/4.png" alt="Screen Shot 4" width="49.75%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/1.png" alt="Screen Shot 1" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/2.png" alt="Screen Shot 2" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/3.png" alt="Screen Shot 3" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-v2-plex-theme/master/screenshots/4.png" alt="Screen Shot 4" width="49.15%" />
 </p>
 
 

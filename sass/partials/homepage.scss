@@ -261,12 +261,12 @@
 
 .owl-stage {
 	width: 9999999px !important;
-	height: 256px
 }
 
 @media screen and (min-width: 768px) {
 	#homepage-items .owl-item {
 		margin-right: 30px !important;
+		margin-bottom: 30px;
 	}
 }
 

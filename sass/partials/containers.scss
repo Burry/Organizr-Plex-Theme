@@ -152,10 +152,6 @@ body {
 
 // Content Containers
 
-.bg-info {
-	background: transparent !important;
-}
-
 .bg-theme {
 	background: $black30a!important;
 }
@@ -280,6 +276,7 @@ body {
 
 .recent-poster {
 	margin-bottom: 50px;
+	margin-top: 2px;
 }
 
 .recent-title {

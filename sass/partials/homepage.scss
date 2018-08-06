@@ -48,7 +48,7 @@
 	}
 
 	.flexbox {
-		margin: 0 0 30px;
+		margin: 0 0 0px;
 	}
 
 	.white-box {
@@ -66,11 +66,12 @@
 
 	.panel {
 		padding: 0;
-		margin: 0 0 48px;
+		margin: 0 0 20px!important;
 	}
 
 	.panel-heading {
 		padding: 0 0 10px !important;
+		background: transparent !important;
 	}
 
 	h4.pull-left,
@@ -102,15 +103,16 @@
 		padding: 35px 60px;
 
 		.flexbox {
-			margin: 0 0 50px;
+			margin: 0 0 0px;
 		}
 
 		.panel {
-			margin: 0 0 73px;
+			margin: 0 0 48px;
 		}
 
 		.panel-heading {
 			padding: 0 0 20px !important;
+			background: transparent !important;
 		}
 
 		.white-box {
@@ -124,13 +126,16 @@
 		}
 
 		.owl-item {
-			margin-right: 30px !important;
+			margin-right: 28px !important;
+			margin-top: 2px;
+			margin-left: 2px;
+			margin-bottom: 2px;
 		}
 	}
 }
 
 .homepageImageTitle {
-	margin-top: 0;
+	margin-top: 0px;
 }
 
 
@@ -155,7 +160,6 @@
 
 	&.default {
 		padding: 0 5px !important;
-		position: absolute;
 		top: -49px;
 		right: 0;
 	}
@@ -196,7 +200,7 @@
 }
 
 .nowPlayingItem {
-	margin: 0 0 30px;
+	margin: 0 0 30px!important;
 
 	&:first-child:nth-last-child(3),
 	+ .white-popup + .white-popup + .nowPlayingItem {
@@ -250,11 +254,14 @@
 }
 
 .owl-stage-outer {
-    overflow: visible !important;
+    overflow: hidden !important;
+    padding-left: 2px;
+    padding-bottom: 1px;
 }
 
 .owl-stage {
 	width: 9999999px !important;
+	height: 256px
 }
 
 @media screen and (min-width: 768px) {
@@ -264,14 +271,10 @@
 }
 
 .hover-homepage-item {
-	pointer-events: none;
 	transition: all 0.2s;
 }
 
-.badge,
-.inside-request-div {
-	background: $theme !important;
-}
+.badge
 
 .outside-request-div {
 	transition: all 0.2s;

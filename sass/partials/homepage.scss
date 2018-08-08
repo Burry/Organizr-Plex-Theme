@@ -129,7 +129,7 @@
 			margin-right: 28px !important;
 			margin-top: 2px;
 			margin-left: 2px;
-			margin-bottom: 2px;
+			margin-bottom: 28px;
 		}
 	}
 }
@@ -263,9 +263,13 @@
 	width: 9999999px !important;
 }
 
+.recent-items .owl-item {
+	margin-bottom: 27px;
+}
+
 @media screen and (min-width: 768px) {
 	#homepage-items .owl-item {
-		margin-right: 30px !important;
+		margin-right: 28px !important;
 		margin-bottom: 30px;
 	}
 }

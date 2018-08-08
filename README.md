@@ -35,17 +35,17 @@ Some group icons are provided for your use in [`/images/groups`](https://github.
 
 ### *Related:* Open Plex App on iOS
 
-Using Organizr's Settings > Customize > Appearance > Custom JavaScript and [this script](https://gist.github.com/Burry/7f6c2caa9cf645ca511ffefd697b3126), you can redirect all links to Plex while browsing on iOS to the Plex app, complete with functional deep-linking. I cannot find the equivalent scheme to open Plex on Android if it exists.
+Using *Organizr's Settings > Customize > Appearance > Custom JavaScript* and [this script](https://gist.github.com/Burry/7f6c2caa9cf645ca511ffefd697b3126), you can redirect all links to Plex while browsing on iOS to the Plex app, complete with functional deep-linking. I cannot find the equivalent scheme to open Plex on Android if it exists.
 
 ### Don't Change These
 
 #### Notifications
 
-To ensure that notifications display as intended, keep the default notification style setting "Izi" under Organizr Settings > Customize > Appearance > Notifications.
+To ensure that notifications display as intended, keep the default notification style setting "Izi" under *Organizr Settings > Customize > Appearance > Notifications*.
 
 #### Custom Colors
 
-Changing the placeholder color values in Organizr Settings > Customize > Appearance > Colors & Themes will override Plex Theme's color styles. Deleting custom color values will reverse this.
+Changing the placeholder color values in *Organizr Settings > Customize > Appearance > Colors & Themes* will override Plex Theme's color styles. Deleting custom color values will reverse this.
 
 
 ## Development

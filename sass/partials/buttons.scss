@@ -6,7 +6,7 @@
 	@extend %button-basic;
 
 	&:not(.dropdown-toggle) {
-		padding: 8px 0px;
+		padding: 6px 12px;
 		margin-right: 1px;
 		margin-left: 1px;
 	}

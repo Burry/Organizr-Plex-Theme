@@ -3,7 +3,7 @@
 a {
 	color: $theme;
 	text-decoration: none;
-	transition: color 0.2s;
+	transition: color 0.2s ease;
 	-webkit-tap-highlight-color: transparent;
 
 	&:hover,

@@ -12,7 +12,7 @@ body {
 	font: 600 13px $font-stack;
 	width: 100%;
 	height: 100%;
-	transition: background-image 0.2s;
+	transition: background-image 0.2s ease;
 
 	&[data-active-tab=""] {
 		position: absolute;
@@ -109,6 +109,7 @@ body {
 
 .panel-default {
 	.panel-heading {
+		background: $black15a;
 		border-color: transparent;
 		color: $white70a;
 	}
@@ -151,6 +152,10 @@ body {
 
 
 // Content Containers
+
+.bg-info {
+	background: transparent !important;
+}
 
 .bg-theme {
 	background: $black30a!important;
@@ -196,6 +201,10 @@ body {
 		font-size: 14px;
 		font-weight: 600;
 	}
+}
+
+blockquote {
+	border-left-color: $theme !important;
 }
 
 
@@ -252,7 +261,7 @@ body {
 
 	.el-card-item {
 		.el-overlay {
-			transition: all 0.2s;
+			transition: all 0.2s ease;
 		    background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
 		}
 

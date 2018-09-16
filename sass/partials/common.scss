@@ -42,7 +42,7 @@
 %date-link {
 	color: $text-muted;
 	cursor: pointer !important;
-	transition: color 0.2s;
+	transition: color 0.2s ease;
 
 	&:focus,
 	&:hover {

@@ -8,6 +8,10 @@
 		border-bottom-left-radius: 4px !important;
 	}
 
+	.bg-info {	
+		background: $theme !important;	
+	}
+
 	.btn-group {
 		margin-top: 4px;
 
@@ -16,7 +20,7 @@
 			color: $white70a !important;
 			padding: 6px 12px;
 			margin: 0 12.5px;
-			transition: color 0.2s;
+			transition: color 0.2s ease;
 
 			&.focus,
 			&:focus,
@@ -55,6 +59,7 @@
 		margin: 0;
 
 		&.bg-info {
+			background: transparent !important;
 			padding: 0 0 5px 0 !important;
 		}
 
@@ -151,7 +156,7 @@
 .refreshImage {
 	color: $white70a;
 	opacity: 0;
-	transition: all 0.2s;
+	transition: all 0.2s ease;
 
 	&:focus,
 	&:hover {
@@ -170,9 +175,6 @@
 	opacity: 1;
 }
 
-.bg-warning {
-	background-color: #e3891c!important;
-}
 
 // Scroll-To-Top Button
 
@@ -229,7 +231,7 @@
 		padding: 10px !important;
 		opacity: 0;
 		transform: translateY(100%);
-		transition: all 0.2s;
+		transition: all 0.2s ease;
 	}
 }
 
@@ -278,16 +280,17 @@
 }
 
 .hover-homepage-item {
-	transition: all 0.2s;
+	pointer-events: none;
+	transition: all 0.2s ease;
 }
 
-.badge,	.badge
+.badge
 .inside-request-div {	
 	background: $theme !important;	
 }
 
 .outside-request-div {
-	transition: all 0.2s;
+	transition: all 0.2s ease;
 	z-index: 1;
 }
 
@@ -309,7 +312,7 @@
 }
 
 #homepage-items .recent-title {
-	transition: 0.2s color;
+	transition: 0.2s ease color;
 
 	&:hover {
 		&::first-line {
@@ -401,7 +404,7 @@ td span.label.label-info {
 	margin-bottom: 5px;
 	cursor: default;
 	user-select: none;
-	transition: height 0.2s;
+	transition: height 0.2s ease;
 }
 
 .progress-lg {

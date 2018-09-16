@@ -22,7 +22,7 @@ span.select2-selection.select2-selection--multiple,
 	border-radius: 4px;
 	vertical-align: middle;
 	background: $white25a;
-	transition: background .2s;
+	transition: background .2s ease;
 
 	&.focus,
 	&:focus {
@@ -102,7 +102,7 @@ span.select2-selection.select2-selection--multiple,
 		background: $white08a;
 		border: 0;
 		border-radius: 4px;
-		transition: all .2s ease;
+		transition: all .2s ease ease;
 	}
 
 	&::after {
@@ -137,7 +137,7 @@ input {
 .radio-purple input[type=radio] {
 	+ label::before {
 		background: $white25a;
-		transition: all 0.2s;
+		transition: all 0.2s ease;
 	}
 
 	+ label::after {

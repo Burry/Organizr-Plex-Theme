@@ -4,7 +4,7 @@
 	@extend %background-blur;
 	background: $black15a !important;
 	box-shadow: none;
-	transition: all 0.2s;
+	transition: all 0.2s ease;
 
 	.label {
 		padding: 5px 8px;
@@ -29,7 +29,7 @@
 		font-weight: 400;
 		text-transform: none;
 		padding: 2px 0 !important;
-		transition: 0.2s all;
+		transition: 0.2s ease all;
 
 		.m-r-5 {
 			margin-right: 10px !important;
@@ -50,7 +50,7 @@
 
 @media screen and (min-width: 768px) {
 	.sidebar {
-		transition: background 0.2s, width 0.1s;
+		transition: background 0.2s ease, width 0.1s;
 	}
 
 	.sidebar-head {
@@ -103,7 +103,7 @@
 		color: $white70a;
 		font-weight: 600 !important;
 	    padding: 15px 35px 15px 15px;
-		transition: .2s color ease;
+		transition: .2s ease color ease;
 
 		&:focus,
 		&:hover {

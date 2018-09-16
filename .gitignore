@@ -57,3 +57,6 @@ yarn-error.log
 
 # Personal modifications
 /sass/partials/grant-custom.scss
+
+# Organizr theme format
+plex_theme

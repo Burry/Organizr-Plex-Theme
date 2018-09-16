@@ -278,7 +278,10 @@
 	transition: all 0.2s;
 }
 
-.badge
+.badge,	.badge
+.inside-request-div {	
+	background: $theme !important;	
+}
 
 .outside-request-div {
 	transition: all 0.2s;

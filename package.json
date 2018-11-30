@@ -5,7 +5,10 @@
     "main": "css/Plex.css",
     "repository": "https://github.com/Burry/organizr-v2-plex-theme",
     "homepage": "",
-    "author": "Grant Burry <grant@burry.me>",
+    "contributors": [
+        "Grant Burry <grant@burry.me> (grantburry.com)",
+        "jigahertz (https://github.com/jigahertz)"
+    ],
     "license": "MIT",
     "private": false,
     "scripts": {

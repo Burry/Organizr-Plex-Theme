@@ -62,7 +62,11 @@
 
 // Needs to not apply to register form, so we don't group with above
 #loginform .form-group.m-t-20 {
-	margin: -10px 0 30px !important;
+	margin: -10px 0 !important;
+}
+
+#tfa-div {
+	margin: 0;
 }
 
 @media screen and (max-width: 320px) {

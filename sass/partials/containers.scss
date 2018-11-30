@@ -74,6 +74,34 @@ body {
 		background: transparent !important;
 	}
 
+	&.panel-green,
+	&.panel-success {
+		margin: 0;
+		.panel-heading {
+			color: #000;
+			text-align: center;
+			border-radius: 4px;
+		}
+	}
+
+	&.panel-warning {
+		.panel-heading {
+			padding: 0 0 15px;
+			border: 0;
+			font-size: 18px;
+			color: #FFF;
+			background: none;
+		}
+
+		.pull-right {
+			display: none;
+		}
+
+		.panel-body {
+			padding: 0;
+		}
+	}
+
 	.panel-heading {
 		font-size: 14px;
 		font-weight: 600;

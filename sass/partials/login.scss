@@ -146,7 +146,7 @@
 
 #to-recover span {
 	color: $white45a;
-	transition: color 0.2s;
+	transition: color 0.2s ease;
 
 	&:hover {
 		color: $white;

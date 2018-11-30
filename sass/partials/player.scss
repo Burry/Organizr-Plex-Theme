@@ -4,7 +4,7 @@
 	border-radius: 4px;
 	box-shadow: 0 5px 15px $black50a;
 	font-family: $font-stack;
-	transition: all 0.2s;
+	transition: all 0.2s ease;
 
    input {
 	   &[type=radio]:checked + span {
@@ -41,7 +41,7 @@
 }
 
 .plyr__controls {
-	transition: all 0.2s !important;
+	transition: all 0.2s ease !important;
 }
 
 .plyr__control {

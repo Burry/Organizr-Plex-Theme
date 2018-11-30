@@ -280,8 +280,8 @@ button.list-group-item {
 		}
 
 		&.active a {
-			background: $white08a !important;
-			color: $theme-lighter !important;
+			background: transparent !important;
+			color: #eee !important;
 			border: 0;
 			cursor: pointer;
 

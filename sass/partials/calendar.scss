@@ -188,12 +188,12 @@
 
 	&.fc-corner-left {
 		border-right-width: 0;
-		border-radius: 4px 0 0 4px;
+		border-radius: 3px 0 0 3px;
 	}
 
 	&.fc-corner-right {
 		border-left-width: 0;
-		border-radius: 0 4px 4px 0;
+		border-radius: 0 3px 3px 0;
 	}
 }
 
@@ -210,7 +210,7 @@
 }
 
 .fc-today-button {
-	border-radius: 4px !important;
+	border-radius: 3px !important;
 	font-weight: 700;
 	transition: all 0.1s;
 

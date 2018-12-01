@@ -78,9 +78,9 @@ body {
 	&.panel-success {
 		margin: 0;
 		.panel-heading {
-			color: #000;
+			color: $black;
 			text-align: center;
-			border-radius: 4px;
+			border-radius: 3px;
 		}
 	}
 
@@ -89,7 +89,7 @@ body {
 			padding: 0 0 15px;
 			border: 0;
 			font-size: 18px;
-			color: #FFF;
+			color: $white;
 			background: none;
 		}
 

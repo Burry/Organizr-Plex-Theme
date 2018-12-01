@@ -9,7 +9,8 @@
 .slideIn,
 .slideInDown,
 .slideInRight,
-.showSweetAlert[data-animation=pop] {
+.showSweetAlert[data-animation=pop],
+.hvr-wobble-bottom:hover {
 	animation-name: none;
 }
 

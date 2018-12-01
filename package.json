@@ -1,12 +1,12 @@
 {
     "name": "organizr-v2-plex-theme",
-    "version": "2.7.1",
+    "version": "2.7.2",
     "description": "A theme for Organizr v2 that emulates the style of Plex",
     "main": "css/Plex.css",
     "repository": "https://github.com/Burry/organizr-v2-plex-theme",
-    "homepage": "",
+    "homepage": "http://192.168.7.77:3113",
     "contributors": [
-        "Grant Burry <grant@burry.me> (grantburry.com)",
+        "Grant Burry <grant@burry.me> (https://grantburry.com)",
         "jigahertz (https://github.com/jigahertz)"
     ],
     "license": "MIT",

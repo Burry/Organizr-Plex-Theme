@@ -4,8 +4,8 @@
 	padding: 25px;
 
 	.dropdown-toggle {
-		border-top-left-radius: 4px !important;
-		border-bottom-left-radius: 4px !important;
+		border-top-left-radius: 3px !important;
+		border-bottom-left-radius: 3px !important;
 	}
 
 	.bg-info {	
@@ -281,7 +281,6 @@
 }
 
 .hover-homepage-item {
-	pointer-events: none;
 	transition: all 0.2s ease;
 }
 

@@ -1,6 +1,7 @@
 // Splash Screen
-
 #splashScreen {
+	overflow-y: auto;
+
 	// App Container
 	div[id^='menu-'] {
 		background-color: $dark-gray;
@@ -51,15 +52,14 @@
 		left: -20px;
 	}
 
-	// Secondary Container
+	// Main Containers
 	.flexbox {
 		margin: 0;
 
-		// Icon Grid
+		// App Grid
 		&:first-of-type {
-			width: 100%;
-			position: absolute;
-			padding: 130px 20px 75px 20px !important;
+			width: calc(100% - 40px);
+			margin: 48px auto 62px auto;
 
 			div[id^='menu']:first-of-type:before {
 				content: 'Select App';
@@ -77,9 +77,9 @@
 		&:last-of-type {
 			padding: 0 !important;
 			position: fixed;
-			bottom: 30px;
+			bottom: 20px;
 			left: 50%;
-			transform: translateX(-50%);
+			transform: translateX(calc(-50% - 10px));
 
 			.bg-danger {
 				@include button($white25a, $white30a, $white20a, $white);
@@ -102,11 +102,11 @@
 	}
 }
 
-// Main Container
-@media screen and (min-width: 992px) {
+// App Grid on medium-sized devices (tablets, 768px and up)
+@media (min-width: 768px) {
 	#splashScreen .flexbox:first-of-type {
-		width: 75%;
-		left: 15%;
+		width: 600px !important;
+		margin-top: 108px !important;
 	}
 }
 

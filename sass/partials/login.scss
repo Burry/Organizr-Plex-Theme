@@ -61,8 +61,16 @@
 }
 
 // Needs to not apply to register form, so we don't group with above
-#loginform .form-group.m-t-20 {
-	margin: -10px 0 !important;
+#loginform {
+	.form-group {
+		.btn {
+			margin: -10px 0 30px !important;
+		}
+	}
+	
+	.m-t-10 {
+		margin-top: -20px !important;
+	}
 }
 
 #tfa-div {

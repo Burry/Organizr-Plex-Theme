@@ -5,10 +5,15 @@
 .btn {
 	@extend %button-basic;
 
+	&:hover {
+		background: rgba(56, 56, 56, 0.4)!important;
+	}
+
 	&:not(.dropdown-toggle) {
 		padding: 6px 12px;
 		margin-right: 1px;
 		margin-left: 1px;
+		background: transparent;
 	}
 
 	&.active,
@@ -36,6 +41,11 @@
 	}
 }
 
+.btn-circle {
+	width: 40px;
+	background: rgba(26, 26, 26, 0.4)!important;
+	padding: 0px 0px 2px!important;
+}
 
 // Info Button (Main Button)
 
@@ -145,7 +155,7 @@ div[id^='request']:not(#request-input-div) .dropdown-toggle {
 .bg-emby,
 .bg-plex {
 	color: $white70a !important;
-	padding: 15.5px 16px !important;
+	//padding: 15.5px 16px !important;
 
 	&:focus,
 	&:hover {

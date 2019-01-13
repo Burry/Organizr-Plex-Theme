@@ -5,8 +5,8 @@
 	.panel-heading {
 		background: $black20 !important;
 	    box-shadow: 0 5px 15px rgba($black, 0.5);
-		border-top-left-radius: 4px;
-		border-top-right-radius: 4px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
 	}
 
 	.panel-footer {
@@ -37,12 +37,12 @@
 	> .col-md-6 > .white-box:nth-child(2),
 	&:not(#speedtest-area) .panel-body,
 	.panel-footer {
-		border-bottom-left-radius: 4px;
-		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
 	}
 
 	.panel {
-		border-radius: 4px;
+		border-radius: 3px;
 
 		> .table-responsive {
 			background: $black20;
@@ -56,7 +56,7 @@
 
 .white-popup-block {
 	background: $black16;
-	border-radius: 4px!important;
+	border-radius: 3px!important;
 
 	h1 {
 		color: $text;
@@ -90,7 +90,7 @@
 
 .sweet-alert {
 	background: $black16;
-	border-radius: 4px;
+	border-radius: 3px;
 	box-shadow: 0 5px 15px rgba($black, 0.5);
 	padding: 30px;
 
@@ -129,7 +129,7 @@
 .resultBox-outside {
 	background: $black16;
 	box-shadow: 0 5px 15px $black50a;
-	border-radius: 4px;
+	border-radius: 3px;
 	padding-bottom: 10px;
 }
 
@@ -148,7 +148,7 @@
 		top: 0;
 		left: 0;
 		cursor: pointer;
-		transition: all 0.2s;
+		transition: all 0.2s ease;
 	}
 
 	&:hover {
@@ -181,11 +181,11 @@
 }
 
 .ajaxloader {
-	border-radius: 4px;
+	border-radius: 3px;
 	margin: 0 15px;
 	width: calc(100% - 30px);
 	left: 0;
-	transition: all 0.2s;
+	transition: all 0.2s ease;
 
 	.circular {
 		position: absolute;
@@ -256,8 +256,8 @@
 
 .user-bg {
 	@extend %background-blur;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 
 // Custom error images
@@ -379,8 +379,8 @@ h2.m-b-0.font-medium.pull-right {
 
 .mce-window {
 	background: transparent;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 
 .mce-panel {
@@ -396,8 +396,8 @@ h2.m-b-0.font-medium.pull-right {
 .mce-foot {
 	background: $black20 !important;
 	border-top: 1px solid #222;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 
 

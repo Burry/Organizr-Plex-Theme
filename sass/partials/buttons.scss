@@ -189,7 +189,7 @@ div[id^='request']:not(#request-input-div) .dropdown-toggle {
 .mce-menubar .mce-menubtn {
 	background: transparent !important;
 	border: 0 !important;
-	border-radius: 4px;
+	border-radius: 3px;
 	text-shadow: none !important;
 
 	button {
@@ -227,16 +227,16 @@ div[id^='request']:not(#request-input-div) .dropdown-toggle {
 
 		&:first-child:not(:last-child) {
 			border-right-width: 0 !important;
-			border-radius: 4px 0 0 4px !important;
+			border-radius: 3px 0 0 3px !important;
 		}
 
 		&:last-child:not(:first-child) {
 			border-left-width: 0 !important;
-			border-radius: 0 4px 4px 0 !important;
+			border-radius: 0 3px 3px 0 !important;
 		}
 
 		&.btn-outline.dropdown-toggle {
-			border-radius: 4px !important;
+			border-radius: 3px !important;
 		}
 	}
 

@@ -3,8 +3,8 @@
 // Extensions
 
 %button-basic {
-	border-radius: 4px;
-	font-size: 15px;
+	border-radius: 3px;
+	font-size: 16px;
 	font-weight: 700;
 	text-transform: uppercase;
 	transition: background 0.1s;
@@ -42,7 +42,7 @@
 %date-link {
 	color: $text-muted;
 	cursor: pointer !important;
-	transition: color 0.2s;
+	transition: color 0.2s ease;
 
 	&:focus,
 	&:hover {

@@ -2,21 +2,21 @@
 
 // Colors
 
-$theme: #CC7B19            !default;
-$theme-light: #E3891C      !default;
-$theme-lighter: #F9BE03    !default;
-$theme-dark: #955A12       !default;
-$red: #E62F2F;
-$green: #35E656;
-$light-gray: #3F4245;
-$dark-gray: #18191B;
+$theme: #cc7b19 !default;
+$theme-light: #e3891c !default;
+$theme-lighter: #f9be03 !default;
+$theme-dark: #955a12 !default;
+$red: #e62f2f;
+$green: #35e656;
+$light-gray: #3f4245;
+$dark-gray: #18191b;
 
-$white: #FFF;
+$white: #fff;
 $black: #000;
-$text: #EEE;
+$text: #eee;
 $text-muted: #999;
 $menu-header: #777;
-$menu-link: #BBB;
+$menu-link: #bbb;
 $divider: hsla(0, 0%, 78%, 0.15);
 
 $white70a: rgba($white, 0.7);
@@ -38,7 +38,6 @@ $black20: hsl(0, 0%, 20%);
 $black16: hsl(0, 0%, 16%);
 $black12: hsl(0, 0%, 12%);
 
-
 // URLs
 
 $bg-light: url('https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/images/background/blur-light.png');
@@ -50,9 +49,12 @@ $ombi: url('images/tabs/ombi.svg');
 $rotten-tomatoes: url('images/rotten.svg');
 $times: url('images/times.svg');
 
-
 // Font Stacks
 
-$system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$monospace-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, "Source Code Pro", "Droid Sans Mono", "Liberation Mono", "Fira Mono", "Courier New", monospace;
+$system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+$monospace-font-stack: SFMono-Regular, Menlo, Monaco, Consolas,
+    'Source Code Pro', 'Droid Sans Mono', 'Liberation Mono', 'Fira Mono',
+    'Courier New', monospace;
 $font-stack: 'Open Sans', $system-font-stack !default;

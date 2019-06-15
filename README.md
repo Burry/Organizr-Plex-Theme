@@ -14,15 +14,15 @@
     </a>
     <br />
     <br />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/screenshots/1.png" alt="Screen Shot 1" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/screenshots/2.png" alt="Screen Shot 2" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/screenshots/3.png" alt="Screen Shot 3" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/screenshots/4.png" alt="Screen Shot 4" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/screenshots/1.png" alt="Screen Shot 1" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/screenshots/2.png" alt="Screen Shot 2" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/screenshots/3.png" alt="Screen Shot 3" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/screenshots/4.png" alt="Screen Shot 4" width="49.15%" />
 </p>
 
 ## ✅ Usage
 
-1. Setup a PHP 7 server with [Organizr v2](https://github.com/causefx/Organizr/tree/v2-develop).
+1. Setup a PHP 7 server with [Organizr v2](https://github.com/causefx/Organizr).
 2. Open _Organizr Settings > Customize > Marketplace_ and install Plex Theme.
 3. Open _Organizr Settings > Customize > Appearance > Colors & Themes_, select "Plex" from the theme dropdown, and keep the style set to "Dark."
 

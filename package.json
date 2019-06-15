@@ -45,7 +45,7 @@
             ]
         }
     },
-    "devDependencies": {
+    "dependencies": {
         "autoprefixer": "^9.6.0",
         "browser-sync": "^2.26.7",
         "dotenv": "^8.0.0",

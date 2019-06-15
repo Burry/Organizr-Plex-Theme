@@ -52,6 +52,9 @@ $RECYCLE.BIN/
 # Plex Theme
 # =========================
 
+# Compiled output
+build
+
 # Logs
 *.log
 

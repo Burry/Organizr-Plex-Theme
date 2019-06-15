@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/banner.png" width="370px" alt="Plex Theme for Organizr" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/v3/doc/banner.png" width="370px" alt="Plex Theme for Organizr" />
 </h1>
 
 <p align="center">
@@ -14,10 +14,10 @@
     </a>
     <br />
     <br />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/screenshots/1.png" alt="Screen Shot 1" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/screenshots/2.png" alt="Screen Shot 2" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/screenshots/3.png" alt="Screen Shot 3" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/master/doc/screenshots/4.png" alt="Screen Shot 4" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/v3/doc/screenshots/1.png" alt="Screen Shot 1" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/v3/doc/screenshots/2.png" alt="Screen Shot 2" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/v3/doc/screenshots/3.png" alt="Screen Shot 3" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/organizr-plex-theme/v3/doc/screenshots/4.png" alt="Screen Shot 4" width="49.15%" />
 </p>
 
 ## ✅ Usage

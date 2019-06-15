@@ -1,106 +1,106 @@
 // Pagination Buttons
 
 .pagination {
-	> li {
-		> a {
-			background: $black15a;
-			color: $white70a;
-			border: 0;
-			border-radius: 0;
+    > li {
+        > a {
+            background: $black15a;
+            color: $white70a;
+            border: 0;
+            border-radius: 0;
 
-			&:focus,
-			&:hover {
-				background: $white08a;
-				color: $text;
-				border: 0;
-			}
-		}
+            &:focus,
+            &:hover {
+                background: $white08a;
+                color: $text;
+                border: 0;
+            }
+        }
 
-		&.active > a {
-			background: $white08a;
-			color: $theme-lighter;
-			border: 0;
+        &.active > a {
+            background: $white08a;
+            color: $theme-lighter;
+            border: 0;
 
-			&:focus,
-			&:hover {
-				background: $white08a;
-				color: $theme-lighter;
-				border: 0;
-			}
-		}
+            &:focus,
+            &:hover {
+                background: $white08a;
+                color: $theme-lighter;
+                border: 0;
+            }
+        }
 
-		&.disabled > a {
-			background: transparent;
-			color: $text-muted;
-			border: 0;
+        &.disabled > a {
+            background: transparent;
+            color: $text-muted;
+            border: 0;
 
-			&:focus,
-			&:hover {
-				background: transparent;
-				color: $text-muted !important;
-				border: 0;
-				cursor: default;
-			}
-		}
-	}
+            &:focus,
+            &:hover {
+                background: transparent;
+                color: $text-muted !important;
+                border: 0;
+                cursor: default;
+            }
+        }
+    }
 }
 
 .dataTables_wrapper {
-	.dataTables_paginate {
-		color: $white70a;
+    .dataTables_paginate {
+        color: $white70a;
 
-		.paginate_button {
-			background: $black15a;
-			color: $white70a !important;
-			border: 0 !important;
-			border-radius: 0 !important;
-			margin: 0 !important;
-			transition: none;
+        .paginate_button {
+            background: $black15a;
+            color: $white70a !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            margin: 0 !important;
+            transition: none;
 
-			&.current {
-				background: $white08a !important;
-				color: $theme-lighter !important;
+            &.current {
+                background: $white08a !important;
+                color: $theme-lighter !important;
 
-				&:hover {
-					background: $white08a !important;
-					color: $theme-lighter !important;
-				}
-			}
+                &:hover {
+                    background: $white08a !important;
+                    color: $theme-lighter !important;
+                }
+            }
 
-			&:active {
-				box-shadow: none;
-			}
+            &:active {
+                box-shadow: none;
+            }
 
-			&.disabled {
-				background: transparent !important;
-				color: $text-muted !important;
+            &.disabled {
+                background: transparent !important;
+                color: $text-muted !important;
 
-				&:hover {
-					background: transparent !important;
-					color: $text-muted !important;
-				}
-			}
+                &:hover {
+                    background: transparent !important;
+                    color: $text-muted !important;
+                }
+            }
 
-			&:hover {
-				background: $white08a!important;
-				color: $text !important;
-			}
-		}
-	}
+            &:hover {
+                background: $white08a !important;
+                color: $text !important;
+            }
+        }
+    }
 
-	.dataTables_filter {
-		color: $text-muted !important;
-	}
+    .dataTables_filter {
+        color: $text-muted !important;
+    }
 
-	.dataTables_info {
-		color: $text-muted !important;
-	}
+    .dataTables_info {
+        color: $text-muted !important;
+    }
 
-	.dataTables_length {
-		color: $text-muted !important;
-	}
+    .dataTables_length {
+        color: $text-muted !important;
+    }
 
-	.dataTables_processing {
-		color: $text-muted !important;
-	}
+    .dataTables_processing {
+        color: $text-muted !important;
+    }
 }

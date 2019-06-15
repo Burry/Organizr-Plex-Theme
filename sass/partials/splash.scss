@@ -1,128 +1,128 @@
 // Splash Screen
 #splashScreen {
-	overflow-y: auto;
+    overflow-y: auto;
 
-	// App Container
-	div[id^='menu-'] {
-		background-color: $dark-gray;
-		border-radius: 3px;
-		max-width: 120px;
-		height: 155px;
-		margin: 24px 20px 0 0 !important;
-		padding: 0;
+    // App Container
+    div[id^='menu-'] {
+        background-color: $dark-gray;
+        border-radius: 3px;
+        max-width: 120px;
+        height: 155px;
+        margin: 24px 20px 0 0 !important;
+        padding: 0;
 
-		&:focus,
-		&:hover {
-			span {
-				color: $white;
-			}
+        &:focus,
+        &:hover {
+            span {
+                color: $white;
+            }
 
-			.fc-event{
-				box-shadow: 0 0 0 4px $white;
-			}
+            .fc-event {
+                box-shadow: 0 0 0 4px $white;
+            }
 
-			.splash-badge {
-				background: $theme-light;
-			}
-		}
-	}
+            .splash-badge {
+                background: $theme-light;
+            }
+        }
+    }
 
-	// App Image/Icon Container
-	.bg-org.fc-event {
-		background-color: $light-gray;
-		border-radius: 1000px;
-		height: 80px !important;
-		width: 80px !important;
-		margin: 0 auto;
-		padding: 0;
-		margin-top: 25px;
-	}
+    // App Image/Icon Container
+    .bg-org.fc-event {
+        background-color: $light-gray;
+        border-radius: 1000px;
+        height: 80px !important;
+        width: 80px !important;
+        margin: 0 auto;
+        padding: 0;
+        margin-top: 25px;
+    }
 
-	// App Name
-	.homepage-text {
-		width: 120px;
-		background: $black50a;
-		color: $text-muted;
-		font-size: 14px;
-		text-align: center;
-		margin: 0;
-		position: absolute;
-		padding: 5px;
-		bottom: -50px;
-		left: -20px;
-	}
+    // App Name
+    .homepage-text {
+        width: 120px;
+        background: $black50a;
+        color: $text-muted;
+        font-size: 14px;
+        text-align: center;
+        margin: 0;
+        position: absolute;
+        padding: 5px;
+        bottom: -50px;
+        left: -20px;
+    }
 
-	// Main Containers
-	.flexbox {
-		margin: 0;
+    // Main Containers
+    .flexbox {
+        margin: 0;
 
-		// App Grid
-		&:first-of-type {
-			width: calc(100% - 40px);
-			margin: 48px auto 62px auto;
+        // App Grid
+        &:first-of-type {
+            width: calc(100% - 40px);
+            margin: 48px auto 62px auto;
 
-			div[id^='menu']:first-of-type:before {
-				content: 'Select App';
-				display: block;
-				color: $text;
-				font-size: 20px;
-				font-weight: 400;
-				position: absolute;
-				top: -65px;
-				pointer-events: none;
-			}
-		}
+            div[id^='menu']:first-of-type:before {
+                content: 'Select App';
+                display: block;
+                color: $text;
+                font-size: 20px;
+                font-weight: 400;
+                position: absolute;
+                top: -65px;
+                pointer-events: none;
+            }
+        }
 
-		// Close Button
-		&:last-of-type {
-			padding: 0 !important;
-			position: fixed;
-			bottom: 20px;
-			left: 50%;
-			transform: translateX(calc(-50% - 10px));
+        // Close Button
+        &:last-of-type {
+            padding: 0 !important;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(calc(-50% - 10px));
 
-			.bg-danger {
-				@include button($white25a, $white30a, $white20a, $white);
-				height: auto;
-			    padding: 12px;
+            .bg-danger {
+                @include button($white25a, $white30a, $white20a, $white);
+                height: auto;
+                padding: 12px;
 
-				&:before {
-					content: "";
-					display: block;
-					background: $times;
-					width: 18px;
-					height: 18px;
-				}
-			}
+                &:before {
+                    content: '';
+                    display: block;
+                    background: $times;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
 
-			span {
-				display: none;
-			}
-		}
-	}
+            span {
+                display: none;
+            }
+        }
+    }
 }
 
 // App Grid on medium-sized devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	#splashScreen .flexbox:first-of-type {
-		width: 600px !important;
-		margin-top: 108px !important;
-	}
+    #splashScreen .flexbox:first-of-type {
+        width: 600px !important;
+        margin-top: 108px !important;
+    }
 }
 
 // Icon
 .splash-badge {
-	color: $white;
-	background: $theme;
-	width: 80px !important;
-	height: 80px;
-	font-size: 60px;
-	border-radius: 1000px;
-	
-	i {
-		position: absolute;
-		left: 15px;
-	}
+    color: $white;
+    background: $theme;
+    width: 80px !important;
+    height: 80px;
+    font-size: 60px;
+    border-radius: 1000px;
+
+    i {
+        position: absolute;
+        left: 15px;
+    }
 }
 
 // App Hover Animation

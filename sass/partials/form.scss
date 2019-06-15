@@ -10,148 +10,146 @@ select,
 span.select2-selection.select2-selection--single,
 span.select2-selection.select2-selection--multiple,
 .select2-container--default .select2-search--dropdown .select2-search__field {
-	color: $text;
-	margin: 0;
-	border: 0;
-	height: 36px;
-	min-width: 100px;
-	font-size: 15px;
-	font-weight: 600;
-	line-height: 1.5;
-	padding: 0 12px;
-	border-radius: 3px;
-	vertical-align: middle;
-	background: $white25a;
-	transition: background .2s ease;
+    color: $text;
+    margin: 0;
+    border: 0;
+    height: 36px;
+    min-width: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 0 12px;
+    border-radius: 3px;
+    vertical-align: middle;
+    background: $white25a;
+    transition: background 0.2s ease;
 
-	&.focus,
-	&:focus {
-		color: $black33;
-		background: $text;
-		border-radius: 3px;
-	}
+    &.focus,
+    &:focus {
+        color: $black33;
+        background: $text;
+        border-radius: 3px;
+    }
 
-	&[disabled],
-	&[readonly] {
-		background: $black15a;
-	}
+    &[disabled],
+    &[readonly] {
+        background: $black15a;
+    }
 }
 
 // Input label
 
 .control-label {
-	color: $text-muted;
+    color: $text-muted;
 }
-
 
 // Input Groups
 
 .input-group {
-	.form-control {
-		&:not(:first-child):not(:last-child) {
-			border-top-left-radius: 3px;
-			border-bottom-left-radius: 3px;
-		}
+    .form-control {
+        &:not(:first-child):not(:last-child) {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
 
-		&:first-child {
-			&.focus,
-			&:focus {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-			}
-		}
-	}
+        &:first-child {
+            &.focus,
+            &:focus {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
 }
 
 .input-group-addon {
-	background: $black20 !important;
-	color: $menu-link;
-	border-color: transparent;
-	border-radius: 3px;
+    background: $black20 !important;
+    color: $menu-link;
+    border-color: transparent;
+    border-radius: 3px;
 }
 
 .input-group-btn .btn {
-	background: $black20;
-	color: $menu-link;
-	border-color: transparent;
-	padding: 6.5px 12px;
-	transition: none;
+    background: $black20;
+    color: $menu-link;
+    border-color: transparent;
+    padding: 6.5px 12px;
+    transition: none;
 
-	&:focus,
-	&:hover {
-		background: $black20;
-		color: $menu-link;
-		border-color: transparent;
-	}
+    &:focus,
+    &:hover {
+        background: $black20;
+        color: $menu-link;
+        border-color: transparent;
+    }
 
-	&:active {
-		&:focus,
-		&:hover {
-			background: $theme;
-			color: $white;
-			border-color: transparent;
-		}
-	}
+    &:active {
+        &:focus,
+        &:hover {
+            background: $theme;
+            color: $white;
+            border-color: transparent;
+        }
+    }
 }
-
 
 // Checkboxes & Radio Buttons
 
 .checkbox label {
-	&::before {
-		background: $white08a;
-		border: 0;
-		border-radius: 3px;
-		transition: all .2s ease ease;
-	}
+    &::before {
+        background: $white08a;
+        border: 0;
+        border-radius: 3px;
+        transition: all 0.2s ease ease;
+    }
 
-	&::after {
-		top: 2px;
-	}
+    &::after {
+        top: 2px;
+    }
 }
 
-.checkbox-primary input[type=checkbox] {
-	label {
-		color: $white45a;
-		font-weight: 600;
-	}
+.checkbox-primary input[type='checkbox'] {
+    label {
+        color: $white45a;
+        font-weight: 600;
+    }
 
-	&:hover label {
-		color: $white;
-	}
+    &:hover label {
+        color: $white;
+    }
 
-	&:checked + label::before {
-		background: $theme;
-		border-color: $theme;
-	}
+    &:checked + label::before {
+        background: $theme;
+        border-color: $theme;
+    }
 }
 
 input {
-	&[type=checkbox],
-	&[type=radio] {
-		margin: 0;
-		height: 17px;
-	}
+    &[type='checkbox'],
+    &[type='radio'] {
+        margin: 0;
+        height: 17px;
+    }
 }
 
-.radio-purple input[type=radio] {
-	+ label::before {
-		background: $white25a;
-		transition: all 0.2s ease;
-	}
+.radio-purple input[type='radio'] {
+    + label::before {
+        background: $white25a;
+        transition: all 0.2s ease;
+    }
 
-	+ label::after {
-		background: $theme;
-	}
+    + label::after {
+        background: $theme;
+    }
 
-	&:checked {
-		+ label::after {
-			background: $theme;
-		}
+    &:checked {
+        + label::after {
+            background: $theme;
+        }
 
-		+ label::before {
-			background: $black15a;
-			border-color: $theme;
-		}
-	}
+        + label::before {
+            background: $black15a;
+            border-color: $theme;
+        }
+    }
 }

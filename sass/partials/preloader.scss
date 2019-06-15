@@ -1,22 +1,23 @@
 // Preloader
 
 #preloader {
-	@include background($bg-dark, 'fixed');
+    @include background($bg-dark, 'fixed');
 }
 
 .circular {
-	@extend %circular-loader;
-	position: fixed;
-	top: 30%;
-	left: 50%;
+    position: fixed;
+    top: 30%;
+    left: 50%;
 
-	circle {
-		display: none;
-	}
+    @extend %circular-loader;
+
+    circle {
+        display: none;
+    }
 }
 
 body[style=''] {
-	#preloader {
-		z-index: 2;
-	}
+    #preloader {
+        z-index: 2;
+    }
 }

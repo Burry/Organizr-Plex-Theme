@@ -1,263 +1,266 @@
 // Modal Views
 
 .white-popup {
-	> .col-md-6 > .white-box:first-child,
-	.panel-heading {
-		background: $black20 !important;
-	    box-shadow: 0 5px 15px rgba($black, 0.5);
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
-	}
+    > .col-md-6 > .white-box:first-child,
+    .panel-heading {
+        background: $black20 !important;
+        box-shadow: 0 5px 15px rgba($black, 0.5);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
 
-	.panel-footer {
-		background: $black20;
-		border-top: 1px solid #222;
-	}
+    .panel-footer {
+        background: $black20;
+        border-top: 1px solid #222;
+    }
 
-	> .col-md-6 > .white-box:nth-child(2),
-	.panel-body {
-		background: $black16;
-		box-shadow: 0 5px 15px $black50a;
+    > .col-md-6 > .white-box:nth-child(2),
+    .panel-body {
+        background: $black16;
+        box-shadow: 0 5px 15px $black50a;
 
-		.box-title {
-			color: $text-muted;
-			font-weight: 700;
+        .box-title {
+            color: $text-muted;
+            font-weight: 700;
 
-			span {
-				color: $text;
-				font-weight: 600;
-			}
-		}
+            span {
+                color: $text;
+                font-weight: 600;
+            }
+        }
 
-		.mdi {
-			color: $text-muted !important;
-		}
-	}
+        .mdi {
+            color: $text-muted !important;
+        }
+    }
 
-	> .col-md-6 > .white-box:nth-child(2),
-	&:not(#speedtest-area) .panel-body,
-	.panel-footer {
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
-	}
+    > .col-md-6 > .white-box:nth-child(2),
+    &:not(#speedtest-area) .panel-body,
+    .panel-footer {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
 
-	.panel {
-		border-radius: 3px;
+    .panel {
+        border-radius: 3px;
 
-		> .table-responsive {
-			background: $black20;
-		}
-	}
+        > .table-responsive {
+            background: $black20;
+        }
+    }
 
-	p {
-		margin: 0;
-	}
+    p {
+        margin: 0;
+    }
 }
 
 .white-popup-block {
-	background: $black16;
-	border-radius: 3px!important;
+    background: $black16;
+    border-radius: 3px !important;
 
-	h1 {
-		color: $text;
-		font-size: 20px;
-		font-weight: 400;
-		text-transform: none;
-		margin: 0 0 15px 0;
-	}
+    h1 {
+        color: $text;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: none;
+        margin: 0 0 15px 0;
+    }
 
-	.btn.row {
-		margin: 15px 0;
-	}
+    .btn.row {
+        margin: 15px 0;
+    }
 }
 
 .mfp-bg {
-	background: $black;
-	opacity: 0.5 !important;
+    background: $black;
+    opacity: 0.5 !important;
 }
 
 @media screen and (min-width: 768px) {
-	.white-popup-block,
-	.white-popup:not([id$='metadata-div']):not([id^='request']) .panel {
-		box-shadow: 0 5px 15px $black50a;
-	}
+    .white-popup-block,
+    .white-popup:not([id$='metadata-div']):not([id^='request']) .panel {
+        box-shadow: 0 5px 15px $black50a;
+    }
 }
 
 .mfp-close-btn-in .mfp-close {
-	color: $white70a;
-	font-size: 42px;
+    color: $white70a;
+    font-size: 42px;
 }
 
 .sweet-alert {
-	background: $black16;
-	border-radius: 3px;
-	box-shadow: 0 5px 15px rgba($black, 0.5);
-	padding: 30px;
+    background: $black16;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba($black, 0.5);
+    padding: 30px;
 
-	h2 {
-		color: $text-muted;
-		font-size: 24px;
-		font-weight: 600;
-		text-transform: uppercase;
-		margin: 0;
-	}
+    h2 {
+        color: $text-muted;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+    }
 
-	button.cancel {
-		@include button($white25a, $white30a, $white20a, $white);
+    button.cancel {
+        @include button($white25a, $white30a, $white20a, $white);
 
-		&:focus {
-			box-shadow: none !important;
-		}
-	}
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
 
-	button.confirm {
-		@include button($red, $color: $white);
+    button.confirm {
+        @include button($red, $color: $white);
 
-		&:focus {
-			box-shadow: none !important;
-		}
-	}
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
 }
-
 
 // Content/Request Modal
 
 .nowPlayingUserThumb:hover {
-	transition: none;
+    transition: none;
 }
 
 .resultBox-outside {
-	background: $black16;
-	box-shadow: 0 5px 15px $black50a;
-	border-radius: 3px;
-	padding-bottom: 10px;
+    background: $black16;
+    box-shadow: 0 5px 15px $black50a;
+    border-radius: 3px;
+    padding-bottom: 10px;
 }
 
 .resultBox-inside {
-	padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 .mediaSearch-div .el-card-item {
-	.el-overlay-1::after {
-		content: '';
-		background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
-		opacity: 0;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
+    .el-overlay-1::after {
+        content: '';
+        background: radial-gradient(
+            farthest-corner at 50% 50%,
+            $black50a 50%,
+            $black20 100%
+        );
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
 
-	&:hover {
-		.el-overlay-1::after {
-			opacity: 1;
-		}
-	}
+    &:hover {
+        .el-overlay-1::after {
+            opacity: 1;
+        }
+    }
 }
 
 .request-result-item {
-	left: 50%;
-	transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media screen and (min-width: 576px) {
-	.request-result-item {
-		left: initial;
-		transform: none;
-	}
+    .request-result-item {
+        left: initial;
+        transform: none;
+    }
 }
 
 #request-input-div {
-	span:first-of-type {
-		display: none;
-	}
+    span:first-of-type {
+        display: none;
+    }
 
-	.dropdown-toggle {
-	    padding: 8px 12px;
-	}
+    .dropdown-toggle {
+        padding: 8px 12px;
+    }
 }
 
 .ajaxloader {
-	border-radius: 3px;
-	margin: 0 15px;
-	width: calc(100% - 30px);
-	left: 0;
-	transition: all 0.2s ease;
+    border-radius: 3px;
+    margin: 0 15px;
+    width: calc(100% - 30px);
+    left: 0;
+    transition: all 0.2s ease;
 
-	.circular {
-		position: absolute;
-		top: 50%;
-	}
+    .circular {
+        position: absolute;
+        top: 50%;
+    }
 }
 
 @media screen and (min-width: 576px) {
-	#request-input-div span:first-of-type {
-		display: inline;
-	}
+    #request-input-div span:first-of-type {
+        display: inline;
+    }
 
-	#mediaSearchQuery,
-	#request-input,
-	#request-input-div .dropdown-toggle {
-		font-size: 18px;
-		height: 46px;
-		padding: 10px 16px;
-	}
+    #mediaSearchQuery,
+    #request-input,
+    #request-input-div .dropdown-toggle {
+        font-size: 18px;
+        height: 46px;
+        padding: 10px 16px;
+    }
 }
 
 .white-popup {
-	&[id$='metadata-div'],
-	&[id^='request'] {
-		.white-box:not(.resultBox-outside) {
-			box-shadow: 0 5px 15px rgba($black, 0.5);
-		}
+    &[id$='metadata-div'],
+    &[id^='request'] {
+        .white-box:not(.resultBox-outside) {
+            box-shadow: 0 5px 15px rgba($black, 0.5);
+        }
 
-		.panel-body {
-			overflow: hidden;
-		}
-	}
+        .panel-body {
+            overflow: hidden;
+        }
+    }
 
-	.el-card-content.bg-org {
-		text-align: left;
+    .el-card-content.bg-org {
+        text-align: left;
 
-		h3 {
-			font-size: 13px;
-			text-transform: none;
-			padding: 3px 0 0;
-		}
+        h3 {
+            font-size: 13px;
+            text-transform: none;
+            padding: 3px 0 0;
+        }
 
-		small {
-			font-size: 13px;
-			position: relative;
-			top: -5px;
-		}
-	}
+        small {
+            font-size: 13px;
+            position: relative;
+            top: -5px;
+        }
+    }
 }
 
 .mediaSearch-div {
-	.el-card-content.bg-org {
-		cursor: pointer;
+    .el-card-content.bg-org {
+        cursor: pointer;
 
-		&:hover {
-			h3 {
-				text-decoration: underline;
-			}
-		}
-	}
+        &:hover {
+            h3 {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 #request-results {
-	.el-card-content.bg-org {
-		cursor: default;
-	}
+    .el-card-content.bg-org {
+        cursor: default;
+    }
 }
 
 .user-bg {
-	@extend %background-blur;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+    @extend %background-blur;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 // Custom error images
@@ -265,166 +268,162 @@
 .resultImages.error,
 img[src$='no-list.png'],
 img[src$='no-request.png'] {
-	padding: 0 0 0 200px;
+    padding: 0 0 0 200px;
 }
 
 .lazyload.error,
 img[src$='no-list.png'],
 div[data-src$='no-np.png'] {
-	background: $black45a $not-found no-repeat center center !important;
+    background: $black45a $not-found no-repeat center center !important;
 }
 
 .lazyload.error,
 img[src$='no-list.png'] {
-	background-size: 100px 100px !important;
+    background-size: 100px 100px !important;
 }
 
 img[src$='no-request.png'] {
-	background: $black45a $no-request center center/cover;
+    background: $black45a $no-request center center/cover;
 }
 
 div[data-src$='no-np.png'] {
-	background-size: 150px 150px !important;
+    background-size: 150px 150px !important;
 }
 
 @supports not (backdrop-filter: blur(30px)) {
-	div[data-src$='no-np.png'] {
-		background-color: $black20 !important;
-	}
+    div[data-src$='no-np.png'] {
+        background-color: $black20 !important;
+    }
 }
-
 
 // Circular progress indicators
 
 .css-bar {
-	&:after {
-		color: $text;
-		opacity: 1;
-	}
+    &:after {
+        color: $text;
+        opacity: 1;
+    }
 }
 
 .css-bar-sm {
-	font-size: 11px;
+    font-size: 11px;
 
-	&:after {
-		z-index: 102;
-		font-size: 10px;
-	    line-height: 45px;
-	}
+    &:after {
+        z-index: 102;
+        font-size: 10px;
+        line-height: 45px;
+    }
 }
 
 .css-bar-lg {
-	&:after {
-		background: $dark-gray !important;
-	}
+    &:after {
+        background: $dark-gray !important;
+    }
 }
 
 .css-bar-lg img {
-	width: 90px;
+    width: 90px;
     height: 90px;
-	margin: 5px 0 0 5px;
+    margin: 5px 0 0 5px;
 }
-
 
 // Rotten Tomatoes rating indicator
 
 img[src$='rotten.png'] {
-	background: $dark-gray $rotten-tomatoes 5px 4px/30px no-repeat;
-	opacity: 1 !important;
-	padding: 0 0 0 40px;
+    background: $dark-gray $rotten-tomatoes 5px 4px/30px no-repeat;
+    opacity: 1 !important;
+    padding: 0 0 0 40px;
 }
 
 .css-bar-info {
-	@include css-bar($theme, $dark-gray);
+    @include css-bar($theme, $dark-gray);
 
-	&:after {
-		background: transparent;
-	}
+    &:after {
+        background: transparent;
+    }
 }
 
 .customPoster {
-	margin: 40px 0;
+    margin: 40px 0;
 
-	a {
-		color: $text !important;
-		font-size: 32px;
-		font-weight: 600;
-		text-shadow: none !important;
-		transform: none !important;
-	}
+    a {
+        color: $text !important;
+        font-size: 32px;
+        font-weight: 600;
+        text-shadow: none !important;
+        transform: none !important;
+    }
 }
 
 div[id^='request'] {
-	.bg-plex {
-		margin-top: 10px;
-	}
-	.btn-youtube {
-		margin-top: 10px;
-	}
+    .bg-plex {
+        margin-top: 10px;
+    }
+    .btn-youtube {
+        margin-top: 10px;
+    }
 }
 
 h2.m-b-0.font-medium.pull-right {
-	color: $white;
-	font-weight: 600;
-	filter: drop-shadow(0 2px 5px $black70a);
+    color: $white;
+    font-weight: 600;
+    filter: drop-shadow(0 2px 5px $black70a);
 }
 
 .genre-list .badge {
-	cursor: default;
-	user-select: none;
+    cursor: default;
+    user-select: none;
 }
-
 
 // MCE Modal
 
 .mce-window {
-	background: transparent;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+    background: transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .mce-panel {
-	background: $black16 !important;
-	border: 0 !important;
+    background: $black16 !important;
+    border: 0 !important;
 }
 
 .mce-label {
-	color: $text-muted !important;
-	text-shadow: none !important;
+    color: $text-muted !important;
+    text-shadow: none !important;
 }
 
 .mce-foot {
-	background: $black20 !important;
-	border-top: 1px solid #222;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+    background: $black20 !important;
+    border-top: 1px solid #222;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
-
 
 // Speed Test
 
 #speedtest-area {
-	.ti-download {
-		color: $green;
-	}
+    .ti-download {
+        color: $green;
+    }
 
-	.ti-upload {
-		color: $theme;
-	}
+    .ti-upload {
+        color: $theme;
+    }
 }
 
 .css-bar-default {
-	@include css-bar($green, $dark-gray);
+    @include css-bar($green, $dark-gray);
 
-	&:after {
-		background: $dark-gray;
-	}
+    &:after {
+        background: $dark-gray;
+    }
 }
 
 .css-bar-warning {
-	@include css-bar($theme, $dark-gray);
+    @include css-bar($theme, $dark-gray);
 
-	&:after {
-		background: $dark-gray;
-	}
+    &:after {
+        background: $dark-gray;
+    }
 }

@@ -1,145 +1,143 @@
 // Sidebar
 
 .sidebar {
-	@extend %background-blur;
-	background: $black15a !important;
-	box-shadow: none;
-	transition: all 0.2s ease;
+    @extend %background-blur;
+    background: $black15a !important;
+    box-shadow: none;
+    transition: all 0.2s ease;
 
-	.label {
-		padding: 5px 8px;
-		cursor: pointer;
-	}
+    .label {
+        padding: 5px 8px;
+        cursor: pointer;
+    }
 
-	.slimScrollBar,
-	.slimScrollRail {
-		left: 0 !important;
-	}
+    .slimScrollBar,
+    .slimScrollRail {
+        left: 0 !important;
+    }
 }
 
 .sidebar-head {
-	@extend %background-blur;
-	background: $black30a !important;
-	min-height: 60px;
-	max-height: 60px;
-	padding: 2px 20px !important;
+    @extend %background-blur;
+    background: $black30a !important;
+    min-height: 60px;
+    max-height: 60px;
+    padding: 2px 20px !important;
 
-	h3 {
-		color: $white70a;
-		font-weight: 400;
-		text-transform: none;
-		padding: 2px 0 !important;
-		transition: 0.2s ease all;
+    h3 {
+        color: $white70a;
+        font-weight: 400;
+        text-transform: none;
+        padding: 2px 0 !important;
+        transition: 0.2s ease all;
 
-		.m-r-5 {
-			margin-right: 10px !important;
-		}
+        .m-r-5 {
+            margin-right: 10px !important;
+        }
 
-		i {
-			font-size: 14px;
-			position: relative;
-			top: 2px;
-		}
+        i {
+            font-size: 14px;
+            position: relative;
+            top: 2px;
+        }
 
-		span {
-			cursor: default;
-			user-select: none;
-		}
-	}
+        span {
+            cursor: default;
+            user-select: none;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
-	.sidebar {
-		transition: background 0.2s ease, width 0.1s;
-	}
+    .sidebar {
+        transition: background 0.2s ease, width 0.1s;
+    }
 
-	.sidebar-head {
-		h3 {
-			padding: 0;
+    .sidebar-head {
+        h3 {
+            padding: 0;
 
-			.m-r-5 {
-				margin-right: 5px !important;
-			}
+            .m-r-5 {
+                margin-right: 5px !important;
+            }
 
-			i {
-				font-size: 20px;
-			}
-		}
-	}
+            i {
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 @supports not (backdrop-filter: blur(30px)) {
-	.sidebar {
-		@include background($bg-light, 'fixed');
+    .sidebar {
+        @include background($bg-light, 'fixed');
 
-		&:hover {
-			box-shadow: 0 5px 15px $black50a;
-		}
-	}
+        &:hover {
+            box-shadow: 0 5px 15px $black50a;
+        }
+    }
 
-	.sidebar-nav {
-		background: $black15a;
-	}
+    .sidebar-nav {
+        background: $black15a;
+    }
 
-	body[data-active-tab=""],
-	.active-tab-Settings,
-	#internal-Settings {
-		.sidebar {
-			@include background($bg-dark, 'fixed');
-		}
-	}
+    body[data-active-tab=''],
+    .active-tab-Settings,
+    #internal-Settings {
+        .sidebar {
+            @include background($bg-dark, 'fixed');
+        }
+    }
 
-	.sidebar-head {
-		background: $black65a !important;
-	}
+    .sidebar-head {
+        background: $black65a !important;
+    }
 }
 
 .ping .heartbit {
-	z-index: 9;
+    z-index: 9;
 }
 
 #side-menu {
-	li a {
-		color: $white70a;
-		font-weight: 600 !important;
-	    padding: 15px 35px 15px 15px;
-		transition: .2s ease color ease;
+    li a {
+        color: $white70a;
+        font-weight: 600 !important;
+        padding: 15px 35px 15px 15px;
+        transition: 0.2s ease color ease;
 
-		&:focus,
-		&:hover {
-			color: $white;
-			background: $white08a !important;
-		}
+        &:focus,
+        &:hover {
+            color: $white;
+            background: $white08a !important;
+        }
 
-		&.active,
-		&:active {
-			background: $white08a;
-			color: $theme-lighter;
-			box-shadow: none;
-		}
-	}
+        &.active,
+        &:active {
+            background: $white08a;
+            color: $theme-lighter;
+            box-shadow: none;
+        }
+    }
 }
 
 .tabLoaded {
-	filter: none;
+    filter: none;
 }
-
 
 // Override Ombi Icon
 
 .sidebar img[src*='ombi'] {
-	height: 30px;
-	padding-left: 30px;
+    height: 30px;
+    padding-left: 30px;
 }
-
 
 // Unsure where this belongs
 
 .nav .open > a {
-	background: transparent !important;
+    background: transparent !important;
 
-	&:focus,
-	&:hover {
-		background: transparent !important;
-	}
+    &:focus,
+    &:hover {
+        background: transparent !important;
+    }
 }

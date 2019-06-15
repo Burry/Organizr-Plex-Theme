@@ -1,32 +1,32 @@
 // Text
 
 a {
-	color: $theme;
-	text-decoration: none;
-	transition: color 0.2s ease;
-	-webkit-tap-highlight-color: transparent;
+    color: $theme;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
 
-	&:hover,
-	&:focus {
-		color: $white !important;
-	}
+    &:hover,
+    &:focus {
+        color: $white !important;
+    }
 
-	&.text-primary {
-		font-weight: 600;
-	    user-select: none;
+    &.text-primary {
+        font-weight: 600;
+        user-select: none;
 
         &:hover {
-			color: $white;
-		}
-	}
+            color: $white;
+        }
+    }
 
-	&.list-group-item {
-		color: $white70a;
-	}
+    &.list-group-item {
+        color: $white70a;
+    }
 }
 
 b {
-	font-weight: 600;
+    font-weight: 600;
 }
 
 h1,
@@ -35,138 +35,137 @@ h3,
 h4,
 h5,
 h6 {
-	@extend %header;
+    @extend %header;
 }
 
 pre {
-	color: $text-muted !important;
+    color: $text-muted !important;
 }
 
 code {
-	background: $white08a;
-	color: $white70a;
+    background: $white08a;
+    color: $white70a;
 }
 
 .bg-title h4 {
-	font-weight: 700;
+    font-weight: 700;
 }
 
 .font-medium {
-	text-transform: none;
+    text-transform: none;
 }
 
 .text-dark {
-	color: $white70a !important;
+    color: $white70a !important;
 
-	&:hover {
-		color: $white !important;
-	}
+    &:hover {
+        color: $white !important;
+    }
 }
 
 .text-success {
-	color: $green;
+    color: $green;
 }
 
 .text-danger {
-	color: $red;
+    color: $red;
 }
 
 .text-info,
 .text-primary,
 .text-purple {
-	color: $theme-light !important;
+    color: $theme-light !important;
 }
 
 .text-muted {
-	color: $text !important;
+    color: $text !important;
 }
 
 .has-success {
-	.checkbox,
-	.checkbox-inline,
-	.control-label,
-	.help-block,
-	.radio,
-	.radio-inline {
-		color: $green;
-	}
+    .checkbox,
+    .checkbox-inline,
+    .control-label,
+    .help-block,
+    .radio,
+    .radio-inline {
+        color: $green;
+    }
 
-	.checkbox,
-	&.checkbox-inline,
-	&.radio,
-	&.radio-inline {
-		label {
-			color: $green;
-		}
-	}
+    .checkbox,
+    &.checkbox-inline,
+    &.radio,
+    &.radio-inline {
+        label {
+            color: $green;
+        }
+    }
 
-	.form-control {
-		border: 2px solid $green;
-	}
+    .form-control {
+        border: 2px solid $green;
+    }
 }
 
 .has-failure {
-	.checkbox,
-	.checkbox-inline,
-	.control-label,
-	.help-block,
-	.radio,
-	.radio-inline {
-		color: $red;
-	}
+    .checkbox,
+    .checkbox-inline,
+    .control-label,
+    .help-block,
+    .radio,
+    .radio-inline {
+        color: $red;
+    }
 
-	.checkbox,
-	&.checkbox-inline,
-	&.radio,
-	&.radio-inline {
-		label {
-			color: $red;
-		}
-	}
+    .checkbox,
+    &.checkbox-inline,
+    &.radio,
+    &.radio-inline {
+        label {
+            color: $red;
+        }
+    }
 
-	.form-control {
-		border: 2px solid $red;
-	}
+    .form-control {
+        border: 2px solid $red;
+    }
 }
 
 .label {
-	cursor: default;
-	height: 100%;
-	user-select: none;
+    cursor: default;
+    height: 100%;
+    user-select: none;
 }
 
 .label-info {
-	background: $black15a !important;
-	color: $white70a !important;
+    background: $black15a !important;
+    color: $white70a !important;
 }
 
 #settings-settings-updates {
-	.label-info {
-		background: $theme !important;
-		color: $white !important;
-	}
+    .label-info {
+        background: $theme !important;
+        color: $white !important;
+    }
 }
 
 .label-success {
-	background: $green;
-	color: $black;
+    background: $green;
+    color: $black;
 }
 
 .label-danger {
-	background: $red;
+    background: $red;
 }
 
 .label-warning,
 .label-inverse {
-	background: $black30a;
+    background: $black30a;
 }
 
 .label.m-l-20 {
-	margin-left: 10px !important;
-	padding: 3px 8px;
-	font-weight: 700;
+    margin-left: 10px !important;
+    padding: 3px 8px;
+    font-weight: 700;
 }
-
 
 // Random stuff
 
@@ -175,5 +174,5 @@ code {
 button.list-group-item,
 .dd-handle,
 .dd3-content {
-	color: $white70a !important;
+    color: $white70a !important;
 }

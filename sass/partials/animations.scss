@@ -9,21 +9,21 @@
 .slideIn,
 .slideInDown,
 .slideInRight,
-.showSweetAlert[data-animation=pop],
+.showSweetAlert[data-animation='pop'],
 .hvr-wobble-bottom:hover {
-	animation-name: none;
+    animation-name: none;
 }
 
 .mfp-zoom-out,
 .mfp-3d-unfold {
-	.mfp-with-anim {
-		transform: none;
-		transition: none;
-	}
+    .mfp-with-anim {
+        transform: none;
+        transition: none;
+    }
 }
 
 .waves-effect .waves-ripple {
-	display: none;
+    display: none;
 }
 
 @keyframes loading {

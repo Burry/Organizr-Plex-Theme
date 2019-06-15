@@ -4,63 +4,61 @@
 
 .active-tab-Settings,
 #internal-Settings {
-	@include background($bg-dark, 'fixed');
+    @include background($bg-dark, 'fixed');
 }
-
 
 // Tabs
 
 .sttabs nav {
-	padding: 0 25px;
+    padding: 0 25px;
 
-	a span {
-		font-family: $font-stack;
-	}
+    a span {
+        font-family: $font-stack;
+    }
 }
 
 .tabs-style-flip {
-	.content-wrap {
-		background: transparent;
-	}
+    .content-wrap {
+        background: transparent;
+    }
 
-	nav {
-		color: $text-muted !important;
+    nav {
+        color: $text-muted !important;
 
-		a::after {
-			background: $black15a !important;
-			transition: none;
-			transform: none;
-		}
+        a::after {
+            background: $black15a !important;
+            transition: none;
+            transform: none;
+        }
 
-		a {
-			color: $white70a !important;
-			transition: none;
+        a {
+            color: $white70a !important;
+            transition: none;
 
-			&:hover::after {
-				background: $white08a !important;
-			}
+            &:hover::after {
+                background: $white08a !important;
+            }
 
-			&:hover {
-				color: $text!important;
-			}
+            &:hover {
+                color: $text !important;
+            }
 
-			span {
-				text-transform: none;
-			}
-		}
+            span {
+                text-transform: none;
+            }
+        }
 
-		li.tab-current {
-			a::after {
-				background: $white08a !important;
-			}
+        li.tab-current {
+            a::after {
+                background: $white08a !important;
+            }
 
-			a {
-				color: $theme-lighter !important;
-			}
-		}
-	}
+            a {
+                color: $theme-lighter !important;
+            }
+        }
+    }
 }
-
 
 // Buttons
 
@@ -69,448 +67,440 @@
 .newAPIKey,
 .purgeLog,
 .updateNow {
-	font-size: 14px;
-	padding: 6.5px 20px !important;
+    font-size: 14px;
+    padding: 6.5px 20px !important;
 }
 
 .fcbtn {
-	a {
-		color: $white;
-	}
+    a {
+        color: $white;
+    }
 
-	&:focus a,
-	&:hover a {
-		color: $white;
-	}
+    &:focus a,
+    &:hover a {
+        color: $white;
+    }
 }
 
 .swapLog {
-	background: $black15a !important;
-	color: $white70a !important;
-	border: 0 !important;
-	border-radius: 0 !important;
+    background: $black15a !important;
+    color: $white70a !important;
+    border: 0 !important;
+    border-radius: 0 !important;
 
-	&:focus,
-	&:hover {
-		color: $white !important;
-		opacity: 1;
-	}
+    &:focus,
+    &:hover {
+        color: $white !important;
+        opacity: 1;
+    }
 
-	&.active {
-		background: $white08a !important;
-		color: $theme-lighter !important;
-		opacity: 1;
-	}
+    &.active {
+        background: $white08a !important;
+        color: $theme-lighter !important;
+        opacity: 1;
+    }
 }
 
 #manageUserTable {
-	.el-card-avatar,
-	.el-overlay {
-		border-radius: 1000px !important;
-	}
+    .el-card-avatar,
+    .el-overlay {
+        border-radius: 1000px !important;
+    }
 }
 
 #settings-settings-about li:hover {
-	background: transparent;
+    background: transparent;
 }
 
 #settings-settings-updates {
-	.label:not(.label-info) {
-		min-width: 80px;
-	    display: inline-block;
-	    padding: 4px 12px 3px;
-	}
+    .label:not(.label-info) {
+        min-width: 80px;
+        display: inline-block;
+        padding: 4px 12px 3px;
+    }
 }
 
 #settings-settings-donate {
-	.nav-tabs li a {
-		min-height: 40px;
-	}
+    .nav-tabs li a {
+        min-height: 40px;
+    }
 
-	.lazyload {
-		background-color: initial;
-	}
+    .lazyload {
+        background-color: initial;
+    }
 
-	#donate-crypto {
-		.col-xs-12 {
-			text-align: center;
-			margin-bottom: 30px;
-		}
-	}
+    #donate-crypto {
+        .col-xs-12 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
 }
-
 
 @media screen and (min-width: 768px) {
-	#settings-settings-updates .btn {
-		margin: -20px -15px !important;
-	}
+    #settings-settings-updates .btn {
+        margin: -20px -15px !important;
+    }
 }
-
 
 // Organizr Links
 
 .profile-social-icons a {
-	color: $white70a !important;
+    color: $white70a !important;
 
-	&:hover,
-	&:focus {
-		color: $white !important;
-	}
+    &:hover,
+    &:focus {
+        color: $white !important;
+    }
 }
-
 
 // Panels
 
 .tab-pane {
-	.panel-wrapper {
-		margin-top: 30px;
-	}
+    .panel-wrapper {
+        margin-top: 30px;
+    }
 
-	.panel-body {
-		padding: 0;
-	}
+    .panel-body {
+        padding: 0;
+    }
 
-	.white-box {
-		padding: 0;
-	}
+    .white-box {
+        padding: 0;
+    }
 
-	h3.p-l-10 {
-		padding-left: 0 !important;
-	}
+    h3.p-l-10 {
+        padding-left: 0 !important;
+    }
 
-	.col-lg-12,
-	.col-md-6 {
-		padding: 0;
-	}
+    .col-lg-12,
+    .col-md-6 {
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
-	.tab-pane .col-md-6 {
-		&:first-of-type {
-			padding: 0 15px 0 0;
-		}
+    .tab-pane .col-md-6 {
+        &:first-of-type {
+            padding: 0 15px 0 0;
+        }
 
-		&:last-of-type {
-			padding: 0 0 0 15px;
-		}
+        &:last-of-type {
+            padding: 0 0 0 15px;
+        }
 
-		&:only-child {
-			padding: 0 !important;
-		}
-	}
+        &:only-child {
+            padding: 0 !important;
+        }
+    }
 }
 
 #customEmailTemplates .panel-body {
-	padding: 25px;
+    padding: 25px;
 }
 
 ul.nav.customtab.nav-tabs.nav-low-margin {
-	margin: 0 !important;
+    margin: 0 !important;
 }
 
 .sales-report {
-	margin: 0 0 15px 0;
+    margin: 0 0 15px 0;
 }
 
 .white-popup .tab-content {
-	margin-top: 15px;
+    margin-top: 15px;
 }
 
 #settings-tab-editor-homepage-order {
-	.panel-body {
-		padding: 0 15px;
-	}
+    .panel-body {
+        padding: 0 15px;
+    }
 }
-
 
 // Cards
 
 #settings-homepage-list,
 #settings-image-manager-list,
 #settings-plugins-active {
-	.el-card-content {
-		background: transparent;
-		margin-bottom: 3rem;
-		cursor: default;
-	}
+    .el-card-content {
+        background: transparent;
+        margin-bottom: 3rem;
+        cursor: default;
+    }
 
-	.lazyload {
-		background: $black15a;
-	}
+    .lazyload {
+        background: $black15a;
+    }
 }
 
 #settings-homepage-list,
 #settings-image-manager-list {
-	.lazyload {
-		padding: 15px;
-	}
+    .lazyload {
+        padding: 15px;
+    }
 }
 
 #settings-homepage-list {
-	img[src*='ombi'] {
-		background: $black15a $ombi center center/90px no-repeat !important;
-		padding-top: 105px;
-	}
+    img[src*='ombi'] {
+        background: $black15a $ombi center center/90px no-repeat !important;
+        padding-top: 105px;
+    }
 }
 
 #settings-plugins-marketplace {
-	.el-card-item:hover {
-		.el-card-avatar {
-			box-shadow: none;
-		}
-	}
+    .el-card-item:hover {
+        .el-card-avatar {
+            box-shadow: none;
+        }
+    }
 }
 
 // Tab Editor
 
 .tabEditor {
-	// Override Ombi Icon
-	img[src*='ombi'] {
-		height: 35px !important;
-		padding-left: 35px;
-	}
+    // Override Ombi Icon
+    img[src*='ombi'] {
+        height: 35px !important;
+        padding-left: 35px;
+    }
 
-	td:nth-of-type(2) {
-		padding: 30px 0 30px 15px;
-		font-weight: 600;
-	}
+    td:nth-of-type(2) {
+        padding: 30px 0 30px 15px;
+        font-weight: 600;
+    }
 
-	select {
-		margin-top: 7px;
-	}
+    select {
+        margin-top: 7px;
+    }
 
-	.radio,
-	.switchery {
-		margin: 15px 0;
-	}
+    .radio,
+    .switchery {
+        margin: 15px 0;
+    }
 }
 
 #settings-tab-editor-tabs .tabEditorIcon {
-	padding: 7.5px;
+    padding: 7.5px;
 }
 
 .select2-container {
-	img[src*='ombi'] {
-		background: $ombi;
-		height: 20px;
-		padding-left: 20px;
-	}
+    img[src*='ombi'] {
+        background: $ombi;
+        height: 20px;
+        padding-left: 20px;
+    }
 }
-
 
 // Favicon / CSS editors
 
 div[id$='Custom-CSS'] {
-	.col-md-12,
-	.row {
-		margin: 0;
-		padding: 0;
-	}
+    .col-md-12,
+    .row {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 div[id$='FavIcon'] textarea,
 #customCSSEditor {
-	height: -webkit-fill-available !important;
-	border-radius: 3px;
-	font-size: 12px;
-	font-weight: 400;
+    height: -webkit-fill-available !important;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .ace-idle-fingers {
-	background: $black15a !important;
+    background: $black15a !important;
 }
 
 .ace_gutter {
-	background: $black30a !important;
-	color: $text!important;
+    background: $black30a !important;
+    color: $text !important;
 }
 
 .ace_marker-layer .ace_active-line {
-	background: $white08a !important;
+    background: $white08a !important;
 }
 
 .ace_cursor {
-	color: $white !important;
+    color: $white !important;
 }
-
 
 // Log Table
 
 th {
-	color: $white70a;
+    color: $white70a;
 }
 
 tbody {
-	color: $text;
+    color: $text;
 }
 
 table.dataTable {
-	border: 0;
+    border: 0;
 
-	thead {
-		.sorting::after,
-		.sorting_asc::after,
-		.sorting_desc::after {
-			color: $white70a;
-		}
-	}
+    thead {
+        .sorting::after,
+        .sorting_asc::after,
+        .sorting_desc::after {
+            color: $white70a;
+        }
+    }
 
-	tbody tr {
-		background: $black15a !important;
+    tbody tr {
+        background: $black15a !important;
 
-		&:hover {
-			background: $black15a !important;
-		}
-	}
+        &:hover {
+            background: $black15a !important;
+        }
+    }
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-	background: $black30a !important;
+    background: $black30a !important;
 }
 
 .footable.breakpoint > tbody > tr > td > span.footable-toggle {
-	color: $text-muted !important;
+    color: $text-muted !important;
 }
-
 
 // User Management
 
 .userManagement {
-	img[alt="user-img"] {
-		min-width: 55px;
-		min-height: 55px;
-	}
+    img[alt='user-img'] {
+        min-width: 55px;
+        min-height: 55px;
+    }
 
-	select {
-		margin-top: 7px;
-	}
+    select {
+        margin-top: 7px;
+    }
 
-	.tabEditorIcon img {
-		width: 54px !important;
-	}
+    .tabEditorIcon img {
+        width: 54px !important;
+    }
 }
 
 #manageUserTable td {
-	&:nth-of-type(2),
-	&:nth-of-type(3) {
-		padding: 24px 0 24px 10px;
-	}
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+        padding: 24px 0 24px 10px;
+    }
 }
 
 #manageGroupTable td {
-	&:nth-of-type(2),
-	&:nth-of-type(3) {
-		padding: 32px 10px;
-	}
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+        padding: 32px 10px;
+    }
 }
-
 
 // Invites Settings
 
 .select2-container--default .select2-selection--multiple {
-	.select2-selection__choice {
-		background: $black30a;
-		border: 0;
-		font-size: 13px;
-		padding: 2.5px 5px;
-	}
+    .select2-selection__choice {
+        background: $black30a;
+        border: 0;
+        font-size: 13px;
+        padding: 2.5px 5px;
+    }
 
-	.select2-selection__choice__remove {
-		margin-right: 5px;
-	}
+    .select2-selection__choice__remove {
+        margin-right: 5px;
+    }
 }
 
 // Plugin Marketplace
 
 #settings-plugins-marketplace {
-	td {
-		&:nth-of-type(3),
-		&:nth-of-type(4) {
-			padding: 32px 10px;
-		}
-	}
+    td {
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+            padding: 32px 10px;
+        }
+    }
 
-	.btn-success {
-		@include button($white25a, $white30a, $white20a, $white);
-		border-radius: 1000px;
-	}
+    .btn-success {
+        @include button($white25a, $white30a, $white20a, $white);
+        border-radius: 1000px;
+    }
 }
 
 // E-Mail Center
 
 .ms-container {
-	.ms-list {
-		border: 0;
+    .ms-list {
+        border: 0;
 
-		&.ms-focus {
-			box-shadow: none;
-		}
-	}
+        &.ms-focus {
+            box-shadow: none;
+        }
+    }
 
-	.ms-selectable,
-	.ms-selection {
-		background: $dark-gray;
+    .ms-selectable,
+    .ms-selection {
+        background: $dark-gray;
 
-		li {
-			background: transparent;
-			color: $text;
+        li {
+            background: transparent;
+            color: $text;
 
-			&.ms-hover {
-				background: $light-gray;
-				color: $white;
-			}
-		}
-	}
+            &.ms-hover {
+                background: $light-gray;
+                color: $white;
+            }
+        }
+    }
 
-	.ms-selectable li.ms-elem-selectable,
-	.ms-selection li.ms-elem-selection {
-		border: 0;
-	}
+    .ms-selectable li.ms-elem-selectable,
+    .ms-selection li.ms-elem-selection {
+        border: 0;
+    }
 }
 
 .mce-menubar {
-	border: 0 !important;
+    border: 0 !important;
 }
 
 .mce-toolbar-grp {
-	padding: 0 10px 10px 10px !important;
+    padding: 0 10px 10px 10px !important;
 }
 
 .mce-btn-group:not(:first-child) {
-	border: 0 !important;
+    border: 0 !important;
 }
 
 .mce-menu-item {
-	.mce-text {
-		color: $text-muted !important;
-	}
+    .mce-text {
+        color: $text-muted !important;
+    }
 
-	&:focus,
-	&:hover,
-	&.mce-selected {
-		background: $light-gray !important;
+    &:focus,
+    &:hover,
+    &.mce-selected {
+        background: $light-gray !important;
 
-		.mce-text {
-			color: $white !important;
-		}
-	}
+        .mce-text {
+            color: $white !important;
+        }
+    }
 }
 
 .mce-menu-item-sep {
-	border-bottom-color: $divider !important;
-	margin: 5px !important;
+    border-bottom-color: $divider !important;
+    margin: 5px !important;
 
-	&:hover {
-		background: transparent !important;
-	}
+    &:hover {
+        background: transparent !important;
+    }
 }
 
 .mce-grid-border a {
-	border-color: $white25a !important;
+    border-color: $white25a !important;
 
-	&:hover,
-	&.mce-active {
-		background: $theme !important;
-		border-color: $theme !important;
-	}
+    &:hover,
+    &.mce-active {
+        background: $theme !important;
+        border-color: $theme !important;
+    }
 }

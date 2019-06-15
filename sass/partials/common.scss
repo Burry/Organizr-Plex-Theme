@@ -3,123 +3,135 @@
 // Extensions
 
 %button-basic {
-	border-radius: 3px;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: uppercase;
-	transition: background 0.1s;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background 0.1s;
 }
 
 %background-blur {
-	backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
 }
 
 %center {
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 %circular-loader {
-	width: 24px;
-	height: 24px;
-	position: fixed;
-	margin: -12px 0 0 -12px;
-	border: 2px solid transparent;
-	border-top-color: $theme;
-	border-left-color: $theme;
-	border-radius: 50%;
-	animation: loading 0.5s linear infinite;
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    margin: -12px 0 0 -12px;
+    border: 2px solid transparent;
+    border-top-color: $theme;
+    border-left-color: $theme;
+    border-radius: 50%;
+    animation: loading 0.5s linear infinite;
 }
 
 %header {
-	color: $white70a;
-	font-family: $font-stack;
-	font-weight: 700;
-	text-transform: uppercase;
+    color: $white70a;
+    font-family: $font-stack;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 %date-link {
-	color: $text-muted;
-	cursor: pointer !important;
-	transition: color 0.2s ease;
+    color: $text-muted;
+    cursor: pointer !important;
+    transition: color 0.2s ease;
 
-	&:focus,
-	&:hover {
-		color: $text;
-	}
+    &:focus,
+    &:hover {
+        color: $text;
+    }
 }
-
 
 // Mixins
 
 @mixin background($background-image, $attachment: '') {
-	background: $light-gray $noise repeat $attachment center center/auto,
-		$background-image no-repeat $attachment center center/cover !important;
+    background: $light-gray $noise repeat $attachment center center/auto,
+        $background-image no-repeat $attachment center center/cover !important;
 }
 
-@mixin button
-	($background, $background-hover: lighten($background, 10%),
-	$background-active: darken($background, 10%),
-	$color: inherit) {
-		@extend %button-basic;
-		background: $background !important;
-		color: $color !important;
-		border: 0 !important;
+@mixin button(
+    $background,
+    $background-hover: lighten($background, 10%),
+    $background-active: darken($background, 10%),
+    $color: inherit
+) {
+    @extend %button-basic;
+    background: $background !important;
+    color: $color !important;
+    border: 0 !important;
 
-		&.disabled,
-		&:disabled {
-			background: $background !important;
-			color: $color !important;
-			border: 0 !important;
-			opacity: 0.7;
+    &.disabled,
+    &:disabled {
+        background: $background !important;
+        color: $color !important;
+        border: 0 !important;
+        opacity: 0.7;
 
-			&.focus,
-			&:focus,
-	        &:hover {
-				background: $background !important;
-				color: $color !important;
-				border: 0 !important;
-				opacity: 0.7;
-			}
-		}
+        &.focus,
+        &:focus,
+        &:hover {
+            background: $background !important;
+            color: $color !important;
+            border: 0 !important;
+            opacity: 0.7;
+        }
+    }
 
-		&.focus,
-		&:focus,
-		&:hover {
-			background: $background-hover !important;
-			color: $color !important;
-			border: 0 !important;
-			opacity: 1;
-		}
+    &.focus,
+    &:focus,
+    &:hover {
+        background: $background-hover !important;
+        color: $color !important;
+        border: 0 !important;
+        opacity: 1;
+    }
 
-		&.active,
-		&:active {
-			background: $background-active !important;
-			color: $color !important;
-			border: 0 !important;
-			opacity: 1;
+    &.active,
+    &:active {
+        background: $background-active !important;
+        color: $color !important;
+        border: 0 !important;
+        opacity: 1;
 
-			&.focus,
-			&:focus,
-			&:hover {
-				background: $background-active !important;
-				color: $color !important;
-				border: 0 !important;
-				opacity: 1;
-			}
-		}
+        &.focus,
+        &:focus,
+        &:hover {
+            background: $background-active !important;
+            color: $color !important;
+            border: 0 !important;
+            opacity: 1;
+        }
+    }
 }
 
 @mixin css-bar($progress-color, $bg-color) {
-	$percent: 0;
-	@while $percent <= 100 {
-		$deg1: if($percent < 50, 90, 270 + (360 / 20) * ($percent - 50) / 5);
-		$deg2: if($percent < 50, 90 + (360 / 20) * $percent / 5, 270);
-		$first-color: if($percent < 50, $bg-color, $progress-color);
-		&.css-bar-#{$percent} {
-			background-image: linear-gradient(#{$deg1}deg, $first-color 50%, transparent 50%, transparent), linear-gradient(#{$deg2}deg, $progress-color 50%, $bg-color 50%, $bg-color);
-		}
-		$percent: $percent + 5;
-	}
+    $percent: 0;
+    @while $percent <= 100 {
+        $deg1: if($percent < 50, 90, 270 + (360 / 20) * ($percent - 50) / 5);
+        $deg2: if($percent < 50, 90 + (360 / 20) * $percent / 5, 270);
+        $first-color: if($percent < 50, $bg-color, $progress-color);
+        &.css-bar-#{$percent} {
+            background-image: linear-gradient(
+                    #{$deg1}deg,
+                    $first-color 50%,
+                    transparent 50%,
+                    transparent
+                ),
+                linear-gradient(
+                    #{$deg2}deg,
+                    $progress-color 50%,
+                    $bg-color 50%,
+                    $bg-color
+                );
+        }
+        $percent: $percent + 5;
+    }
 }

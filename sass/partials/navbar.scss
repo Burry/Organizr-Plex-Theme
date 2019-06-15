@@ -1,91 +1,91 @@
 // Navbar
 
 .navbar {
-	background: $black70a;
-	padding: 10px;
+    background: $black70a;
+    padding: 10px;
 }
 
 @media screen and (min-width: 768px) {
-	.navbar {
-		padding-left: 60px;
-	}
+    .navbar {
+        padding-left: 60px;
+    }
 }
 
 .navbar-header {
-	background: transparent;
+    background: transparent;
 }
 
 .top-left-part a {
-	line-height: inherit;
-	font-size: 26px;
-	text-transform: none;
+    line-height: inherit;
+    font-size: 26px;
+    text-transform: none;
 }
 
 .navbar-top-links {
-	> li > a {
-		background: transparent !important;
-		color: $text-muted;
-		transition: none;
+    > li > a {
+        background: transparent !important;
+        color: $text-muted;
+        transition: none;
 
-		&:hover {
-			color: $text !important;
-		}
-	}
+        &:hover {
+            color: $text !important;
+        }
+    }
 
-	&.navbar-left {
-		li:first-of-type i {
-			width: 14px !important;
-		}
-	}
+    &.navbar-left {
+        li:first-of-type i {
+            width: 14px !important;
+        }
+    }
 
-	.dropdown-user {
-		top: 60px;
+    .dropdown-user {
+        top: 60px;
 
-		.dw-user-box {
-			cursor: default;
+        .dw-user-box {
+            cursor: default;
 
-			.u-img img {
-				border-radius: 1000px;
-			}
-		}
-	}
+            .u-img img {
+                border-radius: 1000px;
+            }
+        }
+    }
 }
 
 .profile-pic {
-	.img-circle {
-		box-shadow: inset 0 0 0 1px rgba($white, 0.1);
-		margin-top: -4px;
-	}
+    .img-circle {
+        box-shadow: inset 0 0 0 1px rgba($white, 0.1);
+        margin-top: -4px;
+    }
 
-	b {
-		font-weight: 600;
-	}
+    b {
+        font-weight: 600;
+    }
 
-	&:hover {
-		.img-circle {
-			background: $text;
-			box-shadow: 0 0 0 2px $text;
-		}
+    &:hover {
+        .img-circle {
+            background: $text;
+            box-shadow: 0 0 0 2px $text;
+        }
 
-		b,
-		.caret {
-			color: $text;
-		}
-	}
+        b,
+        .caret {
+            color: $text;
+        }
+    }
 
-	&[aria-expanded='true'] {
-		.img-circle {
-			background: $theme-lighter;
-			box-shadow: 0 0 0 2px $theme-lighter;
-		}
+    &[aria-expanded='true'] {
+        .img-circle {
+            background: $theme-lighter;
+            box-shadow: 0 0 0 2px $theme-lighter;
+        }
 
-		b,
-		.caret {
-			color: $theme-lighter;
-		}
-	}
+        b,
+        .caret {
+            color: $theme-lighter;
+        }
+    }
 }
 
 .ti-fullscreen {
-	line-height: inherit;
+    line-height: inherit;
 }

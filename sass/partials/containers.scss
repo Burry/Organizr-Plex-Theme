@@ -3,350 +3,351 @@
 // Page Elements
 
 html {
-	background: $light-gray;
+    background: $light-gray;
 }
 
 body {
-	@include background($bg-light, 'fixed');
-	color: $text;
-	font: 600 13px $font-stack;
-	width: 100%;
-	height: 100%;
-	transition: background-image 0.2s ease;
+    color: $text;
+    font: 600 13px $font-stack;
+    width: 100%;
+    height: 100%;
+    transition: background-image 0.2s ease;
 
-	&[data-active-tab=""] {
-		position: absolute;
-		@include background($bg-dark, 'fixed');
-	}
+    @include background($bg-light, 'fixed');
+
+    &[data-active-tab=''] {
+        position: absolute;
+
+        @include background($bg-dark, 'fixed');
+    }
 }
-
 
 // Wrappers
 
 #wrapper {
-	height: 100%;
+    height: 100%;
 }
 
 #page-wrapper {
-	background: transparent;
+    background: transparent;
 
-	&:before {
-		content: '';
-		@include background($bg-light, 'fixed');
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-	}
+    &:before {
+        content: '';
+        @include background($bg-light, 'fixed');
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
 }
 
 @media screen and (max-width: 767px) {
-	.fix-header #page-wrapper {
-		margin-top: 60px;
-	}
+    .fix-header #page-wrapper {
+        margin-top: 60px;
+    }
 }
 
 @media screen and (min-width: 768px) {
-	.fix-header #page-wrapper {
-		margin-top: 60px;
-                min-height: 0px !important;
-	}
+    .fix-header #page-wrapper {
+        margin-top: 60px;
+        min-height: 0px !important;
+    }
 }
 
 .iframe {
-	height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
 }
 
 .dropify-wrapper {
-	color: $white70a !important;
+    color: $white70a !important;
 }
-
 
 // Panel
 
 .panel {
-	background: transparent;
+    background: transparent;
 
-	&.bg-org {
-		background: transparent !important;
-	}
+    &.bg-org {
+        background: transparent !important;
+    }
 
-	&.panel-green,
-	&.panel-success {
-		margin: 0;
-		.panel-heading {
-			color: $black;
-			text-align: center;
-			border-radius: 3px;
-		}
-	}
+    &.panel-green,
+    &.panel-success {
+        margin: 0;
+        .panel-heading {
+            color: $black;
+            text-align: center;
+            border-radius: 3px;
+        }
+    }
 
-	&.panel-warning {
-		.panel-heading {
-			padding: 0 0 15px;
-			border: 0;
-			font-size: 18px;
-			color: $white;
-			background: none;
-		}
+    &.panel-warning {
+        .panel-heading {
+            padding: 0 0 15px;
+            border: 0;
+            font-size: 18px;
+            color: $white;
+            background: none;
+        }
 
-		.pull-right {
-			display: none;
-		}
+        .pull-right {
+            display: none;
+        }
 
-		.panel-body {
-			padding: 0;
-		}
-	}
+        .panel-body {
+            padding: 0;
+        }
+    }
 
-	.panel-heading {
-		font-size: 14px;
-		font-weight: 600;
-		color: $text-muted;
-		text-transform: uppercase;
+    .panel-heading {
+        font-size: 14px;
+        font-weight: 600;
+        color: $text-muted;
+        text-transform: uppercase;
 
-		.btn {
-			padding: 8px 12px;
-			margin-top: -10px;
+        .btn {
+            padding: 8px 12px;
+            margin-top: -10px;
 
-			&.popup-with-form {
-				padding: 2px;
-				margin-top: -4px;
-			}
-		}
+            &.popup-with-form {
+                padding: 2px;
+                margin-top: -4px;
+            }
+        }
 
-		.btn-group {
-			margin-right: -0.5rem;
-		}
-	}
+        .btn-group {
+            margin-right: -0.5rem;
+        }
+    }
 }
 
 .panel-body {
-	background: transparent;
+    background: transparent;
 
-	&.bg-org {
-		background: transparent;
-	}
+    &.bg-org {
+        background: transparent;
+    }
 
-	&:first-child h3 {
-		font-family: $font-stack;
-	}
+    &:first-child h3 {
+        font-family: $font-stack;
+    }
 }
 
 .panel-default {
-	.panel-heading {
-		background: $black15a;
-		border-color: transparent;
-		color: $white70a;
-	}
+    .panel-heading {
+        background: $black15a;
+        border-color: transparent;
+        color: $white70a;
+    }
 
-	.panel-body {
-		background: transparent;
-		color: $text;
-	}
+    .panel-body {
+        background: transparent;
+        color: $text;
+    }
 }
 
 .panel-info {
-	.panel-heading {
-		background: $black15a;
-		color: $text-muted;
-		border-color: transparent;
-	}
+    .panel-heading {
+        background: $black15a;
+        color: $text-muted;
+        border-color: transparent;
+    }
 
-	a {
-		color: $text !important;
+    a {
+        color: $text !important;
 
-		&:focus,
-		&:hover {
-			color: $white !important;
-		}
-	}
+        &:focus,
+        &:hover {
+            color: $white !important;
+        }
+    }
 }
 
 .panel-blue {
-	.panel-heading {
-		background: $black15a !important;
-	}
+    .panel-heading {
+        background: $black15a !important;
+    }
 }
 
 .panel-white {
-	.panel-heading {
-		border-color: transparent;
-		color: $white70a;
-	}
+    .panel-heading {
+        border-color: transparent;
+        color: $white70a;
+    }
 }
-
 
 // Content Containers
 
 .bg-info {
-	background: transparent !important;
+    background: transparent !important;
 }
 
 .bg-theme {
-	background: $black30a!important;
+    background: $black30a !important;
 }
 
 .bg-danger {
-	background: $red !important;
+    background: $red !important;
 }
 
 .bg-success {
-	background: $green !important;
+    background: $green !important;
 }
 
 .bg-title {
-	background: $black15a!important;
+    background: $black15a !important;
 
-	h4 {
-		color: $white70a!important;
-	}
+    h4 {
+        color: $white70a !important;
+    }
 
-	.breadcrumb a {
-		color: $white70a!important;
-	}
+    .breadcrumb a {
+        color: $white70a !important;
+    }
 }
 
 .well {
-	border: 0;
+    border: 0;
 
-	&.bg-org {
-		background: transparent !important;
-	}
+    &.bg-org {
+        background: transparent !important;
+    }
 }
 
 .white-box {
-	background: transparent;
+    background: transparent;
 
-	&.bg-org {
-		background: transparent !important;
-	}
+    &.bg-org {
+        background: transparent !important;
+    }
 
-	.box-title {
-		color: $white;
-		font-size: 14px;
-		font-weight: 600;
-	}
+    .box-title {
+        color: $white;
+        font-size: 14px;
+        font-weight: 600;
+    }
 }
 
 blockquote {
-	border-left-color: $theme !important;
+    border-left-color: $theme !important;
 }
-
 
 // Content Boxes
 
 .el-card-content {
-	&.bg-org {
-		background: transparent!important;
-	}
+    &.bg-org {
+        background: transparent !important;
+    }
 
-	small {
-		color: $white45a;
-	}
+    small {
+        color: $white45a;
+    }
 
-	br:last-of-type {
-		display: none;
-	}
+    br:last-of-type {
+        display: none;
+    }
 }
 
 .el-card-item .el-card-avatar,
 .item {
-	box-shadow: 0 0 2px $black35a;
+    box-shadow: 0 0 2px $black35a;
 }
 
 .el-card-item:hover .el-card-avatar,
 .item:hover {
-	box-shadow: 0 0 0 2px $theme;
+    box-shadow: 0 0 0 2px $theme;
 }
 
 .el-card-avatar a {
-	color: $white70a !important;
+    color: $white70a !important;
 
-	&:focus,
-	&:hover {
-		background: transparent !important;
-		color: $white !important;
-	}
+    &:focus,
+    &:hover {
+        background: transparent !important;
+        color: $white !important;
+    }
 }
 
 .el-element-overlay {
-	.white-box {
-		padding: 2px;
-	}
+    .white-box {
+        padding: 2px;
+    }
 
-	a.btn-outline {
-		color: $white70a;
-		border: 0;
+    a.btn-outline {
+        color: $white70a;
+        border: 0;
 
-		&:focus,
-		&:hover {
-			color: $white;
-		}
-	}
+        &:focus,
+        &:hover {
+            color: $white;
+        }
+    }
 
-	.el-card-item {
-		.el-overlay {
-			transition: all 0.2s ease;
-		    background: radial-gradient(farthest-corner at 50% 50%, $black50a 50%, $black20 100%);
-		}
+    .el-card-item {
+        .el-overlay {
+            transition: all 0.2s ease;
+            background: radial-gradient(
+                farthest-corner at 50% 50%,
+                $black50a 50%,
+                $black20 100%
+            );
+        }
 
-		.el-overlay-1 {
-			img {
-				transition: none;
-			}
-		}
-	}
+        .el-overlay-1 {
+            img {
+                transition: none;
+            }
+        }
+    }
 }
 
 .el-overlay-1:hover {
-	img {
-		transform: none !important;
-	}
+    img {
+        transform: none !important;
+    }
 }
 
 .lazyload:not(.homepageImageTitle) {
-	background-color: $black45a;
+    background-color: $black45a;
 }
 
 .recent-poster {
-	margin-bottom: 50px;
-	margin-top: 2px;
+    margin-bottom: 50px;
+    margin-top: 2px;
 }
 
 .recent-title {
-	background: transparent;
-	color: $white45a;
-	display: block;
-	padding: 5px 0 0;
+    background: transparent;
+    color: $white45a;
+    display: block;
+    padding: 5px 0 0;
     font-size: 13px;
-	font-weight: 600 ;
-	line-height: 19px;
-	transform: translateY(100%);
+    font-weight: 600;
+    line-height: 19px;
+    transform: translateY(100%);
 
-	&::first-line {
-		color: $white;
-	}
+    &::first-line {
+        color: $white;
+    }
 
-	small {
-		font-size: 100% !important;
-		font-weight: 600;
-	}
+    small {
+        font-size: 100% !important;
+        font-weight: 600;
+    }
 }
 
 @media screen and (min-width: 768px) {
-	.recent-title {
-		padding: 11px 0 0;
-	}
+    .recent-title {
+        padding: 11px 0 0;
+    }
 }
-
 
 // Override Ombi Icon
 
 img[src*='ombi'],
 div[data-src*='ombi'] {
-	background-image: $ombi !important;
+    background-image: $ombi !important;
 }

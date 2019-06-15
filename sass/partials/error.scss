@@ -1,14 +1,14 @@
 // Error Page
 
 .error-page {
-	@include background($bg-dark, 'fixed');
+    @include background($bg-dark, 'fixed');
 
-	h1 {
-		font-size: 128px;
-		font-weight: 700;
-	}
+    h1 {
+        font-size: 128px;
+        font-weight: 700;
+    }
 }
 
 .error-box {
-	top: inherit;
+    top: inherit;
 }

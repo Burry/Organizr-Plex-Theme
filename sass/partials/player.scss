@@ -1,145 +1,145 @@
 // Media Player
 
 .plyr {
-	border-radius: 3px;
-	box-shadow: 0 5px 15px $black50a;
-	font-family: $font-stack;
-	transition: all 0.2s ease;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px $black50a;
+    font-family: $font-stack;
+    transition: all 0.2s ease;
 
-   input {
-	   &[type=radio]:checked + span {
-		   background: $theme !important;
-	   }
+    input {
+        &[type='radio']:checked + span {
+            background: $theme !important;
+        }
 
-		&[type=range] {
-			color: $theme !important;
-		}
-	}
+        &[type='range'] {
+            color: $theme !important;
+        }
+    }
 
-	&:focus,
-	&:hover {
-		.plyr__control--overlaid {
-			background: $theme-light;
-		}
-	}
+    &:focus,
+    &:hover {
+        .plyr__control--overlaid {
+            background: $theme-light;
+        }
+    }
 
-	&:active {
-		.plyr__control--overlaid {
-			background: $theme-dark;
-		}
-	}
+    &:active {
+        .plyr__control--overlaid {
+            background: $theme-dark;
+        }
+    }
 }
 
 .plyr__control--overlaid {
-	background: $theme;
-	padding: 30px;
+    background: $theme;
+    padding: 30px;
 
-	&:focus,
-	&:hover {
-		background: $theme;
-	}
+    &:focus,
+    &:hover {
+        background: $theme;
+    }
 }
 
 .plyr__controls {
-	transition: all 0.2s ease !important;
+    transition: all 0.2s ease !important;
 }
 
 .plyr__control {
-	&.plyr__tab-focus,
-	&:hover,
-	&[aria-expanded=true] {
-		background: $theme !important;
-	}
+    &.plyr__tab-focus,
+    &:hover,
+    &[aria-expanded='true'] {
+        background: $theme !important;
+    }
 
-	&:active {
-		background: $theme-dark !important;
-	}
+    &:active {
+        background: $theme-dark !important;
+    }
 }
 
 .plyr__menu__container {
-	background: $black20;
-	box-shadow: 0 5px 15px rgba($black, 0.5);
-	padding: 5px 0;
+    background: $black20;
+    box-shadow: 0 5px 15px rgba($black, 0.5);
+    padding: 5px 0;
 
-	&:after {
-		border-top-color: $black20;
-	}
+    &:after {
+        border-top-color: $black20;
+    }
 
-	ul {
-		padding: 0;
-	}
+    ul {
+        padding: 0;
+    }
 
-	li:not(:first-of-type) {
-		margin: 0 !important;
-	}
+    li:not(:first-of-type) {
+        margin: 0 !important;
+    }
 
-	.plyr__control {
-		color: $menu-link;
-		font-weight: 600;
-		border-radius: 0;
-		margin: 0;
-		padding: 3px 15px !important;
-		transition: none;
+    .plyr__control {
+        color: $menu-link;
+        font-weight: 600;
+        border-radius: 0;
+        margin: 0;
+        padding: 3px 15px !important;
+        transition: none;
 
-		&:active,
-		&:hover {
-			background: $white08a !important;
-			color: $white !important;
-		}
+        &:active,
+        &:hover {
+            background: $white08a !important;
+            color: $white !important;
+        }
 
-		input[type=radio]:focus + span {
-			box-shadow: none !important;
-		}
-	}
+        input[type='radio']:focus + span {
+            box-shadow: none !important;
+        }
+    }
 
-	.plyr__control--back {
-		color: $menu-header;
-		font-weight: 700;
-		text-transform: uppercase;
-		width: 100%;
-		margin: 0 0 10px !important;
-		padding-left: 35px !important;
+    .plyr__control--back {
+        color: $menu-header;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+        margin: 0 0 10px !important;
+        padding-left: 35px !important;
 
-		&:before {
-			background: transparent;
-			box-shadow: 0 1px 0 $divider;
-			width: calc(100% - 10px);
-			left: 5px;
-		}
+        &:before {
+            background: transparent;
+            box-shadow: 0 1px 0 $divider;
+            width: calc(100% - 10px);
+            left: 5px;
+        }
 
-		&:after {
-			border-right-color: $menu-header;
-			left: 10px;
-		}
-	}
+        &:after {
+            border-right-color: $menu-header;
+            left: 10px;
+        }
+    }
 
-	.plyr__control--forward {
-		color: $menu-header;
-		font-weight: 700;
-		text-transform: uppercase;
-		padding-right: 35px !important;
+    .plyr__control--forward {
+        color: $menu-header;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-right: 35px !important;
 
-		span {
-			color: $menu-link;
-			font-weight: 600;
-			text-transform: none;
-		}
+        span {
+            color: $menu-link;
+            font-weight: 600;
+            text-transform: none;
+        }
 
-		&:active,
-		&:hover {
-			span {
-				color: $white;
-			}
-		}
+        &:active,
+        &:hover {
+            span {
+                color: $white;
+            }
+        }
 
-		&:after {
-			border-left-color: $menu-header;
-			right: 10px;
-		}
-	}
+        &:after {
+            border-left-color: $menu-header;
+            right: 10px;
+        }
+    }
 }
 
 .plyr__badge {
-	background: $white08a;
-	color: $text-muted;
+    background: $white08a;
+    color: $text-muted;
 }

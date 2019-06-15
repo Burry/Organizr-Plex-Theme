@@ -1,229 +1,228 @@
 // Calendar
 
 #calendar {
-	margin: 0 !important
+    margin: 0 !important;
 }
 
 #homepageOrdercalendar:not(:last-of-type) {
-	#calendar {
-		margin: 0 0 30px !important;
-	}
+    #calendar {
+        margin: 0 0 30px !important;
+    }
 }
 
 @media screen and (min-width: 768px) {
-	#homepageOrdercalendar:not(:last-of-type) {
-		#calendar {
-			margin: 0 0 50px !important;
-		}
-	}
+    #homepageOrdercalendar:not(:last-of-type) {
+        #calendar {
+            margin: 0 0 50px !important;
+        }
+    }
 }
 
 .fc-toolbar {
-	background: transparent !important;
-	cursor: default;
-	padding: 0 0 2.5px;
+    background: transparent !important;
+    cursor: default;
+    padding: 0 0 2.5px;
 
-	h2 {
-		@extend %header;
-		color: $text;
-		font-size: 15px;
-	}
+    h2 {
+        @extend %header;
+        color: $text;
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 768px) {
-	.fc-toolbar {
-		padding: 0 0 20px;
-	}
+    .fc-toolbar {
+        padding: 0 0 20px;
+    }
 
-	.fc-toolbar .fc-center {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+    .fc-toolbar .fc-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .fc-day-header {
-	background: $black30a !important;
+    background: $black30a !important;
 
-	a {
-		@extend %date-link;
-	}
+    a {
+        @extend %date-link;
+    }
 
-	span {
-		color: $text-muted;
-		cursor: default;
-	}
+    span {
+        color: $text-muted;
+        cursor: default;
+    }
 }
 
 .fc-today-button {
-	margin: 0 5px !important;
+    margin: 0 5px !important;
 }
 
 @media screen and (min-width: 768px) {
-	.fc-today-button {
-		margin: 0;
-	}
+    .fc-today-button {
+        margin: 0;
+    }
 }
 
 .fc-day {
-	background: $black15a;
+    background: $black15a;
 }
 
 .fc-day-top {
-	padding: 10px 15px !important;
+    padding: 10px 15px !important;
 }
 
 .fc-day-number {
-	@extend %date-link;
-	width: 100%;
-	padding: 0 !important;
-	text-align: left !important;
+    @extend %date-link;
+    width: 100%;
+    padding: 0 !important;
+    text-align: left !important;
 }
 
 .fc-list-heading-main {
-	@extend %date-link;
+    @extend %date-link;
 }
 
 .fc-time {
-	font-weight: 400 !important;
+    font-weight: 400 !important;
 }
 
 .fc-title {
-	color: $white70a;
-	font-weight: 600;
-	transition: color 0.2s ease;
+    color: $white70a;
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
 .fc-event {
-	&:focus,
-	&:hover {
-		.fc-title {
-			color: $text;
-		}
-	}
+    &:focus,
+    &:hover {
+        .fc-title {
+            color: $text;
+        }
+    }
 }
 
 .fc-content {
-	text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
 .fc-day-grid {
-	.fc-event {
-		padding: 5px 15px;
-	}
+    .fc-event {
+        padding: 5px 15px;
+    }
 
-	tr:last-of-type .fc-event {
-		padding-bottom: 15px;
-	}
+    tr:last-of-type .fc-event {
+        padding-bottom: 15px;
+    }
 }
 
 .fc-today {
-	background: $white08a !important;
+    background: $white08a !important;
 
-	&.fc-day-top,
-	&.fc-state-highlight,
-	&.fc-day-header {
-		background: $white08a !important;
+    &.fc-day-top,
+    &.fc-state-highlight,
+    &.fc-day-header {
+        background: $white08a !important;
 
-		a {
-			color: $theme-lighter;
-		}
-	}
+        a {
+            color: $theme-lighter;
+        }
+    }
 
-	&.fc-day-header span {
-		color: $theme-lighter;
-	}
+    &.fc-day-header span {
+        color: $theme-lighter;
+    }
 }
 
 .fc-widget-content {
-	border-width: 0 !important;
-	border-color: $white08a !important;
+    border-width: 0 !important;
+    border-color: $white08a !important;
 
-	&.fc-day:not(:last-of-type) {
-		border-right-width: 1px !important;
-	}
+    &.fc-day:not(:last-of-type) {
+        border-right-width: 1px !important;
+    }
 
-	&.fc-row:not(:last-of-type) {
-		border-bottom-width: 1px !important;
-	}
+    &.fc-row:not(:last-of-type) {
+        border-bottom-width: 1px !important;
+    }
 }
-
 
 // Calendar Buttons
 
 .fc-button {
-	background: $black15a !important;
-	color: $text-muted;
-	border-color: transparent;
-	border-radius: 0 !important;
-	border: 0 !important;
-	text-transform: uppercase;
+    background: $black15a !important;
+    color: $text-muted;
+    border-color: transparent;
+    border-radius: 0 !important;
+    border: 0 !important;
+    text-transform: uppercase;
 
-	&:focus,
-	&:hover {
-		background: $white08a !important;
-		color: $text;
-		border-color: transparent;
-		opacity: 1;
-	}
+    &:focus,
+    &:hover {
+        background: $white08a !important;
+        color: $text;
+        border-color: transparent;
+        opacity: 1;
+    }
 }
 
 .fc-next-button,
 .fc-prev-button {
-	background: transparent !important;
-	color: $white70a !important;
-	border: 0 !important;
+    background: transparent !important;
+    color: $white70a !important;
+    border: 0 !important;
 
-	&.focus,
-	&:focus,
-	&:hover {
-		background: transparent !important;
-		color: $white !important;
-	}
+    &.focus,
+    &:focus,
+    &:hover {
+        background: transparent !important;
+        color: $white !important;
+    }
 }
 
 .fc-state-default {
-	text-shadow: none;
-	box-shadow: none;
+    text-shadow: none;
+    box-shadow: none;
 
-	&.fc-corner-left {
-		border-right-width: 0;
-		border-radius: 3px 0 0 3px;
-	}
+    &.fc-corner-left {
+        border-right-width: 0;
+        border-radius: 3px 0 0 3px;
+    }
 
-	&.fc-corner-right {
-		border-left-width: 0;
-		border-radius: 0 3px 3px 0;
-	}
+    &.fc-corner-right {
+        border-left-width: 0;
+        border-radius: 0 3px 3px 0;
+    }
 }
 
 .fc-state-active,
 .fc-state-active:focus,
 .fc-state-active:hover {
-	background: $white08a !important;
-	color: $theme-lighter;
-	border-color: transparent;
+    background: $white08a !important;
+    color: $theme-lighter;
+    border-color: transparent;
 }
 
 .fc-state-hover {
-	opacity: 1;
+    opacity: 1;
 }
 
 .fc-today-button {
-	border-radius: 3px !important;
-	font-weight: 700;
-	transition: all 0.1s;
+    border-radius: 3px !important;
+    font-weight: 700;
+    transition: all 0.1s;
 
-	background: $white25a !important;
-	color: $white;
+    background: $white25a !important;
+    color: $white;
 
-	&:focus,
-	&:hover {
-		background: $white30a !important;
-		color: $white;
-	}
+    &:focus,
+    &:hover {
+        background: $white30a !important;
+        color: $white;
+    }
 
-	&:active {
-		background: $white20a !important;
-	}
+    &:active {
+        background: $white20a !important;
+    }
 }

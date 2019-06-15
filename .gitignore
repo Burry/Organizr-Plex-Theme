@@ -49,14 +49,17 @@ $RECYCLE.BIN/
 
 
 # =========================
-# Project
+# Plex Theme
 # =========================
 
-# Errors
-yarn-error.log
+# Logs
+*.log
 
-# Personal modifications
-/sass/partials/grant-custom.scss
+# Development environment variables
+.env
 
 # Organizr theme format
 plex_theme
+
+# Personal modifications
+/sass/partials/grant-custom.scss

@@ -1,70 +1,69 @@
 // Alert Popup
 
 .iziToast-wrapper {
-	text-align: center !important;
-	padding: 0;
-	bottom: 0;
-	top: auto;
+    text-align: center !important;
+    padding: 0;
+    bottom: 0;
+    top: auto;
 }
 
 .iziToast {
-	background: $black !important;
-	border: 0 !important;
+    background: $black !important;
+    border: 0 !important;
     box-shadow: 0 4px 12px $black50a;
-	padding: 10px 20px;
-	font-family: $font-stack;
+    padding: 10px 20px;
+    font-family: $font-stack;
 
-	> .iziToast-close {
-		width: 100%;
-		opacity: 0;
-	}
+    > .iziToast-close {
+        width: 100%;
+        opacity: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
-	.iziToast {
-		border-radius: 10px;
-		width: 50%;
-		margin: 0 0 20px;
-	}
+    .iziToast {
+        border-radius: 10px;
+        width: 50%;
+        margin: 0 0 20px;
+    }
 }
 
 .iziToast-body {
-	height: initial;
-	min-height: initial;
-	margin: 0;
+    height: initial;
+    min-height: initial;
+    margin: 0;
 }
 
 .iziToast-icon {
-	color: $text !important;
+    color: $text !important;
 }
 
 .iziToast-texts {
-	margin: 0 !important;
-	padding: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
-	strong + p {
-
-	}
+    // strong + p {
+    // }
 }
 
 .iziToast-title,
 .iziToast-message {
-	color: $text !important;
+    color: $text !important;
 }
 
 .iziToast-message {
-	margin-bottom: 0 !important;
-	font-weight: 400;
+    margin-bottom: 0 !important;
+    font-weight: 400;
 
-	&:only-child {
-		margin-top: 10px !important;
-	}
+    &:only-child {
+        margin-top: 10px !important;
+    }
 }
 
 .iziToast-progressbar {
-	display: none;
+    display: none;
 }
 
 .iziToast-capsule {
-	transition: none;
+    transition: none;
 }

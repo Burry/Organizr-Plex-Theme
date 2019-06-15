@@ -1,267 +1,262 @@
 // Login & Register
 
 .login-area:not(.hidden) + #page-wrapper {
-	display: none;
+    display: none;
 }
 
 .login-register {
-	background: transparent !important;
+    background: transparent !important;
 
-	.login-box {
-		background: transparent;
-		width: 480px;
-		height: initial;
-		right: initial;
-		position: fixed;
-		@extend %center;
-	}
+    .login-box {
+        background: transparent;
+        width: 480px;
+        height: initial;
+        right: initial;
+        position: fixed;
+        @extend %center;
+    }
 
-	h1 {
-		color: $white;
-		font-weight: 700;
-		text-transform: none;
-		width: 320px;
-		margin: 0;
-	}
+    h1 {
+        color: $white;
+        font-weight: 700;
+        text-transform: none;
+        width: 320px;
+        margin: 0;
+    }
 
-	.white-box {
-		background: $black30a;
-		margin: 0;
-		padding: 0;
-	}
+    .white-box {
+        background: $black30a;
+        margin: 0;
+        padding: 0;
+    }
 
-	form {
-		width: 320px;
-		margin: auto;
-		padding-top: 30px;
-	}
+    form {
+        width: 320px;
+        margin: auto;
+        padding-top: 30px;
+    }
 
-	.form-group {
-		margin: 15px 0;
-		overflow: visible;
+    .form-group {
+        margin: 15px 0;
+        overflow: visible;
 
-		.col-xs-12,
-		.col-md-12 {
-			padding: 0;
-		}
+        .col-xs-12,
+        .col-md-12 {
+            padding: 0;
+        }
 
-		&.m-t-40,
-		&.m-b-0 {
-			margin: 0 !important;
-		}
+        &.m-t-40,
+        &.m-b-0 {
+            margin: 0 !important;
+        }
 
-		&.m-b-0 {
-			color: #A8A8AB;
+        &.m-b-0 {
+            color: #a8a8ab;
 
-			p {
-				margin: -10px 0 20px;
-			}
-		}
-	}
+            p {
+                margin: -10px 0 20px;
+            }
+        }
+    }
 }
 
 // Needs to not apply to register form, so we don't group with above
 #loginform {
-	.form-group {
-		.btn {
-			margin: -10px 0 30px !important;
-		}
-	}
-	
-	.m-t-10 {
-		margin-top: -20px !important;
-	}
+    .form-group {
+        .btn {
+            margin: -10px 0 30px !important;
+        }
+    }
+
+    .m-t-10 {
+        margin-top: -20px !important;
+    }
 }
 
 #tfa-div {
-	margin: 0;
+    margin: 0;
 }
 
 @media screen and (max-width: 320px) {
-	.login-register {
-		h1,
-		form {
-			width: 288px;
-		}
-	}
+    .login-register {
+        h1,
+        form {
+            width: 288px;
+        }
+    }
 }
 
 @media screen and (min-width: 350px) {
-	.login-register {
-		width: 480px;
-		height: 300px;
+    .login-register {
+        width: 480px;
+        height: 300px;
 
-		.white-box {
-			width: 480px;
-		}
-	}
+        .white-box {
+            width: 480px;
+        }
+    }
 }
-
 
 // Login Logo
 
 #login-logo {
-	display: block !important;
-	height: 0;
-	position: absolute;
-	top: -70px;
+    display: block !important;
+    height: 0;
+    position: absolute;
+    top: -70px;
 }
 
 .loginLogo {
-	max-width: 320px;
-	border: 0;
+    max-width: 320px;
+    border: 0;
     margin-top: 35px;
-	transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 @media screen and (max-width: 320px) {
-	.loginLogo {
-		max-width: 288px;
-	}
+    .loginLogo {
+        max-width: 288px;
+    }
 }
-
 
 // Registration form
 
 #registerForm .form-group {
-	margin: 15px 0 !important;
+    margin: 15px 0 !important;
 
-	&:first-of-type {
-		margin: 0 0 15px !important;
-	}
+    &:first-of-type {
+        margin: 0 0 15px !important;
+    }
 
-	&:last-of-type {
-		margin: 15px 0 0 !important;
-		padding: 0 0 30px;
-	}
+    &:last-of-type {
+        margin: 15px 0 0 !important;
+        padding: 0 0 30px;
+    }
 }
-
 
 // Password recovery form
 
 #recoverform {
-	.form-group {
-		&:first-of-type {
-			margin: 0 0 15px !important;
-		}
+    .form-group {
+        &:first-of-type {
+            margin: 0 0 15px !important;
+        }
 
-		&:last-of-type {
-			margin: 15px 0 0 !important;
-			padding: 0 0 30px;
-		}
-	}
+        &:last-of-type {
+            margin: 15px 0 0 !important;
+            padding: 0 0 30px;
+        }
+    }
 
-	h3 {
-		margin: 0;
-	}
+    h3 {
+        margin: 0;
+    }
 }
 
 #to-recover span {
-	color: $white45a;
-	transition: color 0.2s ease;
+    color: $white45a;
+    transition: color 0.2s ease;
 
-	&:hover {
-		color: $white;
-	}
+    &:hover {
+        color: $white;
+    }
 }
-
 
 // Invite Modal
 
 body[data-active-tab=''] #invite-area {
-	.panel {
-		max-width: 480px;
-		margin: auto;
-	}
+    .panel {
+        max-width: 480px;
+        margin: auto;
+    }
 
-	.panel-body {
-		padding: 35px;
-	}
+    .panel-body {
+        padding: 35px;
+    }
 
-	.invite-step-1 {
-		max-width: 210px;
+    .invite-step-1 {
+        max-width: 210px;
 
-		.input-group:last-of-type {
-			margin: 0 !important;
-		}
-	}
+        .input-group:last-of-type {
+            margin: 0 !important;
+        }
+    }
 
-	.form-group {
-		margin: 0 auto;
-	}
+    .form-group {
+        margin: 0 auto;
+    }
 
-	.input-group {
-		margin: 15px 0;
+    .input-group {
+        margin: 15px 0;
 
-		&:first-of-type {
-			margin: 0 0 15px !important;
-		}
+        &:first-of-type {
+            margin: 0 0 15px !important;
+        }
 
-		&:last-of-type {
-			margin: 15px 0 0 !important;
-		}
+        &:last-of-type {
+            margin: 15px 0 0 !important;
+        }
 
-		.form-control:last-child {
-			border-radius: 3px;
-		}
-	}
+        .form-control:last-child {
+            border-radius: 3px;
+        }
+    }
 
-	h4 {
-		text-transform: none;
-		font-weight: 600;
-		margin: 0;
-	}
+    h4 {
+        text-transform: none;
+        font-weight: 600;
+        margin: 0;
+    }
 }
 
 #inviteCodeInput {
-	font-family: $monospace-font-stack;
-	font-size: 50px !important;
-	font-weight: 400;
+    font-family: $monospace-font-stack;
+    font-size: 50px !important;
+    font-weight: 400;
 }
 
 @media screen and (min-width: 768px) {
-	body[data-active-tab=''] #invite-area {
-		.invite-step-1 {
-			max-width: 350px;
-			margin: auto;
-		}
+    body[data-active-tab=''] #invite-area {
+        .invite-step-1 {
+            max-width: 350px;
+            margin: auto;
+        }
 
-		.input-group .form-control:last-child {
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-		}
-	}
+        .input-group .form-control:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
 
-	#inviteCodeInput {
-		font-size: 64px !important;
-	}
+    #inviteCodeInput {
+        font-size: 64px !important;
+    }
 }
-
 
 // Login overlay
 
 .blockOverlay {
-	background: $black50a !important;
+    background: $black50a !important;
 }
 
 .blockMsg {
-	background: transparent !important;
-	border: 0 !important;
-	width: 90% !important;
+    background: transparent !important;
+    border: 0 !important;
+    width: 90% !important;
 
-	h5 {
-		color: transparent;
+    h5 {
+        color: transparent;
 
-		&:after {
-			@extend %circular-loader;
-			content: '';
-			display: block;
-			top: 50%;
-			left: 50%;
-		}
-	}
+        &:after {
+            @extend %circular-loader;
+            content: '';
+            display: block;
+            top: 50%;
+            left: 50%;
+        }
+    }
 
-	img {
-		display: none;
-	}
+    img {
+        display: none;
+    }
 }

@@ -1,34 +1,30 @@
 // Plex Theme Build Automation
 
-'use strict';
-
 // Imports & configurations
 
+// Environment variables
+const dotenv = require('dotenv').config(),
     // Automation engine
-const gulp = require('gulp'),
+    gulp = require('gulp'),
     // CSS preprocessor
     sass = require('gulp-sass'),
-    sassLint = require('gulp-sass-lint'),
+    stylelint = require('gulp-stylelint'),
     // Inline and optimize svgs
     cssSvg = require('gulp-css-svg'),
-    // Add browser prefixes
-    autoPrefixer = require('gulp-autoprefixer'),
-    // Project information
-    packageDetails = require('./package.json'),
-    repository = packageDetails.repository,
-
+    // PostCSS (runs Autoprefixer)
+    postcss = require('gulp-postcss'),
     // BrowserSync
     browserSync = require('browser-sync').create(),
     browserSyncConfig = {
-        proxy: packageDetails.homepage,
-        files: 'css/Plex.css',
+        proxy: process.env.ORGANIZR_URL,
+        files: 'build/Plex.css',
         serveStatic: ['css'],
         snippetOptions: {
             rule: {
                 match: /<link id="theme" href=".*" rel="stylesheet">/i,
                 fn: (snippet, match) =>
-                    '<link rel="stylesheet" type="text/css" href="/Plex.css">'
-                    + snippet
+                    '<link rel="stylesheet" type="text/css" href="/Plex.css">' +
+                    snippet
             }
         },
         ghostMode: {
@@ -39,16 +35,17 @@ const gulp = require('gulp'),
         },
         notify: {
             styles: {
-        		top: 'auto',
-        		bottom: '0'
+                top: 'auto',
+                bottom: '0'
             }
         }
     },
     browserSyncError = () => {
-        console.error('Set the "homepage" value in package.json to your Organizr instance\'s URL to test with Browsersync.');
+        console.error(
+            "Set the ORGANIZR_URL environment variable in .env to your Organizr instance's URL to test with Browsersync."
+        );
         return process.exit(0);
     },
-
     // Image optimzation
     imagemin = require('gulp-imagemin'),
     imageminPlugins = [
@@ -58,7 +55,6 @@ const gulp = require('gulp'),
         imagemin.gifsicle({ interlaced: true, optimizationLevel: 3 })
     ],
     imageGlob = '**/*.+(svg|png|jpg|jpeg|gif)',
-
     // CSS optimization
     cleanCSS = require('gulp-clean-css'),
     cleanCSSConfig = {
@@ -68,17 +64,14 @@ const gulp = require('gulp'),
             2: { all: true }
         }
     },
-
     // Header Comment
     headerComment = require('gulp-header-comment'),
     comment = `Plex Theme for Organizr v2
-        Version ` + packageDetails.version + `
-        ` + packageDetails.license + ` License
-        ` + repository;
-
+        Version <%= pkg.version %>
+        <%= pkg.license %> License
+        <%= pkg.homepage %>`;
 
 // Losslessly optimize images
-
 gulp.task('imagemin', () =>
     gulp
         .src(imageGlob)
@@ -86,38 +79,32 @@ gulp.task('imagemin', () =>
         .pipe(gulp.dest('./'))
 );
 
-
 // Lint, compile, and post-process Sass
-
 gulp.task('build', () =>
     gulp
         .src('sass/*.s+(a|c)ss')
-        .pipe(sassLint({ options: { 'merge-default-rules': false } }))
-        .pipe(sassLint.format())
+        .pipe(stylelint({ fix: true }))
         .pipe(sass({ errLogToConsole: true }).on('error', sass.logError))
-        .pipe(autoPrefixer())
         .pipe(cssSvg({ baseDir: '../' }))
+        .pipe(postcss())
         .pipe(cleanCSS(cleanCSSConfig))
         .pipe(headerComment(comment))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('build'))
         .pipe(browserSync.stream())
 );
 
-
 // Build Sass files when changes detected
-
 gulp.task('watch', () =>
     gulp.watch(['sass/**/*.s+(a|c)ss', imageGlob], gulp.series('build'))
 );
 
 gulp.task('build-watch', gulp.series(['build', 'watch']));
 
-
 // Start BrowserSync server
-
-gulp.task('serve', () => !packageDetails.homepage
-    ? browserSyncError
-    : browserSync.init(browserSyncConfig)
+gulp.task('serve', () =>
+    !process.env.ORGANIZR_URL
+        ? browserSyncError
+        : browserSync.init(browserSyncConfig)
 );
 
 gulp.task('build-watch-serve', gulp.parallel('build-watch', 'serve'));

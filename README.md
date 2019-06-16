@@ -9,7 +9,7 @@
     <a href="https://travis-ci.org/Burry/Organizr-Plex-Theme" target="_blank" title="Build Status">
         <img src="https://travis-ci.org/Burry/Organizr-Plex-Theme.svg?branch=master" alt="Build Status" />
     </a>
-    <a href="https://beerpay.io/Burry/Organizr-Plex-Theme" target="_blank" title="Beerpay">
+    <a href="https://beerpay.io/Burry/Organizr-Plex-Theme?focus=wish" target="_blank" title="Beerpay">
         <img src="https://beerpay.io/Burry/Organizr-Plex-Theme/badge.svg?style=flat" alt="Beerpay" />
     </a>
     <br />
@@ -44,4 +44,4 @@ To ensure that notifications display as intended, keep the default notification 
 
 Changing the placeholder color values in _Organizr Settings > Customize > Appearance > Colors & Themes_ will override Plex Theme's color styles. Deleting custom color values will reverse this.
 
-### [🛠 Development](docs/Development.md)
+## [🛠 Development](docs/Development.md)

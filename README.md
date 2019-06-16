@@ -24,7 +24,7 @@
 
 1. Setup a PHP 7 server with [Organizr 2](https://github.com/causefx/Organizr).
 2. Open _Organizr Settings > Customize > Marketplace_ and install Plex Theme.
-3. Open _Organizr Settings > Customize > Appearance > Colors & Themes_, select "Plex" from the theme dropdown, and keep the style set to "Dark."
+3. Open _Organizr Settings > Customize > Appearance > Colors & Themes_, and select "Plex" from the theme dropdown.
 
 ### Group Icons
 
@@ -36,12 +36,18 @@ Using _Organizr's Settings > Customize > Appearance > Custom JavaScript_ and [th
 
 ### Don't Change These
 
+Under _Organizr Settings > Customize > Appearance_:
+
+#### Dark Style
+
+Keep the "style" dropdown in _Colors & Themes_ set to "dark".
+
 #### Notifications
 
-To ensure that notifications display as intended, keep the default notification style setting "Izi" under _Organizr Settings > Customize > Appearance > Notifications_.
+To ensure that notifications display as intended, keep the default notification style setting "Izi" in _Notifications_.
 
 #### Custom Colors
 
-Changing the placeholder color values in _Organizr Settings > Customize > Appearance > Colors & Themes_ will override Plex Theme's color styles. Deleting custom color values will reverse this.
+Changing the placeholder color values in _Colors & Themes_ will override Plex Theme's color styles. Deleting custom color values will reverse this.
 
 ## [🛠 Development](docs/Development.md)

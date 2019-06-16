@@ -50,4 +50,4 @@ To ensure that notifications display as intended, keep the default notification 
 
 Changing the placeholder color values in _Colors & Themes_ will override Plex Theme's color styles. Deleting custom color values will reverse this.
 
-## [🛠 Development](docs/Development.md)
+## [🛠 Development](doc/Development.md)

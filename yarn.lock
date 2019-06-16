@@ -684,7 +684,7 @@ bin-check@^4.1.0:
 bin-version-check@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/bin-version-check/-/bin-version-check-4.0.0.tgz#7d819c62496991f80d893e6e02a3032361608f71"
-  integrity sha512-sR631OrhC+1f8Cvs8WyVWOA33Y8tgwjETNPyyD/myRBXLkfS/vl74FmH/lFcRl9KY3zwGh7jFhvyk9vV3/3ilQ==
+  integrity sha512-sR631OrhC+1f8Cvs8WyVWOA33Y8tgwjETNPyyD/myRBXLkfS/vl74FmH/lFcRl9KY3zwGh7jFhvyk9vmaster/3ilQ==
   dependencies:
     bin-version "^3.0.0"
     semver "^5.6.0"
@@ -2346,7 +2346,7 @@ fancy-log@1.3.3, fancy-log@^1.1.0, fancy-log@^1.3.2, fancy-log@^1.3.3:
 fast-deep-equal@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
-  integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
+  integrity sha1-ewUhjd+WZ79/Nwmaster/bLLFf3Qqkk=
 
 fast-glob@^2.0.2, fast-glob@^2.2.6:
   version "2.2.7"

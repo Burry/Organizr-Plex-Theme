@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/v3/doc/banner.png" width="370px" alt="Plex Theme for Organizr" />
+    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/master/doc/banner.png" width="370px" alt="Plex Theme for Organizr" />
 </h1>
 
 <p align="center">
-    A theme for <a href="https://github.com/causefx/Organizr" target="_blank">Organizr 2</a> that emulates the style of Plex
+    A theme for <a href="https://github.com/causefx/Organizr" target="_blank">Organizr</a> that emulates the style of Plex
     <br />
     <br />
     <a href="https://travis-ci.org/Burry/Organizr-Plex-Theme" target="_blank" title="Build Status">
@@ -14,10 +14,10 @@
     </a>
     <br />
     <br />
-    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/v3/doc/screenshots/1.png" alt="Screen Shot 1" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/v3/doc/screenshots/2.png" alt="Screen Shot 2" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/v3/doc/screenshots/3.png" alt="Screen Shot 3" width="49.15%" />
-    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/v3/doc/screenshots/4.png" alt="Screen Shot 4" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/master/doc/screenshots/1.png" alt="Screen Shot 1" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/master/doc/screenshots/2.png" alt="Screen Shot 2" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/master/doc/screenshots/3.png" alt="Screen Shot 3" width="49.15%" />
+    <img src="https://raw.githubusercontent.com/Burry/Organizr-Plex-Theme/master/doc/screenshots/4.png" alt="Screen Shot 4" width="49.15%" />
 </p>
 
 ## ✅ Usage

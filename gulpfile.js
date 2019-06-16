@@ -65,7 +65,7 @@ const dotenv = require('dotenv').config(),
     },
     // Header Comment
     headerComment = require('gulp-header-comment'),
-    comment = `Plex Theme for Organizr v2
+    comment = `Plex Theme for Organizr
         Version <%= pkg.version %>
         <%= pkg.license %> License
         <%= pkg.homepage %>`;

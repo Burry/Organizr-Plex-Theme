@@ -93,6 +93,32 @@
     }
 }
 
+@supports not (backdrop-filter: blur(30px)) {
+    .sidebar {
+        @include background-shade($black45a, $bg-light, 'fixed');
+
+        &:hover {
+            box-shadow: 0 5px 20px $black30a;
+        }
+
+        .sidebar-head {
+            background: $black15a !important;
+        }
+    }
+
+    .sidebar-nav {
+        background: $black15a;
+    }
+
+    .active-tab-Settings,
+    body[data-active-tab=''],
+    #internal-Settings {
+        .sidebar {
+            @include background-shade($black45a, $bg-dark, 'fixed');
+        }
+    }
+}
+
 .ping .heartbit {
     z-index: 9;
 }

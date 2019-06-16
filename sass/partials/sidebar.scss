@@ -127,6 +127,17 @@
     right: -25px;
 }
 
+// Unsure where this belongs
+
+.nav .open > a {
+    background: transparent !important;
+
+    &:focus,
+    &:hover {
+        background: transparent !important;
+    }
+}
+
 #side-menu {
     li a {
         color: $white70a;
@@ -164,15 +175,4 @@
 .sidebar img[src*='ombi'] {
     height: 30px;
     padding-left: 30px;
-}
-
-// Unsure where this belongs
-
-.nav .open > a {
-    background: transparent !important;
-
-    &:focus,
-    &:hover {
-        background: transparent !important;
-    }
 }

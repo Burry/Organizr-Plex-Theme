@@ -258,9 +258,10 @@
 }
 
 .user-bg {
-    @extend %background-blur;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+
+    @extend %background-blur;
 }
 
 // Custom error images

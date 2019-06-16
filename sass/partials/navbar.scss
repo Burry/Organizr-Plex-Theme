@@ -1,7 +1,7 @@
 // Navbar
 
 .navbar {
-    background: $black70a;
+    background: $black60a;
     padding: 10px;
 }
 
@@ -25,7 +25,7 @@
     > li > a {
         background: transparent !important;
         color: $text-muted;
-        transition: none;
+        transition: 0.2s ease all;
 
         &:hover {
             color: $text !important;
@@ -53,35 +53,35 @@
 
 .profile-pic {
     .img-circle {
-        box-shadow: inset 0 0 0 1px rgba($white, 0.1);
         margin-top: -4px;
+        width: 30px;
+        height: 30px;
     }
 
     b {
         font-weight: 600;
     }
 
-    &:hover {
-        .img-circle {
-            background: $text;
-            box-shadow: 0 0 0 2px $text;
-        }
-
+    &:hover,
+    [aria-expanded='true'] {
         b,
         .caret {
             color: $text;
+        }
+
+        .caret {
+            transition: color 0.2s, transform 0.4s;
         }
     }
 
     &[aria-expanded='true'] {
         .img-circle {
             background: $theme-lighter;
-            box-shadow: 0 0 0 2px $theme-lighter;
+            box-shadow: 0 0 0 1px $white;
         }
 
-        b,
         .caret {
-            color: $theme-lighter;
+            transform: translateY(-50%) rotateX(180deg);
         }
     }
 }

@@ -49,6 +49,16 @@
     border-width: 2px;
 }
 
+// Close Button
+.close-popup {
+    background: $black50a;
+
+    &.btn-circle {
+        padding: 0;
+        border-radius: 50%;
+    }
+}
+
 // Large Button
 
 .btn-lg {

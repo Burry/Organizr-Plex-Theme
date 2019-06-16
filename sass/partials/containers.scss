@@ -18,7 +18,7 @@ body {
     &[data-active-tab=''] {
         position: absolute;
 
-        @include background($bg-dark, 'fixed');
+        @include background($bg-dark-login, 'fixed');
     }
 }
 
@@ -31,9 +31,8 @@ body {
 #page-wrapper {
     background: transparent;
 
-    &:before {
+    &::before {
         content: '';
-        @include background($bg-light, 'fixed');
         display: block;
         width: 100%;
         height: 100%;
@@ -41,6 +40,8 @@ body {
         top: 0;
         left: 0;
         z-index: -1;
+
+        @include background($bg-light, 'fixed');
     }
 }
 
@@ -53,7 +54,7 @@ body {
 @media screen and (min-width: 768px) {
     .fix-header #page-wrapper {
         margin-top: 60px;
-        min-height: 0px !important;
+        min-height: 0 !important;
     }
 }
 
@@ -65,64 +66,136 @@ body {
     color: $white70a !important;
 }
 
-// Panel
+// Content Boxes
 
-.panel {
+.el-card-content {
+    &.bg-org {
+        background: transparent !important;
+    }
+
+    small {
+        color: $white45a;
+    }
+
+    br:last-of-type {
+        display: none;
+    }
+}
+
+.el-card-item .el-card-avatar,
+.item {
+    box-shadow: 0 0 2px $black35a;
+}
+
+.el-card-item:hover .el-card-avatar,
+.item:hover {
+    box-shadow: 0 0 0 2px $theme;
+}
+
+.el-card-avatar a {
+    color: $white70a !important;
+
+    &:focus,
+    &:hover {
+        background: transparent !important;
+        color: $white !important;
+    }
+}
+
+.el-overlay-1 {
+    &:hover {
+        img {
+            transform: none !important;
+        }
+    }
+}
+
+.white-box {
     background: transparent;
 
     &.bg-org {
         background: transparent !important;
     }
 
-    &.panel-green,
-    &.panel-success {
-        margin: 0;
-        .panel-heading {
-            color: $black;
-            text-align: center;
-            border-radius: 3px;
-        }
-    }
-
-    &.panel-warning {
-        .panel-heading {
-            padding: 0 0 15px;
-            border: 0;
-            font-size: 18px;
-            color: $white;
-            background: none;
-        }
-
-        .pull-right {
-            display: none;
-        }
-
-        .panel-body {
-            padding: 0;
-        }
-    }
-
-    .panel-heading {
+    .box-title {
+        color: $white;
         font-size: 14px;
         font-weight: 600;
-        color: $text-muted;
-        text-transform: uppercase;
+    }
+}
 
-        .btn {
-            padding: 8px 12px;
-            margin-top: -10px;
+.el-element-overlay {
+    .white-box {
+        padding: 2px;
+    }
 
-            &.popup-with-form {
-                padding: 2px;
-                margin-top: -4px;
-            }
+    a.btn-outline {
+        color: $white70a;
+        border: 0;
+
+        &:focus,
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .el-card-item {
+        .el-overlay {
+            transition: all 0.2s ease;
+            background:
+                radial-gradient(
+                    farthest-corner at 50% 50%,
+                    $black50a 50%,
+                    $black20 100%
+                );
         }
 
-        .btn-group {
-            margin-right: -0.5rem;
+        .el-overlay-1 {
+            img {
+                transition: none;
+            }
         }
     }
 }
+
+.lazyload {
+    &:not(.homepageImageTitle):not(.loginTitle) {
+        background-color: $black45a;
+    }
+}
+
+.recent-poster {
+    margin-bottom: 50px;
+    margin-top: 2px;
+}
+
+.recent-title {
+    background: transparent;
+    color: $white45a;
+    display: block;
+    padding: 5px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 19px;
+    transform: translateY(100%);
+
+    &::first-line {
+        color: $white;
+    }
+
+    small {
+        font-size: 100% !important;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .recent-title {
+        padding: 11px 0 0;
+    }
+}
+
+// Panel
 
 .panel-body {
     background: transparent;
@@ -179,6 +252,72 @@ body {
     }
 }
 
+.panel {
+    background: transparent;
+
+    &.bg-org {
+        background: transparent !important;
+    }
+
+    .panel-heading {
+        font-size: 14px;
+        font-weight: 600;
+        color: $text-muted;
+        text-transform: uppercase;
+
+        .btn {
+            padding: 0;
+            margin-top: -4px;
+
+            &.popup-with-form {
+                padding: 2px;
+                margin-top: -4px;
+            }
+        }
+
+        .btn-group {
+            margin-right: -0.5rem;
+        }
+
+        .panel-title {
+            color: $white;
+        }
+    }
+
+    .panel-body {
+        padding: 30px;
+    }
+
+    &.panel-green,
+    &.panel-success {
+        margin: 0;
+
+        .panel-heading {
+            color: $black;
+            text-align: center;
+            border-radius: 3px;
+        }
+    }
+
+    &.panel-warning {
+        .panel-heading {
+            padding: 0 0 15px;
+            border: 0;
+            font-size: 18px;
+            color: $white;
+            background: none;
+        }
+
+        .pull-right {
+            display: none;
+        }
+
+        .panel-body {
+            padding: 0;
+        }
+    }
+}
+
 // Content Containers
 
 .bg-info {
@@ -217,132 +356,8 @@ body {
     }
 }
 
-.white-box {
-    background: transparent;
-
-    &.bg-org {
-        background: transparent !important;
-    }
-
-    .box-title {
-        color: $white;
-        font-size: 14px;
-        font-weight: 600;
-    }
-}
-
 blockquote {
-    border-left-color: $theme !important;
-}
-
-// Content Boxes
-
-.el-card-content {
-    &.bg-org {
-        background: transparent !important;
-    }
-
-    small {
-        color: $white45a;
-    }
-
-    br:last-of-type {
-        display: none;
-    }
-}
-
-.el-card-item .el-card-avatar,
-.item {
-    box-shadow: 0 0 2px $black35a;
-}
-
-.el-card-item:hover .el-card-avatar,
-.item:hover {
-    box-shadow: 0 0 0 2px $theme;
-}
-
-.el-card-avatar a {
-    color: $white70a !important;
-
-    &:focus,
-    &:hover {
-        background: transparent !important;
-        color: $white !important;
-    }
-}
-
-.el-element-overlay {
-    .white-box {
-        padding: 2px;
-    }
-
-    a.btn-outline {
-        color: $white70a;
-        border: 0;
-
-        &:focus,
-        &:hover {
-            color: $white;
-        }
-    }
-
-    .el-card-item {
-        .el-overlay {
-            transition: all 0.2s ease;
-            background: radial-gradient(
-                farthest-corner at 50% 50%,
-                $black50a 50%,
-                $black20 100%
-            );
-        }
-
-        .el-overlay-1 {
-            img {
-                transition: none;
-            }
-        }
-    }
-}
-
-.el-overlay-1:hover {
-    img {
-        transform: none !important;
-    }
-}
-
-.lazyload:not(.homepageImageTitle) {
-    background-color: $black45a;
-}
-
-.recent-poster {
-    margin-bottom: 50px;
-    margin-top: 2px;
-}
-
-.recent-title {
-    background: transparent;
-    color: $white45a;
-    display: block;
-    padding: 5px 0 0;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 19px;
-    transform: translateY(100%);
-
-    &::first-line {
-        color: $white;
-    }
-
-    small {
-        font-size: 100% !important;
-        font-weight: 600;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .recent-title {
-        padding: 11px 0 0;
-    }
+    border-left-color: $theme-lighter !important;
 }
 
 // Override Ombi Icon

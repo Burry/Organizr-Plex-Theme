@@ -1,13 +1,49 @@
 // Sidebar
 
+.sidebar,
+.sidebar-head {
+    transition:
+        background 0.2s ease,
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 1s ease-out;
+}
+
 .sidebar {
-    @extend %background-blur;
-    background: $black15a !important;
+    background: $black45a !important;
     box-shadow: none;
-    transition: all 0.2s ease;
+
+    @extend %background-blur;
+
+    .sidebar-head {
+        background: rgba($white, 0.05) !important;
+        min-height: 60px;
+        max-height: 60px;
+        padding: 2px 20px !important;
+
+        h3 {
+            font-size: 0;
+
+            .m-r-5 {
+                margin-right: 10px !important;
+            }
+
+            i {
+                font-size: 20px;
+                color: $white70a;
+                position: relative;
+                top: 7px;
+            }
+
+            span {
+                cursor: default;
+                user-select: none;
+            }
+        }
+    }
 
     .label {
         padding: 5px 8px;
+        margin-top: 5px;
         cursor: pointer;
     }
 
@@ -17,42 +53,7 @@
     }
 }
 
-.sidebar-head {
-    @extend %background-blur;
-    background: $black30a !important;
-    min-height: 60px;
-    max-height: 60px;
-    padding: 2px 20px !important;
-
-    h3 {
-        color: $white70a;
-        font-weight: 400;
-        text-transform: none;
-        padding: 2px 0 !important;
-        transition: 0.2s ease all;
-
-        .m-r-5 {
-            margin-right: 10px !important;
-        }
-
-        i {
-            font-size: 14px;
-            position: relative;
-            top: 2px;
-        }
-
-        span {
-            cursor: default;
-            user-select: none;
-        }
-    }
-}
-
 @media screen and (min-width: 768px) {
-    .sidebar {
-        transition: background 0.2s ease, width 0.1s;
-    }
-
     .sidebar-head {
         h3 {
             padding: 0;
@@ -60,20 +61,20 @@
             .m-r-5 {
                 margin-right: 5px !important;
             }
-
-            i {
-                font-size: 20px;
-            }
         }
     }
 }
 
 @supports not (backdrop-filter: blur(30px)) {
     .sidebar {
-        @include background($bg-light, 'fixed');
+        @include background-shade($black45a, $bg-light, 'fixed');
 
         &:hover {
-            box-shadow: 0 5px 15px $black50a;
+            box-shadow: 0 5px 20px $black30a;
+        }
+
+        .sidebar-head {
+            background: $black15a !important;
         }
     }
 
@@ -81,16 +82,12 @@
         background: $black15a;
     }
 
-    body[data-active-tab=''],
     .active-tab-Settings,
+    body[data-active-tab=''],
     #internal-Settings {
         .sidebar {
-            @include background($bg-dark, 'fixed');
+            @include background-shade($black45a, $bg-dark, 'fixed');
         }
-    }
-
-    .sidebar-head {
-        background: $black65a !important;
     }
 }
 
@@ -98,12 +95,16 @@
     z-index: 9;
 }
 
+.pingTime {
+    right: -25px;
+}
+
 #side-menu {
     li a {
         color: $white70a;
         font-weight: 600 !important;
         padding: 15px 35px 15px 15px;
-        transition: 0.2s ease color ease;
+        transition: 0.2s ease color;
 
         &:focus,
         &:hover {
@@ -114,14 +115,20 @@
         &.active,
         &:active {
             background: $white08a;
-            color: $theme-lighter;
-            box-shadow: none;
+            color: $white;
+            box-shadow: inset 4px 0 0 0 $theme-lighter;
         }
     }
 }
 
 .tabLoaded {
     filter: none;
+}
+
+.sidebar-tabName {
+    top: 19px;
+    left: 60px;
+    font-size: 15px;
 }
 
 // Override Ombi Icon

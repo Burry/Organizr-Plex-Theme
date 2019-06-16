@@ -2,9 +2,9 @@
     "name": "organizr-plex-theme",
     "version": "3.0.0",
     "description": "A theme for Organizr v2 that emulates the style of Plex",
-    "main": "build/Plex.css",
-    "homepage": "https://burry.dev/organizr-plex-theme",
-    "repository": "github:Burry/organizr-plex-theme",
+    "main": "css/Plex.css",
+    "homepage": "https://burry.dev/Organizr-Plex-Theme",
+    "repository": "github:Burry/Organizr-Plex-Theme",
     "contributors": [
         "Grant Burry <grant@burry.me> (https://grantburry.com)",
         "jigahertz (https://github.com/jigahertz)"

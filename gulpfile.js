@@ -17,14 +17,13 @@ const dotenv = require('dotenv').config(),
     browserSync = require('browser-sync').create(),
     browserSyncConfig = {
         proxy: process.env.ORGANIZR_URL,
-        files: 'build/Plex.css',
+        files: 'css/Plex.css',
         serveStatic: ['css'],
         snippetOptions: {
             rule: {
-                match: /<link id="theme" href=".*" rel="stylesheet">/i,
-                fn: (snippet, match) =>
-                    '<link rel="stylesheet" type="text/css" href="/Plex.css">' +
-                    snippet
+                match: /<link id="theme" href=".*" rel="stylesheet"\s*\/?>/is,
+                fn: snippet =>
+                    `<link href="/Plex.css" rel="stylesheet" type="text/css" />${snippet}`
             }
         },
         ghostMode: {
@@ -89,7 +88,7 @@ gulp.task('build', () =>
         .pipe(postcss())
         .pipe(cleanCSS(cleanCSSConfig))
         .pipe(headerComment(comment))
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('css'))
         .pipe(browserSync.stream())
 );
 

@@ -113,6 +113,10 @@
 }
 
 #settings-settings-updates {
+    .btn {
+        margin-right: -15px !important;
+    }
+
     .label:not(.label-info) {
         min-width: 80px;
         display: inline-block;
@@ -138,9 +142,28 @@
 }
 
 @media screen and (min-width: 768px) {
-    #settings-settings-updates .btn {
-        margin: -20px -15px !important;
+    #settings-settings-updates .white-box .btn {
+        margin: -46px 210px 0 0 !important;
     }
+}
+
+.homepage-drag {
+    background-color: $black45a !important;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px !important;
+
+    span.homepage-text {
+        margin-top: 12px;
+    }
+}
+
+.homepage-number {
+    background: none !important;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 5px;
 }
 
 // Organizr Links
@@ -176,6 +199,19 @@
     .col-lg-12,
     .col-md-6 {
         padding: 0;
+    }
+}
+
+#organizrNewsPanel {
+    .panel-body {
+        background: $black15a;
+        padding: 0 20px;
+
+        h5 {
+            font-weight: 600;
+            line-height: 1.5;
+            margin: 0;
+        }
     }
 }
 

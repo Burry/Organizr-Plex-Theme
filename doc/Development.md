@@ -1,7 +1,7 @@
 # 🛠 Development
 
 - Install [Node.js](https://nodejs.org) and [Yarn](https://yarnpkg.com/docs/install).
-- [Download](https://github.com/Burry/organizr-plex-theme/archive/master.zip) or clone the repository and enter it in a terminal.
+- [Download](https://github.com/Burry/Organizr-Plex-Theme/archive/master.zip) or clone the repository and enter it in a terminal.
 - Run `yarn` to install development dependencies.
 
 ## Scripts

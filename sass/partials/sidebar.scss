@@ -2,9 +2,7 @@
 
 .sidebar,
 .sidebar-head {
-    transition:
-        background 0.2s ease,
-        width 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    transition: background 0.2s ease, width 0.2s cubic-bezier(0.4, 0, 0.2, 1),
         background-color 1s ease-out;
 }
 
@@ -65,28 +63,32 @@
     }
 }
 
-@supports not (backdrop-filter: blur(30px)) {
-    .sidebar {
-        @include background-shade($black45a, $bg-light, 'fixed');
-
-        &:hover {
-            box-shadow: 0 5px 20px $black30a;
-        }
-
-        .sidebar-head {
-            background: $black15a !important;
-        }
-    }
-
-    .sidebar-nav {
-        background: $black15a;
-    }
-
-    .active-tab-Settings,
-    body[data-active-tab=''],
-    #internal-Settings {
+// Temporarily disabled blurred bg style on mobile due to Safari bug
+// Per https://github.com/Burry/Organizr-Plex-Theme/issues/18#issuecomment-502330525
+@media screen and (min-width: 768px) {
+    @supports not (backdrop-filter: blur(30px)) {
         .sidebar {
-            @include background-shade($black45a, $bg-dark, 'fixed');
+            @include background-shade($black45a, $bg-light, 'fixed');
+
+            &:hover {
+                box-shadow: 0 5px 20px $black30a;
+            }
+
+            .sidebar-head {
+                background: $black15a !important;
+            }
+        }
+
+        .sidebar-nav {
+            background: $black15a;
+        }
+
+        .active-tab-Settings,
+        body[data-active-tab=''],
+        #internal-Settings {
+            .sidebar {
+                @include background-shade($black45a, $bg-dark, 'fixed');
+            }
         }
     }
 }

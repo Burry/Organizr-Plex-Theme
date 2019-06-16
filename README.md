@@ -69,3 +69,8 @@ You must first set the `homepage` value in `package.json` to your Organizr insta
 #### `yarn imagemin`
 
 Losslessly optimizes all `.svg`, `.png`, `.jpg`, and `.gif` images in the repository with [imagemin](https://github.com/imagemin/imagemin). This will take some time.
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/Burry/Organizr-Plex-Theme/badge.svg?style=beer-square)](https://beerpay.io/Burry/Organizr-Plex-Theme)  [![Beerpay](https://beerpay.io/Burry/Organizr-Plex-Theme/make-wish.svg?style=flat-square)](https://beerpay.io/Burry/Organizr-Plex-Theme?focus=wish)
